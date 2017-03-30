@@ -8,9 +8,17 @@
     {% if page.author %}
       {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.owner %}
     {% endif %}
-    {% seo title=false %}
+    <meta name="google-site-verification" content="wZay7xUx1IaKgYaoC5EA1V9z-kAZ1fYLD2WtuLVMjbU" />
 
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-2489951759872236",
+        enable_page_level_ads: true
+      });
+    </script>
+
+    {% seo title=false %}
 
     <link href="{{ site.url }}/atom.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} Atom Feed">
     <link href="{{ site.url }}/sitemap.xml" type="application/xml" rel="sitemap" title="Sitemap">

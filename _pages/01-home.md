@@ -2,7 +2,7 @@
 layout: archive
 title:
 permalink: /
-image: wood-texture-1600x800.jpg
+image: /images/wood-texture-1600x800.jpg
 ---
 {% include page-lead.html %}
 

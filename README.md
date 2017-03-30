@@ -1,8 +1,10 @@
 # Amith Raravi's Blog - Version 2.0
 
-This is a work in progress.
+My Personal Website
 
-Just a little something I’m using to jump start a career refresh :)
+This will hold the code of my website www.amithraravi.com, so that i don't accidentally delete it. I may need help from other contributors later on - once my website grows - hence creating a repo to track the changes.
+
+This is a work in progress. Just a little something I’m using to jump start a career refresh :)
 
 I like to think of it as a starter for building my freelancing work…
 

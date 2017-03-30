@@ -1,0 +1,159 @@
+/* ==========================================================================
+   NOTICE TEXT BLOCKS
+   ========================================================================== */
+/**
+ * Default Kramdown usage (no indents!):
+ * <div class="notice" markdown="1">
+ * #### Headline for the Notice
+ * Text for the notice
+ * </div>
+ */
+/* default notice */
+.notice {
+  margin: 2em 0;
+  padding: 1em;
+  background-color: #eaeaea;
+  border-left: 0.25em solid #989898; }
+  .notice h4 {
+    margin-top: 0 !important;
+    margin-bottom: 0.75em;
+    line-height: 1 !important; }
+  .page-content .notice h4 {
+    /* using at-root to override .page-content h4 font size */
+    margin-bottom: 0;
+    font-size: 1rem; }
+  .page-content .notice a {
+    border-bottom-width: 2px;
+    box-shadow: none !important; }
+    .page-content .notice a:hover {
+      background-color: transparent !important; }
+  .notice a {
+    color: #252525 !important; }
+  .notice p {
+    margin-bottom: 0; }
+  .notice h4 + p {
+    /* remove space above paragraphs that appear directly after notice headline */
+    margin-top: 0;
+    padding-top: 0; }
+  .notice code {
+    background-color: #c1c1c1; }
+
+/* info notice */
+.notice--info {
+  margin: 2em 0;
+  padding: 1em;
+  background-color: #e9f1f9;
+  border-left: 0.25em solid #91bae0; }
+  .notice--info h4 {
+    margin-top: 0 !important;
+    margin-bottom: 0.75em;
+    line-height: 1 !important; }
+  .page-content .notice--info h4 {
+    /* using at-root to override .page-content h4 font size */
+    margin-bottom: 0;
+    font-size: 1rem; }
+  .page-content .notice--info a {
+    border-bottom-width: 2px;
+    box-shadow: none !important; }
+    .page-content .notice--info a:hover {
+      background-color: transparent !important; }
+  .notice--info a {
+    color: #1a5891 !important; }
+  .notice--info p {
+    margin-bottom: 0; }
+  .notice--info h4 + p {
+    /* remove space above paragraphs that appear directly after notice headline */
+    margin-top: 0;
+    padding-top: 0; }
+  .notice--info code {
+    background-color: #bdd6ec; }
+
+/* warning notice */
+.notice--warning {
+  margin: 2em 0;
+  padding: 1em;
+  background-color: #fcf7e9;
+  border-left: 0.25em solid #f1d990; }
+  .notice--warning h4 {
+    margin-top: 0 !important;
+    margin-bottom: 0.75em;
+    line-height: 1 !important; }
+  .page-content .notice--warning h4 {
+    /* using at-root to override .page-content h4 font size */
+    margin-bottom: 0;
+    font-size: 1rem; }
+  .page-content .notice--warning a {
+    border-bottom-width: 2px;
+    box-shadow: none !important; }
+    .page-content .notice--warning a:hover {
+      background-color: transparent !important; }
+  .notice--warning a {
+    color: #aa8619 !important; }
+  .notice--warning p {
+    margin-bottom: 0; }
+  .notice--warning h4 + p {
+    /* remove space above paragraphs that appear directly after notice headline */
+    margin-top: 0;
+    padding-top: 0; }
+  .notice--warning code {
+    background-color: #f6e8bc; }
+
+/* success notice */
+.notice--success {
+  margin: 2em 0;
+  padding: 1em;
+  background-color: #ecf7ee;
+  border-left: 0.25em solid #a1d7aa; }
+  .notice--success h4 {
+    margin-top: 0 !important;
+    margin-bottom: 0.75em;
+    line-height: 1 !important; }
+  .page-content .notice--success h4 {
+    /* using at-root to override .page-content h4 font size */
+    margin-bottom: 0;
+    font-size: 1rem; }
+  .page-content .notice--success a {
+    border-bottom-width: 2px;
+    box-shadow: none !important; }
+    .page-content .notice--success a:hover {
+      background-color: transparent !important; }
+  .notice--success a {
+    color: #328340 !important; }
+  .notice--success p {
+    margin-bottom: 0; }
+  .notice--success h4 + p {
+    /* remove space above paragraphs that appear directly after notice headline */
+    margin-top: 0;
+    padding-top: 0; }
+  .notice--success code {
+    background-color: #c6e7cc; }
+
+/* danger notice */
+.notice--danger {
+  margin: 2em 0;
+  padding: 1em;
+  background-color: #fbecec;
+  border-left: 0.25em solid #eba0a0; }
+  .notice--danger h4 {
+    margin-top: 0 !important;
+    margin-bottom: 0.75em;
+    line-height: 1 !important; }
+  .page-content .notice--danger h4 {
+    /* using at-root to override .page-content h4 font size */
+    margin-bottom: 0;
+    font-size: 1rem; }
+  .page-content .notice--danger a {
+    border-bottom-width: 2px;
+    box-shadow: none !important; }
+    .page-content .notice--danger a:hover {
+      background-color: transparent !important; }
+  .notice--danger a {
+    color: #a13030 !important; }
+  .notice--danger p {
+    margin-bottom: 0; }
+  .notice--danger h4 + p {
+    /* remove space above paragraphs that appear directly after notice headline */
+    margin-top: 0;
+    padding-top: 0; }
+  .notice--danger code {
+    background-color: #f3c6c6; }

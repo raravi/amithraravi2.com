@@ -1,0 +1,21 @@
+# Site navigation links
+
+- title: Getting Started
+  url: /getting-started/
+  excerpt: "I'm just getting started..."
+  image: once-upon-a-time.jpg
+
+- title: Articles
+  url: /articles/
+  excerpt: "My articles on Tech, Travel & Life in general!"
+  image: joao-silas.jpg
+
+- title: Portfolio
+  url: /portfolio/
+  excerpt: "The stuff I've done over the years."
+  image: office.jpg
+
+- title: About
+  url: /about/
+  excerpt: "It's all about moi :)"
+  image: about-me.jpg

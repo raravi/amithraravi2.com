@@ -1,0 +1,31 @@
+---
+layout:     article
+title:      "An Exercise in Static Sites"
+author:     amith_raravi
+date:       2017-03-30 12:05:00 +0530
+modified:   
+categories: articles
+image:
+  teaser:   static-and-dynamic-400x250.png
+---
+
+As you know by now, this is my first website. And I will take you through the decision-making steps that landed me in the static-site generation side of web!
+
+![image](/images/static-and-dynamic.png)
+
+The first thing I did was enroll in web development courses on [udemy](https://www.udemy.com/
+). And googled '*how to build a simple blog*' quite a bit :)
+
+A lot of options came up. The chief among them being [Wordpress](https://wordpress.com/). In fact, it seemed to fit all my needs. So I'd decided on it initially. And i moved on to taking up the courses on HTML/CSS/JavaScript & Git/GitHub.
+
+The next thing to look at was : Should it be a static site or a dynamic one? In fact, there is a huge debate on that one. Check this Quora [thread](https://www.quora.com/What-is-the-difference-between-Static-Websites-and-Dynamic-Websites), it's meant to confuse you :)
+
+I needed a blog, updated a few times a week or so, which focused on the content with minimal upkeep. For my needs, a static site was good enough. These two links([1](https://bradonomics.com/jekyll-wordpress-speed/) &  [2](http://progur.com/2016/08/jekyll-vs-wordpress.html)) pretty much convinced me to go static!!
+
+As i progressed through the courses I realized I needed a place to get my hands dirty and get complete control over the data in my blog, so that I can play with the look as I wished & code it accordingly. That's when I stumbled upon [Jekyll](https://jekyllrb.com/).
+
+![image](/images/jekyll.png)
+
+To get an idea of how Jekyll sites look, take a look at this [post](https://qrohlf.com/posts/5-best-jekyll-designs) from *qrohlf*'s site. Doesn't it blow your mind?! The look is minimalistic and yet quite stylish. And the focus is on the content. I love the way content gets highlighted in Jekyll based sites. It's about simple presentation!
+
+I will write about setting up the website with Jekyll in an upcoming post. Thank you for being here :)

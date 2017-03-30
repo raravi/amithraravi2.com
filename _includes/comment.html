@@ -1,0 +1,34 @@
+<article id="comment{% if p %}{{ index | prepend: '-' }}{% else %}{{ include.index | prepend: '-' }}{% endif %}" class="js-comment comment {% if include.name == site.author.name %}admin{% endif %} {% if p %}child{% endif %}">
+  <div class="commentbox">
+	  <div class="comment__avatar">
+		{% if include.avatar %}
+		  <img src="{{ include.avatar }}" alt="{{ include.name | escape }}">
+		{% elsif include.email %}
+		  <img src="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=60" srcset="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=120 2x" alt="{{ include.name | escape }}">
+		{% else %}
+		  <img src="{{ site.url }}/assets/images/avatar-60.png" srcset="{{ site.url }}/assets/images/avatar-120.png 2x" alt="{{ include.name | escape }}">
+		{% endif %}
+	  </div>
+	  <div>
+		  <h3 class="comment__author-name">
+			{% unless include.url == blank %}
+			  <a rel="external nofollow" href="{{ include.url }}">
+				{% if include.name == site.author.name %}<svg class="icon" width="20px" height="20px"><use xlink:href="#icon-mistake"></use></svg> {% endif %}{{ include.name }}
+			  </a>
+			{% else %}
+			  {% if include.name == site.author.name %}<svg class="icon" width="20px" height="20px"><use xlink:href="#icon-mistake"></use></svg> {% endif %}{{ include.name }}
+			{% endunless %}
+		  </h3>
+		  <div class="comment__timestamp">
+			{% if include.date %}
+			  {% if include.index %}<a href="#comment{% if p %}{{ index | prepend: '-' }}{% else %}{{ include.index | prepend: '-' }}{% endif %}" title="Permalink to this comment">{% endif %}
+			  <time datetime="{{ include.date | date_to_xmlschema }}">{{ include.date | date: '%B %d, %Y' }}</time>
+			  {% if include.index %}</a>{% endif %}
+			{% endif %}
+		  </div>
+	  </div>
+  </div>
+  <div class="comment__content">
+    {{ include.message | markdownify }}
+  </div>
+</article>

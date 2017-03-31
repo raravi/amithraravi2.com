@@ -12,8 +12,8 @@ staticman:
   branch: master
 
 # Change this before publishing to Live Server!!!
-# url: http://www.amithraravi.com
-url: http://localhost:4000
+url: http://www.amithraravi.com
+# url: http://localhost:4000
 feed:
   path: atom.xml
 

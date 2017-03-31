@@ -3,7 +3,7 @@ layout:     article
 title:      "Moving to my new Home!"
 author:     amith_raravi
 date:       2017-03-30 11:40:00 +0530
-modified:   
+modified:   2017-03-31 18:40:00 +0530
 categories: articles
 image:
   teaser:   moving-in-400x250.jpg
@@ -21,6 +21,6 @@ Through all the confusion of moving to & setting up my new home, there was only 
 
 This *[article](https://m.signalvnoise.com/planning-is-guessing-66fd2cea3f50)* on **Medium** says it all about planning :)
 
-After that, it's all a blur. It's a continuous procession of people, of fixing up stuff and of putting things inside cabinets. Yet, the excitement I had on the day when I moved in is still here, a week after the move. It still makes me smile.
+After that, it's all a blur. It's a continuous procession of people, of fixing up stuff and of putting things inside cabinets. Yet, the excitement I had on the day when I moved in is still there, a week after the move. It still makes me smile.
 
-Here's to many more new things to be experienced and wisdom gained (hopefully :-P)!!
+Here's to many more new things to be experienced and wisdom to be gained (hopefully :-P)!!

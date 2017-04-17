@@ -1,0 +1,49 @@
+---
+layout:     article
+title:      "Building a Static Site with Jekyll"
+author:     amith_raravi
+date:       2017-04-17 14:51:00 +0530
+modified:   2017-04-17 16:34:00 +0530
+categories: articles
+image:
+  teaser:   jekyll-logo-400x250.png
+---
+
+Once I decided to use Jekyll for my static site (please read my previous [post]() if you haven't yet), I needed resources to quickstart my website development.
+
+## Installing Jekyll
+
+![image](/images/jekyll-logo.png)
+
+The first place I looked at was the [official website](https://jekyllrb.com/docs/home/). This will be your goto place for any reference. So keep it open whenever you are working on anything Jekyll-related.
+
+Next I needed to install a few things for Jekyll to work. If you are installing Jekyll on a Linux machine, the above link has all the relevant details.
+
+If like me, you are working on windows, go [here](https://labs.sverrirs.com/jekyll/) for Installation instructions. The first thing to install is [Ruby](http://rubyinstaller.org/downloads/) and its DevKit. You can follow the instructions in the above link, they come with complete details and screenshots! If you have reached the end of the Jekyll installation successfully, congrats! You are all set to build your own website :)
+
+## Installing Grunt
+
+![image](/images/grunt-logo.png)
+
+[Grunt](https://gruntjs.com/), put simply, is for automating stuff. Stuff that you don't want to be doing everytime you build. It's a Javascript Task Runner which requires [node.js](https://nodejs.org/en/) to run and works really well with Jekyll for automating tasks like image compression, compiling/uglifying the main.js file and so on.
+
+So, first download and install [node.js](https://nodejs.org/en/download/). The npm installer will come bundled with it. You can use this link to install [Grunt.js](http://www.codebelt.com/javascript/install-grunt-js-on-windows/).
+
+Note: Make sure you are able to run commands on these packages. If not, you may need to add the bin/install folders of these packages to the PATH in windows.
+
+## Get a Jekyll template
+
+[![image](/images/jekyll-templates.png)](https://jekyllthemes.io/theme/31560300/beautiful-jekyll)
+
+Getting a simple Jekyll template will make it easier for you to understand how Jekyll works and focus on the content of your website faster. I recommend going with a template for the sheer pleasure of everything working out of the box!
+
+There are quite a few places where you can get a Jekyll template. These are my favorite sites:
+
+* [Made Mistakes](https://mademistakes.com/articles/using-jekyll-2016/) by [Michael Rose](https://github.com/mmistakes).
+* [Jekyll Themes](http://jekyllthemes.org/) by Matt Harzewski.
+* [Jekyll Themes](http://themes.jekyllrc.org/) is a directory of best-looking themes for Jekyll blogs.
+* [Free/Premium Themes](https://jekyllthemes.io/) by Tyler Cubell.
+
+Go with a free simple template that you like. Download the template to your workstation. Unzip it and put it in a folder. Run the build and serve commands on the folder. Once you do, the template will be published to the default url, which is usually [localhost:4000](http://localhost:4000).
+
+You just used Jekyll to build a static site!

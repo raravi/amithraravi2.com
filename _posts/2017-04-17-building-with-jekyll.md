@@ -9,7 +9,7 @@ image:
   teaser:   jekyll-logo-400x250.png
 ---
 
-Once I decided to use Jekyll for my static site (please read my previous [post]() if you haven't yet), I needed resources to quickstart my website development.
+Once I decided to use Jekyll for my static site (please read my previous [post](https://www.amithraravi.com/articles/an-exercise-in-static-sites/) if you haven't yet), I needed resources to quickstart my website development.
 
 ## Installing Jekyll
 

@@ -40,28 +40,7 @@ module.exports = function(grunt) {
         }
       }
     },
-    surround: {
-      src: 'js/main.js',
-      options: {
-        overwrite: true,
-        prepend: '---\n---',
-      },
-    },
     imagemin: {
-      dist: {
-        options: {
-          optimizationLevel: 7,
-          progressive: true
-        },
-        files: [{
-          expand: true,
-          cwd: 'images/',
-          src: '{,*/}*.{png,jpg,jpeg}',
-          dest: 'images/'
-        }]
-      }
-    },
-    imgcompress: {
       dist: {
         options: {
           optimizationLevel: 7,
@@ -85,6 +64,14 @@ module.exports = function(grunt) {
         }]
       }
     },
+    file_append: {
+      default_options: {
+        files: [{
+          prepend: "---\n---\n",
+          input: 'js/main.js'
+        }]
+      }
+    },
   });
 
   // Load tasks
@@ -94,11 +81,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-svgmin');
-  grunt.loadNpmTasks('grunt-imgcompress');
-  grunt.loadNpmTasks('grunt-surround');
+  grunt.loadNpmTasks('grunt-file-append');
 
   // Register tasks
-  grunt.registerTask('mainjs', ['uglify', 'surround']);
+  grunt.registerTask('mainjs', ['uglify', 'file_append']);
   grunt.registerTask('scripts', ['watch', 'uglify']);
-  grunt.registerTask('images', ['newer:imgcompress', 'newer:svgmin']);
+//  grunt.registerTask('images', ['newer:imgcompress', 'newer:svgmin']);
 };

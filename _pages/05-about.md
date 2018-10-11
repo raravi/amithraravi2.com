@@ -4,8 +4,10 @@ title: About
 permalink: /about/
 ---
 
-This is a work in progress.
+<div class="row">
+{% for content in site.data.aboutgrid %}
+	{% include about-grid.html %}
+{% endfor %}
+</div>
 
-Just a little something I'm using to jump start a career refresh :)
-
-I like to think of it as a starter for building my freelancing work...
+{% include about-me.html %}

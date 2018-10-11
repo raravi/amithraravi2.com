@@ -88,3 +88,4 @@ exclude:
   - package.json
   - spec
   - tmp
+  - staticman.yml

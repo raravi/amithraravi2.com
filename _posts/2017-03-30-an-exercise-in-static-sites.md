@@ -9,20 +9,22 @@ image:
   teaser:   static-and-dynamic-400x250.png
 ---
 
-As you know by now, this is my first website. And I will take you through the decision-making steps that landed me in the static-site generation side of web!
+This is my first website. Let me take you through the decision-making steps that landed me in the static-site generation side of web!
 
 ![image](/images/static-and-dynamic.png)
 
-The first thing I did was enroll in web development courses on [udemy](https://www.udemy.com/
+The first thing I did was enrol in web development courses on [udemy](https://www.udemy.com/
 ). And googled '*how to build a simple blog*' quite a bit :)
 
-A lot of options came up. The chief among them being [Wordpress](https://wordpress.com/). In fact, it seemed to fit all my needs. So I'd decided on it initially. And i moved on to taking up the courses on HTML/CSS/JavaScript & Git/GitHub.
+A lot of options came up. The chief among them being [Wordpress](https://wordpress.com/). In fact, it seemed to fit all my needs. So I'd decided on it initially. If you are not at all into learning technical side of things, I would recommend sticking with Wordpress. It's a simple setup-and-deploy kind of website management. You don't have to do anything more.
 
-The next thing to look at was : Should it be a static site or a dynamic one? In fact, there is a huge debate on that one. Check this Quora [thread](https://www.quora.com/What-is-the-difference-between-Static-Websites-and-Dynamic-Websites), it's meant to confuse you :)
+But I'm interested in setting up everything myself, and own all the data on my site (including comments which we will talk about later) at all times. I moved on to taking up the courses on HTML/CSS/JavaScript & Git/GitHub.
 
-I needed a blog, updated a few times a week or so, which focused on the content with minimal upkeep. For my needs, a static site was good enough. These two links([1](https://bradonomics.com/jekyll-wordpress-speed/) &  [2](http://progur.com/2016/08/jekyll-vs-wordpress.html)) pretty much convinced me to go static!!
+The next thing to look at was: should it be a static site or a dynamic one? In fact, there is a huge debate on that one. Check this Quora [thread](https://www.quora.com/What-is-the-difference-between-Static-Websites-and-Dynamic-Websites), it's meant to confuse you :) A static site is sufficient if you are looking for a website which publishes content not so often, and not many comments are seen in a day. The main advantage is obviously the complete freedom, as you don't need anything else. And the small size, since its just a bunch of HTML/CSS files.
 
-As i progressed through the courses I realized I needed a place to get my hands dirty and get complete control over the data in my blog, so that I can play with the look as I wished & code it accordingly. That's when I stumbled upon [Jekyll](https://jekyllrb.com/).
+I needed a blog, updated a few times a week or so, which focused on the content with minimal upkeep. And allowed me tinker with the look and feel of the site without too much hassle. For my needs, a static site was good enough. These two links([1](https://bradonomics.com/jekyll-wordpress-speed/) &  [2](http://progur.com/2016/08/jekyll-vs-wordpress.html)) pretty much convinced me to go static!!
+
+As i progressed through the courses I realised I needed a place to get my hands dirty and get complete control over the data in my blog, so that I can play with the look as I wished & code it accordingly. That's when I stumbled upon [Jekyll](https://jekyllrb.com/).
 
 ![image](/images/jekyll.png)
 

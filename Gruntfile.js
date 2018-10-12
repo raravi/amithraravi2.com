@@ -86,5 +86,5 @@ module.exports = function(grunt) {
   // Register tasks
   grunt.registerTask('mainjs', ['uglify', 'file_append']);
   grunt.registerTask('scripts', ['watch', 'uglify']);
-//  grunt.registerTask('images', ['newer:imgcompress', 'newer:svgmin']);
+  grunt.registerTask('images', ['newer:imagemin', 'newer:svgmin']);
 };

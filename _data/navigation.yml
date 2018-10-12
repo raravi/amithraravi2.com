@@ -1,8 +1,8 @@
 # Site navigation links
 
-- title: Getting Started
-  url: /getting-started/
-  excerpt: "I'm just getting started..."
+- title: Home
+  url: /
+  excerpt: "Go back"
   image: once-upon-a-time.jpg
 
 - title: Articles
@@ -15,7 +15,7 @@
   excerpt: "The stuff I've done over the years."
   image: office.jpg
 
-- title: About
+- title: About Me
   url: /about/
   excerpt: "It's all about moi :)"
   image: about-me.jpg

@@ -13,8 +13,7 @@ This is my first website. Let me take you through the decision-making steps that
 
 ![image](/images/static-and-dynamic.png)
 
-The first thing I did was enrol in web development courses on [udemy](https://www.udemy.com/
-). And googled '*how to build a simple blog*' quite a bit :)
+The first thing I did was enrol in web development courses on [udemy](https://www.udemy.com/). And googled '*how to build a simple blog*' quite a bit :)
 
 A lot of options came up. The chief among them being [Wordpress](https://wordpress.com/). In fact, it seemed to fit all my needs. So I'd decided on it initially. If you are not at all into learning technical side of things, I would recommend sticking with Wordpress. It's a simple setup-and-deploy kind of website management. You don't have to do anything more.
 

@@ -21,7 +21,7 @@ In this blog post, I'll take you through the process of setting up Web Hosting f
 
 I would suggest you go for a Linux based one. As it is more secure and Linux gives you a lot of tools preinstalled. It has a lot of high quality open source software too - and new open source server software (stuff like node.js) usually becomes available for Linux first.
 
-I guess you know which way I lean by now?! If you aren't convinced yet, then have a look at this <a href="https://www.quora.com/What-is-the-difference-between-Windows-and-Linux-for-web-hosting">Quora</a> thread for more analysis. You can google your way through what the web has to offer, and take your time to decide. Come back here once you are sure what you want (this depends on your requirements a lot, some features may require `Windows` based web hosting).
+I guess you know which way I lean by now?! If you aren't convinced yet, then have a look at this [Quora](https://www.quora.com/What-is-the-difference-between-Windows-and-Linux-for-web-hosting) thread for more analysis. You can google your way through what the web has to offer, and take your time to decide. Come back here once you are sure what you want (this depends on your requirements a lot, some features may require `Windows` based web hosting).
 
 Have you decided yet? Awesome, let's go!
 

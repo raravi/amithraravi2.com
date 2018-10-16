@@ -4,7 +4,7 @@ title:      "An Exercise in Static Sites"
 author:     amith_raravi
 date:       2017-03-30 12:05:00 +0530
 modified:   
-categories: articles
+categories: [articles, tech]
 image:
   teaser:   static-and-dynamic-400x250.png
 ---

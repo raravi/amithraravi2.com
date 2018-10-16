@@ -4,7 +4,7 @@ title:      "Cycling is for Everybody"
 author:     amith_raravi
 date:       2017-05-03 19:16:00 +0530
 modified:   2017-05-03 21:59:00 +0530
-categories: articles
+categories: [articles, personal]
 image:
   teaser:   cycling-400x250.jpg
 ---

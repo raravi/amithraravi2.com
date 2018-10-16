@@ -4,7 +4,7 @@ title:      "Your own website - Part II"
 author:     amith_raravi
 date:       2017-03-10 20:20:00 +0530
 modified:   2017-03-18 20:21:00 +0530
-categories: articles
+categories: [articles, tech]
 image:
   teaser:   web-hosting-400x250.png
 ---

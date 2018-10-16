@@ -4,7 +4,7 @@ title:      "You Are Not Alone"
 author:     amith_raravi
 date:       2017-04-25 17:45:00 +0530
 modified:   2017-04-25 19:59:00 +0530
-categories: articles
+categories: [articles, personal]
 image:
   teaser:   not-alone-2-400x250.jpg
 ---

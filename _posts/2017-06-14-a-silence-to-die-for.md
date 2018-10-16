@@ -4,7 +4,7 @@ title:      "A Silence to Die For!"
 author:     amith_raravi
 date:       2017-06-14 20:11:00 +0530
 modified:   2017-06-14 21:59:00 +0530
-categories: articles
+categories: [articles, personal]
 image:
   teaser:   silence-400x250.jpg
 ---

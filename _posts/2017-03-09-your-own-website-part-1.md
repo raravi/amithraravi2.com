@@ -4,7 +4,7 @@ title:      "Your own website - Part I"
 author:     amith_raravi
 date:       2017-03-09 20:20:00 +0530
 modified:   2017-03-18 19:59:00 +0530
-categories: articles
+categories: [articles, tech]
 image:
   teaser:   domain-name-400x250.png
 ---

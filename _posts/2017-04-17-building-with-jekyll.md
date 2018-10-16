@@ -4,7 +4,7 @@ title:      "Building a Static Site with Jekyll"
 author:     amith_raravi
 date:       2017-04-17 14:51:00 +0530
 modified:   2017-04-17 16:34:00 +0530
-categories: articles
+categories: [articles, tech]
 image:
   teaser:   jekyll-logo-400x250.png
 ---

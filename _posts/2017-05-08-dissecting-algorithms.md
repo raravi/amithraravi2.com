@@ -4,7 +4,7 @@ title:      "Dissecting Algorithms"
 author:     amith_raravi
 date:       2017-05-08 19:56:00 +0530
 modified:   2017-05-08 21:59:00 +0530
-categories: articles
+categories: [articles, tech]
 image:
   teaser:   algorithm-400x250.jpg
 ---

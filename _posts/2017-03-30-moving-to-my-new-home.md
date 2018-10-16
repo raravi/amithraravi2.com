@@ -1,10 +1,10 @@
 ---
 layout:     article
-title:      "Moving to my new Home!"
+title:      Moving to my new Home!
 author:     amith_raravi
 date:       2017-03-30 11:40:00 +0530
 modified:   2017-03-31 18:40:00 +0530
-categories: articles
+categories: [articles, personal]
 image:
   teaser:   moving-in-400x250.jpg
 ---

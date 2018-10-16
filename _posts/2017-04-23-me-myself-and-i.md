@@ -4,7 +4,7 @@ title:      "Me, Myself & I"
 author:     amith_raravi
 date:       2017-04-23 12:30:00 +0530
 modified:   2017-04-23 19:59:00 +0530
-categories: articles
+categories: [articles, personal]
 image:
   teaser:   tattoo-400x250.jpg
 ---

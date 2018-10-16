@@ -4,7 +4,7 @@ title:      "The Mighty Himalayas"
 author:     amith_raravi
 date:       2017-06-29 01:30:00 +0530
 modified:   2017-06-29 19:59:00 +0530
-categories: articles
+categories: [articles, personal]
 image:
   teaser:   himalayas-400x250.jpg
 ---

@@ -62,4 +62,4 @@ Never change your morality to fit your friends. Choose your friends to fit your 
 
 **Always.**
 
-*All images used in this post are from [Unsplash](https://unsplash.com)!*
+Note: *All images used in this post are from [Unsplash](https://unsplash.com)!*

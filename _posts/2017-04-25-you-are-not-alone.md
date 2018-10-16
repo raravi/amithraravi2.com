@@ -49,4 +49,4 @@ I’ll leave you with these words by [Valerie Renee](https://plus.google.com/+Va
 
 ![image](/images/not-alone-3.jpg)
 
-*All images used in this post are from [Unsplash](https://unsplash.com)!*
+Note: *All images used in this post are from [Unsplash](https://unsplash.com)!*

@@ -62,7 +62,7 @@
 				position: absolute;
 				top: 0;
 				left: 0;
-				height: 2px;
+				height: 4px;
 				@include transition(width 0.3s);
 			}
 			&:before {
@@ -71,7 +71,7 @@
 			}
 			&:after {
 				width: 0;
-				background: $black;
+				background: $red;
 			}
 			&:active:after,
 			&:hover:after {

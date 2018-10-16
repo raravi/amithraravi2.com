@@ -12,6 +12,19 @@
     @include span-columns(3);
     @include omega(4n);
   }
+  &:hover {
+    .post-title {
+      a {
+        text-decoration: underline;
+        color:red;
+      }
+    }
+    .post-teaser {
+      &:after {
+          background: rgba($base-color,0.25);
+      }
+    }
+  }
   .entry-date {
     @include font-size(16,no);
     color: lighten($text-color,25);
@@ -35,11 +48,6 @@
       background: rgba($base-color,0);
       pointer-events: none;
       @include transition(background 0.3s);
-    }
-    &:hover {
-      &:after {
-        background: rgba($base-color,0.2);
-      }
     }
   }
 }

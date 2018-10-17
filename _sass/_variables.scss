@@ -6,11 +6,16 @@
    Typography variables
    ========================================================================== */
 
-$base-font                   	: Georgia,Times,"Times New Roman",serif;
-$heading-font                	: "Helvetica Neue","Segoe UI",Arial,sans-serif;
+$base-font                   	: "Montserrat",sans-serif;
+//$base-font                   	: "Zilla Slab",serif;
+//$base-font                   	: Georgia,Times,"Times New Roman",serif;
+$heading-font                	: "Allerta Stencil",sans-serif;
+//$heading-font                	: "Helvetica Neue","Segoe UI",Arial,sans-serif;
 $caption-font                	: $base-font;
 $code-font                   	: monospace;
 $alt-font                    	: $heading-font;
+$hi-font                      : "Lobster",cursive;
+//$hi-font                      : "IBM Plex Serif",serif;
 
 $doc-font-size               	: 16;
 $doc-line-height             	: 24;
@@ -23,7 +28,12 @@ $border-radius               	: 3px;
 
 $white                        : #fff;
 $black                        : #000;
+
 $red                          : #f00;
+$awesome                      : #ff2052;
+$amaranth                     : #e52b50;
+$boston-red                   : #cc0000;
+$cg-red                       : #e03c31;
 
 $body-color                  	: #ebebeb;
 

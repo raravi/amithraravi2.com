@@ -1,4 +1,8 @@
-<div class="column">
-	<h4>{{content.title}}</h4>
-	<p>{{content.excerpt}}</p>
-</div><!-- /.tile -->
+<div class="gridrow">
+	{% for content in site.data.aboutgrid %}
+		<div class="twocolumn">
+			<h4>{{content.title}}</h4>
+			<p>{{content.excerpt}}</p>
+		</div><!-- /.tile -->
+	{% endfor %}
+</div><!-- /.tiles -->

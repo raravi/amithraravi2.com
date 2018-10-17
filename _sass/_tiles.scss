@@ -14,10 +14,7 @@
   }
   &:hover {
     .post-title {
-      a {
-        text-decoration: underline;
-        color:red;
-      }
+      color: $cg-red;
     }
     .post-teaser {
       &:after {
@@ -26,14 +23,16 @@
     }
   }
   .entry-date {
-    @include font-size(16,no);
+    @include font-size(12,no);
     color: lighten($text-color,25);
   }
   .post-title {
-    @include font-size(18,no);
+    @include font-size(20,no);
+    color: $text-color;
   }
   .post-excerpt {
-    @include font-size(16);
+    @include font-size(15);
+    color: $text-color;
   }
   .post-teaser {
     position: relative;

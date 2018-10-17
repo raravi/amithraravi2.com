@@ -1,4 +1,8 @@
-<div class="tile">
-	<h2 class="post-title">{{content.title}}</h2>
-	<p class="post-excerpt">{{content.excerpt}}</p>
-</div><!-- /.tile -->
+<div class="gridrow">
+	{% for content in site.data.contentgrid %}
+		<div class="fourcolumn">
+			<h5>{{content.title}}</h5>
+			<p>{{content.excerpt}}</p>
+		</div><!-- /.tile -->
+	{% endfor %}
+</div><!-- /.tiles -->

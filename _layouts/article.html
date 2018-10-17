@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <div id="main" role="main">
 	<article class="wrap" itemscope itemtype="http://schema.org/Article">
 		{% if page.image.feature %}
@@ -13,23 +12,70 @@ layout: default
 		</div><!-- /.page-feature -->
 		{% endif %}
 		{% include breadcrumbs.html %}
-		<div class="page-title">
-			<h1>{{ page.title }}</h1>
-		</div>
+		<!--
+		-->
+		<div class="gridrow">
+		<div class="mainbar">
 		<div class="inner-wrap">
+			<div class="header-line-red"></div>
+			<div class="page-title">
+				<h1>{{ page.title }}</h1>
+			</div>
+			<div class="article-date">
+				{% include page-meta-top.html %}
+			</div>
+			<div class="header-line"></div>
+			<div class="header-line-red"></div>
 			<div id="content" class="page-content" itemprop="articleBody">
 				{{ content }}
-				<hr />
+				<div class="header-line"></div>
+				<div class="header-line"></div>
+				<div class="header-line-red"></div>
+				<div class="header-line"></div>
 				<footer class="page-footer">
-					{% include page-meta.html %}<br><br>
 					{% if page.categories %}{% include page-author.html %}{% endif %}
 					{% if page.share != false %}{% include share-this.html %}{% endif %}
 				</footer><!-- /.footer -->
+				<div class="header-line-red"></div>
+				<div class="header-line"></div>
 				<aside>
 					{% include post-comments.html %}
 				</aside>
 			</div><!-- /.content -->
 		</div><!-- /.inner-wrap -->
 		{% if page.ads == true %}<div class="ads">{% include advertising.html %}</div><!-- /.ads -->{% endif %}
+		</div>
+		<div class="sidebar">
+			<div>
+				<img src="/images/amith-bio-300x300.png" class="bio-pic" alt="Avatar">
+			</div>
+			<div class="text">
+				<p class="sayhi">Hi there! Nice to meet you!</p>
+				<div class="header-line-red"></div>
+				<p>I'm Amith: former .Net developer, now full time freelancer/blogger. My wife and I live in Bengaluru, India. I love a good book, a quiet getaway, and a good laugh. </p>
+			</div>
+			<div class="header-line-red"></div>
+			<div class="text">
+				<h5>Latest Posts</h5>
+			</div>
+			{% assign total = 0 %}
+			{% for post in site.posts %}
+				{% if post.layout == "article" %}
+				{% if post.title != page.title %}
+				{% if post.categories == page.categories %}
+					{% assign total = total | plus: 1 %}
+					<div class="header-line-red"></div>
+					<div>
+						{% include sidebar.html %}
+					</div>
+					<div class="header-line"></div>
+				{% endif %}
+				{% endif %}
+				{% endif %}
+			{% endfor %}
+		</div> <!-- sidebar -->
+	</div> <!-- gridrow -->
+		<!--
+		-->
 	</article><!-- ./wrap -->
 </div><!-- /#main -->

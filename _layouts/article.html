@@ -58,12 +58,10 @@ layout: default
 			<div class="text">
 				<h5>Latest Posts</h5>
 			</div>
-			{% assign total = 0 %}
 			{% for post in site.posts %}
 				{% if post.layout == "article" %}
 				{% if post.title != page.title %}
 				{% if post.categories == page.categories %}
-					{% assign total = total | plus: 1 %}
 					<div class="header-line-red"></div>
 					<div>
 						{% include sidebar.html %}

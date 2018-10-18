@@ -50,3 +50,22 @@
     }
   }
 }
+
+@media screen and (max-width: 600px) {
+   .tile {
+       width: 100%;
+   }
+}
+
+@media screen and (min-width: 601px) and (max-width: 800px) {
+   .tile {
+       width: 45%;
+   }
+}
+
+
+@media screen and (min-width: 801px) and (max-width: 1000px) {
+   .tile {
+       width: 30%;
+   }
+}

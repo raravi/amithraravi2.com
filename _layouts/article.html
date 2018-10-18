@@ -45,33 +45,7 @@ layout: default
 		</div><!-- /.inner-wrap -->
 		{% if page.ads == true %}<div class="ads">{% include advertising.html %}</div><!-- /.ads -->{% endif %}
 		</div>
-		<div class="sidebar">
-			<div>
-				<img src="/images/amith-bio-300x300.png" class="bio-pic" alt="Avatar">
-			</div>
-			<div class="text">
-				<p class="sayhi">Hi there! Nice to meet you!</p>
-				<div class="header-line-red"></div>
-				<p>I'm Amith: former .Net developer, now full time freelancer/blogger. My wife and I live in Bengaluru, India. I love a good book, a quiet getaway, and a good laugh. </p>
-			</div>
-			<div class="header-line-red"></div>
-			<div class="text">
-				<h5>Latest Posts</h5>
-			</div>
-			{% for post in site.posts %}
-				{% if post.layout == "article" %}
-				{% if post.title != page.title %}
-				{% if post.categories == page.categories %}
-					<div class="header-line-red"></div>
-					<div>
-						{% include sidebar.html %}
-					</div>
-					<div class="header-line"></div>
-				{% endif %}
-				{% endif %}
-				{% endif %}
-			{% endfor %}
-		</div> <!-- sidebar -->
+		{% include sidebar.html %}
 	</div> <!-- gridrow -->
 		<!--
 		-->

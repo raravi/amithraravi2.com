@@ -6,7 +6,8 @@
    Typography variables
    ========================================================================== */
 
-$base-font                   	: "Montserrat",sans-serif;
+//$base-font                   	: "Montserrat",sans-serif;
+$base-font                   	: "Niramit",sans-serif;
 //$base-font                   	: "Zilla Slab",serif;
 //$base-font                   	: Georgia,Times,"Times New Roman",serif;
 $heading-font                	: "Allerta Stencil",sans-serif;
@@ -15,7 +16,6 @@ $caption-font                	: $base-font;
 $code-font                   	: monospace;
 $alt-font                    	: $heading-font;
 $hi-font                      : "Lobster",cursive;
-//$hi-font                      : "IBM Plex Serif",serif;
 
 $doc-font-size               	: 16;
 $doc-line-height             	: 24;

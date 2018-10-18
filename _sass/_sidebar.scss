@@ -1,0 +1,108 @@
+/* ==========================================================================
+   Sidebar / Mainbar - Article
+   ========================================================================== */
+
+   /* Main bar & Side bar */
+   .mainbar {
+       float: left;
+       width: 75%;
+       padding-top: 40px;
+   }
+   .sidebar {
+       float: left;
+       width: 25%;
+       padding: 10px;
+   }
+
+   @media screen and (max-width: 900px) {
+      .mainbar {
+          width: 100%;
+      }
+      .sidebar {
+          width: 75%;
+      }
+   }
+
+   .sidebar {
+     .bio-pic {
+       border-radius: 50%;
+     }
+     .sayhi {
+       @include font-size(20,no);
+       font-family: $hi-font;
+       color: $cg-red;
+     }
+     .text {
+       text-align: center;
+       a {
+         @include font-size(16,no);
+         text-decoration: none;
+       }
+     }
+   }
+
+   /* Sidebar - Latest Posts */
+   .sidebartile {
+     width: 100%;
+     &:hover {
+       .post-title {
+         color: $cg-red;
+       }
+       .post-teaser {
+         &:after {
+             background: rgba($base-color,0.25);
+         }
+       }
+     }
+     a {
+       text-decoration: none;
+     }
+     .entry-date {
+       @include font-size(12,no);
+       color: lighten($text-color,25);
+       text-decoration: none;
+     }
+     .post-title {
+       @include font-size(20,no);
+       color: $text-color;
+       text-decoration: none;
+     }
+     .post-excerpt {
+       @include font-size(15);
+       color: $text-color;
+       text-decoration: none;
+     }
+     .post-teaser {
+       position: relative;
+       display: block;
+       &:after {
+         content: '';
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left: 0;
+         background: rgba($base-color,0);
+         pointer-events: none;
+         @include transition(background 0.3s);
+       }
+     }
+   }
+
+   /* Header & Footer Lines */
+   .header-line {
+     height: 20px;
+     width: 100%;
+   }
+   .footer-line {
+     height: 10px;
+     width: 100%;
+   }
+   .header-line-red {
+     height: 7px;
+     width: 100%;
+     background-color: $red;
+   }
+   .site-title-padding {
+     width: 2000px;
+   }

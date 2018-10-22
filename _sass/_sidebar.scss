@@ -39,6 +39,17 @@
          text-decoration: none;
        }
      }
+     .blogger-resources {
+       a {
+         @include font-size(14,no);
+         font-family: $blogger-resources-font;
+         color: $text-color;
+         text-decoration: none;
+         &:hover {
+           color: $cg-red;
+         }
+       }
+     }
    }
 
    /* Sidebar - Latest Posts */

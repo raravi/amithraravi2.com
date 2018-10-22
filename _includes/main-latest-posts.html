@@ -1,0 +1,59 @@
+<div class="header-line"></div>
+<div class="header-line"></div>
+<div class="header-line-red"></div>
+<div class="main-latest-posts">
+    <div class="row">
+        <div class="title">
+          <h1>Latest Posts</h1>
+        </div>
+    </div>
+    <div class="row">
+    {% assign count = 1 %}
+    {% for post in site.posts %}
+      {% if count <= 6 %}
+      {% if post.layout == "article" %}
+          <div class="col">
+              <div class="image" style="background-image:url({{site.url}}/images/{{post.image.teaser}})">
+                  <div class="post-title">
+                        <p>{{post.categories[1]}}</p>
+                        <div class="line-red"></div>
+                        <h1>{{post.title}}</h1>
+                  </div>
+              </div>
+          </div>
+          {% assign count = count | plus:1 %}
+      {% endif %}
+      {% endif %}
+    {% endfor %}
+    </div>
+</div>
+
+<div class="header-line"></div>
+<div class="header-line"></div>
+<div class="header-line-red"></div>
+<div class="main-latest-posts">
+    <div class="row">
+        <div class="title">
+          <h1>Portfolio</h1>
+        </div>
+    </div>
+    <div class="row">
+    {% assign count = 1 %}
+    {% for post in site.posts %}
+      {% if count <= 4 %}
+      {% if post.categories[0] == "portfolio" %}
+          <div class="col">
+              <div class="image" style="background-image:url({{site.url}}/images/{{post.image.teaser}})">
+                  <div class="post-title">
+                        <p>{{post.categories[0]}}</p>
+                        <div class="line-red"></div>
+                        <h1>{{post.title}}</h1>
+                  </div>
+              </div>
+          </div>
+          {% assign count = count | plus:1 %}
+      {% endif %}
+      {% endif %}
+    {% endfor %}
+    </div>
+</div>

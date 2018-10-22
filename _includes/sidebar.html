@@ -2,6 +2,7 @@
   <div>
     <img src="/images/amith-bio-300x300.png" class="bio-pic" alt="Avatar">
   </div>
+  <div class="footer-line"></div>
   <div class="text">
     <p class="sayhi">Hi there! Nice to meet you!</p>
     <p>I'm Amith: former .Net developer, now full time freelancer/blogger. My wife and I live in Bengaluru, India. I love a good book, a quiet getaway, and a good laugh. </p>
@@ -30,20 +31,39 @@
   </div>
   <div class="header-line"></div>
   <div class="header-line-red"></div>
-  <div class="text">
-    <h5>Latest Posts</h5>
-  </div>
-  {% for post in site.posts %}
-    {% if post.layout == "article" %}
-    {% if post.title != page.title %}
-    {% if post.categories == page.categories %}
-      <div class="header-line-red"></div>
-      <div>
-        {% include sidebar-latestposts.html %}
+  {% if page.layout == "article" %}
+      <div class="text">
+        <h5>Latest Posts</h5>
       </div>
-      <div class="header-line"></div>
-    {% endif %}
-    {% endif %}
-    {% endif %}
-  {% endfor %}
+      {% assign count = 1 %}
+      {% for post in site.posts %}
+        {% if count <= 4 %}
+        {% if post.layout == "article" %}
+        {% if post.title != page.title %}
+        {% if post.categories == page.categories %}
+          <div>
+            {% include sidebar-latestposts.html %}
+            {% assign count = count | plus:1 %}
+          </div>
+          <div class="header-line"></div>
+        {% endif %}
+        {% endif %}
+        {% endif %}
+        {% endif %}
+      {% endfor %}
+      <div class="header-line-red"></div>
+  {% endif %}
+  <div class="text">
+    <h5>Blogger Resources</h5>
+  </div>
+  <div class="blogger-resources">
+    <p>
+      <a href="https://www.amithraravi.com/articles/tech/your-own-website-part-1/"> ➤ Your own website - Part I</a><br/>
+      <a href="https://www.amithraravi.com/articles/tech/your-own-website-part-2/"> ➤ Your own website - Part II</a><br/>
+      <a href="https://cookieandkate.com/how-to-start-a-blog/"> ➤ How to Start any Blog</a><br/>
+      <a href="https://www.bloggingbasics101.com/how-do-i-start-a-blog/"> ➤ Blogging - Beginner’s Guide 2018</a><br/>
+      <a href="https://makeawebsitehub.com/examples-of-blogs/"> ➤ Examples of Blogs – 2018 Edition</a>
+    </p>
+  </div>
+  <div class="header-line-red"></div>
 </div> <!-- sidebar -->

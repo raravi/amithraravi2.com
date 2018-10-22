@@ -15,38 +15,38 @@ layout: default
 		<!--
 		-->
 		<div class="gridrow">
-		<div class="mainbar">
-		<div class="inner-wrap">
-			<div class="header-line-red"></div>
-			<div class="page-title">
-				<h1>{{ page.title }}</h1>
-			</div>
-			<div class="article-date">
-				{% include page-meta-top.html %}
-			</div>
-			<div class="header-line"></div>
-			<div class="header-line-red"></div>
-			<div id="content" class="page-content" itemprop="articleBody">
-				{{ content }}
-				<div class="header-line"></div>
-				<div class="header-line"></div>
-				<div class="header-line-red"></div>
-				<div class="header-line"></div>
-				<footer class="page-footer">
-					{% if page.categories %}{% include page-author.html %}{% endif %}
-					{% if page.share != false %}{% include share-this.html %}{% endif %}
-				</footer><!-- /.footer -->
-				<div class="header-line-red"></div>
-				<div class="header-line"></div>
-				<aside>
-					{% include post-comments.html %}
-				</aside>
-			</div><!-- /.content -->
-		</div><!-- /.inner-wrap -->
-		{% if page.ads == true %}<div class="ads">{% include advertising.html %}</div><!-- /.ads -->{% endif %}
-		</div>
-		{% include sidebar.html %}
-	</div> <!-- gridrow -->
+				<div class="mainbar">
+						<div class="inner-wrap">
+								<div class="header-line-red"></div>
+								<div class="page-title">
+									<h1>{{ page.title }}</h1>
+								</div>
+								<div class="article-date">
+									{% include page-meta-top.html %}
+								</div>
+								<div class="header-line"></div>
+								<div class="header-line-red"></div>
+								<div id="content" class="page-content" itemprop="articleBody">
+									{{ content }}
+									<div class="header-line"></div>
+									<div class="header-line"></div>
+									<div class="header-line-red"></div>
+									<div class="header-line"></div>
+									<footer class="page-footer">
+										{% if page.categories %}{% include page-author.html %}{% endif %}
+										{% if page.share != false %}{% include share-this.html %}{% endif %}
+									</footer><!-- /.footer -->
+									<div class="header-line-red"></div>
+									<div class="header-line"></div>
+									<aside>
+										{% include post-comments.html %}
+									</aside>
+								</div><!-- /.content -->
+							</div><!-- /.inner-wrap -->
+							{% if page.ads == true %}<div class="ads">{% include advertising.html %}</div><!-- /.ads -->{% endif %}
+				</div> <!-- mainbar -->
+				{% include sidebar.html %}
+		</div> <!-- gridrow -->
 		<!--
 		-->
 	</article><!-- ./wrap -->

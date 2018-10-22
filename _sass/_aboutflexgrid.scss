@@ -1,0 +1,153 @@
+/* ==========================================================================
+   About Flex Grid
+   ========================================================================== */
+
+   .mainbox {
+       //border: 1px solid #000;  /* For debugging */
+       display: flex;
+       flex-direction: column;
+       .row {
+         display: flex;
+         align-items: stretch;
+         flex-wrap: wrap;
+         .col {
+             flex: 50%;
+             max-width: 50%;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+
+             .grid-title {
+                  padding: 1em;
+                 	@include media($medium) {
+                 		padding: 2em;
+                 	}
+                 	@include media($large) {
+                 		padding: 3em;
+                 	}
+                 	h1 {
+                 		@include font-size(48);
+                 		@include media($medium) {
+                 			@include font-size(60);
+                 		}
+                 		@include media($large) {
+                 			@include font-size(60);
+                 		}
+                 	}
+             }
+             .grid-content {
+                   padding-left: 15px;
+                   padding-right: 30px;
+                   padding-top: 30px;
+                   padding-bottom: 30px;
+                 	 li {
+                 		  color: lighten($text-color,17);
+                 		   @include font-size(18);
+                 		   @include media($medium) {
+                 			     @include font-size(20);
+                 	     }
+                 	     @include media($large) {
+                          @include font-size(20);
+                 	     }
+                 	 }
+             }
+         }
+         /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+         @media screen and (max-width: 800px) {
+            .col {
+              flex: 100%;
+              max-width: 100%;
+            }
+          }
+         .image {
+             text-align: center;
+           	 color: $white;
+           	 text-shadow: 1px 1px $text-color;
+           	 background-size: 100% 100%;
+         }
+       }
+       .forward {
+         flex-direction: row;
+       }
+       .reverse {
+         flex-direction: row-reverse;
+       }
+   }
+
+   .main-latest-posts {
+       display: flex;
+       flex-direction: column;
+       padding: 0 4px;
+       .row {
+           display: flex;
+           flex-wrap: wrap;
+           flex-direction: row;
+           padding: 0 4px;
+           .col {
+               display: flex;
+               flex: 50%;
+               max-width: 50%;
+               padding: 0 4px;
+
+               .image {
+                   width: 100%;
+                   margin-top: 8px;
+                   height: 250px;
+                   text-align: left;
+                 	 color: $white;
+                 	 text-shadow: 1px 1px $text-color;
+                 	 background-size: 100% 100%;
+                   .post-title {
+                       padding-left: 20px;
+                       padding-right: 20px;
+                       padding-top: 10px;
+                       p {
+                           text-transform: uppercase;
+                           @include font-size(16);
+                           @include media($medium) {
+                              @include font-size(18);
+                           }
+                           @include media($large) {
+                              @include font-size(18);
+                           }
+                       }
+                       h1 {
+                           @include font-size(20);
+                           @include media($medium) {
+                              @include font-size(24);
+                           }
+                           @include media($large) {
+                              @include font-size(24);
+                           }
+                       }
+                       .line-red {
+                         height: 4px;
+                         width: 100px;
+                         background-color: $red;
+                       }
+                   }
+               }
+           }
+           @media screen and (max-width: 600px) {
+              .col {
+                flex: 100%;
+                max-width: 100%;
+              }
+           }
+           .title {
+              display: flex;
+              flex: 100%;
+              max-width: 100%;
+              justify-content: center;
+              h1 {
+                 @include font-size(30);
+                   @include media($medium) {
+                      @include font-size(36);
+                   }
+                   @include media($large) {
+                      @include font-size(36);
+                   }
+               }
+           }
+       }
+   }

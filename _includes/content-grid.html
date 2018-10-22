@@ -1,8 +1,57 @@
-<div class="gridrow">
-	{% for content in site.data.contentgrid %}
-		<div class="fourcolumn">
-			<h5>{{content.title}}</h5>
-			<p>{{content.excerpt}}</p>
-		</div><!-- /.tile -->
-	{% endfor %}
-</div><!-- /.tiles -->
+<div class="header-line"></div>
+<div class="header-line"></div>
+<div class="header-line"></div>
+<div class="header-line-red"></div>
+<div class="header-line"></div>
+<div class="header-line"></div>
+
+<div class="mainbox">
+  <div class="row forward"><!-- Block 1 -->
+    <div class="col image" style="background-image:url({{site.url}}/images/dotnet-1600x800.jpg)">
+			<div class="grid-title">
+						<h1>{{site.data.contentgrid[0].title}}</h1>
+			</div><!-- /.page-lead-content -->
+    </div>
+    <div class="col">
+			<div class="grid-content">
+      {{site.data.contentgrid[0].excerpt}}
+		  </div>
+    </div>
+  </div>
+  <div class="row reverse"><!-- Block 2 -->
+    <div class="col image" style="background-image:url({{ site.url }}/images/website-design-1600x800.jpg)">
+			<div class="grid-title">
+						<h1>{{site.data.contentgrid[1].title}}</h1>
+			</div><!-- /.page-lead-content -->
+    </div>
+		<div class="col">
+			<div class="grid-content">
+      {{site.data.contentgrid[1].excerpt}}
+		  </div>
+    </div>
+  </div>
+  <div class="row forward"><!-- Block 3 -->
+    <div class="col image" style="background-image:url({{ site.url }}/images/editor-1600x800.jpg)">
+			<div class="grid-title">
+						<h1>{{site.data.contentgrid[2].title}}</h1>
+			</div><!-- /.page-lead-content -->
+    </div>
+		<div class="col">
+			<div class="grid-content">
+      {{site.data.contentgrid[2].excerpt}}
+		  </div>
+    </div>
+  </div>
+	<div class="row reverse"><!-- Block 4 -->
+    <div class="col image" style="background-image:url({{ site.url }}/images/writer-1600x800.jpg)">
+			<div class="grid-title">
+						<h1>{{site.data.contentgrid[3].title}}</h1>
+			</div><!-- /.page-lead-content -->
+    </div>
+		<div class="col">
+			<div class="grid-content">
+      {{site.data.contentgrid[3].excerpt}}
+		  </div>
+    </div>
+  </div>
+</div>

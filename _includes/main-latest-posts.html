@@ -12,14 +12,16 @@
     {% for post in site.posts %}
       {% if count <= 6 %}
       {% if post.layout == "article" %}
-          <div class="col">
-              <div class="image" style="background-image:url({{site.url}}/images/{{post.image.teaser}})">
-                  <div class="post-title">
-                        <p>{{post.categories[1]}}</p>
-                        <div class="line-red"></div>
-                        <h1>{{post.title}}</h1>
+          <div class="col col-latest-posts">
+              <a href="{{ site.url }}{{ post.url }}">
+                  <div class="image" style="background-image:url({{site.url}}/images/{{post.image.teaser}})">
+                      <div class="post-title">
+                            <p>{{post.categories[1]}}</p>
+                            <div class="line-red"></div>
+                            <h1>{{post.title}}</h1>
+                      </div>
                   </div>
-              </div>
+              </a>
           </div>
           {% assign count = count | plus:1 %}
       {% endif %}
@@ -42,14 +44,16 @@
     {% for post in site.posts %}
       {% if count <= 4 %}
       {% if post.categories[0] == "portfolio" %}
-          <div class="col">
-              <div class="image" style="background-image:url({{site.url}}/images/{{post.image.teaser}})">
-                  <div class="post-title">
-                        <p>{{post.categories[0]}}</p>
-                        <div class="line-red"></div>
-                        <h1>{{post.title}}</h1>
+          <div class="col col-portfolio">
+              <a href="{{ site.url }}{{ post.url }}">
+                  <div class="image" style="background-image:url({{site.url}}/images/{{post.image.teaser}})">
+                      <div class="post-title">
+                            <p>{{post.categories[0]}}</p>
+                            <div class="line-red"></div>
+                            <h1>{{post.title}}</h1>
+                      </div>
                   </div>
-              </div>
+              </a>
           </div>
           {% assign count = count | plus:1 %}
       {% endif %}

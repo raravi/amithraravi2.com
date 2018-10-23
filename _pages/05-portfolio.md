@@ -4,10 +4,12 @@ title: Portfolio
 permalink: /portfolio/
 ---
 
-<div class="tiles">
+<div class="articles-tiles">
 {% for post in site.posts %}
 	{% if post.layout == "media" %}
-		{% include post-grid.html %}
+			<div class="col">
+			{% include post-grid.html %}
+			</div>
 	{% endif %}
 {% endfor %}
 </div><!-- /.tiles -->

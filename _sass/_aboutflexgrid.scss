@@ -77,30 +77,46 @@
    .main-latest-posts {
        display: flex;
        flex-direction: column;
-       padding: 0 4px;
+       padding: 0 8px;
        .row {
            display: flex;
            flex-wrap: wrap;
            flex-direction: row;
-           padding: 0 4px;
+           padding: 0 8px;
            .col {
                display: flex;
-               flex: 50%;
-               max-width: 50%;
-               padding: 0 4px;
+               //flex: 50%;
+               //max-width: 50%;
+               padding: 0 8px;
+
+               a {
+                 width: 100%;
+               }
 
                .image {
                    width: 100%;
-                   margin-top: 8px;
+                   margin-top: 16px;
                    height: 250px;
                    text-align: left;
                  	 color: $white;
                  	 text-shadow: 1px 1px $text-color;
                  	 background-size: 100% 100%;
+                   &:hover {
+                     .post-title {
+                       color: $cg-red;
+                       .line-red {
+                         background-color: $white;
+                       }
+                     }
+                     &:after {
+                           background: rgba($base-color,0.25);
+                       }
+                   }
                    .post-title {
                        padding-left: 20px;
                        padding-right: 20px;
                        padding-top: 10px;
+                       color: $white;
                        p {
                            text-transform: uppercase;
                            @include font-size(16);
@@ -128,10 +144,24 @@
                    }
                }
            }
+           .col-latest-posts {
+             flex: 50%;
+             max-width: 50%;
+           }
+           .col-portfolio {
+             flex: 25%;
+             max-width: 25%;
+           }
            @media screen and (max-width: 600px) {
-              .col {
+              .col-latest-posts {
                 flex: 100%;
                 max-width: 100%;
+              }
+           }
+           @media screen and (max-width: 900px) {
+              .col-portfolio {
+                flex: 50%;
+                max-width: 50%;
               }
            }
            .title {
@@ -149,5 +179,45 @@
                    }
                }
            }
+       }
+   }
+
+   .main-about-me {
+       display: flex;
+       flex-wrap: wrap;
+       flex-direction: row;
+       align-items: center;
+
+       .col {
+           display: flex;
+           flex-direction: column;
+           flex: 33%;
+           max-width: 33%;
+
+           .bio-pic {
+               border-radius: 50%;
+               padding: 30px;
+           }
+           .sayhi {
+               @include font-size(20,no);
+               font-family: $hi-font;
+               color: $cg-red;
+           }
+           .text {
+               text-align: center;
+               a {
+                 @include font-size(16,no);
+                 text-decoration: none;
+               }
+           }
+       }
+       @media screen and (max-width: 600px) {
+          .col {
+            flex: 100%;
+            max-width: 100%;
+            .bio-pic {
+                padding: 80px;
+            }
+          }
        }
    }

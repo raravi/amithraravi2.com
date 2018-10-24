@@ -10,6 +10,8 @@ locale: en
 repository: raravi/amithraravi2.com
 staticman:
   branch: master
+#comments:
+#  receiver: https://staticman-amith.azurewebsites.net/api/PostComment
 
 # Change this before publishing to Live Server!!!
 url: https://www.amithraravi.com

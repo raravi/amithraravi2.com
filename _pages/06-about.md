@@ -20,6 +20,6 @@ I've been freelancing since the beginning of 2017. My main focus areas are websi
 
 ### Contact Me
 
-If you are looking for an editor or a writer, send me an email with your requirements at <a href="mailto:amith.raravi@gmail.com">amith.raravi@gmail.com</a>. I usually reply within a day.
+If you are looking for an editor or a writer, send me an email with your requirements at <a href="mailto:{{site.owner.email}}">amith.raravi@gmail.com</a>. I usually reply within a day.
 
-I'm always looking forward to connect with new people! Find me on [GitHub](https://github.com/raravi), [Google+](https://plus.google.com/+AmithRaravi), [LinkedIn](https://www.linkedin.com/in/amith-raravi-82b525139), [Instagram](https://www.instagram.com/the.raravi.chronicles), [Facebook](https://www.facebook.com/amith.raravi), [Twitter](https://www.twitter.com/amith_raravi), [XDA](https://forum.xda-developers.com/member.php?u=4214466), [Good Reads](https://www.goodreads.com/user/show/12212283-amith-raravi) and [Runkeeper](https://runkeeper.com/user/raravi).
+I'm always looking forward to connect with new people! Find me on [GitHub]({{site.github.url}}/{{site.github.username}}), [Google+]({{site.googleplus.url}}/{{site.googleplus.username}}), [LinkedIn]({{site.linkedin.url}}/{{site.linkedin.username}}), [Instagram]({{site.instagram.url}}/{{site.instagram.username}}), [Facebook]({{site.facebook.url}}/{{site.facebook.username}}), [Twitter]({{site.twitter.url}}/{{site.twitter.username}}), [XDA]({{site.xda.url}}/{{site.xda.username}}), [Good Reads]({{site.goodreads.url}}/{{site.goodreads.username}}) and [Runkeeper]({{site.runkeeper.url}}/{{site.runkeeper.username}}).

@@ -35,9 +35,9 @@ plugins:
 
 # Site owner
 owner:
-  name:
-  email:
-  twitter:
+  name: Amith Raravi
+  email: amith.raravi@gmail.com
+  twitter: https://www.twitter.com/amith_raravi
   google:
     ad-client:
     ad-slot:
@@ -47,7 +47,40 @@ owner:
   disqus-shortname:
 
 twitter:
+  url: https://www.twitter.com
   username: amith_raravi
+
+facebook:
+  url: https://www.facebook.com
+  username: amith.raravi
+
+linkedin:
+  url: https://www.linkedin.com
+  username: in/amith-raravi-82b525139
+
+googleplus:
+  url: https://plus.google.com
+  username: +AmithRaravi
+
+github:
+  url: https://github.com
+  username: raravi
+
+instagram:
+  url: https://www.instagram.com
+  username: the.raravi.chronicles
+
+xda:
+  url: https://forum.xda-developers.com
+  username: member.php?u=4214466
+
+goodreads:
+  url: https://www.goodreads.com
+  username: user/show/12212283-amith-raravi
+
+runkeeper:
+  url: https://runkeeper.com
+  username: user/raravi
 
 social:
   name: Amith Raravi

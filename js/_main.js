@@ -37,7 +37,7 @@ $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']").addClass("image-popup");
       success: function (data) {
         $('#comment-form-submit').html('Submitted');
         $('#comment-form .js-notice').removeClass('notice--danger').addClass('notice--success');
-        showAlert('<strong>Thanks for your comment!</strong> It will show on the site once it has been approved.');
+        showAlert('<strong>Thank you!</strong> Your comment will show up here once it has been approved by the moderator.');
       },
       error: function (err) {
         console.log(err);

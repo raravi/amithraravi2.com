@@ -221,3 +221,29 @@
           }
        }
    }
+
+/* ==========================================================================
+   Share This buttons
+   ========================================================================== */
+
+   .sharethis {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      //align-content: stretch;
+      //flex: 100%;
+      //max-width: 100%;
+      .col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 33%;
+        max-width: 33%;
+      }
+      @media screen and (max-width: 600px) {
+         .col {
+           flex: 100%;
+           max-width: 100%;
+         }
+      }
+   }

@@ -5,7 +5,7 @@ author:     amith_raravi
 date:       2017-04-17 14:51:00 +0530
 modified:   2017-04-17 16:34:00 +0530
 categories: [articles, tech]
-image:      images/jekyll-logo.png
+image:      images/jekyll-templates.png
 teaser:     jekyll-logo-400x250.png
 ---
 

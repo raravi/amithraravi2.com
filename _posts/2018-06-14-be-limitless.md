@@ -5,13 +5,13 @@ author:     amith_raravi
 date:       2018-06-14 20:11:00 +0530
 modified:   2018-06-14 21:59:00 +0530
 categories: [articles, personal]
-image:
-  teaser:   limitless-1-400x250.jpg
+image:      images/limitless-1.jpg
+teaser:     limitless-1-400x250.jpg
 ---
 
 There was a hope, which was more than hope.
 
-![image](/images/limitless-1.jpg)
+![image]({{ site.images }}limitless-1.jpg)
 
 It is seen in a kid’s incredible joy at being alive, at being able to do wondrous things, and experiencing something new. The kid is not good at it and it doesn’t matter. What matters is the experience!
 
@@ -23,7 +23,7 @@ As we grow up, we are constantly told that what we do isn’t enough. So we do t
 
 >Why should it be normal only if everybody agrees it is so? Why not let things be as they are? Why give them a label? Why rationalize the normal to fit the average?
 
-![image](/images/limitless-2.jpg)
+![image]({{ site.images }}limitless-2.jpg)
 
 So we learn to like what we do. To be happy, we ride a wave, from low to high. A new phone! A new car! These are a never ending cycle of waves. And the amount of happiness felt will reduce with every subsequent wave ridden. It’s how humans are wired, to always look for more. And we keep looking for the “*Bigger Better Deal*”…
 
@@ -39,9 +39,9 @@ Until the realization sinks in, that happiness and sadness are as much a part of
 
 >The point of living is to live. Not to be happy, not to be sad, but to live itself.
 
-![image](/images/limitless-3.jpg)
+![image]({{ site.images }}limitless-3.jpg)
 
-Remove the limits placed on you by society, which you adapted yourself to, and look out. Everything has so much potential! You just didn’t see it!
+Remove the limits placed on you by society (which you have learned to adapt to) and look out. Everything has so much potential! You just didn’t see it!
 
 Time to live a new experience. Out with the old, in with the new!!
 

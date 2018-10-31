@@ -5,14 +5,14 @@ author:     amith_raravi
 date:       2017-04-26 18:45:00 +0530
 modified:   2017-04-26 19:59:00 +0530
 categories: [articles, personal]
-image:
-  teaser:   morality-400x250.jpg
+image:      images/morality.jpg
+teaser:     morality-400x250.jpg
 ---
 
 > Morality is not the doctrine of how we may make ourselves happy, but how we may make ourselves worthy of happiness.
 > ~ Immanuel Kant
 
-![image](/images/morality.jpg)
+![image]({{ site.images }}morality.jpg)
 
 As we grow up, our parents instil their ethics in us. We learn by seeing what our parents do, and by learning what happens when we lie. *Do we get away with our lie? What happens when we get caught? What did happen when we got caught?* The lie would be successful if we as kids were intelligent enough to manipulate our way out of it.
 

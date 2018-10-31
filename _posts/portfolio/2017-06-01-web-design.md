@@ -6,7 +6,7 @@ modified:
 categories: portfolio
 image:
   feature:  website-design-1600x800.jpg
-  teaser:   website-design-400x250.jpg
+teaser:   website-design-400x250.jpg
 ---
 Role:     Freelance Website Designer
 

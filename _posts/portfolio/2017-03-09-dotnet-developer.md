@@ -6,7 +6,7 @@ modified:
 categories: portfolio
 image:
   feature:  dotnet-1600x800.jpg
-  teaser:   dotnet-400x250.jpg
+teaser:   dotnet-400x250.jpg
 ---
 Company:  Cognizant Technology Solutions
 

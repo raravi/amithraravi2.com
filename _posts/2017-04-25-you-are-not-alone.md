@@ -5,15 +5,15 @@ author:     amith_raravi
 date:       2017-04-25 17:45:00 +0530
 modified:   2017-04-25 19:59:00 +0530
 categories: [articles, personal]
-image:
-  teaser:   not-alone-2-400x250.jpg
+image:      images/not-alone-2.jpg
+teaser:     not-alone-2-400x250.jpg
 ---
 
 Depression can hit anyone at any time in their lives.
 
 The sad thing is, most of us have no real experience dealing with it, and usually end up making it worse. How we deal with it is what matters most!
 
-![image](/images/not-alone-1.jpg)
+![image]({{ site.images }}not-alone-1.jpg)
 
 We all keep hearing voices in our heads, that keep reinforcing negative thoughts. The truth is that the negatives get exaggerated, and the positives get minimised. But we tend to believe what the voices are telling us. And that makes us feel so alone in this world.
 
@@ -25,7 +25,7 @@ Sometimes, the only person who thinks of yourself as a failure is you. And it’
 
 If you have been comparing yourself to your sibling/friend/cousin, and you gauge your success through the skewered lens of "greater than" or "less than", then prepare to be disappointed. Your life is to be lived, not a race to be won. Do not place useless and unrealistic expectations on yourself. It will backfire, and in serious cases it may lead you to depression.
 
-![image](/images/not-alone-2.jpg)
+![image]({{ site.images }}not-alone-2.jpg)
 
 **What If..** This is a loaded question. *What If I had taken a different path 10 years ago? What if I hadn’t done this? What if I had done that?* There are so many things we want to change. As we keep getting older(and hopefully wiser ☺), the list of “What If”s will only grow longer. Most of us learn to snap out of it and get on with our lives. And I think it’s a good thing too. Looking into the past will take us nowhere but down.
 
@@ -47,6 +47,6 @@ I’ll leave you with these words by [Valerie Renee](https://plus.google.com/+Va
 
 > A funny thing about taking steps towards your goal is that eventually you get there. The trick is to keep taking those smaller steps while keeping a positive attitude about the progress you’re making. It’s harder to do than it sounds because often these steps are not glamorous and it feels like you’re not getting anywhere. It’s easy to lose sight of the bigger picture and where you’re going. But as long as you keep taking the steps you’ll achieve something bigger than the sum of those steps.
 
-![image](/images/not-alone-3.jpg)
+![image]({{ site.images }}not-alone-3.jpg)
 
 Note: *All images used in this post are from [Unsplash](https://unsplash.com)!*

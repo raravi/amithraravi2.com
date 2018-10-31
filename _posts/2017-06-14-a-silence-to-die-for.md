@@ -5,13 +5,13 @@ author:     amith_raravi
 date:       2017-06-14 20:11:00 +0530
 modified:   2017-06-14 21:59:00 +0530
 categories: [articles, personal]
-image:
-  teaser:   silence-400x250.jpg
+image:      images/silence.jpg
+teaser:     silence-400x250.jpg
 ---
 
 My first horror story!
 
-![image](/images/silence.jpg)
+![image]({{ site.images }}silence.jpg)
 
 It’s been a crazy month. The wedding is a few weeks away and the activity has reached fever pitch. What with the constant buzz around the house and the amount of work for the wedding never seems to reduce.
 
@@ -23,7 +23,7 @@ It’s been a crazy month. The wedding is a few weeks away and the activity has 
 
 When my dad and mom told me that they will be heading out of town for a couple of days (for more inviting) I welcomed the news. I wanted a quiet few days to laze around and relax. So I told them I have work here in town and told them to go ahead without me :)
 
-I needed some peace and quiet to organize my thoughts before the D-Day arrived. I thought of so many things to do. Write a bit in my journal, I haven’t got the chance to do it in a while. Spend a cozy day in bed. And not move an inch. With these happy thoughts, I went to sleep.
+I needed some peace and quiet to organise my thoughts before the D-Day arrived. I thought of so many things to do. Write a bit in my journal, I haven’t got the chance to do it in a while. Spend a cozy day in bed. And not move an inch. With these happy thoughts, I went to sleep.
 
 ---
 
@@ -99,9 +99,9 @@ The breathing reminds me of the low rumbling of a watchful and malicious being. 
 
 That’s when the power comes back on, and I’m blinded by the light. And I hear — “*Why are you standing at the door?!*” It’s my dad’s voice. I open my eyes to see if it’s indeed him. It is him!
 
-Apparently, mom and dad had come back after I slept and then there was a power cut. Dad had slept off on the couch and mom in the bedroom.
+Apparently, mom and dad had come back after I slept and then there was a power cut. Dad had slept off on the couch and mom in the bedroom. After hearing this, I sigh deeply and go sit down beside him. Dad had always been a heavy sleeper with a snore that could rumble through the jungle. How many times have I and mom laughed about his ability to make so much noise through his nose?! After reminiscing over this for a bit, I come out of my reverie...
 
-After hearing this, I sigh deeply and go sit down beside him. I'm suddenly aware of the quiet. An uneasy quiet. I look towards my dad only to realise that it's not my dad.
+I'm suddenly aware of the quiet. An uneasy quiet. I look towards my dad only to realise that it's not my dad.
 
 I scream. And I wake up to find its dark already...
 

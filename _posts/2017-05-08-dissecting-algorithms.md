@@ -5,15 +5,15 @@ author:     amith_raravi
 date:       2017-05-08 19:56:00 +0530
 modified:   2017-05-08 21:59:00 +0530
 categories: [articles, tech]
-image:
-  teaser:   algorithm-400x250.jpg
+image:      images/algorithm.jpg
+teaser:     algorithm-400x250.jpg
 ---
 
 Algorithms are the building blocks of Computer Science.
 
 It's because our understanding of the world needs to be replicated into machine readable code so that it can be executed.
 
-![image](/images/algorithm.jpg)
+![image]({{ site.images }}algorithm.jpg)
 
 As advanced as the human brain is, people started to realise that machines can be faster (unbelievably so as time passed) and error-free. Humans make mistakes but machines never do, unless those errors are part of the programming.
 
@@ -55,10 +55,10 @@ You will understand the difference between a **Depth First Search** and **Breadt
 
 And right now we are in the age of Neural Networks and Machine Learning. Where we throw a generic scenario at a computer and it tries to solve it using other programs we have developed. And it gets better the more data we throw at it.
 
->Wikipedia says Neural Networks is a computer system modeled on the human brain and nervous system. See what I meant earlier about replication of our understanding into code?!
+>Wikipedia says Neural Networks is a computer system modelled on the human brain and nervous system. See what I meant earlier about replication of our understanding into code?!
 
 **Algorithms are a basic set of guidelines for generic scenarios.** If you have these set of inputs, do this. They are exciting because they help us to understand the “how” of a given problem. How do we solve it?
 
-Take a game you like and start coding in your favorite language. That is the best way to learn Algorithms.
+Take a game you like and start coding in your favourite language. That is the best way to learn Algorithms.
 
 **And you will create something of value along the way!**

@@ -5,33 +5,33 @@ author:     amith_raravi
 date:       2018-09-26 16:56:00 +0530
 modified:   
 categories: [articles, tech]
-image:
-  teaser:   ios-1-400x250.jpg
+image:      images/ios-1.jpg
+teaser:     ios-1-400x250.jpg
 ---
 
 iOS 12 Feature Highlight
 
 So you have updated to the new **iOS 12**, and want to see what it has to offer?! I’m sure you’ve read quite a few articles on all the new features by now. Among these, the one that should grab your attention is **Screen Time**. Let’s see why it’s so important for you and me.
 
-![image](/images/ios-1.jpg)
+![image]({{ site.images }}ios-1.jpg)
 
 ### WHY DO WE NEED IT?
 
-iOS 12 has been released at a time when our lives are being overshadowed by our online avatars. Our FB updates, Instagram posts, Tweets and LinkedIn posts are taking up so much of our time daily. We go on dates to have some uninterrupted ‘Us’ time with our significant other, only to realize that we have posted more updates online then we talked to each other all evening…
+iOS 12 has been released at a time when our lives are being overshadowed by our online avatars. Our FB updates, Instagram posts, Tweets and LinkedIn posts are taking up so much of our time daily. We go on dates to have some uninterrupted ‘Us’ time with our significant other, only to realise that we have posted more updates online then we talked to each other all evening…
 
 >Ooh, let me quickly post this dinner date on Instagram. Damn, the Greek salad was not as good as last time. On top of it, our waiter is rude. That’s it, let me write a scathing review on Yelp. My Uber is not here yet.
 
 See what I mean.
 
-People are starting to realize that they need to turn off their phones and devote more time to family and friends. Numerous articles have been written on how ‘switching off’ has helped people prioritize what’s important to them, and it has also led to reduced stress in their lives.
+People are starting to realise that they need to turn off their phones and devote more time to family and friends. Numerous articles have been written on how ‘switching off’ has helped people prioritise what’s important to them, and it has also led to reduced stress in their lives.
 
-Apple always strives for a better understanding of what people need right now. And it has realized that limiting phone usage is the way forward. People should make use of technology, while not becoming slaves to it. The decision to limit usage has to come from each individual user. Apple provides the tools, it’s up to the user to make efficient use of it.
+Apple always strives for a better understanding of what people need right now. And it has realised that limiting phone usage is the way forward. People should make use of technology, while not becoming slaves to it. The decision to limit usage has to come from each individual user. Apple provides the tools, it’s up to the user to make efficient use of it.
 
 ### WHAT IS IT?
 
 Enter **Screen Time**! Each user can see the stats on how they are using their devices. Apps they use have been grouped to make sense of the hundreds of apps on our phones. Prominent categories displayed on my iPhone include Social Networking, Games, Reading & Reference, Productivity, Entertainment, Creativity and Other.
 
-![image](/images/ios-2.jpg)
+![image]({{ site.images }}ios-2.jpg)
 
 The ability to create custom groups would have been greatly appreciated. Many users use Instagram to drive traffic to their blog, and surely can’t look at it as Social Networking. Who knows, Apple may add custom grouping in a future release.
 
@@ -47,7 +47,7 @@ Right, so now you have the tools to see clearly for yourself, how you are using 
 * **Always Allowed**: Calls, Messages, and other important stuff that you want to wake up for :)
 * **Content & Privacy Restrictions**: For those pesky apps that try to get into your kids’ phone!
 
-It’s one thing to have the options, and another to know what to do with them. Each of us have to realize the importance of **Screen Off Time**. If we utilize each option cleverly, then we can reduce our daily usage to ‘what’s required’ only. **Downtime** can be a set time of the day. Say dinner time with family, so that we make it a habit to eat together. **App Limits** can curb your time spent on Instagram, drooling over others travel diaries.
+It’s one thing to have the options, and another to know what to do with them. Each of us have to realise the importance of **Screen Off Time**. If we utilise each option cleverly, then we can reduce our daily usage to ‘what’s required’ only. **Downtime** can be a set time of the day. Say dinner time with family, so that we make it a habit to eat together. **App Limits** can curb your time spent on Instagram, drooling over others travel diaries.
 
 ### WHAT PEOPLE SAY
 
@@ -75,10 +75,10 @@ And a bit of truth gets revealed.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Me looking at my “Screen Time” stats in iOS 12. <a href="https://twitter.com/hashtag/Yikes?src=hash&amp;ref_src=twsrc%5Etfw">#Yikes</a> <a href="https://twitter.com/hashtag/PhoneAddict?src=hash&amp;ref_src=twsrc%5Etfw">#PhoneAddict</a> <a href="https://t.co/h9q92Y3rZL">pic.twitter.com/h9q92Y3rZL</a></p>&mdash; Mike Wilson (@MikeWils13) <a href="https://twitter.com/MikeWils13/status/1044703912429858816?ref_src=twsrc%5Etfw">September 25, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-People have often realized what’s right in front of them through self-mockery. And that’s another job well done for Twitter!
+People have often realised what’s right in front of them through self-mockery. And that’s another job well done for Twitter!
 
 ---
 
-Personally, I’ve found out a few surprising bits of information myself. Like I spend too much time scrolling **Instagram** before going to sleep. **DomiNations** takes up too much of my time every day, far more than I realized. News apps have my afternoons, mostly (I should be working, I know). **WhatsApp** is a time hog (those pesky notifications from friends) all through the day.
+Personally, I’ve found out a few surprising bits of information myself. Like I spend too much time scrolling **Instagram** before going to sleep. **DomiNations** takes up too much of my time every day, far more than I realised. News apps have my afternoons, mostly (I should be working, I know). **WhatsApp** is a time hog (those pesky notifications from friends) all through the day.
 
 In the end, it’s up to each one of us to make use of **Screen Time** as we see fit. We can either use it take control of our lives or continue to let devices steamroll all over us.

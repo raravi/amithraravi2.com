@@ -6,7 +6,7 @@ modified:
 categories: portfolio
 image:
   feature:  writer-1600x800.jpg
-  teaser:   writer-400x250.jpg
+teaser:   writer-400x250.jpg
 ---
 Role:     Freelance Writer
 

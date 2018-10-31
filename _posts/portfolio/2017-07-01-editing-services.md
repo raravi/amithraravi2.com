@@ -6,7 +6,7 @@ modified:
 categories: portfolio
 image:
   feature:  editor-1600x800.jpg
-  teaser:   editor-400x250.jpg
+teaser:   editor-400x250.jpg
 ---
 Role:     Freelance Editor
 

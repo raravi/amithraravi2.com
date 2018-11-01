@@ -191,12 +191,12 @@
        .col {
            display: flex;
            flex-direction: column;
+           align-items: center;
            flex: 33%;
            max-width: 33%;
 
            .bio-pic {
                border-radius: 50%;
-               padding: 30px;
            }
            .sayhi {
                @include font-size(20,no);
@@ -211,13 +211,10 @@
                }
            }
        }
-       @media screen and (max-width: 600px) {
+       @media screen and (max-width: 800px) {
           .col {
             flex: 100%;
             max-width: 100%;
-            .bio-pic {
-                padding: 80px;
-            }
           }
        }
    }

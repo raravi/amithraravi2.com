@@ -19,13 +19,20 @@
           width: 100%;
       }
       .sidebar {
-          width: 75%;
+          width: 100%;
       }
    }
 
    .sidebar {
-     .bio-pic {
-       border-radius: 50%;
+     .row {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       div {
+         .bio-pic {
+           border-radius: 50%;
+         }
+       }
      }
      .sayhi {
        @include font-size(20,no);

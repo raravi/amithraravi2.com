@@ -2,10 +2,10 @@
     header("Content-type: text/plain; charset=utf-8", true, 200); //Response body is text
     if(isset($_POST)) {
         $post       = $_POST;
-        $message    = $_POST['message'];
-        $name       = $_POST['name'];
-        $email      = $_POST['email'];
-        $url        = $_POST['url'];
+        $message    = trim($_POST['message']);
+        $name       = trim($_POST['name']);
+        $email      = md5(strtolower(trim( $_POST['email'])));
+        $url        = trim($_POST['url']);
         $slug       = $_POST['slug'];
 
         $date = new DateTime();

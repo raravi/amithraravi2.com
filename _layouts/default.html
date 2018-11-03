@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96482099-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-96482099-1');
+    </script>
+    <!-- End - Google Analytics -->
+
     <meta charset="utf-8">
     <title>{% if page.title %}{{ page.title }} • {% endif %}{{ site.title }}</title>
     {% if page.excerpt %}<meta name="description" content="{{ page.excerpt | strip_html }}">{% endif %}
@@ -8,6 +19,8 @@
     {% if page.author %}
       {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.owner %}
     {% endif %}
+
+    <!-- Google Ads Site Verification -->
     <meta name="google-site-verification" content="wZay7xUx1IaKgYaoC5EA1V9z-kAZ1fYLD2WtuLVMjbU" />
 
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -17,6 +30,7 @@
         enable_page_level_ads: true
       });
     </script>
+    <!-- End - Google Ads Site Verification -->
 
     {% seo title=false %}
 

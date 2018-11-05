@@ -108,15 +108,23 @@
    }
 
    /* Header & Footer Lines */
-   .header-line {
+   .div-25-high {
+     height: 25px;
+     width: 100%;
+   }
+   .div-20-high {
      height: 20px;
      width: 100%;
    }
-   .footer-line {
+   .div-10-high {
      height: 10px;
      width: 100%;
    }
-   .header-line-red {
+   .div-5-high {
+     height: 5px;
+     width: 100%;
+   }
+   .line-red {
      height: 7px;
      width: 100%;
      background-color: $red;

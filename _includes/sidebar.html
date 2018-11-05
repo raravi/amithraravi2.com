@@ -4,12 +4,12 @@
     <img src="{{ site.images }}amith-bio-300x300.png" class="bio-pic" alt="Avatar">
     </div>
   </div>
-  <div class="footer-line"></div>
+  <div class="div-10-high"></div>
   <div class="text">
     <p class="sayhi">Hi there! Nice to meet you!</p>
     <p>I'm Amith: former .Net developer, now full time freelancer/blogger. My wife and I live in Bengaluru, India. I love a good book, a quiet getaway, and a good laugh. </p>
   </div>
-  <div class="header-line-red"></div>
+  <div class="line-red"></div>
   <div class="text">
     <h5>Let's Hang Out</h5>
   </div>
@@ -27,12 +27,12 @@
       <i class="fa fa-facebook" aria-hidden="true"></i>
     </a>
   </div>
-  <div class="footer-line"></div>
+  <div class="div-10-high"></div>
   <div class="text">
     <a href="mailto:{{site.owner.email}}"><i>contact me</i></a>
   </div>
-  <div class="header-line"></div>
-  <div class="header-line-red"></div>
+  <div class="div-20-high"></div>
+  <div class="line-red"></div>
   {% if page.layout == "article" %}
       <div class="text">
         <h5>Latest Posts</h5>
@@ -47,13 +47,13 @@
             {% include sidebar-latestposts.html %}
             {% assign count = count | plus:1 %}
           </div>
-          <div class="header-line"></div>
+          <div class="div-20-high"></div>
         {% endif %}
         {% endif %}
         {% endif %}
         {% endif %}
       {% endfor %}
-      <div class="header-line-red"></div>
+      <div class="line-red"></div>
   {% endif %}
   <div class="text">
     <h5>Blogger Resources</h5>
@@ -67,5 +67,5 @@
       <a href="https://makeawebsitehub.com/examples-of-blogs/"> ➤ Examples of Blogs – 2018 Edition</a>
     </p>
   </div>
-  <div class="header-line-red"></div>
+  <div class="line-red"></div>
 </div> <!-- sidebar -->

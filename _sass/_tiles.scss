@@ -29,6 +29,7 @@
               }
             }
             .post-teaser {
+              margin-bottom: 0px;
               width: 100%;
               position: relative;
               display: block;
@@ -45,15 +46,18 @@
               }
             }
             .entry-date {
+              margin-top: 10px;
               @include font-size(12,no);
               color: lighten($text-color,25);
             }
             .post-title {
+              margin-top: 4px;
               @include font-size(20,no);
               color: $text-color;
             }
             .post-excerpt {
-              @include font-size(15);
+              margin-top: 10px;
+              @include font-size(14);
               color: $text-color;
             }
           }

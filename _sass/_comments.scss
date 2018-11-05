@@ -1,6 +1,14 @@
 /* ==========================================================================
    Comments
    ========================================================================== */
+.page__reactions {
+  .js-comments {
+    .page__section-label {
+      margin-top: 0px;
+    }
+  }
+}
+
 .comment {
   position: relative;
   margin-bottom: 4em;

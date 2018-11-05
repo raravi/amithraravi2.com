@@ -1,4 +1,4 @@
-<article id="comment{% if p %}{{ index | prepend: '-' }}{% else %}{{ include.index | prepend: '-' }}{% endif %}" class="js-comment comment {% if include.name == site.author.name %}admin{% endif %} {% if p %}child{% endif %}">
+<article id="comment{{ include.index | prepend: '-' }}" class="js-comment comment{% if include.name == site.author.name %} admin{% endif %}{% unless include.replying_to == 0 %} child{% endunless %}">
   <div class="commentbox">
 	  <div class="comment__avatar">
 		{% if include.avatar %}
@@ -31,4 +31,23 @@
   <div class="comment__content">
     {{ include.message | markdownify }}
   </div>
+  {% unless include.replying_to != 0 or page.comments_locked == true %}
+    <div class="comment__reply">
+      <a rel="nofollow" href="#comment-{{ include.index }}" onclick="return addComment.moveForm('comment-{{ include.index }}', '{{ include.index }}', 'respond', '{{ page.slug }}')"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve"><path class="replying-to-icon" d="M11.6,12.8l-1-1l2.7-2.7H5.5C0.2,9.1,0,3.9,0,3.7l0-0.5l1.4,0v0.5c0,0.2,0,4.1,4.1,4.1h7.8L10.6,5l1-1L16,8.4L11.6,12.8z"/></svg> Reply to {{ include.name }}</a>
+    </div>
+  {% endunless %}
 </article>
+
+{% capture i %}{{ include.index }}{% endcapture %}
+{% assign replies = site.data.comments[page.slug] | sort | where_exp: 'comment', 'comment[1].replying_to == i' %}
+{% for reply in replies %}
+  {% assign index       = forloop.index | prepend: '-' | prepend: include.index %}
+  {% assign replying_to = reply[1].replying_to | to_integer %}
+  {% assign avatar      = reply[1].avatar %}
+  {% assign email       = reply[1].email %}
+  {% assign name        = reply[1].name %}
+  {% assign url         = reply[1].url %}
+  {% assign date        = reply[1].date %}
+  {% assign message     = reply[1].message %}
+  {% include comment.html index=index replying_to=replying_to avatar=avatar email=email name=name url=url date=date message=message %}
+{% endfor %}

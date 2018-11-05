@@ -6,6 +6,7 @@
         $name       = trim($_POST['name']);
         $email      = md5(strtolower(trim( $_POST['email'])));
         $url        = trim($_POST['url']);
+        $replyingto = trim($_POST['replyingto']);
         $slug       = $_POST['slug'];
 
         $date = new DateTime();
@@ -13,6 +14,8 @@
         $myfilename = "entry$datetostring.yml";
         $myfile = fopen($myfilename, "w") or die("Unable to open file!");
         $txt = "_id: $datetostring\n";
+        fwrite($myfile, $txt);
+        $txt = "replying_to: '$replyingto'\n";
         fwrite($myfile, $txt);
         $txt = "message: \"$message\"\n";
         fwrite($myfile, $txt);

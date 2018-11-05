@@ -25,14 +25,20 @@
     display: -webkit-box;
     display: -moz-box;
     display: box;
-}	  
-	  
+}
+
 .comment__timestamp {
   font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
   font-size: 0.8em; }
   .comment__timestamp a {
     color: inherit;
     text-decoration: none; }
+
+.comment__content {
+  p {
+    font-size: 16px;
+  }
+}
 
 .comment__content > p, .comment__content > ul, .comment__content > ol, .comment__content > figure, .comment__content > table {
   margin-bottom: 1.5em; }
@@ -71,12 +77,32 @@
     z-index: -1; }
 
 .comment__author-name {
-  margin: 0 0 0.25em 0;
-  font-size: 1.25em;
-  line-height: 1; }
-  .comment__author-name a {
+  margin: 0 0 .25em 0;
+  font-size: 1.5em;
+  line-height: 1;
+  a {
     color: inherit;
-    text-decoration: none; }
+    text-decoration: none;
+  }
+}
+
+#cancel-comment-reply-link {
+  margin-left: 1em;
+}
+
+.comment__reply {
+  margin-top: 30px;
+  a {
+    font-size: 14px;
+    text-decoration: none;
+    svg {
+      height: 14px;
+      .replying-to-icon {
+        fill: $cg-red;
+      }
+    }
+  }
+}
 
 #comment-form {
   margin-bottom: 3em; }

@@ -1,4 +1,5 @@
 _id: 1541176542
+replying_to: '0'
 message: "Nice article Amith! Very insightful.\r\n\r\nJust a thought how about dumping comments in a nosql db like mongo. With proper hierarchy we can maintain replys to comments as well?"
 name: Vivek
 email: 49cdc8aa084593e00301121e4219830c

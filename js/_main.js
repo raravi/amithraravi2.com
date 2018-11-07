@@ -130,3 +130,23 @@ var addComment = {
 
 // Table of Contents title. Change text to localize
 $("#markdown-toc").prepend("<li><h6>{{ site.data.messages.locales[site.locale].overview }}</h6></li>");
+
+// external js: isotope.pkgd.js
+// init Isotope
+var $grid = $('.articles-tiles').isotope({
+  itemSelector: '.col',
+  layoutMode: 'fitRows'
+});
+// bind filter button click
+$('.filters-button-group').on( 'click', 'button', function() {
+  var filterValue = $( this ).attr('data-filter');
+  $grid.isotope({ filter: filterValue });
+});
+// change is-checked class on buttons
+$('.new-button-group').each( function( i, buttonGroup ) {
+  var $buttonGroup = $( buttonGroup );
+  $buttonGroup.on( 'click', 'button', function() {
+    $buttonGroup.find('.is-checked').removeClass('is-checked');
+    $( this ).addClass('is-checked');
+  });
+});

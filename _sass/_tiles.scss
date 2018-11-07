@@ -83,6 +83,74 @@
    }
 
    /* ==========================================================================
+      Isotope
+      ========================================================================== */
+
+   /* ---- button ---- */
+
+  .new-button{
+    background: $white;
+    //background: #e5e5e5;
+    //background: #ffeded;
+    color:$cg-red;
+    border:none;
+    position:relative;
+    height:40px;
+    font-size:1.1em;
+    padding:0 1em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+    margin-right: 10px;
+  }
+  .new-button:before,.new-button:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width: 100%;
+    background: $cg-red;
+    transition:200ms ease all;
+  }
+  .new-button:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  .new-button:hover {
+    background: #ffeded;
+    transition:400ms ease all;
+  }
+  .new-button:hover:before,.new-button:hover:after{
+    height: 3px;
+    transition:400ms ease all;
+  }
+
+  .new-button:active,
+  .new-button.is-checked {
+    background-color: $cg-red;
+    text-decoration: none;
+  }
+
+  .new-button.is-checked {
+    color: white;
+    text-shadow: 0 -1px hsla(0, 0%, 0%, 0.4);
+  }
+
+  .new-button:active {
+    box-shadow: inset 0 1px 10px hsla(0, 0%, 0%, 0.8);
+  }
+
+  .new-button-group {
+    display: inline-block;
+    padding-top   : 10px;
+    padding-bottom: 40px;
+  }
+
+
+   /* ==========================================================================
       Tiles - Old
       ========================================================================== */
 

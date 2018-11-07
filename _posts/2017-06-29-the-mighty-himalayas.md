@@ -17,6 +17,8 @@ I hated everything about Nainital, the dislike starting even before I had reache
 
 We had reached Delhi at 8 in the morning, and it was already hot. The horrible roads from Delhi to Nainital, which literally broke our backs, just added to our misery. Once we were properly rested, we decided go out in the evening and check out Nainital.
 
+{% include advertising-article.html %}
+
 Oh my god! The crowded roads and the never-ending stream of people. It took forever to reach the other side of the lake, a distance of only 2 kms. Our car was stuck in a one-way road, with no way of returning, for the better part of the day. Man, It felt like I was back in Bengaluru on a Monday morning :(
 
 I wonder what Jim Corbett would think of the present day Nainital?! The crowd-filled streets and the honk-filled ambiance. Not much, I guess. He may not even recognise it as the same place where he had lived his life peacefully.
@@ -28,6 +30,8 @@ About 22 kms from Nainital is Bhimtal. Smaller than Nainital, and absolutely no 
 The boats somehow made me think of what humans have done to these forests, here and every else. Of the devastation we cause to nature, in the name of civilisation...
 
 After staying for 2 days, we started from Bhimtal and reached Kausani at 9 in the evening yesterday. The route was a never ending stream of vehicles in both directions. And there was not much to be seen through the windows. As soon as we reached we went straight to bed, for we were too tired. The roads are not so well maintained, and they tend to give you sore muscles all over your body.
+
+{% include advertising-article.html %}
 
 I get up in the morning and see this... Who knew I would get to see this!
 

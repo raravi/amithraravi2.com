@@ -17,11 +17,15 @@ It's difficult to think of moving away from a locality where you have lived for 
 
 The incredible feeling of first-time Home ownership can only be understood by people who have been living in rented spaces all their lives. And that's what we need to keep in mind. The excitement of something new! It should scare you as much as it excites you.
 
+{% include advertising-article.html %}
+
 ---
 
 Through all the confusion of moving to and setting up my new home, there was only one central thought - **Movement**. There is only so much you can plan - all I remember now is I decided to call the *Movers & Packers* for a particular date. That started the ball rolling!
 
 There were some mix-ups too. Like it took a while for the Movers to find my place, which delayed our plans. And once they did arrive, everything happened so fast that it was quite difficult to keep track of what went where. The custom painting job at my new place, which was supposed to finish the day before, was coinciding with the move. This in turn led to a whole list of concurrency (I'm a developer, these work jargon slip through unnoticed sometimes) issues.
+
+{% include advertising-article.html %}
 
 This [article](https://m.signalvnoise.com/planning-is-guessing-66fd2cea3f50) on **Medium** says it all about planning :)
 

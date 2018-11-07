@@ -25,6 +25,8 @@ What is it that you keep thinking most of the day? The thing that your mind wand
 
 > Food? Exercise? Travel? Gadgets? Tech? Lifestyle?
 
+{% include advertising-article.html %}
+
 Focusing on too many things will lead to your efforts getting diluted and your mind moving in too many directions. This is neither fruitful nor efficient. It will only make it harder for you to actually start your blog.
 
 ![image]({{ site.images }}blog-2.jpg)
@@ -37,6 +39,8 @@ Though it’s not mandatory to have a writing experience, having it definitely h
 
 What is necessary though, is to have a love for reading. Reading all sorts of content - from shorter news to longer blog posts, and finally many chapters of a novel. This inculcates the art of imagination through the written word in us. A page describing a war efficiently will make that war come alive in your head, because you’re actively imagining every word of every sentence of every paragraph. You're actively involved when reading, and that is what makes reading such an intimate and fun process.
 
+{% include advertising-article.html %}
+
 This is but a starting point only. Beyond this, it requires a constant effort of daily writing about your thoughts to get better. And you will get better. But it requires a considerable amount of time. Every day needs to be dedicated to making your craft better. You are a wordsmith, practicing your craft every day to fine-tune your skills so you get to the point where you can write with a flourish that doesn’t require too much effort from your side to write or for the reader to understand it.
 
 ![image]({{ site.images }}blog-3.jpg)
@@ -48,6 +52,8 @@ You should be able to write posts - full posts which deal with the subject in-de
 The blog should maintain integrity throughout in looks as well as content. The design should conform across different pages and also be consistent across different devices. Each blog post is part of a whole represented by your website. As such, every blog post should be written in the same style of writing and should follow the same hierarchy.
 
 Doing this every day, over a period of many years will gain you a lot of readers. And these readers is how you monetise your blog. It can be done through ads on your blog or affiliate links which pay you a commission upon each click/buy.
+
+{% include advertising-article.html %}
 
 > “Nobody tells this to people who are beginners, I wish someone told me. All of us who do creative work, we get into it because we have good taste. But there is this gap. For the first couple years you make stuff, it’s just not that good. It’s trying to be good, it has potential, but it’s not. But your taste, the thing that got you into the game, is still killer. And your taste is why your work disappoints you. A lot of people never get past this phase, they quit. Most people I know who do interesting, creative work went through years of this. We know our work doesn’t have this special thing that we want it to have. We all go through this. And if you are just starting out or you are still in this phase, you gotta know its normal and the most important thing you can do is do a lot of work. Put yourself on a deadline so that every week you will finish one story. It is only by going through a volume of work that you will close that gap, and your work will be as good as your ambitions. And I took longer to figure out how to do this than anyone I’ve ever met. It’s gonna take awhile. It’s normal to take awhile. You’ve just gotta fight your way through.”
 >

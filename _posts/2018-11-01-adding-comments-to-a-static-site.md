@@ -15,6 +15,8 @@ If you need to know how to build a static site, please read my [previous post]({
 
 When I created my blog in 2017, I was looking around for an easy and self maintained comments system and found [Staticman](https://staticman.net) to fit my requirements to the dot. It was easy to add to to my Jekyll site and configure correctly with minimal effort. All I needed was a Github account and a repository, which I already had.
 
+{% include advertising-article.html %}
+
 ---
 
 About a month back, I discovered that the Staticman component is no longer working as expected. So I head to the GitHub repository of Staticman to see if there is an already existing issue. To my dismay, I not only found there was an [issue](https://github.com/eduardoboucas/staticman/issues/227) raised but that it had to do with the daily limits set by GitHub (which can’t be changed by us mere mortals). So I had to figure out a different way to deliver the comments to my blog.
@@ -43,6 +45,8 @@ I owe you an explanation on why this is a problem. In a static site, the content
 	2. The saved file has to be taken from your server manually and added to your build. And deployed back to the PROD server.
 
 If option 1’s disadvantages are not really so in your eyes, please go ahead and use it. Else, you will have to think of a way of getting those comments back onto your blog/website. Options 2 and 3 are some of the ways of doing it.
+
+{% include advertising-article.html %}
 
 I tried each of the options in the order presented above, and ended up with the last one. This is because, my static server runs on a Linux hosted virtual server with Apache/PHP enabled. I wrote a PHP script, which gets called by the POST method of the comment FORM. The script writes the comment to a file and saves it on the server. I check the server periodically to see if there are new comment files, and add them to my static build and deploy back. I think this last part can be automated, but not sure how yet (I see my next blog post!).
 

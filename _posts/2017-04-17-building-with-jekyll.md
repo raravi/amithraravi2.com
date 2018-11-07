@@ -19,6 +19,8 @@ Once I decided to use Jekyll for my static site (please read my previous [post](
 
 The first place I looked at was the [official website](https://jekyllrb.com/docs/home/). This will be your goto place for any kind of reference required. So keep it open whenever you are working on anything Jekyll-related.
 
+{% include advertising-article.html %}
+
 Next I needed to install a few things for Jekyll to work. If you are installing Jekyll on a Linux machine, the above link has all the relevant details.
 
 If like me, you are working on windows, go [here](https://labs.sverrirs.com/jekyll/) for Installation instructions. The first thing to install is [Ruby](http://rubyinstaller.org/downloads/) and its DevKit. You can follow the instructions in the above link, they come with complete details and screenshots! If you have reached the end of the Jekyll installation successfully, congrats! You are all set to build your own website :)
@@ -45,6 +47,8 @@ There are quite a few places where you can get a nice and easy-to-use Jekyll tem
 * [Jekyll Themes](http://jekyllthemes.org/) by *Matt Harzewski*.
 * [Jekyll Themes](http://themes.jekyllrc.org/) is a directory of best-looking themes for Jekyll blogs.
 * [Free/Premium Themes](https://jekyllthemes.io/) by *Tyler Cubell*.
+
+{% include advertising-article.html %}
 
 Go with a free simple template that you like. Download the template to your workstation. Unzip it and put it in a folder. Run the build and serve commands on the folder. Once you do, the template will be published to the default url, which is usually at `localhost:4000`. Open it to make sure the url is up and running. This means all the steps have worked perfectly.
 

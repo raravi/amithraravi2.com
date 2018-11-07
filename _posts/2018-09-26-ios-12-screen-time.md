@@ -23,6 +23,8 @@ iOS 12 has been released at a time when our lives are being overshadowed by our 
 
 See what I mean.
 
+{% include advertising-article.html %}
+
 People are starting to realise that they need to turn off their phones and devote more time to family and friends. Numerous articles have been written on how ‘switching off’ has helped people prioritise what’s important to them, and it has also led to reduced stress in their lives.
 
 Apple always strives for a better understanding of what people need right now. And it has realised that limiting phone usage is the way forward. People should make use of technology, while not becoming slaves to it. The decision to limit usage has to come from each individual user. Apple provides the tools, it’s up to the user to make efficient use of it.
@@ -36,6 +38,8 @@ Enter **Screen Time**! Each user can see the stats on how they are using their d
 The ability to create custom groups would have been greatly appreciated. Many users use Instagram to drive traffic to their blog, and surely can’t look at it as Social Networking. Who knows, Apple may add custom grouping in a future release.
 
 The Screen Time setting is basically a dashboard. The top graph gives the breakup of screen time and highlights the top categories. Below that is a list of all the apps/games that are being used. There is a toggle at the top to switch the view between **Today** and **Last 7 days**.
+
+{% include advertising-article.html %}
 
 Like me, if you own more than one device, then you get separate graphs on each device. That simply doesn’t make sense now, does it? You are interested in your usage through the day, and it should be device-independent. For this, enable **Screen Time** to keep track of your activities across all your devices and this will give you a single combined graph instead of device-specific ones on each.
 
@@ -57,6 +61,8 @@ Some were hilarious.
 
 <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en"><p lang="en" dir="ltr">The iOS 12 updates “Screen Time” feature should be called the “You are a total loser” feature. <a href="https://t.co/nke9xyifUj">pic.twitter.com/nke9xyifUj</a></p>&mdash; Danielle Blair (@ladyriver77) <a href="https://twitter.com/ladyriver77/status/1041831465691041792?ref_src=twsrc%5Etfw">September 17, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+{% include advertising-article.html %}
+
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I am completely addicted to iOS 12&#39;s Screen Time feature. Ironically.</p>&mdash; Frozzie Procopé (@frozzieprocope) <a href="https://twitter.com/frozzieprocope/status/1044899230073180160?ref_src=twsrc%5Etfw">September 26, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I set a daily time limit on my social media apps with the new screen time feature on iOS 12 and here I am ignoring the notifications telling me I’ve reached my daily limit to tweet this</p>&mdash; Alissa Godwin (@Alissa_Godwin) <a href="https://twitter.com/Alissa_Godwin/status/1044772658129326080?ref_src=twsrc%5Etfw">September 26, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -65,6 +71,8 @@ A few were ashamed.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">How I feel after looking at iOS 12’s Screen Time feature <a href="https://t.co/CWoZvR0Amq">pic.twitter.com/CWoZvR0Amq</a></p>&mdash; Creative Rants (@Creative_Rants) <a href="https://twitter.com/Creative_Rants/status/1043990136164372480?ref_src=twsrc%5Etfw">September 23, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+{% include advertising-article.html %}
+
 <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en"><p lang="en" dir="ltr">Monitoring your ‘Screen Time’ in iOS 12 is going to be both fascinating and scary. <a href="https://twitter.com/hashtag/ScreenTime?src=hash&amp;ref_src=twsrc%5Etfw">#ScreenTime</a> <a href="https://twitter.com/hashtag/iOS12?src=hash&amp;ref_src=twsrc%5Etfw">#iOS12</a> <a href="https://twitter.com/hashtag/reclaimyourlife?src=hash&amp;ref_src=twsrc%5Etfw">#reclaimyourlife</a> <a href="https://t.co/mTBnVjd2cG">pic.twitter.com/mTBnVjd2cG</a></p>&mdash; Andrew Ian Villis (@aivillis) <a href="https://twitter.com/aivillis/status/1041803312113373185?ref_src=twsrc%5Etfw">September 17, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Screen time on IOS 12 is an eye opener, so much time wasted😳🙆🏿‍♂️</p>&mdash; BM (@Mshanab) <a href="https://twitter.com/Mshanab/status/1044984399111081986?ref_src=twsrc%5Etfw">September 26, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -72,6 +80,8 @@ A few were ashamed.
 And a bit of truth gets revealed.
 
 <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en"><p lang="en" dir="ltr">Oh blimey, the new screen time feature on latest iOS update is going to prove eye opening I think! Great feature. Will make sure kids have it on their phones too! <a href="https://t.co/DaYxwej4Rp">pic.twitter.com/DaYxwej4Rp</a></p>&mdash; Tim Kelly (@ChopperKelly1) <a href="https://twitter.com/ChopperKelly1/status/1044916924264706049?ref_src=twsrc%5Etfw">September 26, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+{% include advertising-article.html %}
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Me looking at my “Screen Time” stats in iOS 12. <a href="https://twitter.com/hashtag/Yikes?src=hash&amp;ref_src=twsrc%5Etfw">#Yikes</a> <a href="https://twitter.com/hashtag/PhoneAddict?src=hash&amp;ref_src=twsrc%5Etfw">#PhoneAddict</a> <a href="https://t.co/h9q92Y3rZL">pic.twitter.com/h9q92Y3rZL</a></p>&mdash; Mike Wilson (@MikeWils13) <a href="https://twitter.com/MikeWils13/status/1044703912429858816?ref_src=twsrc%5Etfw">September 25, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 

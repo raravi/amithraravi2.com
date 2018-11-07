@@ -23,6 +23,8 @@ Hence our understanding of the real world problems is directly related to how we
 
 A basic understanding of math concepts is essential to understand and interact with the world right?!
 
+{% include advertising-article.html %}
+
 ---
 
 >A kilo of mango costs 60 bucks. So how much do you pay for 2.5 kilos?
@@ -39,6 +41,8 @@ In college, we are taught simple programs. A Fibonacci series for understanding 
 
 If you write a program that models a real-world problem and solves it, the sum of those parts is what matters. *This is something you have to discover by yourself!*
 
+{% include advertising-article.html %}
+
 ---
 
 In the beginning, programmers try to solve simpler issues. Like games :) I was personally interested in writing a program for all the games I played.. 4 in a row, Sudoku, Chess, Tiles, Tic Tac Toe, Towers of Hanoi. I wrote for all except Chess. Chess falls into the **real-world problem** category as it’s quite complicated! In fact, I'm still trying to write a program for Chess.
@@ -50,6 +54,8 @@ Once you learn these by trial and error, you move on to the interesting part �
 You will understand the difference between a **Depth First Search** and **Breadth First search**, and why you need to pick one of those for your particular scenario because you tried applying these techniques to your scenario and discovered why one of these doesn’t work.
 
 >Learn to code, it’s fun. And progress onto the different algorithms used. Understand why each is used.
+
+{% include advertising-article.html %}
 
 ---
 

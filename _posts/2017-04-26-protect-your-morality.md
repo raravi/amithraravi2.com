@@ -18,6 +18,8 @@ As we grow up, our parents instil their ethics in us. We learn by seeing what ou
 
 I thought it was my right to have a computer when i joined Engineering, because all my friends had one. So I told my parents I desperately needed one for my computer class. And they got it for me. **Needed? Yes. Desperately? No.**
 
+{% include advertising-article.html %}
+
 I also wanted a bike. But I was feeling so guilty about the computer, I didn’t lie again. I asked (didn’t say going to classes depended on it ☺), they said No. I asked couple more times. They said No. Then I decided to get it when I joined work.
 
 ---
@@ -31,6 +33,8 @@ Most of us have this fluid sense of morality. If the lie is not serious enough, 
 And as we mature into young adults, our sense of right and wrong crystallises into our own moral code. What we consider "not serious enough" too gets into it, these are the exceptions to our moral code.
 
 These exceptions are not expressed to others. We know it breaks our moral code in other's eyes. The justification that we give ourselves doesn't hold good for others you see. So we hide it.
+
+{% include advertising-article.html %}
 
 When we think of moral choices at this point, most of us feel that there is only one way everyone should look at it. And that is the way we look at right and wrong. In other words, we expect the world to agree with our version of morality. And the world won't agree to it if it can see our exceptions, because that exposes a moral ambiguity in us.
 
@@ -48,6 +52,8 @@ I was recently faced with such an issue. It involved three of my closest friends
 **So I decided that my justifications need to be thrown out. There can be no exceptions to the code.** Only then will we be in sync with ourselves completely. And will I be at peace with myself.
 
 Once I got this clarity, I could deal with the situation. I cut off ties with friends who made those bad choices. I was finally free of the negativity that surrounded me.
+
+{% include advertising-article.html %}
 
 ----
 

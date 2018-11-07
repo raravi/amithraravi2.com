@@ -17,6 +17,8 @@ It is seen in a kid’s incredible joy at being alive, at being able to do wondr
 
 >There is no fear, only an excitement of doing! It’s all about the moment, this moment!
 
+{% include advertising-article.html %}
+
 ---
 
 As we grow up, we are constantly told that what we do isn’t enough. So we do things that are expected, which keeps taking a chunk out of us every time. And we learn to hide in the daily schedules of our busy lives.
@@ -28,6 +30,8 @@ As we grow up, we are constantly told that what we do isn’t enough. So we do t
 So we learn to like what we do. To be happy, we ride a wave, from low to high. A new phone! A new car! These are a never ending cycle of waves. And the amount of happiness felt will reduce with every subsequent wave ridden. It’s how humans are wired, to always look for more. And we keep looking for the “*Bigger Better Deal*”…
 
 We stop looking at our life choices. But this isn’t enough, this so-called life and its complications. The mind needs to wander and find things on its own. To recognize ourselves in what we do, and not keep mimicking the world’s choices.
+
+{% include advertising-article.html %}
 
 ---
 

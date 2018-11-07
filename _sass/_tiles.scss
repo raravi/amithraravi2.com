@@ -13,6 +13,9 @@
           flex: 25%;
           max-width: 25%;
           padding: 0 8px;
+          .ad {
+            width: 266px;
+          }
           .article-tile {
             display: flex;
             flex-direction: column;
@@ -81,6 +84,12 @@
           }
        }
    }
+   /* clear fix */
+    .articles-tiles:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
 
    /* ==========================================================================
       Isotope
@@ -149,6 +158,11 @@
     padding-bottom: 40px;
   }
 
+  .new-button-group:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
 
    /* ==========================================================================
       Tiles - Old

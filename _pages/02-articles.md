@@ -10,8 +10,15 @@ permalink: /articles/
 </div>
 
 <div class="articles-tiles">
+{% assign counter = 1 %}
 {% for post in site.posts %}
 	{% if post.layout == "article" %}
+		{% assign remainder = counter | modulo: 6 %}
+		{% if remainder == 0 %}
+			<div class="col {{post.categories[1]}}">
+				{% include advertising-grid-manual.html %}
+			</div>
+		{% endif %}
 		<div class="col {{post.categories[1]}}">
 		{% include post-grid.html %}
 		</div>

@@ -9,16 +9,9 @@ permalink: /articles/
 	  <button class="new-button" data-filter=".personal">Personal</button>
 </div>
 
-{% assign counter = 1 %}
 <div class="articles-tiles">
 {% for post in site.posts %}
 	{% if post.layout == "article" %}
-		{% assign remainder = counter | modulo: 6 %}
-		{% if remainder == 0 %}
-			<div class="col {{post.categories[1]}} ad">
-			{% include advertising-grid.html %}
-			</div>
-		{% endif %}
 		<div class="col {{post.categories[1]}}">
 		{% include post-grid.html %}
 		</div>
@@ -26,3 +19,7 @@ permalink: /articles/
 	{% endif %}
 {% endfor %}
 </div><!-- /.tiles -->
+
+<div class="ad">
+	{% include advertising-grid.html %}
+</div>

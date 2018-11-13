@@ -150,3 +150,10 @@ $('.new-button-group').each( function( i, buttonGroup ) {
     $( this ).addClass('is-checked');
   });
 });
+// Upon Page Load, the isotope grid is skewered
+// This call fixes it!
+$(document).ready(function(){
+	$('.articles-tiles').imagesLoaded( function() {
+      $grid.isotope({ filter: '*' });
+  });
+});

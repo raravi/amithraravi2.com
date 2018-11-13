@@ -16,7 +16,7 @@ permalink: /articles/
 			{% assign remainder = counter | modulo: 6 %}
 			{% if remainder == 0 %}
 				<div class="col tech personal">
-					{% include advertising-grid-manual.html %}
+					{% include advertising-grid.html %}
 				</div>
 			{% endif %}
 			<div class="col {{post.categories[1]}}">

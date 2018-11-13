@@ -1,7 +1,7 @@
 	<!-- Twitter Cards -->
 	<meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
 	{% if page.excerpt %}<meta name="twitter:description" content="{{ page.excerpt | strip_html }}">{% endif %}
-	{% if site.owner.twitter %}<meta name="twitter:site" content="@{{ site.owner.twitter }}">{% endif %}
+	{% if site.owner.twitter.username %}<meta name="twitter:site" content="@{{ site.owner.twitter.username }}">{% endif %}
 	{% if author.twitter %}<meta name="twitter:creator" content="@{{ author.twitter }}">{% endif %}
 	{% if page.image.feature %}
 	<meta name="twitter:card" content="summary_large_image">

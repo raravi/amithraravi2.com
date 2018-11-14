@@ -15,8 +15,6 @@ Okay, so you have finally decided to host a website for yourself.
 
 In this blog post, I'll take you through the process of buying a domain. I know you are excited about that personal digital space that you can own completely and do whatever you want with it!
 
-{% include advertising-article.html %}
-
 ### Buy a domain for yourself
 
 ![image]({{ site.images }}domain-name.png)
@@ -24,6 +22,8 @@ In this blog post, I'll take you through the process of buying a domain. I know 
 There are a few things to consider before you make your decision. This also involves thinking of how much you are ready to spend. Money matters!
 
 **Decide on a name:** Since this is something that will stay on in the Interwebs for time immemorial, the name is something you need to be sure about. Take your time to come up with something that really identifies with you. Got a name that you love? Fantastic, let's move on!
+
+{% include advertising-article.html %}
 
 **Where to buy it:** The popular places to buy your domain are [GoDaddy](https://www.godaddy.com), [BigRock](https://www.bigrock.in), [ZNet](https://www.znetlive.com), [NameCheap](https://www.namecheap.com/) & [HostGator](https://www.hostgator.in). Once you enter your domain name, these sites will let you know if it's available or not. If not, they suggest you go for a `yourdomain.net` or `yourdomain.org` or any of the other myriad choices.
 

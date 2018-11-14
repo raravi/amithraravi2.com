@@ -29,9 +29,9 @@ About 22 kms from Nainital is Bhimtal. Smaller than Nainital, and absolutely no 
 
 The boats somehow made me think of what humans have done to these forests, here and every else. Of the devastation we cause to nature, in the name of civilisation...
 
-After staying for 2 days, we started from Bhimtal and reached Kausani at 9 in the evening yesterday. The route was a never ending stream of vehicles in both directions. And there was not much to be seen through the windows. As soon as we reached we went straight to bed, for we were too tired. The roads are not so well maintained, and they tend to give you sore muscles all over your body.
-
 {% include advertising-article.html %}
+
+After staying for 2 days, we started from Bhimtal and reached Kausani at 9 in the evening yesterday. The route was a never ending stream of vehicles in both directions. And there was not much to be seen through the windows. As soon as we reached we went straight to bed, for we were too tired. The roads are not so well maintained, and they tend to give you sore muscles all over your body.
 
 I get up in the morning and see this... Who knew I would get to see this!
 

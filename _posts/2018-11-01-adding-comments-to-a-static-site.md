@@ -17,8 +17,6 @@ When I created my blog in 2017, I was looking around for an easy and self mainta
 
 {% include advertising-article.html %}
 
----
-
 About a month back, I discovered that the Staticman component is no longer working as expected. So I head to the GitHub repository of Staticman to see if there is an already existing issue. To my dismay, I not only found there was an [issue](https://github.com/eduardoboucas/staticman/issues/227) raised but that it had to do with the daily limits set by GitHub (which can’t be changed by us mere mortals). So I had to figure out a different way to deliver the comments to my blog.
 
 ![image]({{ site.images }}adding-comments-2.jpg)

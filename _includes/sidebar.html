@@ -34,26 +34,7 @@
   <div class="div-20-high"></div>
   <div class="line-red"></div>
   {% if page.layout == "article" %}
-      <div class="text">
-        <h5>Latest Posts</h5>
-      </div>
-      {% assign count = 1 %}
-      {% for post in site.posts %}
-        {% if count <= 4 %}
-        {% if post.layout == "article" %}
-        {% if post.title != page.title %}
-        {% if post.categories == page.categories %}
-          <div>
-            {% include sidebar-latestposts.html %}
-            {% assign count = count | plus:1 %}
-          </div>
-          <div class="div-20-high"></div>
-        {% endif %}
-        {% endif %}
-        {% endif %}
-        {% endif %}
-      {% endfor %}
-      <div class="line-red"></div>
+    {% include sidebar-latestposts.html %}
   {% endif %}
   <div class="text">
     <h5>Blogger Resources</h5>

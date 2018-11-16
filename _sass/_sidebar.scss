@@ -6,7 +6,7 @@
    .mainbar {
        float: left;
        width: 75%;
-       padding-top: 40px;
+       padding-top: 20px;
    }
    .sidebar {
        float: left;
@@ -129,6 +129,16 @@
      width: 100%;
      background-color: $red;
    }
+   .line-red-media {
+     height: 7px;
+     width: 80%;
+     background-color: $red;
+   }
+   @media screen and (max-width: 900px) {
+     .line-red-media {
+ 		   width: 100%;
+ 		 }
+ 	 }
    .site-title-padding {
      width: 2000px;
    }

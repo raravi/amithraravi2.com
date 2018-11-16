@@ -151,6 +151,14 @@
 	.page-title {
 		@include fill-parent;
 	}
+	.page-title-media {
+		width: 80%;
+	}
+	@media screen and (max-width: 900px) {
+		.page-title-media {
+			width: 100%;
+		}
+	}
 	@at-root {
 		.page-content {
 			@include fill-parent;
@@ -185,6 +193,11 @@
 					font-family: $alt-font;
 					color: lighten($black,60);
 				}
+			}
+			.image-credit {
+				padding: 10px 15px;
+				font-family: $alt-font;
+				@include font-size(14,no);
 			}
 		}
 	}
@@ -269,7 +282,14 @@
 	@include fill-parent;
 	// expand image to cover full width of header
 	img {
-		width: 100%;
+		padding-left: 25px;
+		padding-right: 25px;
+		width: 80%;
+	}
+	@media screen and (max-width: 900px) {
+		 img {
+				 width: 100%;
+		 }
 	}
 }
 // make image flush with edges on small screens

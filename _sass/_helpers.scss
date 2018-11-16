@@ -94,13 +94,27 @@
     @include span-columns(3);
     @include omega(4n);
     margin-bottom: flex-gutter($grid-columns);
+    h6 {
+      @include font-size(14,no);
+      color: $text-color;
+      margin-top: 10px;
+    }
+  }
+  @media screen and (max-width: 700px) {
+     li {
+       @include span-columns(6);
+       @include omega(2n);
+     }
   }
   a {
-    img {
+    &:hover {
       // Image hover animation
-      &:hover {
+      img {
         @include animation(pop .3s 0 linear);
         box-shadow: 0 0 10px rgba($black, .20);
+      }
+      h6 {
+        color: $cg-red;
       }
     }
   }

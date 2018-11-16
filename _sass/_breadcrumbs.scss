@@ -3,9 +3,11 @@
    ========================================================================== */
 
 .breadcrumbs {
+  padding-top: 20px;
+  padding-bottom: 30px;
   @include row;
   margin-top: $gutter;
-  @include font-size(14,no);
+  @include font-size(16,no);
   a {
     display: inline-block;
     font-family: $alt-font;

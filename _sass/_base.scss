@@ -247,19 +247,21 @@ tr, td, th {
 hr {
 	display: block;
 	position: relative;
-	margin: 0px + (2 * $doc-line-height) 0;
-	margin: 0rem + ((2 * $doc-line-height) / $doc-font-size) 0;
+	margin: 0px + (1.5 * $doc-line-height) 0;
+	margin: 0rem + ((1.5 * $doc-line-height) / $doc-font-size) 0;
 	padding: 0;
-	height: 5px;
+	height: 1px;
 	border: 0;
 	&:before {
+		//border: 1px solid blue;  /* For debugging */
 		content: '';
 		position: absolute;
 		top: 0;
-		left: 0;
-		width: 2 * $column;
-		height: 1px;
-		background: $border-color;
+		left: 50%;
+		margin-left: -(0.75 * $column);
+		width: 1.5 * $column;
+		height: 3px;
+		background: $red;
 	}
 }
 

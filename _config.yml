@@ -98,6 +98,7 @@ exclude:
   - .bundle
   - .jekyll-assets-cache
   - .sass-cache
+  - .DS_Store
   - CHANGELOG
   - Capfile
   - Gemfile

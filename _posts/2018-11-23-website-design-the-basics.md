@@ -61,3 +61,5 @@ The first build of your website is just that. It has all the content presented a
 A prototype may not have all the functionality working as expected, but it will have the look and feel of the website as designed. This is the main use of a prototype, it gives you a simplified version of your website for adding in functionality as required. It acts a placeholder for the complete functionality to be added later.
 
 Once you have a working prototype, you have completed the basic part of your website!
+
+Note: *All images used in this post are from [Unsplash](https://unsplash.com)!*

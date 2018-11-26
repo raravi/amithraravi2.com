@@ -3,13 +3,13 @@
    ========================================================================== */
 
    .articles-tiles {
+       //border: 1px solid black;  /* For debugging */
        display: flex;
        flex-wrap: wrap;
        flex-direction: row;
        .col {
           display: flex;
           flex-direction: column;
-          align-items: flex-start;
           flex: 25%;
           max-width: 25%;
           padding: 0 8px;
@@ -196,12 +196,6 @@
           }
        }
    }
-   /* clear fix */
-    .articles-tiles:after {
-        content: '';
-        display: block;
-        clear: both;
-    }
 
    /* ==========================================================================
       Isotope

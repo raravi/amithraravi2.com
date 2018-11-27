@@ -1,6 +1,6 @@
 <?php
     header("Content-type: text/plain; charset=utf-8", true, 200); //Response body is text
-    if(isset($_POST)) {
+    if(isset($_POST['replyingto'])) {
         $post       = $_POST;
         $message    = trim($_POST['message']);
         $name       = trim($_POST['name']);

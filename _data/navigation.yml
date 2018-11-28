@@ -2,17 +2,17 @@
 
 - title: Home
   url: /
-  excerpt: "Go back"
+  excerpt: "Go back to main page"
   image: once-upon-a-time.jpg
 
 - title: Articles
   url: /articles/
-  excerpt: "My articles on Tech, Travel & Life in general!"
+  excerpt: "Posts on tech, travel & life in general!"
   image: joao-silas.jpg
 
 - title: Portfolio
   url: /portfolio/
-  excerpt: "The stuff I've done over the years."
+  excerpt: "Stuff I've done over the years"
   image: office.jpg
 
 - title: About Me

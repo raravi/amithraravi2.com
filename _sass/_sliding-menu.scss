@@ -24,7 +24,7 @@
   position: fixed;
   transform: translateZ(0);
   backface-visibility: hidden; /* fix scroll jank */
-  top: $gutter;
+  top: $gutter/1.15;
   right: $gutter;
   display: block;
   width: $button-size * 2;
@@ -90,9 +90,10 @@
     color: $white;
     @include font-size(14);
     @include media($small) {
-      @include font-size(16);
+      @include font-size(18);
     }
     span {
+      padding-top: 10px;
       display: block;
       @include font-size(32,no,1);
       @include media($small) {
@@ -132,7 +133,7 @@
       position: absolute;
       left: 0;
       margin-bottom: 0;
-      width: 50px;
+      width: 100px;
       border: 2px solid $white;
       margin-bottom: ($gutter / 2);
       opacity: 0.6;
@@ -145,7 +146,7 @@
     }
     .title {
       display: block;
-      margin-left: 60px;
+      margin-left: 110px;
       font-family: $alt-font;
       @include font-size(24,no);
       font-weight: 700;
@@ -156,7 +157,7 @@
     }
     .excerpt {
       margin-top: 0;
-      margin-left: 60px;
+      margin-left: 110px;
       @include font-size(14,no);
       @include media($small) {
         margin-left: 170px;

@@ -1,9 +1,9 @@
 <div class="text">
-  <h5>Latest Posts</h5>
+  <h5>Posts - {% if page.categories[1] == "tech" %}Personal{% else %}Tech{% endif %}</h5>
 </div>
 {% assign count = 1 %}
 {% for post in site.posts %}
-  {% if count <= 4 and post.layout == "article" and post.title != page.title and post.categories == page.categories %}
+  {% if count <= 4 and post.layout == "article" and post.categories[1] != page.categories[1] %}
     <div>
       <article class="sidebartile" itemscope itemtype="http://schema.org/Article">
         <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
@@ -18,4 +18,5 @@
     <div class="div-5-high"></div>
   {% endif %}
 {% endfor %}
+<div class="div-10-high"></div>
 <div class="line-red"></div>

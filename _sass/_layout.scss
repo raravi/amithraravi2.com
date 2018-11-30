@@ -20,7 +20,7 @@
 }
 .site-title {
 	@include row;
-	@include media($large) {
+	@include media($medium750) {
 		@include span-columns(4);
 	}
 	padding: (.25 * $masthead-height) 0; // fourth the height to center vertically
@@ -43,8 +43,8 @@
 	li {
 		float: left;
 		&:last-child a {
-			@include media($medium) {
-				margin-right: 0; // remove spacing from last menu link
+			@include media($medium750) {
+				margin-right: 10px; // remove extra spacing from last menu link
 			}
 		}
 		a {
@@ -86,10 +86,10 @@
 .top-menu {
 	display: none;
 	position: relative;
-	@include media($medium) {
-		@include span-columns(12);
-	}
-	@include media($large) {
+	//@include media($small) {
+	//	@include span-columns(12);
+	//}
+	@include media($medium750) {
 		@include span-columns(7);
 		ul {
 			position: absolute;

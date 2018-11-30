@@ -27,6 +27,9 @@
   top: $gutter/1.15;
   right: $gutter;
   display: block;
+  //@include media($medium750) {
+  //  display: none;
+  //}
   width: $button-size * 2;
   height: $button-size * 2;
   background: $primary-color;

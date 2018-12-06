@@ -70,6 +70,6 @@ I will leave you with the following conclusion from the BBC study.
 
 > "We have to conclude, though, that checking the flow of fake news, especially in their current predominant form of images and memes is likely to be extremely challenging. We suggest that all actors - platforms, media organisations, government, civil society - come together to tackle the problem, since it is not just a technological problem. But in this, ordinary citizens too, need to take more responsibility about sharing things without verification - and surely, platform-centric solutions to help them can be found without compromising too much on the essential characteristics of the platform. We also recommend that journalists investigate further whether or not there is an organised ecosystem of fake news production and dissemination."
 >
-> From the study
+> ~ From the study
 
 Note: *All images used in this post are from [Unsplash](https://unsplash.com)!*

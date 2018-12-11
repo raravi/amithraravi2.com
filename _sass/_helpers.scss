@@ -106,6 +106,12 @@
        @include omega(2n);
      }
   }
+  @media screen and (max-width: 400px) {
+     li {
+       @include span-columns(12);
+       @include omega(n);
+     }
+  }
   a {
     &:hover {
       // Image hover animation

@@ -14,40 +14,52 @@
           max-width: 25%;
           padding: 0 8px;
           .ad {
-            height: 120px;
-            width: 250px;
+            height: 350px;
+            width: 400px;
             .infeed {
-              height: 120px;
+              height: 350px;
               width: 400px;
             }
             @media screen and (max-width: 360px) {
               .infeed {
-                height: 150px;
+                height: 250px;
                 width: 260px;
               }
             }
             @media screen and (min-width: 361px) and (max-width: 420px) {
               .infeed {
-                height: 150px;
+                height: 300px;
                 width: 300px;
               }
             }
             @media screen and (min-width: 421px) and (max-width: 480px) {
               .infeed {
-                height: 150px;
+                height: 350px;
                 width: 350px;
               }
             }
-            @media screen and (min-width: 601px) and (max-width: 700px) {
+            @media screen and (min-width: 601px) and (max-width: 650px) {
               .infeed {
                 height: 300px;
-                width: 260px;
+                width: 250px;
               }
             }
-            @media screen and (min-width: 701px) and (max-width: 800px) {
+            @media screen and (min-width: 651px) and (max-width: 700px) {
               .infeed {
                 height: 300px;
-                width: 300px;
+                width: 270px;
+              }
+            }
+            @media screen and (min-width: 701px) and (max-width: 750px) {
+              .infeed {
+                height: 300px;
+                width: 290px;
+              }
+            }
+            @media screen and (min-width: 751px) and (max-width: 800px) {
+              .infeed {
+                height: 300px;
+                width: 320px;
               }
             }
             @media screen and (min-width: 801px) and (max-width: 900px) {
@@ -62,16 +74,22 @@
                 width: 260px;
               }
             }
-            @media screen and (min-width: 1001px) and (max-width: 1100px) {
+            @media screen and (min-width: 1001px) and (max-width: 1060px) {
               .infeed {
                 height: 320px;
                 width: 220px;
               }
             }
-            @media screen and (min-width: 1101px) {
+            @media screen and (min-width: 1061px) and (max-width: 1120px) {
               .infeed {
                 height: 320px;
-                width: 250px;
+                width: 235px;
+              }
+            }
+            @media screen and (min-width: 1121px) {
+              .infeed {
+                height: 320px;
+                width: 255px;
               }
             }
           }
@@ -82,26 +100,44 @@
           }
           @media screen and (max-width: 360px) {
             .ad {
-              height: 150px;
+              height: 250px;
               width: 260px;
             }
           }
-          @media screen and (min-width: 361px) and (max-width: 480px) {
-            .ad {
-              height: 150px;
-              width: 300px;
-            }
-          }
-          @media screen and (min-width: 601px) and (max-width: 700px) {
-            .ad {
-              height: 300px;
-              width: 260px;
-            }
-          }
-          @media screen and (min-width: 701px) and (max-width: 800px) {
+          @media screen and (min-width: 361px) and (max-width: 420px) {
             .ad {
               height: 300px;
               width: 300px;
+            }
+          }
+          @media screen and (min-width: 421px) and (max-width: 480px) {
+            .ad {
+              height: 350px;
+              width: 350px;
+            }
+          }
+          @media screen and (min-width: 601px) and (max-width: 650px) {
+            .ad {
+              height: 300px;
+              width: 250px;
+            }
+          }
+          @media screen and (min-width: 651px) and (max-width: 700px) {
+            .ad {
+              height: 300px;
+              width: 270px;
+            }
+          }
+          @media screen and (min-width: 701px) and (max-width: 750px) {
+            .ad {
+              height: 300px;
+              width: 290px;
+            }
+          }
+          @media screen and (min-width: 751px) and (max-width: 800px) {
+            .ad {
+              height: 300px;
+              width: 320px;
             }
           }
           @media screen and (min-width: 801px) and (max-width: 900px) {
@@ -116,16 +152,22 @@
               width: 260px;
             }
           }
-          @media screen and (min-width: 1001px) and (max-width: 1100px) {
+          @media screen and (min-width: 1001px) and (max-width: 1060px) {
             .ad {
               height: 320px;
               width: 220px;
             }
           }
-          @media screen and (min-width: 1101px) {
+          @media screen and (min-width: 1061px) and (max-width: 1120px) {
             .ad {
               height: 320px;
-              width: 250px;
+              width: 235px;
+            }
+          }
+          @media screen and (min-width: 1121px) {
+            .ad {
+              height: 320px;
+              width: 255px;
             }
           }
           .article-tile {
@@ -185,8 +227,8 @@
        }
        @media screen and (min-width: 601px) and (max-width: 800px) {
           .col {
-            flex: 50%;
-            max-width: 50%;
+            flex: 49%; // There is a side-effect to figure out here!! This should ideally be 50%. But right now, 50% will not display items in 2nd column properly.
+            max-width: 49%;
           }
        }
        @media screen and (min-width: 801px) and (max-width: 1000px) {
@@ -217,6 +259,7 @@
     transition:800ms ease all;
     outline:none;
     margin-right: 10px;
+    margin-bottom: 20px;
   }
   .new-button:before,.new-button:after{
     content:'';
@@ -261,7 +304,7 @@
   .new-button-group {
     display: inline-block;
     padding-top   : 10px;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
   }
 
   .new-button-group:after {

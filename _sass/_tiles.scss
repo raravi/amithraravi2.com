@@ -14,11 +14,11 @@
           max-width: 25%;
           padding: 0 8px;
           .ad {
-            height: 300px; // 481px to 540px
-            width: 200px;
+            height: 400px; // 481px to 600px
+            width: 400px;
             .infeed {
-              height: 300px; // 481px to 540px
-              width: 200px;
+              height: 400px; // 481px to 600px
+              width: 400px;
             }
             @media screen and (max-width: 360px) {
               .infeed {
@@ -38,12 +38,6 @@
                 width: 350px;
               }
             }
-            @media screen and (min-width: 541px) and (max-width: 600px) {
-              .infeed {
-                height: 300px;
-                width: 220px;
-              }
-            }
             @media screen and (min-width: 601px) and (max-width: 650px) {
               .infeed {
                 height: 300px;
@@ -59,7 +53,7 @@
             @media screen and (min-width: 701px) and (max-width: 750px) {
               .infeed {
                 height: 300px;
-                width: 290px;
+                width: 300px;
               }
             }
             @media screen and (min-width: 751px) and (max-width: 800px) {
@@ -71,7 +65,7 @@
             @media screen and (min-width: 801px) and (max-width: 900px) {
               .infeed {
                 height: 320px;
-                width: 230px;
+                width: 350px;
               }
             }
             @media screen and (min-width: 901px) and (max-width: 1000px) {
@@ -83,13 +77,13 @@
             @media screen and (min-width: 1001px) and (max-width: 1060px) {
               .infeed {
                 height: 320px;
-                width: 220px;
+                width: 290px;
               }
             }
             @media screen and (min-width: 1061px) and (max-width: 1120px) {
               .infeed {
                 height: 320px;
-                width: 235px;
+                width: 310px;
               }
             }
             @media screen and (min-width: 1121px) {
@@ -122,12 +116,6 @@
               width: 350px;
             }
           }
-          @media screen and (min-width: 541px) and (max-width: 600px) {
-            .ad {
-              height: 300px;
-              width: 220px;
-            }
-          }
           @media screen and (min-width: 601px) and (max-width: 650px) {
             .ad {
               height: 300px;
@@ -143,7 +131,7 @@
           @media screen and (min-width: 701px) and (max-width: 750px) {
             .ad {
               height: 300px;
-              width: 290px;
+              width: 300px;
             }
           }
           @media screen and (min-width: 751px) and (max-width: 800px) {
@@ -155,7 +143,7 @@
           @media screen and (min-width: 801px) and (max-width: 900px) {
             .ad {
               height: 320px;
-              width: 230px;
+              width: 350px;
             }
           }
           @media screen and (min-width: 901px) and (max-width: 1000px) {
@@ -167,13 +155,13 @@
           @media screen and (min-width: 1001px) and (max-width: 1060px) {
             .ad {
               height: 320px;
-              width: 220px;
+              width: 290px;
             }
           }
           @media screen and (min-width: 1061px) and (max-width: 1120px) {
             .ad {
               height: 320px;
-              width: 235px;
+              width: 310px;
             }
           }
           @media screen and (min-width: 1121px) {
@@ -231,19 +219,19 @@
             }
           }
        }
-       @media screen and (max-width: 480px) {
+       @media screen and (max-width: 600px) {
           .col {
             flex: 100%;
             max-width: 100%;
           }
        }
-       @media screen and (min-width: 481px) and (max-width: 800px) {
+       @media screen and (min-width: 601px) and (max-width: 900px) {
           .col {
             flex: 49%; // There is a side-effect to figure out here!! This should ideally be 50%. But right now, 50% will not display items in 2nd column properly.
             max-width: 49%;
           }
        }
-       @media screen and (min-width: 801px) and (max-width: 1000px) {
+       @media screen and (min-width: 901px) and (max-width: 1120px) {
           .col {
             flex: 33%;
             max-width: 33%;

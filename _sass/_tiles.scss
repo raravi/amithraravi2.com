@@ -14,11 +14,11 @@
           max-width: 25%;
           padding: 0 8px;
           .ad {
-            height: 350px;
-            width: 400px;
+            height: 300px; // 481px to 540px
+            width: 200px;
             .infeed {
-              height: 350px;
-              width: 400px;
+              height: 300px; // 481px to 540px
+              width: 200px;
             }
             @media screen and (max-width: 360px) {
               .infeed {
@@ -36,6 +36,12 @@
               .infeed {
                 height: 350px;
                 width: 350px;
+              }
+            }
+            @media screen and (min-width: 541px) and (max-width: 600px) {
+              .infeed {
+                height: 300px;
+                width: 220px;
               }
             }
             @media screen and (min-width: 601px) and (max-width: 650px) {
@@ -114,6 +120,12 @@
             .ad {
               height: 350px;
               width: 350px;
+            }
+          }
+          @media screen and (min-width: 541px) and (max-width: 600px) {
+            .ad {
+              height: 300px;
+              width: 220px;
             }
           }
           @media screen and (min-width: 601px) and (max-width: 650px) {
@@ -219,13 +231,13 @@
             }
           }
        }
-       @media screen and (max-width: 600px) {
+       @media screen and (max-width: 480px) {
           .col {
             flex: 100%;
             max-width: 100%;
           }
        }
-       @media screen and (min-width: 601px) and (max-width: 800px) {
+       @media screen and (min-width: 481px) and (max-width: 800px) {
           .col {
             flex: 49%; // There is a side-effect to figure out here!! This should ideally be 50%. But right now, 50% will not display items in 2nd column properly.
             max-width: 49%;

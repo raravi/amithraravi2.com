@@ -29,7 +29,7 @@ All of this information is not linked to anything that is personally identifiabl
 
 ### Cookies and Web Beacons
 
-When you visit this site <convenience> cookies are stored on your computer, not by my site but third-party advertisers.
+When you visit this site <convenience> cookies are stored on your computer, not by my site but by third-party advertisers.
 
 Third-party advertisers may place and read cookies on your browser and/or use web beacons to collect information. This site has no access or control over these cookies. You should review the respective privacy policies on any and all third-party ad servers for more information regarding their practices and how to opt-out.
 

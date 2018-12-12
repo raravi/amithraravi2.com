@@ -17,80 +17,8 @@
             height: 400px; // 481px to 600px
             width: 400px;
             .infeed {
-              height: 400px; // 481px to 600px
-              width: 400px;
-            }
-            @media screen and (max-width: 360px) {
-              .infeed {
-                height: 250px;
-                width: 260px;
-              }
-            }
-            @media screen and (min-width: 361px) and (max-width: 420px) {
-              .infeed {
-                height: 300px;
-                width: 300px;
-              }
-            }
-            @media screen and (min-width: 421px) and (max-width: 480px) {
-              .infeed {
-                height: 350px;
-                width: 350px;
-              }
-            }
-            @media screen and (min-width: 601px) and (max-width: 650px) {
-              .infeed {
-                height: 300px;
-                width: 250px;
-              }
-            }
-            @media screen and (min-width: 651px) and (max-width: 700px) {
-              .infeed {
-                height: 300px;
-                width: 270px;
-              }
-            }
-            @media screen and (min-width: 701px) and (max-width: 750px) {
-              .infeed {
-                height: 300px;
-                width: 300px;
-              }
-            }
-            @media screen and (min-width: 751px) and (max-width: 800px) {
-              .infeed {
-                height: 300px;
-                width: 320px;
-              }
-            }
-            @media screen and (min-width: 801px) and (max-width: 900px) {
-              .infeed {
-                height: 320px;
-                width: 350px;
-              }
-            }
-            @media screen and (min-width: 901px) and (max-width: 1000px) {
-              .infeed {
-                height: 320px;
-                width: 260px;
-              }
-            }
-            @media screen and (min-width: 1001px) and (max-width: 1060px) {
-              .infeed {
-                height: 320px;
-                width: 290px;
-              }
-            }
-            @media screen and (min-width: 1061px) and (max-width: 1120px) {
-              .infeed {
-                height: 320px;
-                width: 310px;
-              }
-            }
-            @media screen and (min-width: 1121px) {
-              .infeed {
-                height: 320px;
-                width: 255px;
-              }
+              height: 100%;
+              width: 100%;
             }
           }
           .ad:after {
@@ -245,10 +173,8 @@
 
    /* ---- button ---- */
 
-  .new-button{
+  .filters-button{
     background: $white;
-    //background: #e5e5e5;
-    //background: #ffeded;
     color:$cg-red;
     border:none;
     position:relative;
@@ -261,7 +187,7 @@
     margin-right: 10px;
     margin-bottom: 20px;
   }
-  .new-button:before,.new-button:after{
+  .filters-button:before,.filters-button:after{
     content:'';
     position:absolute;
     top:0;
@@ -271,43 +197,43 @@
     background: $cg-red;
     transition:200ms ease all;
   }
-  .new-button:after{
+  .filters-button:after{
     right:inherit;
     top:inherit;
     left:0;
     bottom:0;
   }
-  .new-button:hover {
+  .filters-button:hover {
     background: #ffeded;
     transition:400ms ease all;
   }
-  .new-button:hover:before,.new-button:hover:after{
+  .filters-button:hover:before,.filters-button:hover:after{
     height: 3px;
     transition:400ms ease all;
   }
 
-  .new-button:active,
-  .new-button.is-checked {
+  .filters-button:active,
+  .filters-button.is-checked {
     background-color: $cg-red;
     text-decoration: none;
   }
 
-  .new-button.is-checked {
+  .filters-button.is-checked {
     color: white;
     text-shadow: 0 -1px hsla(0, 0%, 0%, 0.4);
   }
 
-  .new-button:active {
+  .filters-button:active {
     box-shadow: inset 0 1px 10px hsla(0, 0%, 0%, 0.8);
   }
 
-  .new-button-group {
+  .filters-button-group {
     display: inline-block;
     padding-top   : 10px;
     padding-bottom: 20px;
   }
 
-  .new-button-group:after {
+  .filters-button-group:after {
     content: '';
     display: block;
     clear: both;

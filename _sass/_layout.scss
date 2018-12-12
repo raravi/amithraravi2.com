@@ -86,9 +86,6 @@
 .top-menu {
 	display: none;
 	position: relative;
-	//@include media($small) {
-	//	@include span-columns(12);
-	//}
 	@include media($medium750) {
 		@include span-columns(7);
 		ul {
@@ -121,7 +118,6 @@
 	}
 }
 
-
 /*
    Page wrapper
    ========================================================================== */
@@ -144,7 +140,13 @@
 
 #main {
 	.inner-wrap {
+		@include media($small) {
+			@include span-columns(11);
+		}
 		@include media($medium) {
+			@include span-columns(10);
+		}
+		@include media($medium1050) {
 			@include span-columns(9);
 		}
 	}
@@ -152,11 +154,9 @@
 		@include fill-parent;
 	}
 	.page-title-media {
-		width: 80%;
-	}
-	@media screen and (max-width: 900px) {
-		.page-title-media {
-			width: 100%;
+		width: 100%;
+		@include media($medium) {
+			width: 80%;
 		}
 	}
 	@at-root {
@@ -188,7 +188,7 @@
 				@include fill-parent;
 			}
 			.page-meta {
-				p{
+				p {
 					@include font-size(14,no);
 					font-family: $alt-font;
 					color: lighten($black,60);
@@ -284,12 +284,10 @@
 	img {
 		padding-left: 25px;
 		padding-right: 25px;
-		width: 80%;
-	}
-	@media screen and (max-width: 900px) {
-		 img {
-				 width: 100%;
-		 }
+		width: 100%;
+		@include media($medium) {
+			width: 80%;
+		}
 	}
 }
 // make image flush with edges on small screens

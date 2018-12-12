@@ -9,9 +9,8 @@
     </div>
     <div class="row">
     {% assign count = 1 %}
-    {% for post in site.posts %}
+    {% for post in site.categories.articles %}
       {% if count <= 6 %}
-      {% if post.layout == "article" %}
           <div class="col col-latest-posts">
               <a href="{{ site.url }}{{ post.url }}">
                   <div class="image" style="background-image:url({{site.url}}{{ site.images }}{{post.teaser}})">
@@ -24,7 +23,6 @@
               </a>
           </div>
           {% assign count = count | plus:1 %}
-      {% endif %}
       {% endif %}
     {% endfor %}
     </div>
@@ -40,10 +38,7 @@
         </div>
     </div>
     <div class="row">
-    {% assign count = 1 %}
-    {% for post in site.posts %}
-      {% if count <= 4 %}
-      {% if post.categories[0] == "portfolio" %}
+    {% for post in site.categories.portfolio %}
           <div class="col col-portfolio">
               <a href="{{ site.url }}{{ post.url }}">
                   <div class="image" style="background-image:url({{site.url}}{{ site.images }}{{post.teaser}})">
@@ -55,9 +50,6 @@
                   </div>
               </a>
           </div>
-          {% assign count = count | plus:1 %}
-      {% endif %}
-      {% endif %}
     {% endfor %}
     </div>
 </div>

@@ -11,12 +11,15 @@
          align-items: stretch;
          flex-wrap: wrap;
          .col {
-             flex: 50%;
-             max-width: 50%;
              display: flex;
              justify-content: center;
              align-items: center;
-
+             flex: 100%;
+             max-width: 100%;
+             @include media($medium750) {
+               flex: 50%;
+               max-width: 50%;
+             }
              .grid-title {
                   padding: 1em;
                  	@include media($medium) {
@@ -52,13 +55,6 @@
                  	 }
              }
          }
-         /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-         @media screen and (max-width: 800px) {
-            .col {
-              flex: 100%;
-              max-width: 100%;
-            }
-          }
          .image {
              text-align: center;
            	 color: $white;
@@ -85,14 +81,10 @@
            padding: 0 8px;
            .col {
                display: flex;
-               //flex: 50%;
-               //max-width: 50%;
                padding: 0 8px;
-
                a {
                  width: 100%;
                }
-
                .image {
                    width: 100%;
                    margin-top: 16px;
@@ -123,17 +115,11 @@
                            @include media($medium) {
                               @include font-size(18);
                            }
-                           @include media($large) {
-                              @include font-size(18);
-                           }
                        }
                        h1 {
                            @include font-size(20);
                            @include media($medium) {
-                              @include font-size(24);
-                           }
-                           @include media($large) {
-                              @include font-size(24);
+                              @include font-size(22);
                            }
                        }
                        .line-red {
@@ -145,30 +131,28 @@
                }
            }
            .col-latest-posts {
-             flex: 50%;
-             max-width: 50%;
+             flex: 100%;
+             max-width: 100%;
+             @include media($small) {
+               flex: 50%;
+               max-width: 50%;
+             }
+             @include media($medium) {
+               flex: 33%;
+               max-width: 33%;
+             }
            }
            .col-portfolio {
-             flex: 25%;
-             max-width: 25%;
-           }
-           @media screen and (max-width: 600px) {
-              .col-latest-posts {
-                flex: 100%;
-                max-width: 100%;
-              }
-           }
-           @media screen and (max-width: 900px) {
-              .col-portfolio {
-                flex: 50%;
-                max-width: 50%;
-              }
-           }
-           @media screen and (max-width: 450px) {
-              .col-portfolio {
-                flex: 100%;
-                max-width: 100%;
-              }
+             flex: 100%;
+             max-width: 100%;
+             @include media($small450) {
+               flex: 50%;
+               max-width: 50%;
+             }
+             @include media($medium) {
+               flex: 25%;
+               max-width: 25%;
+             }
            }
            .title {
               display: flex;
@@ -198,30 +182,37 @@
            display: flex;
            flex-direction: column;
            align-items: center;
-           flex: 33%;
-           max-width: 33%;
-
+           flex: 100%;
+           max-width: 100%;
+           @include media($small) {
+             flex: 33%;
+             max-width: 33%;
+           }
            .bio-pic {
                border-radius: 50%;
-           }
-           .sayhi {
-               @include font-size(20,no);
-               font-family: $hi-font;
-               color: $cg-red;
+               padding-right: 20px;
            }
            .text {
                text-align: center;
+               .sayhi {
+                   @include font-size(20,no);
+                   font-family: $hi-font;
+                   color: $cg-red;
+               }
+               .sayhitext {
+                 @include font-size(18,yes,28);
+                 @include media($small) {
+                   @include font-size(16,yes,26);
+                 }
+                 @include media($medium) {
+                   @include font-size(18,yes,28);
+                 }
+               }
                a {
                  @include font-size(16,no);
                  text-decoration: none;
                }
            }
-       }
-       @media screen and (max-width: 800px) {
-          .col {
-            flex: 100%;
-            max-width: 100%;
-          }
        }
    }
 
@@ -233,20 +224,38 @@
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      //align-content: stretch;
-      //flex: 100%;
-      //max-width: 100%;
+      max-width: 485px;
       .col {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        flex: 33%;
-        max-width: 33%;
+        align-items: stretch;
+        flex: 100%;
+        max-width: 100%;
+        @include media($small) {
+          flex: 33%;
+          max-width: 33%;
+      	}
+        a {
+          text-align: center;
+          align-content: center;
+        }
       }
-      @media screen and (max-width: 600px) {
-         .col {
-           flex: 100%;
-           max-width: 100%;
-         }
+      .first {
+        padding-right: 0;
+        @include media($small) {
+          padding-right: 5px;
+      	}
+      }
+      .middle {
+        padding: 0 0;
+        @include media($small) {
+          padding: 0 5px;
+      	}
+      }
+      .last {
+        padding-left: 0;
+        @include media($small) {
+          padding-left: 5px;
+      	}
       }
    }

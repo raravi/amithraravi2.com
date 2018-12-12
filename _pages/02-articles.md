@@ -3,10 +3,10 @@ layout: archive
 title: Articles
 permalink: /articles/
 ---
-<div class="new-button-group filters-button-group">
-		<button class="new-button is-checked" data-filter="*">All</button>
-		<button class="new-button" data-filter=".tech">Tech</button>
-	  <button class="new-button" data-filter=".personal">Personal</button>
+<div class="filters-button-group">
+		<button class="filters-button is-checked" data-filter="*">All</button>
+		<button class="filters-button" data-filter=".tech">Tech</button>
+	  <button class="filters-button" data-filter=".personal">Personal</button>
 </div>
 
 {% assign counter = 1 %}

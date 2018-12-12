@@ -10,7 +10,9 @@ $visual_grid: false;
 // Define your breakpoints
 $short: new-breakpoint(max-height em(700) 12);
 $micro: new-breakpoint(min-width em(240) max-width em(480) 12);
+$small450: new-breakpoint(min-width em(450) 12);
 $small: new-breakpoint(min-width em(600) 12);
 $medium750: new-breakpoint(min-width em(750) 12);
 $medium: new-breakpoint(min-width em(900) 12);
+$medium1050: new-breakpoint(min-width em(1050) 12);
 $large: new-breakpoint(min-width em(1280) 12);

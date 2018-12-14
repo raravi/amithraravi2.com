@@ -15,7 +15,7 @@ In my previous posts, I have concentrated on the technical side of things. Right
 
 Now I would like to talk only about blogging. The why, what and how of it i.e. the creative process of writing about ‘something’ interesting!
 
-![image]({{ site.images }}blog-1.jpg)
+![image]({{ site.url }}{{ site.images }}blog-1.jpg)
 
 Deciding to start a blog is nothing but a realisation to express yourself. You want a space where you can write about what’s in your head. The written word holds sway over many of us, compelling us to pick up the pen and write. For us, writing is our safe space. It makes us calm down and be content.
 
@@ -27,7 +27,7 @@ What is it that you keep thinking most of the day? The thing that your mind wand
 
 Focusing on too many things will lead to your efforts getting diluted and your mind moving in too many directions. This is neither fruitful nor efficient. It will only make it harder for you to actually start your blog.
 
-![image]({{ site.images }}blog-2.jpg)
+![image]({{ site.url }}{{ site.images }}blog-2.jpg)
 
 If you look around your room or home or workplace, you will notice there is a common theme that unites your spaces. Identifying this early on will help you to come out with a blog that is integral to the theme, and your audience knows exactly what to expect out of your blog.
 
@@ -41,7 +41,7 @@ What is necessary though, is to have a love for reading. Reading all sorts of co
 
 This is but a starting point only. Beyond this, it requires a constant effort of daily writing about your thoughts to get better. And you will get better. But it requires a considerable amount of time. Every day needs to be dedicated to making your craft better. You are a wordsmith, practicing your craft every day to fine-tune your skills so you get to the point where you can write with a flourish that doesn’t require too much effort from your side to write or for the reader to understand it.
 
-![image]({{ site.images }}blog-3.jpg)
+![image]({{ site.url }}{{ site.images }}blog-3.jpg)
 
 ### Consistency
 
@@ -59,6 +59,6 @@ Doing this every day, over a period of many years will gain you a lot of readers
 
 The key to all this is simple - **Keep writing, all day, every day**.
 
-![image]({{ site.images }}blog-4.jpg)
+![image]({{ site.url }}{{ site.images }}blog-4.jpg)
 
 Note: *All images used in this post are from [Unsplash](https://unsplash.com)!*

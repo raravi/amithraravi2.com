@@ -19,7 +19,7 @@ When I created my blog in 2017, I was looking around for an easy and self mainta
 
 About a month back, I discovered that the Staticman component is no longer working as expected. So I head to the GitHub repository of Staticman to see if there is an already existing issue. To my dismay, I not only found there was an [issue](https://github.com/eduardoboucas/staticman/issues/227) raised but that it had to do with the daily limits set by GitHub (which can’t be changed by us mere mortals). So I had to figure out a different way to deliver the comments to my blog.
 
-![image]({{ site.images }}adding-comments-2.jpg)
+![image]({{ site.url }}{{ site.images }}adding-comments-2.jpg)
 
 I owe you an explanation on why this is a problem. In a static site, the content is just plain HTML/CSS files. Which means the user cannot expect the `Submit` button on the comments page to work. But for a responsive blog, users should be able to leave feedback. At this point, it’s clear that our static site needs a dynamic part. There are various ways in which developers have tried to do this.
 
@@ -52,7 +52,7 @@ I tried each of the options in the order presented above, and ended up with the 
 
 I was reluctant to add a PHP script initially because I wanted to keep the website purely static. But looking at all these options, I’ve realised that in order to avoid dynamic code, I’m making a choice to do things the hard way.
 
-![image]({{ site.images }}adding-comments-3.jpg)
+![image]({{ site.url }}{{ site.images }}adding-comments-3.jpg)
 
 Just because I wanted my site to be static doesn’t mean it shouldn’t have any dynamic parts. Commenting is a valued interaction, and as such it requires a script. As soon as I accepted this, things fell into place. A mostly static site with a dynamic script is still quite fast, and now has the added functionality of a dynamic site when required!
 

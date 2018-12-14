@@ -13,7 +13,7 @@ As most of you know, this is my first website. Choosing the kind of website I wa
 
 I had to research quite a bit to figure out what my website should look like. I went through a lot of blogs to get a feel for the style and kind of content being presented. And look at the underlying technology used. All of this was a bit overwhelming for me. So, I wanted to walk my readers through the process of website creation. Let me take you through the decision-making steps that landed me in the static-site generation side of the web!
 
-![image]({{ site.images }}static-and-dynamic.png)
+![image]({{ site.url }}{{ site.images }}static-and-dynamic.png)
 
 The first thing I did was enrol in web development courses on [udemy](https://www.udemy.com/). Even though I know how HTML/CSS work, I needed a refresher course to take me through the basics. Along with this, I was looking at the technologies built on top of the basic HTML aka the web stack.
 
@@ -35,7 +35,7 @@ I needed a blog, updated a few times a week or so, which focused on the content 
 
 As i progressed through the courses I realised I needed a place to get my hands dirty and get complete control over the data in my blog, so that I can play with the look as I wished & code it accordingly. That's when I stumbled upon [Jekyll](https://jekyllrb.com/).
 
-![image]({{ site.images }}jekyll.png)
+![image]({{ site.url }}{{ site.images }}jekyll.png)
 
 To get an idea of how Jekyll sites look, take a look at this [post](https://qrohlf.com/posts/5-best-jekyll-designs) from *qrohlf*'s site. Doesn't it blow your mind?! The look is minimalistic and yet quite stylish. And the focus is on the content. I love the way content gets highlighted in Jekyll based sites. It's about simple presentation!
 

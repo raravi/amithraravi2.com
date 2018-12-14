@@ -11,7 +11,7 @@ teaser:     cycling-400x250.jpg
 
 I have always loved cycling. The freedom of speed is an exhilarating feeling, it gives you wings!
 
-![image]({{ site.images }}cycling.jpg)
+![image]({{ site.url }}{{ site.images }}cycling.jpg)
 
 >I must have been 3 or 4 when I got my first cycle — a tricycle… Mom tells me that I drove her mad riding the tricycle at home all the time, hitting everything in sight. That she would have to chase me around to feed me!
 

@@ -7,7 +7,7 @@
 			</div><!-- /.bullet-icon -->
 			<div class="bullet-content">
 				<h2>{{ post.title }}</h2>
-				<p>{{ post.excerpt | strip_html }}</p>
+				<p>{{ post.excerpt | strip_html | strip }}</p>
 			</div><!-- /.bullet-content -->
 		</a>
 	</div><!-- /.bullet -->

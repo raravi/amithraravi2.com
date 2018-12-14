@@ -13,7 +13,7 @@ iOS 12 Feature Highlight
 
 So you have updated to the new **iOS 12**, and want to see what it has to offer?! I’m sure you’ve read quite a few articles on all the new features by now. Among these, the one that should grab your attention is **Screen Time**. Let’s see why it’s so important for you and me.
 
-![image]({{ site.images }}ios-1.jpg)
+![image]({{ site.url }}{{ site.images }}ios-1.jpg)
 
 ### WHY DO WE NEED IT?
 
@@ -33,7 +33,7 @@ Apple always strives for a better understanding of what people need right now. A
 
 Enter **Screen Time**! Each user can see the stats on how they are using their devices. Apps they use have been grouped to make sense of the hundreds of apps on our phones. Prominent categories displayed on my iPhone include Social Networking, Games, Reading & Reference, Productivity, Entertainment, Creativity and Other.
 
-![image]({{ site.images }}ios-2.jpg)
+![image]({{ site.url }}{{ site.images }}ios-2.jpg)
 
 The ability to create custom groups would have been greatly appreciated. Many users use Instagram to drive traffic to their blog, and surely can’t look at it as Social Networking. Who knows, Apple may add custom grouping in a future release.
 

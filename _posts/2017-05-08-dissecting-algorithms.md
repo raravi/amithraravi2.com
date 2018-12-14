@@ -13,7 +13,7 @@ Algorithms are the building blocks of Computer Science.
 
 It's because our understanding of the world needs to be replicated into machine readable code so that it can be executed.
 
-![image]({{ site.images }}algorithm.jpg)
+![image]({{ site.url }}{{ site.images }}algorithm.jpg)
 
 As advanced as the human brain is, people started to realise that machines can be faster (unbelievably so as time passed) and error-free. Humans make mistakes but machines never do, unless those errors are part of the programming.
 

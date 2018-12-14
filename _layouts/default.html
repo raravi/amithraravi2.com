@@ -126,11 +126,17 @@
     {
       "@context": "http://schema.org",
       "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ site.url }}{{ page.url }}"
+      },
       "headline": "{{ page.excerpt | strip_html | strip | truncate: 160 }}",
       "image": "{{ site.url }}{{ site.images }}{{ page.teaser }}",
       "datePublished": "{{ page.date | date: "%Y-%m-%dT%H:%M:%S%z" }}",
       {%- if page.modified %}
       "dateModified": "{{ page.modified | date: "%Y-%m-%dT%H:%M:%S%z" }}",
+      {%- else %}
+      "dateModified": "{{ page.date | date: "%Y-%m-%dT%H:%M:%S%z" }}",
       {%- endif %}
     	{%- if page.author -%}
     	  {%- assign author = site.data.authors[page.author] -%}
@@ -140,6 +146,14 @@
       "author": {
         "@type": "Person",
         "name": "{{ author.name }}"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{ site.title }}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{site.url}}{{site.images}}amith-bio-300x300.png"
+        }
       },
     	"description": "{{ page.excerpt | strip_html | strip | truncate: 160 }}"
     }

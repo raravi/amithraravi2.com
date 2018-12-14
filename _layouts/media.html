@@ -3,13 +3,13 @@ layout: default
 ---
 
 <div id="main" role="main">
-	<article class="wrap" itemscope itemtype="http://schema.org/Article">
+	<article class="wrap">
 		<div class="gridrow">
 				<div class="mainbar">
 						{% if page.image.feature %}
 						<div class="page-feature">
 							<div class="page-image">
-								<img src="{{ site.url }}{{ site.images }}{{ page.image.feature }}" class="page-feature-image" alt="{{ page.title }}" itemprop="image">
+								<img src="{{ site.url }}{{ site.images }}{{ page.image.feature }}" class="page-feature-image" alt="{{ page.title }}">
 							</div><!-- /.page-image -->
 						</div><!-- /.page-feature -->
 						{% endif %}
@@ -24,7 +24,7 @@ layout: default
 						<div class="line-red-media"></div>
 						<div class="div-20-high"></div>
 						<div class="inner-wrap">
-							<div id="content" class="page-content" itemprop="articleBody">
+							<div id="content" class="page-content">
 								{{ content }}
 								<hr />
 								<footer class="page-footer">

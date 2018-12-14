@@ -11,18 +11,18 @@ permalink: /articles/
 
 {% assign counter = 1 %}
 <div class="articles-tiles">
-	{% for post in site.posts %}
-		{% if post.layout == "article" %}
-			{% assign remainder = counter | modulo: 6 %}
-			{% if remainder == 0 %}
+	{%- for post in site.posts %}
+		{%- if post.layout == "article" -%}
+			{%- assign remainder = counter | modulo: 6 -%}
+			{%- if remainder == 0 %}
 				<div class="col tech personal">
-					{% include advertising-grid.html %}
+					{% include advertising-grid.html -%}
 				</div>
-			{% endif %}
+			{%- endif %}
 			<div class="col {{post.categories[1]}}">
-				{% include post-grid.html %}
+				{% include post-grid.html -%}
 			</div>
-			{% assign counter=counter | plus:1 %}
-		{% endif %}
-	{% endfor %}
+			{%- assign counter=counter | plus:1 -%}
+		{%- endif -%}
+	{%- endfor %}
 </div><!-- /.tiles -->

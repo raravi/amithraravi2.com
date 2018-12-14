@@ -1,33 +1,32 @@
 <section class="page__reactions">
- {% if site.repository %}
-    {% if site.data.comments[page.slug] %}
+ {%- if site.repository %}
+    {%- if site.data.comments[page.slug] -%}
       <!-- Start static comments -->
 	  <div id="comments" class="js-comments">
       <h4 class="page__section-label">
         {% if site.data.comments[page.slug].size > 1 %}
-          {{ site.data.comments[page.slug] | size }}
-        {% endif %}
+          {{- site.data.comments[page.slug] | size -}}
+        {%- endif %}
         Comments
       </h4>
       <div class="div-5-high"></div>
-      <!-- {% assign comments = site.data.comments[page.slug] | sort %} -->
       {% assign comments = site.data.comments[page.slug] | sort | where_exp: "comment", "comment[1].replying_to == '0'" %}
-      {% for comment in comments %}
-        {% assign index       = forloop.index %}
-        {% assign replying_to = comment[1].replying_to | to_integer %}
-        {% assign avatar      = comment[1].avatar %}
-        {% assign email       = comment[1].email %}
-        {% assign name        = comment[1].name %}
-        {% assign url         = comment[1].url %}
-        {% assign date        = comment[1].date %}
-        {% assign message     = comment[1].message %}
-        {% include comment.html index=index replying_to=replying_to avatar=avatar email=email name=name url=url date=date message=message %}
-      {% endfor %}
+      {%- for comment in comments -%}
+        {%- assign index       = forloop.index -%}
+        {%- assign replying_to = comment[1].replying_to | to_integer -%}
+        {%- assign avatar      = comment[1].avatar -%}
+        {%- assign email       = comment[1].email -%}
+        {%- assign name        = comment[1].name -%}
+        {%- assign url         = comment[1].url -%}
+        {%- assign date        = comment[1].date -%}
+        {%- assign message     = comment[1].message -%}
+        {%- include comment.html index=index replying_to=replying_to avatar=avatar email=email name=name url=url date=date message=message -%}
+      {%- endfor -%}
     </div>
     <!-- End static comments -->
-    {% endif %}
+    {%- endif -%}
 
-    {% unless page.comments_locked == true %}
+    {%- unless page.comments_locked == true %}
     <!-- Start new comment form -->
 	  <div id="respond">
 	    <h4 class="page__section-commentlabel">&nbsp;&nbsp;&nbsp;Leave a Comment<small><small><a rel="nofollow" id="cancel-comment-reply-link" href="{{ page.url | relative_url }}#respond" style="display:none;">Cancel reply</a></small></small></h4>
@@ -70,8 +69,8 @@
     </div>
 	  <!-- End new comment form -->
     <script src="https://www.google.com/recaptcha/api.js"></script>
-    {% else %}
+    {%- else %}
       <p><em>Comments are closed. If you have a question concerning the content of this page, please feel free to <a href="mailto:{{ site.owner.email }}">contact me</a>.</em></p>
-    {% endunless %}
- {% endif %}
+    {%- endunless %}
+ {%- endif %}
 </section>

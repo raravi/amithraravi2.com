@@ -2,8 +2,8 @@
   <h5>Posts - {% if page.categories[1] == "tech" %}Personal{% else %}Tech{% endif %}</h5>
 </div>
 {% assign count = 1 %}
-{% for post in site.posts %}
-  {% if count <= 4 and post.layout == "article" and post.categories[1] != page.categories[1] %}
+{%- for post in site.posts -%}
+  {%- if count <= 4 and post.layout == "article" and post.categories[1] != page.categories[1] -%}
     <div>
       <article class="sidebartile" itemscope itemtype="http://schema.org/Article">
         <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
@@ -13,10 +13,10 @@
       		<p class="post-excerpt" itemprop="description">{{ post.excerpt | strip_html | strip | truncate: 160 }}</p>
       	</a>
       </article><!-- /.tile -->
-      {% assign count = count | plus:1 %}
+      {%- assign count = count | plus:1 %}
     </div>
     <div class="div-5-high"></div>
-  {% endif %}
-{% endfor %}
+  {%- endif -%}
+{%- endfor %}
 <div class="div-10-high"></div>
 <div class="line-red"></div>

@@ -1,7 +1,6 @@
-{% if page.author %}
-  {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.owner %}
-{% endif %}
-
+{%- if page.author -%}
+  {%- assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.owner -%}
+{%- endif -%}
 <div class="sharethis">
   <div class="col first">
   <a class="btn-social twitter" href="https://twitter.com/intent/tweet?text={{ page.title | escape | replace:' ','%20' }}&amp;url={{ page.url | replace:'index.html','' | prepend: site.url }}&amp;via={{ author.twitter }}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;Twitter</a>

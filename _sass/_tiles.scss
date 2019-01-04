@@ -21,11 +21,6 @@
               width: 100%;
             }
           }
-          .ad:after {
-              content: '';
-              display: block;
-              clear: both;
-          }
           @media screen and (max-width: 360px) {
             .ad {
               height: 250px;
@@ -155,7 +150,7 @@
        }
        @media screen and (min-width: 601px) and (max-width: 900px) {
           .col {
-            flex: 49%; // There is a side-effect to figure out here!! This should ideally be 50%. But right now, 50% will not display items in 2nd column properly.
+            flex: 49%; // There is a side-effect to figure out here!! This should ideally be 50%. But right now, 50% will not display items in 2nd column properly on Firefox.
             max-width: 49%;
           }
        }

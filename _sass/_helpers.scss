@@ -100,13 +100,13 @@
       margin-top: 10px;
     }
   }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 749px) {
      li {
        @include span-columns(6);
        @include omega(2n);
      }
   }
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 449px) {
      li {
        @include span-columns(12);
        @include omega(n);

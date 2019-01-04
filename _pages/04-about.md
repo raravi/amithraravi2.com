@@ -14,7 +14,7 @@ I'll share posts on setting up everything - from buying a web domain to setting 
 
 ### Freelancing
 
-I've been freelancing since the beginning of 2017. My main focus areas are website design, editorial services and content writing services. I'm actively involved in learning new technologies like Angular.js, node.js and Ruby on Rails in my free time. And since I love to read a good story, I do read a lot of novels. I go through at least 100 books in a year. Hence, my passion for the <u>written word</u>!
+I've been freelancing since the beginning of 2017. My main focus areas are website design, editorial services and content writing services. I'm actively involved in learning new technologies like Node.js, AngularJS, Static Site Generators (Jekyll, Gatsby), ReactJS, React Native in my free time. And since I love to read a good story, I do read a lot of novels. I go through at least 100 books in a year. Hence, my passion for the <u>written word</u>!
 
 {% include about-grid.html %}
 

@@ -23,6 +23,11 @@ $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']").addClass("image-popup");
 (function ($) {
   var $comments = $('.js-comments');
 
+  function showAlert(message) {
+    $('#comment-form .js-notice').removeClass('hidden');
+    $('#comment-form .js-notice-text').html(message);
+  }
+
   $('#comment-form').submit(function () {
     var form = this;
 
@@ -51,10 +56,6 @@ $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']").addClass("image-popup");
     return false;
   });
 
-  function showAlert(message) {
-    $('#comment-form .js-notice').removeClass('hidden');
-    $('#comment-form .js-notice-text').html(message);
-  }
 })(jQuery);
 
 // Staticman comment replies

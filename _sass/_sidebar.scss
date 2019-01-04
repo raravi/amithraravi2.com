@@ -4,6 +4,7 @@
 
    /* Main bar & Side bar */
    .mainbar {
+       //border: 1px solid black;  /* For debugging */
        float: left;
        width: 100%;
        @include media($medium) {
@@ -59,9 +60,31 @@
      }
    }
 
+   .sidebarlatestposts {
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: row;
+     div {
+       padding: 0 5px;
+       flex: 100%;
+       max-width: 100%;
+       @include media($small450) {
+         flex: 50%;
+         max-width: 50%;
+       }
+       @include media($medium750) {
+         flex: 25%;
+         max-width: 25%;
+       }
+       @include media($medium) {
+         flex: 100%;
+         max-width: 100%;
+       }
+     }
+   }
+
    /* Sidebar - Latest Posts */
    .sidebartile {
-     width: 100%;
      &:hover {
        .post-title {
          color: $cg-red;
@@ -75,18 +98,19 @@
      a {
        text-decoration: none;
      }
-     .entry-date {
-       @include font-size(12,no);
-       color: lighten($text-color,25);
-       text-decoration: none;
-     }
      .post-title {
-       @include font-size(20,no);
+       @include font-size(16,no);
+       @include media($medium) {
+         @include font-size(18,no);
+       }
        color: $text-color;
        text-decoration: none;
      }
      .post-excerpt {
-       @include font-size(15);
+       @include font-size(13);
+       @include media($medium) {
+         @include font-size(15);
+       }
        color: $text-color;
        text-decoration: none;
      }

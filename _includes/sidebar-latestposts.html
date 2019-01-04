@@ -1,6 +1,7 @@
 <div class="text">
   <h5>Posts - {% if page.categories[1] == "tech" %}Personal{% else %}Tech{% endif %}</h5>
 </div>
+<div class="sidebarlatestposts">
 {% assign count = 1 %}
 {%- for post in site.posts -%}
   {%- if count <= 4 and post.layout == "article" and post.categories[1] != page.categories[1] -%}
@@ -15,8 +16,8 @@
       </article><!-- /.tile -->
       {%- assign count = count | plus:1 %}
     </div>
-    <div class="div-5-high"></div>
   {%- endif -%}
 {%- endfor %}
+</div>
 <div class="div-10-high"></div>
 <div class="line-red"></div>

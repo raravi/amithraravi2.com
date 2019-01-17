@@ -9,7 +9,9 @@ image:      images/layout.jpg
 teaser:     layout-400x250.jpg
 ---
 
-You're done with the [basic design]({{ site.url }}{% post_url 2018-11-23-website-design-the-basics %}) of your website and now you want to code it in HTML. For this you need to be aware of the different layout options available in HTML/CSS and which of those is the right fit for your website design. Let us go through the options one by one.
+You're done with the [basic design]({{ site.url }}{% post_url 2018-11-23-website-design-the-basics %}) of your website and now you want to code it in HTML.
+
+For this you need to be aware of the different layout options available in HTML/CSS and which of those is the right fit for your website design. Let us go through the options one by one.
 
 ### Tables - Do Not Do This!
 

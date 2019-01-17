@@ -146,11 +146,9 @@
 		&.#{$socialnetwork}:hover {
 	    background: $color;
 	    border-color: $color;
-	    @each $socialnetwork, $color in $social {
-				i.fa-#{$socialnetwork} {
-			    color: $white;
-		    }
-			}
+			i.fa-#{$socialnetwork} {
+		    color: $white;
+	    }
     }
 	}
 }

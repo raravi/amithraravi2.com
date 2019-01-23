@@ -5,6 +5,7 @@
         $message    = trim($_POST['message']);
         $name       = trim($_POST['name']);
         $email      = md5(strtolower(trim( $_POST['email'])));
+        $emailorig  = strtolower(trim( $_POST['email']));
         $url        = trim($_POST['url']);
         $replyingto = trim($_POST['replyingto']);
         $slug       = $_POST['slug'];
@@ -22,6 +23,8 @@
         $txt = "name: $name\n";
         fwrite($myfile, $txt);
         $txt = "email: $email\n";
+        fwrite($myfile, $txt);
+        $txt = "emailorig: $emailorig\n";
         fwrite($myfile, $txt);
         $txt = "url: $url\n";
         fwrite($myfile, $txt);

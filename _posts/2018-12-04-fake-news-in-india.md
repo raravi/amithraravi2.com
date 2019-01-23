@@ -64,7 +64,7 @@ So a key feature of online platforms is the sharing of content without active, e
 
 ### The Tools Required to Fight This
 
-It's quite imperative that all of us understand how why widespread the issue of fake news is. The Indian users need to become aware of the way opinion trumps (pun intended) fact in the current political climate. The average Indian user should exercise more caution while browsing information and distributing it to their family and friends. Fake news spreads because people are ready to believe whatever feels right to them - which means they need to mature as responsible users of the Internet age. Also, the society as a whole needs to take cognisance of this issue and work as a community to work on this.
+It's quite imperative that all of us understand how widespread the issue of fake news is. The Indian users need to become aware of the way opinion trumps (pun intended) fact in the current political climate. The average Indian user should exercise more caution while browsing information and distributing it to their family and friends. Fake news spreads because people are ready to believe whatever feels right to them - which means they need to mature as responsible users of the Internet age. Also, the society as a whole needs to take cognisance of this issue and work as a community to work on this.
 
 I will leave you with the following conclusion from the BBC study.
 

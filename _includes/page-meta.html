@@ -1,5 +1,5 @@
 {% if page.date %}
 <div class="page-meta">
-	<p>{{ site.data.messages.locales[site.locale].updated }} {% if page.modified %}<time datetime="{{ page.modified | date: "%Y-%m-%dT%H:%M:%S%z" }}">{{ page.modified | date: "%B %d, %Y" }}</time>{% else %}<time datetime="{{ page.date | date: "%Y-%m-%dT%H:%M:%S%z" }}">{{ page.date | date: "%B %d, %Y" }}</time>{% endif %}</p>
+	<p>{{ site.data.messages.locales[site.locale].updated }} {% if page.modified %}<time datetime="{{ page.modified | date: "%Y-%m-%dT%H:%M:%S+05:30" }}">{{ page.modified | date: "%B %d, %Y" }}</time>{% else %}<time datetime="{{ page.date | date: "%Y-%m-%dT%H:%M:%S+05:30" }}">{{ page.date | date: "%B %d, %Y" }}</time>{% endif %}</p>
 </div><!-- /.page-meta -->
 {% endif %}

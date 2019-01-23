@@ -3,10 +3,10 @@ layout: article
 title: "How to make Isotope work in a Gatsby site"
 author: amith_raravi
 excerpt: "Isotope.js implementation for grid filtering on a Gatsby generated React.js site."
-date: 2019-01-23 16:06:00 +05:30
+date: 2019-01-23 16:06:00 +0530
 modified:
 categories: [articles, tech]
-image: /images/isotope.jpg
+image: images/isotope.jpg
 teaser: isotope-400x250.jpg
 ---
 
@@ -127,7 +127,7 @@ class GridFilter extends React.Component {
   }
 }
 ```
-Note: [classnames](https://www.npmjs.com/package/classnames) is a simple JavaScript utility for joining classNames together that you can install using `npm`.
+<figcaption>Note: <a href="https://www.npmjs.com/package/classnames">classnames</a> is a simple JavaScript utility for joining classNames together that you can install using `npm`.</figcaption>
 
 The **GridFilter** component renders a group of 3 buttons. Each button has a callback function for handling the click event. The callback functions are binded in the constructor (without which the call `this.handleClick` is not possible). The state variable is used to toggle the status of the buttons upon callback.
 
@@ -251,7 +251,7 @@ this.iso = new Isotope(`.${styles.articlesTiles}`, {
         layoutMode: "fitRows"
       });
 ```
-Note: In the code above, my class name for the grid is `${styles.articlesTiles}` and grid item is `${styles.col}`.
+<figcaption>Note: In the code above, my class name for the grid is `${styles.articlesTiles}` and grid item is `${styles.col}`.</figcaption>
 
 Well, I thought so too. And my first implementation had the initialization code in the constructor. But for some reason it didn’t work. I used to get an ‘undefined’ error upon clicking any of the 3 filter buttons. So I moved it into the ComponentDidMount() function thinking it would work from there. But it didn’t either.
 

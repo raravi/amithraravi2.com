@@ -29,9 +29,11 @@
     {%- if page.layout == "article" %}
     <meta property="article:publisher" content="{{site.owner.facebook.url}}/{{site.owner.facebook.username}}" />
     <meta property="article:section" content="{{ page.categories[1] | capitalize }}" />
-    <meta property="article:published_time" content="{{ page.date | date: "%Y-%m-%dT%H:%M:%S%z" }}" />
+    <meta property="article:published_time" content="{{ page.date | date: "%Y-%m-%dT%H:%M:%S+05:30" }}" />
     {%- if page.modified %}
-    <meta property="article:modified_time" content="{{ page.modified | date: "%Y-%m-%dT%H:%M:%S%z" }}" />
+    <meta property="article:modified_time" content="{{ page.modified | date: "%Y-%m-%dT%H:%M:%S+05:30" }}" />
+    {%- else %}
+    <meta property="article:modified_time" content="{{ page.date | date: "%Y-%m-%dT%H:%M:%S+05:30" }}" />
     {%- endif -%}
     {%- endif %}
     <meta property="og:image" content={% if page.layout == "article" %}"{{ site.url }}{{ site.images }}{{ page.teaser }}"{% else %}"{{ site.url }}{{ site.logo }}"{% endif %} />
@@ -132,11 +134,11 @@
       },
       "headline": "{{ page.excerpt | strip_html | strip | truncate: 160 }}",
       "image": "{{ site.url }}{{ site.images }}{{ page.teaser }}",
-      "datePublished": "{{ page.date | date: "%Y-%m-%dT%H:%M:%S%z" }}",
+      "datePublished": "{{ page.date | date: "%Y-%m-%dT%H:%M:%S+05:30" }}",
       {%- if page.modified %}
-      "dateModified": "{{ page.modified | date: "%Y-%m-%dT%H:%M:%S%z" }}",
+      "dateModified": "{{ page.modified | date: "%Y-%m-%dT%H:%M:%S+05:30" }}",
       {%- else %}
-      "dateModified": "{{ page.date | date: "%Y-%m-%dT%H:%M:%S%z" }}",
+      "dateModified": "{{ page.date | date: "%Y-%m-%dT%H:%M:%S+05:30" }}",
       {%- endif %}
     	{%- if page.author -%}
     	  {%- assign author = site.data.authors[page.author] -%}

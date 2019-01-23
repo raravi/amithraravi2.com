@@ -17,7 +17,7 @@ While I have always wondered why so many of my acquaintances on Facebook/Twitter
 
 ![image]({{ site.url }}{{ site.images }}fake-news-01.jpg)
 
-It took me about 3-4 days for me to go through the entire study. The study is quite detailed and employs a qualitative analysis of the representative dataset to try to understand the prevailing situation in India. I urge everyone to go through the study for the sake of understanding why fake news can be so dangerous. If you are still not convinced, please see [this article](https://www.bbc.com/news/world-46146877) to get the basics of the study results and find some context for the study was deemed necessary.
+It took me about 3-4 days for me to go through the entire study. The study is quite detailed and employs a qualitative analysis of the representative dataset to try to understand the prevailing situation in India. I urge everyone to go through the study for the sake of understanding why fake news can be so dangerous. If you are still not convinced, please see [this article](https://www.bbc.com/news/world-46146877) to get the basics of the study results and also to find some context as to why the study was deemed necessary.
 
 Here is my understanding of the data from the BBC study.
 

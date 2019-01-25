@@ -10,16 +10,19 @@
     <div class="row">
     {%- assign count = 1 -%}
     {%- for post in site.categories.articles -%}
-      {%- if count <= 6 %}
+      {%- if count <= 8 %}
           <div class="col col-latest-posts">
               <a href="{{ site.url }}{{ post.url }}">
-                  <div class="image" style="background-image:url({{site.url}}{{ site.images }}{{post.teaser}})">
-                      <div class="post-title">
-                            <p>{{post.categories[1]}}</p>
-                            <div class="line-red"></div>
-                            <h1>{{post.title}}</h1>
-                      </div>
-                  </div>
+                  <p class="post-teaser">
+                    {%- if post.teaser %}
+                    <img src="{{ site.url }}{{ site.images }}{{ post.teaser }}" alt="teaser">
+                    {%- else %}
+                    <img src="{{ site.url }}{{ site.images }}{{ site.teaser }}" alt="teaser">
+                    {%- endif %}
+                  </p>
+                	<h2 class="post-category">{{ post.categories[1] }}</h2>
+                  <h2 class="post-title">{{ post.title }}</h2>
+                  <div class="div-10-high"></div>
               </a>
           </div>
           {%- assign count = count | plus:1 %}
@@ -41,13 +44,16 @@
     {%- for post in site.categories.portfolio %}
           <div class="col col-portfolio">
               <a href="{{ site.url }}{{ post.url }}">
-                  <div class="image" style="background-image:url({{site.url}}{{ site.images }}{{post.teaser}})">
-                      <div class="post-title">
-                            <p>{{post.categories[0]}}</p>
-                            <div class="line-red"></div>
-                            <h1>{{post.title}}</h1>
-                      </div>
-                  </div>
+                <p class="post-teaser">
+                  {%- if post.teaser %}
+                  <img src="{{ site.url }}{{ site.images }}{{ post.teaser }}" alt="teaser">
+                  {%- else %}
+                  <img src="{{ site.url }}{{ site.images }}{{ site.teaser }}" alt="teaser">
+                  {%- endif %}
+                </p>
+                <h2 class="post-category">{{ post.categories[0] }}</h2>
+                <h2 class="post-title">{{ post.title }}</h2>
+                <div class="div-10-high"></div>
               </a>
           </div>
     {%- endfor %}

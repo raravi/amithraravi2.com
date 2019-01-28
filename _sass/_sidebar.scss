@@ -64,34 +64,43 @@
      display: flex;
      flex-wrap: wrap;
      flex-direction: row;
+     align-items: stretch;
      div {
+       display: flex;
        padding: 0 5px;
        flex: 100%;
        max-width: 100%;
        @include media($small450) {
          flex: 50%;
          max-width: 50%;
+         padding: 0 10px;
        }
        @include media($medium750) {
          flex: 25%;
          max-width: 25%;
+         padding: 0 8px;
        }
        @include media($medium) {
          flex: 100%;
          max-width: 100%;
+         padding: 0 4px;
        }
      }
    }
 
    /* Sidebar - Latest Posts */
    .sidebartile {
+     display: flex;
+     margin: 0px 0px 30px;
+     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
      &:hover {
+       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
        .post-title {
          color: $cg-red;
        }
        .post-teaser {
          &:after {
-             background: rgba($base-color,0.25);
+             background: rgba($base-color,0.05);
          }
        }
      }
@@ -100,21 +109,19 @@
      }
      .post-title {
        @include font-size(16,no);
-       @include media($medium) {
-         @include font-size(18,no);
-       }
        color: $text-color;
        text-decoration: none;
+       padding: 0 10px;
      }
      .post-excerpt {
-       @include font-size(13);
-       @include media($medium) {
-         @include font-size(15);
-       }
+       @include font-size(14);
        color: $text-color;
        text-decoration: none;
+       padding: 0 10px 10px;
+       margin-bottom: 0px;
      }
      .post-teaser {
+       margin-top: 0px;
        position: relative;
        display: block;
        &:after {

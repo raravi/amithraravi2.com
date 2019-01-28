@@ -151,6 +151,9 @@
 		}
 	}
 	.page-title {
+		h2 {
+			margin-top: 10px;
+		}
 		@include fill-parent;
 	}
 	.page-title-media {

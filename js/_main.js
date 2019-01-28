@@ -158,3 +158,18 @@ $(document).ready(function(){
       $grid.isotope({ filter: '*' });
   });
 });
+
+$('.button-all').on( 'click', function() {
+  $('.articles-tiles-grid').children('.article-tile').hide();
+  $('.articles-tiles-grid').children('.article-tile').show();
+});
+
+$('.button-tech').on( 'click', function() {
+  $('.articles-tiles-grid').children('.article-tile').hide();
+  $('.articles-tiles-grid').children('.article-tile').filter('.tech').show();
+});
+
+$('.button-personal').on( 'click', function() {
+  $('.articles-tiles-grid').children('.article-tile').hide();
+  $('.articles-tiles-grid').children('.article-tile').filter('.personal').show();
+});

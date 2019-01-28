@@ -78,8 +78,7 @@
            display: flex;
            flex-wrap: wrap;
            flex-direction: row;
-           justify-content: space-between;
-           padding: 0 8px;
+           justify-content:space-around;
            .title {
               display: flex;
               flex: 100%;
@@ -93,17 +92,17 @@
            .col {
                display: flex;
                box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-               margin: 15px 10px 30px;
-               padding: 0 0px;
+               margin: 15px 10px 20px;
                &:hover {
                  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
                }
                a {
-                 width: 100%;
+                 //width: 100%;
                  text-decoration: none;
                  .post-teaser {
                    position: relative;
                    display: block;
+                   //width: 100%;
                    &:after {
                      content: '';
                      position: absolute;

@@ -24,11 +24,21 @@
   position: fixed;
   transform: translateZ(0);
   backface-visibility: hidden; /* fix scroll jank */
-  top: $gutter/1.15;
+  top: $gutter/0.9;
   right: $gutter;
   display: block;
-  width: $button-size * 2;
-  height: $button-size * 2;
+  width: $button-size * 1.6;
+  height: $button-size * 1.6;
+  @include media($micro350) {
+    top: $gutter;
+    width: $button-size * 1.75;
+    height: $button-size * 1.75;
+  }
+  @include media($small450) {
+    top: $gutter/1.15;
+    width: $button-size * 2;
+    height: $button-size * 2;
+  }
   background: $primary-color;
   outline: 0;
   padding: 0;

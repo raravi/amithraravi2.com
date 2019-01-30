@@ -14,7 +14,7 @@ In my quest to learn [Gatsby.js](https://www.gatsbyjs.org/) and the underlying [
 
 This is when I hit the wall, figuratively speaking. [Isotope.js](https://isotope.metafizzy.co/) is an external javascript resource that I have used to [animate the filtering of articles grid on my static site](https://www.amithraravi.com/articles/), and connect it to the component using [jQuery](https://jquery.com/). Gatsby being React based, I had to write a component which would take care of rendering as well as the callbacks required to sort/filter using Isotope. This is how I got it to work.
 
-### Initial Setup
+## Initial Setup
 
 Before we delve into the solution, it’s better to understand the React basics that go into making it work.
 
@@ -143,7 +143,7 @@ At a bare minimum, the <u>button that is clicked should look different compared 
 
 Note that the `state` variable has 3 variables in it. These store the status of the 3 buttons - `All`, `Tech` and `Personal`. Right now, only the status will get toggled on clicking the buttons. But they are supposed to do something more i.e., filter the posts in the grid and animate the action. This is where Isotope comes in.
 
-### Install/Setup Isotope.js
+## Install/Setup Isotope.js
 
 First, install isotope using npm.
 
@@ -195,7 +195,7 @@ iso.arrange({
 
 Pretty simple, right? How do we go about doing the same in our React component defined above?
 
-### Integrating Isotope into React
+## Integrating Isotope into React
 
 The changes to the React component are done in the 3 handleClick functions. See below:
 

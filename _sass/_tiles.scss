@@ -54,6 +54,7 @@
          .post-title {
            margin-top: 4px;
            @include font-size(18,no);
+           font-family: $grid-title-font;
            color: $text-color;
          }
          .post-excerpt {
@@ -179,8 +180,12 @@
     color:$cg-red;
     border:none;
     position:relative;
-    height:40px;
-    font-size:1.1em;
+    height:30px;
+    font-size:0.9em;
+    @include media($micro350) {
+      font-size: 1.1em;
+      height:40px;
+    }
     padding:0 1em;
     cursor:pointer;
     transition:800ms ease all;
@@ -230,8 +235,12 @@
 
   .filters-button-group {
     display: inline-block;
-    padding-top   : 10px;
-    padding-bottom: 20px;
+    padding-top   : 20px;
+    padding-bottom: 0px;
+    @include media($small) {
+      padding-top   : 10px;
+      padding-bottom: 20px;
+    }
   }
 
   .filters-button-group:after {

@@ -13,7 +13,7 @@ Bought your own [fancy domain]({{ site.url }}{% post_url 2017-03-09-your-own-web
 
 In this blog post, I'll take you through the process of setting up Web Hosting for your domain.
 
-### Buy a Web Hosting package
+## Buy a Web Hosting package
 
 ![image]({{ site.url }}{{ site.images }}linux-vs-windows-hosting.jpg)
 

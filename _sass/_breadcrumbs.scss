@@ -3,13 +3,15 @@
    ========================================================================== */
 
 .breadcrumbs {
-  padding-bottom: 30px;
   @include row;
   margin-top: $gutter;
   @include font-size(16,no);
+  @include media($small) {
+    padding-bottom: 30px;
+  }
   a {
     display: inline-block;
-    font-family: $alt-font;
+    font-family: $quoted-text-font;
     font-weight: 700;
     text-align: left;
     text-transform: uppercase;

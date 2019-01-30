@@ -7,7 +7,10 @@
    ========================================================================== */
 
 #masthead {
-	padding: $gutter;
+	padding: $gutter $gutter 0px $gutter;
+	@include media($small) {
+		padding: $gutter;
+	}
 	z-index: 5;
 	@include transform(translate(0,0));
 	@include transition(500ms cubic-bezier(.645,.045,.355,1.000));
@@ -24,14 +27,15 @@
 		@include span-columns(4);
 	}
 	padding: (.25 * $masthead-height) 0; // fourth the height to center vertically
+	padding-left: 5px;
 	height: $masthead-height;
 	text-decoration: none;
 	color: $black;
-	font-family: $alt-font;
-	font-weight: 700;
-	@include font-size(28,no);
+	font-family: $site-title-font;
+	font-weight: 600;
+	@include font-size(36,no);
 	line-height: .5 * $masthead-height; // half the height to center vertically
-	text-transform: uppercase;
+	//text-transform: lowercase;
 }
 
 
@@ -54,7 +58,6 @@
 			margin-right: $gutter;
 			padding: (.25 * $masthead-height) 0 (.25 * $masthead-height) ;
 			height: $masthead-height;
-			font-family: $alt-font;
 			&:before,
 			&:after {
 				content: '';
@@ -99,8 +102,9 @@
 	}
 	li {
 		a {
-			font-weight: 700;
+			font-weight: 500;
 			@include font-size(16,no);
+			font-family: $menu-font;
 			line-height: .5 * $masthead-height; // half the height to center vertically
 			color: $black;
 			text-transform: uppercase;
@@ -112,7 +116,8 @@
 
 .bottom-menu {
 	@include clearfix;
-	font-weight: 700;
+	//font-weight: 700;
+	font-family: $menu-font;
 	a {
 		color: lighten($black,60);
 	}
@@ -151,12 +156,50 @@
 		}
 	}
 	.page-title {
+		//border: 1px solid blue;  /* For debugging */
+		padding-bottom: 0px;
+		margin-bottom: 0px;
+		h1 {
+			padding-bottom: 0px;
+			margin-bottom: 0px;
+			font-family: $article-title-font;
+			@include font-size(24,yes,34);
+			@include media($small) {
+				@include font-size(30,yes,40);
+			}
+		}
 		h2 {
-			margin-top: 10px;
+			//border: 1px solid blue;  /* For debugging */
+			margin-top: 20px;
+			margin-bottom: 0px;
+			@include media($small) {
+				margin-top: 10px;
+				margin-bottom: 20px;
+			}
 		}
 		@include fill-parent;
 	}
+	.article-date {
+		//border: 1px solid green;  /* For debugging */
+		position: relative;
+		top: -10px;
+		p {
+			margin-top: 0px;
+			@include font-size(14,no);
+			font-family: $alt-font;
+			color: lighten($black,60);
+			margin-bottom: -10px;
+		}
+	}
 	.page-title-media {
+		h1 {
+			font-family: $article-title-font;
+			@include font-size(24,yes,34);
+			@include media($small) {
+				@include font-size(30,yes,40);
+			}
+			margin-bottom: 12px;
+		}
 		width: 100%;
 		@include media($medium) {
 			width: 80%;
@@ -165,12 +208,42 @@
 	@at-root {
 		.page-content {
 			@include fill-parent;
-			// larger font for intro paragraph
-			> p {
-				&:first-child {
-					@include font-size(20,yes,30);
+			p {
+				@include font-size(18,yes,27);
+			}
+			h2 {
+				margin-top: 36px;
+				@include font-size(22,yes,22);
+				@include media($small) {
+					margin-top: 40px;
+					@include font-size(24,yes,32);
 				}
 			}
+			h3 {
+				margin-top: 28px;
+				@include font-size(20,yes,20);
+				@include media($small) {
+					margin-top: 32px;
+					@include font-size(22,yes,28);
+				}
+			}
+			h4 {
+				margin-top: 24px;
+				@include font-size(18,yes,18);
+				@include media($small) {
+					margin-top: 28px;
+					@include font-size(20,yes,24);
+				}
+			}
+			// larger font for intro paragraph
+			//> p {
+			//	&:first-child {
+			//		@include font-size(18,yes,27);
+			//		@include media($small) {
+			//			@include font-size(20,yes,30);
+			//		}
+			//	}
+			//}
 			// cleaner underlines for links
 			a { text-decoration: none; }
 			p a,

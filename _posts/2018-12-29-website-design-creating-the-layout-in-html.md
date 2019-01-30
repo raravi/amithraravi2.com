@@ -13,7 +13,7 @@ You're done with the [basic design]({{ site.url }}{% post_url 2018-11-23-website
 
 For this you need to be aware of the different layout options available in HTML/CSS and which of those is the right fit for your website design. Let us go through the options one by one.
 
-### Tables - Do Not Do This!
+## Tables - Do Not Do This!
 
 This was used earlier when the web was still in its infancy, and there wasn't much you could do with a website except display text. The developers had got used to designing websites using `<table>` element and stuck to it even when new things (CSS, images, animations, small screens) came into the picture.
 
@@ -93,7 +93,7 @@ When we look at the other options available, you will realise why it's so bad to
 
 **A bit of history:** When the CSS standard arrived in 1996, it helped alleviate the problems created by table-based layout. The `<div>` element ruled the layout design for a long time, until the CSS 2.1 standard was finally published in 2011 and float walked in to claim the throne!
 
-### Float - The Classical Way
+## Float - The Classical Way
 
 The CSS Float property is used to float elements in a website. For example, you can float an image next to a body of text. This is `<float>` in its simplest usage. The same concept can be used to design an entire website.
 
@@ -181,7 +181,7 @@ Modify the CSS to add a media query:
 
 This basically makes the website display as a single column for devices with resolution smaller than 800px (most tablets and all smartphones). Why do this you ask? Imagine looking at a two-column website on your mobile device and trying to read the content. It's not appealing, is it?!
 
-### Flex - The Responsive Way
+## Flex - The Responsive Way
 
 CSS Flexbox makes it quite simple to design flexible responsive layout for websites. It takes the concept behind float and streamlines it for easy adoption. The above code can be rewritten as follows:
 
@@ -208,7 +208,7 @@ I won't add anything more here, because there is a beautiful website which alrea
 
 {% include advertising-article.html %}
 
-### Grid - The Future
+## Grid - The Future
 
 By now you should be able to spot the issue with using `<flex>` to design an entire layout. It is a one-dimensional tool (a row/column layout), and as such has to be adapted to be used for designing a website layout which is two-dimensional. This is why you will end up with a hierarchy of nested Flexbox elements in your layout design.
 

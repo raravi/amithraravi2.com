@@ -16,7 +16,7 @@ Okay, so you have finally decided to host a website for yourself.
 
 In this blog post, I'll take you through the process of buying a domain. I know you are excited about that personal digital space that you can own completely and do whatever you want with it!
 
-### Buy a domain for yourself
+## Buy a domain for yourself
 
 ![image]({{ site.url }}{{ site.images }}domain-name.png)
 

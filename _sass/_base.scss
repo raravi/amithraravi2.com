@@ -76,9 +76,10 @@ blockquote {
   padding-right: $gutter;
   border-left: 6px solid $info-color;
   p {
-    font-family: $alt-font;
+    font-family: $quoted-text-font;
 		font-style: italic;
-    @include font-size(18);
+    @include font-size(16);
+		line-height: 1.55;
   }
   cite {
     font-family: $base-font;

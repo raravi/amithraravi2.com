@@ -7,7 +7,13 @@
 
 @mixin line {
   display: inline-block;
-  width: $button-size;
+  width: $button-size * 0.7;
+  @include media($micro350) {
+    width: $button-size * 0.8;
+  }
+  @include media($small450) {
+    width: $button-size;
+  }
   height: $button-size/10;
   background: $white;
   transition: $transition;
@@ -16,6 +22,7 @@
 .nav-lines {
   @include line;
   position: relative;
+  top: -2px;
   &:before, &:after {
     @include line;
     position: absolute;
@@ -117,8 +124,7 @@
     &:before, &:after {
       transition: top .3s ease, -webkit-transform .3s .5s ease; /* delay the formation of the x till the minus is formed */
       transition: top .3s ease, transform .3s .5s ease; /* delay the formation of the x till the minus is formed */
-      top: 0;
-      width: $button-size;
+      top: -2px;
     }
     &:before {
       transform: rotate3d(0,0,1,45deg);

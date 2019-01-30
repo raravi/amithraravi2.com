@@ -14,7 +14,7 @@ The privacy of my visitors is extremely important. This Privacy Policy outlines 
 
 First and foremost, I will never share your email address or any other personal information to anyone without your direct consent.
 
-### Log Files
+### 1.1 Log Files
 
 Like many other websites, this site uses log files to help learn about when, from where, and how often traffic flows to this site. The information in these log files include:
 
@@ -27,7 +27,7 @@ Like many other websites, this site uses log files to help learn about when, fro
 
 All of this information is not linked to anything that is personally identifiable.
 
-### Cookies and Web Beacons
+### 1.2 Cookies and Web Beacons
 
 When you visit this site <convenience> cookies are stored on your computer, not by my site but by third-party advertisers.
 

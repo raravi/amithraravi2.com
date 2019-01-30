@@ -4,13 +4,36 @@
 
    /* Main bar & Side bar */
    .mainbar {
-       //border: 1px solid black;  /* For debugging */
        float: left;
        width: 100%;
        @include media($medium) {
          width: 75%;
        }
        padding-top: 20px;
+       nav {
+         margin-top: 0px;
+         @include media($small) {
+           margin-top: 20px;
+         }
+       }
+       .div-high-1 {
+         &:nth-of-type(2) {
+           //border: 1px solid black;  /* For debugging */
+           height: 15px;
+           @include media($small) {
+             height: 10px;
+           }
+         }
+       }
+       .div-high-2 {
+         &:nth-of-type(3) {
+           //border: 1px solid black;  /* For debugging */
+           height: 15px;
+           @include media($small) {
+             height: 0px;
+           }
+         }
+       }
    }
    .sidebar {
      float: left;
@@ -110,6 +133,7 @@
      .post-title {
        @include font-size(16,no);
        color: $text-color;
+       font-family: $grid-title-font;
        text-decoration: none;
        padding: 0 10px;
      }
@@ -118,7 +142,7 @@
        color: $text-color;
        text-decoration: none;
        padding: 0 10px 10px;
-       margin-bottom: 0px;
+       margin-bottom: 10px;
      }
      .post-teaser {
        margin-top: 0px;
@@ -178,11 +202,4 @@
    }
    .site-title-padding {
      width: 2000px;
-   }
-   .article-date {
-     p {
-       @include font-size(14,no);
-       font-family: $alt-font;
-       color: lighten($black,60);
-     }
    }

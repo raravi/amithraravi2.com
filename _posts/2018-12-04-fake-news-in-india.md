@@ -21,7 +21,7 @@ It took me about 3-4 days for me to go through the entire study. The study is qu
 
 Here is my understanding of the data from the BBC study.
 
-### The Current Situation
+## The Current Situation
 
 **Indian media**, especially the vernacular news media, has become sensationalistic and hyperbolic in the way they deliver news daily to its users. People know that most of the coverage is restricted to the news that sells, rather than news that needs to be seen/spread.  And this knowledge spurs the growth of alternative news outlets. People are ready to believe what influential individuals in their circles say and broadcast it to all their acquaintances.
 
@@ -33,7 +33,7 @@ Rather than the authenticity of information, it’s the social influence of the 
 
 {% include advertising-article.html %}
 
-### The Mindset of the Average Indian User
+## The Mindset of the Average Indian User
 
 With the Internet being touted to be the greatest thing since the Industrial Revolution, everyone wants to use the Internet and be seen doing it. India arrived quite late to the party, so to speak. And Indians felt left behind. So they lapped up the cheap Internet rates and the equally cheap mobiles which could connect them to the 'Internet' being offered due to the entry of **Jio**. Till now, the news was something you could talk face to face in groups. But this push to digital had opened up a new public space. Twitter, WhatsApp, Facebook, and their ilk had opened up a space where people can say and do what they want without being physically there to face the consequences of their actions.
 
@@ -43,7 +43,7 @@ As such, Indian users embraced these social media spaces as public spaces where 
 >
 >~ From the study
 
-### The Result
+## The Result
 
 ![image]({{ site.url }}{{ site.images }}fake-news-02.jpg)
 
@@ -62,7 +62,7 @@ So a key feature of online platforms is the sharing of content without active, e
 
 {% include advertising-article.html %}
 
-### The Tools Required to Fight This
+## The Tools Required to Fight This
 
 It's quite imperative that all of us understand how widespread the issue of fake news is. The Indian users need to become aware of the way opinion trumps (pun intended) fact in the current political climate. The average Indian user should exercise more caution while browsing information and distributing it to their family and friends. Fake news spreads because people are ready to believe whatever feels right to them - which means they need to mature as responsible users of the Internet age. Also, the society as a whole needs to take cognisance of this issue and work as a community to work on this.
 

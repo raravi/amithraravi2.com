@@ -19,7 +19,7 @@ Now I would like to talk only about blogging. The why, what and how of it i.e. t
 
 Deciding to start a blog is nothing but a realisation to express yourself. You want a space where you can write about what’s in your head. The written word holds sway over many of us, compelling us to pick up the pen and write. For us, writing is our safe space. It makes us calm down and be content.
 
-### Core Area
+## Core Area
 
 What is it that you keep thinking most of the day? The thing that your mind wanders to when it’s idling or bored or plain irritated.
 
@@ -31,7 +31,7 @@ Focusing on too many things will lead to your efforts getting diluted and your m
 
 If you look around your room or home or workplace, you will notice there is a common theme that unites your spaces. Identifying this early on will help you to come out with a blog that is integral to the theme, and your audience knows exactly what to expect out of your blog.
 
-### Writing Expertise
+## Writing Expertise
 
 Though it’s not mandatory to have a writing experience, having it definitely helps. Organising your thoughts into a written article which is well structured and has an easy flow is quite an impressive trait. Don’t worry though, it can be acquired with enough practice.
 
@@ -43,7 +43,7 @@ This is but a starting point only. Beyond this, it requires a constant effort of
 
 ![image]({{ site.url }}{{ site.images }}blog-3.jpg)
 
-### Consistency
+## Consistency
 
 You should be able to write posts - full posts which deal with the subject in-depth - every day or two. And maintain the same high quality consistently. All the various aspects of writing - SEO, content, subject knowledge - should be at a top-notch level.
 

@@ -21,7 +21,7 @@ At its most basic level, wireframing can be just a simple sketch done with pen a
 
 Okay then, let us deep-dive into the design process and see the steps involved.
 
-### The Content
+## The Content
 
 What is the content that needs to be hosted? A personal blog? A niche market? A portfolio of your work? Each of these is talking to a different audience and the information expected also differs.
 
@@ -40,7 +40,7 @@ Along with these, you will also need a couple of common-purpose pages:
 
 Just start with a minimal set of pages that you think are necessary, and add more as you need. This will ensure that you add the core functionality first, and follow through with the bells and whistles later.
 
-### Layout of your website
+## Layout of your website
 
 ![image]({{ site.url }}{{ site.images }}design-2.png)
 
@@ -52,7 +52,7 @@ Once the layout of the different pages have been decided upon, the next thing yo
 
 I believe, the number one thing to learn for designing websites is layout design. Or at least a basic understanding of the HTML/CSS elements like the Flexbox and Grid. If you don't know what they are, then now is a good time for a refresher course on these. To play around with the different layouts and make sure they work as expected, its essential to know how to use these elements to fit your requirements.
 
-### Prototype It!
+## Prototype It!
 
 The first build of your website is just that. It has all the content presented as per the intended design and spread across the different pages. This gives you an overview of how the website will look. Once the initial version is coded, the basic design is complete.  This will be your prototype!
 

@@ -4,12 +4,19 @@
 
    .mainbox {
        //border: 1px solid #000;  /* For debugging */
+
+       margin-top: 15px;
        display: flex;
        flex-direction: column;
        .row {
+         box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+         margin-bottom: 40px;
          display: flex;
          align-items: stretch;
          flex-wrap: wrap;
+         a {
+           text-decoration: none;
+         }
          .col {
              display: flex;
              justify-content: center;
@@ -29,6 +36,8 @@
                  		padding: 3em;
                  	}
                  	h1 {
+                    text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.6);
+                    color: darken($white,2);
                  		@include font-size(48);
                  		@include media($medium) {
                  			@include font-size(60);
@@ -60,6 +69,7 @@
            	 color: $white;
            	 text-shadow: 1px 1px $text-color;
            	 background-size: 100% 100%;
+             min-height: 250px;
          }
        }
        .forward {
@@ -118,8 +128,9 @@
                    margin-top: 0px;
                  }
                  .post-category {
-                   @include font-size(18,no);
-                   font-family: $heading-font;
+                   @include font-size(16,no);
+                   font-weight: 400;
+                   font-family: $menu-font;
                    color: darken($cg-red, 3);
                    text-decoration: none;
                    text-transform: uppercase;
@@ -128,7 +139,9 @@
                  }
                  .post-title {
                    @include font-size(16,no);
+                   font-weight: 400;
                    color: $text-color;
+                   font-family: $grid-title-font;
                    text-decoration: none;
                    margin-top: 10px;
                    padding: 0 10px;
@@ -182,7 +195,22 @@
        }
    }
 
+   .title {
+      display: flex;
+      flex: 100%;
+      max-width: 100%;
+      justify-content: center;
+      h1 {
+         @include font-size(30);
+         //margin-bottom: 0px;
+       }
+   }
+
    .main-about-me {
+     //border: 1px solid #000;  /* For debugging */
+     padding: 20px;
+     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
        display: flex;
        flex-wrap: wrap;
        flex-direction: row;
@@ -221,6 +249,10 @@
                a {
                  @include font-size(16,no);
                  text-decoration: none;
+               }
+               h5 {
+                 margin-bottom: 20px;
+                 font-family: $blogger-resources-font;
                }
            }
        }

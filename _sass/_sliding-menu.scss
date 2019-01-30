@@ -93,23 +93,27 @@
     transform: translateX(0);
   }
   h5 {
-    margin: 0 20% 0 10%;
+    margin: 10px 20% 0 10%;
+    @include media($small) {
+      margin-top: 20px;
+    }
     @include media($large) {
       margin-right: 20%;
     }
     color: $white;
-    @include font-size(14);
+    @include font-size(18);
     @include media($small) {
-      @include font-size(18);
+      @include font-size(20);
     }
     span {
       padding-top: 10px;
       display: block;
-      @include font-size(32,no,1);
+      color: #FFD700;
+      @include font-size(42,no,1);
       @include media($small) {
-        @include font-size(48,no,1);
+        @include font-size(52,no,1);
       }
-      font-family: $base-font;
+      font-family: $grid-title-font;
       text-transform: uppercase;
       font-weight: 400;
     }
@@ -154,20 +158,32 @@
     a:hover .teaser {
       opacity: 1;
     }
+    a:hover .excerpt {
+      color: $white;
+    }
+    a:hover .title {
+      color: $red;
+    }
     .title {
       display: block;
       margin-left: 110px;
-      font-family: $alt-font;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      font-family: $menu-font;
+      color: $cg-red;
       @include font-size(24,no);
-      font-weight: 700;
+      //font-weight: 200;
       @include media($small) {
+        padding-top: 5px;
+        padding-bottom: 0px;
         margin-left: 170px;
-        @include font-size(32,no);
+        @include font-size(30,no);
       }
     }
     .excerpt {
       margin-top: 0;
       margin-left: 110px;
+      color: grey;
       @include font-size(14,no);
       @include media($small) {
         margin-left: 170px;

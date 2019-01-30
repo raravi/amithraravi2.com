@@ -15,7 +15,7 @@ So you have updated to the new **iOS 12**, and want to see what it has to offer?
 
 ![image]({{ site.url }}{{ site.images }}ios-1.jpg)
 
-### WHY DO WE NEED IT?
+## WHY DO WE NEED IT?
 
 iOS 12 has been released at a time when our lives are being overshadowed by our online avatars. Our FB updates, Instagram posts, Tweets and LinkedIn posts are taking up so much of our time daily. We go on dates to have some uninterrupted ‘Us’ time with our significant other, only to realise that we have posted more updates online then we talked to each other all evening…
 
@@ -29,7 +29,7 @@ People are starting to realise that they need to turn off their phones and devot
 
 Apple always strives for a better understanding of what people need right now. And it has realised that limiting phone usage is the way forward. People should make use of technology, while not becoming slaves to it. The decision to limit usage has to come from each individual user. Apple provides the tools, it’s up to the user to make efficient use of it.
 
-### WHAT IS IT?
+## WHAT IS IT?
 
 Enter **Screen Time**! Each user can see the stats on how they are using their devices. Apps they use have been grouped to make sense of the hundreds of apps on our phones. Prominent categories displayed on my iPhone include Social Networking, Games, Reading & Reference, Productivity, Entertainment, Creativity and Other.
 
@@ -43,7 +43,7 @@ The Screen Time setting is basically a dashboard. The top graph gives the breaku
 
 Like me, if you own more than one device, then you get separate graphs on each device. That simply doesn’t make sense now, does it? You are interested in your usage through the day, and it should be device-independent. For this, enable **Screen Time** to keep track of your activities across all your devices and this will give you a single combined graph instead of device-specific ones on each.
 
-### HOW DOES IT HELP?
+## HOW DOES IT HELP?
 
 Right, so now you have the tools to see clearly for yourself, how you are using your **Screen Time**. Apple gives you different ways of controlling your usage. You can use:
 * **Downtime**: Scheduled ‘switch off’ time.
@@ -53,7 +53,7 @@ Right, so now you have the tools to see clearly for yourself, how you are using 
 
 It’s one thing to have the options, and another to know what to do with them. Each of us have to realise the importance of **Screen Off Time**. If we utilise each option cleverly, then we can reduce our daily usage to ‘what’s required’ only. **Downtime** can be a set time of the day. Say dinner time with family, so that we make it a habit to eat together. **App Limits** can curb your time spent on Instagram, drooling over others travel diaries.
 
-### WHAT PEOPLE SAY
+## WHAT PEOPLE SAY
 
 I was curious to see how people used **Screen Time**, so I headed to the Complaint Box of the online world a.k.a **Twitter**. And it didn’t disappoint.
 

@@ -1,6 +1,6 @@
 {% if page.categories and page.categories != empty %}
   <nav class="breadcrumbs">
-    <a href="{{ site.url }}">Home</a> ›
+    <a href="{{ site.url }}">Home</a>&nbsp;&nbsp;›&nbsp;
     <a href="{{ site.url }}/{{ page.categories | first }}/">{{ page.categories | first | replace: '-',' ' | capitalize }}</a>
   </nav><!-- /.breadcrumbs -->
 {% endif %}

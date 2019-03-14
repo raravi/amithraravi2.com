@@ -19,8 +19,6 @@ We all keep hearing voices in our heads, that keep reinforcing negative thoughts
 
 All of us have problems that were never acknowledged, issues too intimate to confide in anyone. Unresolved personal issues are the springboard from which depression usually takes stronger hold of us. That’s why it’s easier to talk to a complete stranger, it liberates us from the guilt that holds us back!
 
-{% include advertising-article.html %}
-
 ___
 
 Sometimes, the only person who thinks of yourself as a failure is you. And it’s usually quite far from the truth. It’s called the *Imposter Syndrome*, and it’s quite common in people with above average intelligence. Check this [link](http://www.upworthy.com/this-video-asks-people-about-their-success-then-asks-loved-ones-if-they-agree) if you want to see what I’m talking about.
@@ -38,8 +36,6 @@ Depression, left untreated, usually leads to suicidal thoughts. There are many r
 > A semicolon is used when an author could’ve chosen to end their sentence, but chose not to. The author is you and the sentence is your life.
 
 A powerful message, one that needs to be spread far and wide. The taboo associated with it is - in our minds as well as the world outside - what makes it so dangerous. People go through this breathtakingly painful experience all by themselves, convinced that no one else can understand any of it.
-
-{% include advertising-article.html %}
 
 The first step is to acknowledge that you are going through something. And seek professional help. It is the fastest way to recovery. Let’s overcome together. Ask for help when you need it. Who knows, some day you might even help others who are where you once were!
 

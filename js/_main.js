@@ -130,12 +130,12 @@ $(document).ready(function() {
 $(window).on("load", function() {
   // Menu button click
   $("#js-menu-trigger,#js-menu-screen,#js-menu-link").on(
-    "click touchstart",
+    "click",
     function(e) {
       $("#js-body").toggleClass("no-scroll");
       $("#js-menu, #js-menu-screen").toggleClass("is-visible");
       $("#js-menu-trigger").toggleClass("slide close");
-      $("#masthead, #page-wrapper").toggleClass("slide");
+      $("#masthead-floating, #page-wrapper").toggleClass("slide");
       e.preventDefault();
     }
   );

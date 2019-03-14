@@ -88,8 +88,6 @@ Websites designed using `<table>` element are fixed in nature. They can't be red
 
 When we look at the other options available, you will realise why it's so bad to use the Table-based layout. Especially when you are trying to create responsive websites.
 
-{% include advertising-article.html %}
-
 **A bit of history:** When the CSS standard arrived in 1996, it helped alleviate the problems created by table-based layout. The `<div>` element ruled the layout design for a long time, until the CSS 2.1 standard was finally published in 2011 and float walked in to claim the throne!
 
 ## Float - The Classical Way
@@ -203,8 +201,6 @@ It's that simple.
 You can imagine your website to be a hierarchy of Flexbox elements, starting with the body element, and diving down into the depths till you reach the individual components on each page. Once you start adding `<flex>` elements to your website, it will become second nature to think of your layout in terms of `<flex>` properties. That's how powerful Flexbox is!
 
 I won't add anything more here, because there is a beautiful website which already explains Flexbox and its properties in detail. This [CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) page is my go-to reference for all things **flex**!
-
-{% include advertising-article.html %}
 
 ## Grid - The Future
 

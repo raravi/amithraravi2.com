@@ -23,8 +23,6 @@ It’s been a crazy month. The wedding is a few weeks away and the activity has 
 
 When my dad and mom told me that they will be heading out of town for a couple of days (for more inviting) I welcomed the news. I wanted a quiet few days to laze around and relax. So I told them I have work here in town and told them to go ahead without me :)
 
-{% include advertising-article.html %}
-
 I needed some peace and quiet to organise my thoughts before the D-Day arrived. I thought of so many things to do. Write a bit in my journal, I haven’t got the chance to do it in a while. Spend a cozy day in bed. And not move an inch. With these happy thoughts, I went to sleep.
 
 ---
@@ -42,8 +40,6 @@ I was finishing the living room when the security guard beeped to tell that the 
 The guy came and delivered the sandwich and salad that I’d ordered. I went to get 500 bucks from my purse in my bedroom as it was Cash on Delivery and returned about a minute later. As I entered the living room, I saw that the guy was smiling at the sofa. As soon as he saw me, he turned and smiled at me too. I gave him the money and asked him to keep the change. He smiled and mumbled ‘Thanks’ to the sofa and left.
 
 >What a strange fella! Maybe he is too shy…
-
-{% include advertising-article.html %}
 
 ---
 
@@ -67,8 +63,6 @@ I get up slowly and walk towards the door. I cautiously open the door a bit and 
 
 >Maybe it’s the TV. I left it on. Yeah, that’s it!
 
-{% include advertising-article.html %}
-
 ---
 
 I open the door and walk into the living room, which is in complete darkness. And then, as I am staring with utter confusion at the blank screen, I hear breathing from behind me, where the sofa is. I stand utterly motionless for a good 10 minutes, I’m stricken with fear. There’s something in the house with me. In a locked house, how can that be?!
@@ -90,8 +84,6 @@ The noises have stopped now and I’ve picked up enough courage to think of a pl
 >Get to the main door and I’m free!
 
 Just get to the main door. I slowly and very cautiously move to the door. Making sure that I don’t make any sound, while my heart beats so fast that I’m scared it’ll be heard by the thing on the sofa.
-
-{% include advertising-article.html %}
 
 After what seems like an eternity, I am almost at the door. I haven’t heard any noises from the time I started to move. I have made it. One more step. Just one more.
 

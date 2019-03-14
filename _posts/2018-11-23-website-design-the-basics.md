@@ -13,8 +13,6 @@ Once you zero in on the kind of the website you [want]({{ site.url }}{% post_url
 
 Figure out the pages you want on your site and what you need each of them to be. Once you have a purpose for each page, you can think of the information to be presented and the kind of layout that goes well with that. In UX design, this process is called [wireframing](https://theuxreview.co.uk/wireframes-beginners-guide/). Wireframing brings out the essentials from the initial concept. It is meant to convert the idea into concrete information, presented visually for easy understanding.
 
-{% include advertising-article.html %}
-
 At its most basic level, wireframing can be just a simple sketch done with pen and paper. For advanced wireframing, you have [tools available](https://medium.com/@soulless/the-best-mockup-wireframing-design-tools-apps-for-ui-ux-designers-in-2018-4eb16957e25d)) that help to maintain the same feel across pages and reuse commonly used blocks. Wireframing tools are usually expensive and not really needed for building a personal website. But if you’re looking at a medium sized website for e-commerce purposes then they’re a worthy investment.
 
 ![image]({{ site.url }}{{ site.images }}design-1.jpg)
@@ -26,8 +24,6 @@ Okay then, let us deep-dive into the design process and see the steps involved.
 What is the content that needs to be hosted? A personal blog? A niche market? A portfolio of your work? Each of these is talking to a different audience and the information expected also differs.
 
 A personal blog is about your one passion turning into much more and hence requires a space to explore it. It will be less formal and more subjective in nature. A marketplace is about selling your goods, which means its all about displaying your product range. A portfolio site is about showcasing your amazing work done through the years (and growing).
-
-{% include advertising-article.html %}
 
 Usually, all of these will require a landing page (SEO talk for your main page), which has the links to all the different sections of your website.
 * A blog page listing the posts you have written.
@@ -55,8 +51,6 @@ I believe, the number one thing to learn for designing websites is layout design
 ## Prototype It!
 
 The first build of your website is just that. It has all the content presented as per the intended design and spread across the different pages. This gives you an overview of how the website will look. Once the initial version is coded, the basic design is complete.  This will be your prototype!
-
-{% include advertising-article.html %}
 
 A prototype may not have all the functionality working as expected, but it will have the look and feel of the website as designed. This is the main use of a prototype, it gives you a simplified version of your website for adding in functionality as required. It acts a placeholder for the complete functionality to be added later.
 

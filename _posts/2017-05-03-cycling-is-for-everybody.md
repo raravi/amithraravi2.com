@@ -17,8 +17,6 @@ I have always loved cycling. The freedom of speed is an exhilarating feeling, it
 
 Then I got a bit older.. I asked for a cycle. Dad said not now. So I stopped eating(yeah I know.. My poor parents) until dad got me a cycle. But he didn’t take me to buy the cycle, he got it home one day. He knew I may go for the most expensive one in the shop, without rhyme or reason.
 
-{% include advertising-article.html %}
-
 ---
 
 Well the younger me made peace with that. Anytime I tell stories like these from my childhood, my friends go “A single child, no siblings… You were too pampered”. They’re probably right.
@@ -33,8 +31,6 @@ That deep satisfaction of pedalling without thinking and letting my mind wander 
 
 Then I got too old for my cycle. All the kids had bikes and mopeds. So I gave my cycle to my younger cousins. And then went on to do engineering. And then work. Six years of IT went by in a flash. Work. Party. Party. Work. Sometimes life keeps going on. And on. And you keep trying to catch up.
 
-{% include advertising-article.html %}
-
 Until the day I hit 30. I felt old. Not because of 30, but because I was feeling unfit. *Okay fine, because of 30 too.* I had put on a couple of pounds, and was feeling too well rounded. I checked my weight one day and I was 66. 66?! I tried to cut down on food and booze. Didn’t work. That tends to happen when you reduce one meal and hog the next two.
 
 ---
@@ -46,8 +42,6 @@ I got it on Jan 28, 2015. I rode it back from Decathlon and all the long lost fe
 It’s the one time of the day I’m alone and my mind is ready to have a conversation about all the shit that I don’t want to deal with. I love to ride till my legs give out. This is when my mind offers the least resistance to thinking about the deep stuff, without even trying. I find solutions to my problems, almost out of thin air. Yeah, I know, me and my euphemisms :)
 
 And the high I get after a session of cycling is heavenly. I’m more positive, even though my legs are killing me. I can think of more things to do. I get more ideas for blogging. I can finally make the decisions I’ve been putting off for weeks.
-
-{% include advertising-article.html %}
 
 Believe me, it’s not easy to maintain a cycling schedule through all the things life keeps throwing at you. There are so many things begging for your attention. And to have that constant motivation to keep pushing yourself is tough. You gotta keep telling yourself to not give up.
 

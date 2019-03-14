@@ -30,8 +30,6 @@ Rather than the authenticity of information, it’s the social influence of the 
 > "What is new though, is that with the definition of news becoming expansive and all-encompassing, we find that anything of importance to the citizen is now considered ‘news’. It then also stands to reason that they are happy receiving information from just about anyone – and not just a handful of news organisations with rigorous journalistic practices, trusted brand images, and legacies of accuracy. Even more importantly for our purposes, we find that people don’t differentiate – or more accurately find it too hard or too resource intensive - to differentiate between various sources of news (in the broad sense outlined above). Social media, with its low barriers to entry, provides innumerable sources of information - and the distinctions between them are flattened in the minds of the users."
 > <br/><cite> ~ From the study</cite>
 
-{% include advertising-article.html %}
-
 ## The Mindset of the Average Indian User
 
 With the Internet being touted to be the greatest thing since the Industrial Revolution, everyone wants to use the Internet and be seen doing it. India arrived quite late to the party, so to speak. And Indians felt left behind. So they lapped up the cheap Internet rates and the equally cheap mobiles which could connect them to the 'Internet' being offered due to the entry of **Jio**. Till now, the news was something you could talk face to face in groups. But this push to digital had opened up a new public space. Twitter, WhatsApp, Facebook, and their ilk had opened up a space where people can say and do what they want without being physically there to face the consequences of their actions.
@@ -56,8 +54,6 @@ So a key feature of online platforms is the sharing of content without active, e
 
 > "Most people do not believe they are the ones spreading fake news. For them, the dominant association of fake news is scams and scares, done by nefarious actors for profit making, or at a deeper level fake news is news that is dissonant with their closely held beliefs and self-identity, done by those in a political outgroup. Either way, citizens don’t think they themselves have a role to play in this. This creates a challenge in tackling the spread of fake news: if you don’t believe you have a role to play in the sharing of fake news, then you certainly won’t respond to messages exhorting you to not share fake news."
 > <br/><cite> ~ From the study</cite>
-
-{% include advertising-article.html %}
 
 ## The Tools Required to Fight This
 

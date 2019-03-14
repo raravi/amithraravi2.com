@@ -37,8 +37,6 @@ Though it’s not mandatory to have a writing experience, having it definitely h
 
 What is necessary though, is to have a love for reading. Reading all sorts of content - from shorter news to longer blog posts, and finally many chapters of a novel. This inculcates the art of imagination through the written word in us. A page describing a war efficiently will make that war come alive in your head, because you’re actively imagining every word of every sentence of every paragraph. You're actively involved when reading, and that is what makes reading such an intimate and fun process.
 
-{% include advertising-article.html %}
-
 This is but a starting point only. Beyond this, it requires a constant effort of daily writing about your thoughts to get better. And you will get better. But it requires a considerable amount of time. Every day needs to be dedicated to making your craft better. You are a wordsmith, practicing your craft every day to fine-tune your skills so you get to the point where you can write with a flourish that doesn’t require too much effort from your side to write or for the reader to understand it.
 
 ![image]({{ site.url }}{{ site.images }}blog-3.jpg)
@@ -48,8 +46,6 @@ This is but a starting point only. Beyond this, it requires a constant effort of
 You should be able to write posts - full posts which deal with the subject in-depth - every day or two. And maintain the same high quality consistently. All the various aspects of writing - SEO, content, subject knowledge - should be at a top-notch level.
 
 The blog should maintain integrity throughout in looks as well as content. The design should conform across different pages and also be consistent across different devices. Each blog post is part of a whole represented by your website. As such, every blog post should be written in the same style of writing and should follow the same hierarchy.
-
-{% include advertising-article.html %}
 
 Doing this every day, over a period of many years will gain you a lot of readers. And these readers is how you monetise your blog. It can be done through ads on your blog or affiliate links which pay you a commission upon each click/buy.
 

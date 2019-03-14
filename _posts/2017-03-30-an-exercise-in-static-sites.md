@@ -23,15 +23,11 @@ A lot of options came up. The chief among them being [Wordpress](https://wordpre
 
 But I'm interested in setting up everything myself, and own all the data on my site (including comments which we will talk about in a later post) at all times. I moved on to taking up the courses on HTML/CSS/JavaScript & Git/GitHub.
 
-{% include advertising-article.html %}
-
 The next thing to look at was: should it be a static site or a dynamic one? In fact, there is a huge debate on that one. Check this Quora [thread](https://www.quora.com/What-is-the-difference-between-Static-Websites-and-Dynamic-Websites) but be warned, it's meant to confuse you :)
 
 A static site is sufficient if you are looking for a website which publishes content not so often, and not many comments are seen in a day. The main advantage is obviously the complete freedom, as you don't need anything else. And the small size, since its just a bunch of HTML/CSS files.
 
 I needed a blog, updated a few times a week or so, which focused on the content with minimal upkeep. And allowed me tinker with the look and feel of the site without too much hassle. For my needs, a static site was good enough. These two links([1](https://bradonomics.com/jekyll-wordpress-speed/) &  [2](http://progur.com/2016/08/jekyll-vs-wordpress.html)) pretty much convinced me to go static!!
-
-{% include advertising-article.html %}
 
 As i progressed through the courses I realised I needed a place to get my hands dirty and get complete control over the data in my blog, so that I can play with the look as I wished & code it accordingly. That's when I stumbled upon [Jekyll](https://jekyllrb.com/).
 

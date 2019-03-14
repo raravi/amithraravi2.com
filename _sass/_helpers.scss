@@ -94,12 +94,18 @@
     @include span-columns(3);
     @include omega(4n);
     margin-bottom: flex-gutter($grid-columns);
+    img {
+      width: 100%;
+      max-height: 180px;
+      overflow-y: hidden;
+    }
     h6 {
       @include font-size(14,no);
       color: $text-color;
       font-weight: 400;
       font-family: $grid-title-font;
       margin-top: 10px;
+      margin-bottom: 10px;
     }
   }
   @media screen and (max-width: 749px) {

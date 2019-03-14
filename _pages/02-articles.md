@@ -3,22 +3,20 @@ layout: archive
 title: Articles
 permalink: /articles/
 ---
-<div class="filters-button-group">
-		<button class="filters-button is-checked button-all" data-filter="*">All</button>
-		<button class="filters-button button-tech" data-filter=".tech">Tech</button>
-	  <button class="filters-button button-personal" data-filter=".personal">Personal</button>
+<div class="article-header" >
+	<div class="page-title">
+		<h2>{{ page.title }}</h2>
+	</div>
+	<div class="filters-button-group">
+			<button class="filters-button is-checked button-all" data-filter="*">All</button>
+			<button class="filters-button button-tech" data-filter=".tech">Tech</button>
+		  <button class="filters-button button-personal" data-filter=".personal">Personal</button>
+	</div>
 </div>
-<div class="div-20-high"></div>
-{% assign counter = 1 %}
-<div class="articles-tiles-grid">
+
+<div class="articles-tiles-grid effect-6" id="tiles-grid">
 	{%- for post in site.posts %}
 		{%- if post.layout == "article" -%}
-			{%- assign remainder = counter | modulo: 6 -%}
-			{%- if remainder == 0 %}
-			<div class="col tech personal">
-				{% include advertising-grid.html -%}
-			</div>
-			{%- endif %}
 			<article class="article-tile col {{post.categories[1]}}">
 				<a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
 					<p class="post-teaser">
@@ -36,7 +34,6 @@ permalink: /articles/
 				<h2 class="post-title">{{ post.title }}</h2>
 				<p class="post-excerpt">{{ post.excerpt | strip_html | strip | truncate: 160 }}</p></a>
 			</article><!-- /.tile -->
-			{%- assign counter=counter | plus:1 -%}
 		{%- endif -%}
 	{%- endfor %}
 </div><!-- /.tiles -->

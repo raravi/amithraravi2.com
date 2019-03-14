@@ -36,7 +36,7 @@ After staying for 2 days, we started from Bhimtal and reached Kausani at 9 in th
 I get up in the morning and see this... Who knew I would get to see this!
 
 ![image]({{ site.url }}{{ site.images }}himalayas.jpg)
-(This photo doesn't do justice to the view we have from the room. It's only by being here can the view be really appreciated.)
+<figcaption>This photo doesn't do justice to the view we have from the room. It's only by being here can the view be really appreciated.</figcaption>
 
 Kausani is breathtakingly beautiful and serene. The resort we stayed at is on the northern slope of a big hill and hence offers a bird's eye-view of the surrounding valley. As you follow the hills and look farther and farther away, you will finally see the horizon where snowcapped mountains kiss the skies.
 

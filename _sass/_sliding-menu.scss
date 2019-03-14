@@ -7,14 +7,14 @@
 /* Slider */
 
 .slide {
-    transform: translateX(-100%);
-    @include media($medium) {
-      transform: translateX(em(-600));
-    }
-    @include media($large) {
-      transform: translateX(em(-900));
-    }
+  transform: translateX(-100%);
+  @include media($medium) {
+    transform: translateX(em(-600));
   }
+  @include media($large) {
+    transform: translateX(em(-900));
+  }
+}
 
 /*
    Sliding menu button
@@ -25,8 +25,16 @@
   transform: translateZ(0);
   backface-visibility: hidden; /* fix scroll jank */
   top: $gutter/0.9;
-  right: $gutter;
+  right: ($gutter * 0.5);
   display: block;
+  @include media($micro350) {
+    display: block;
+    right: ($gutter * 0.75);
+  }
+  @include media($small) {
+    display: none;
+    right: $gutter;
+  }
   width: $button-size * 1.6;
   height: $button-size * 1.6;
   @include media($micro350) {
@@ -39,26 +47,39 @@
     width: $button-size * 2;
     height: $button-size * 2;
   }
-  background: $primary-color;
+  background: transparent; //$floating-menu-color;//$primary-color;
   outline: 0;
   padding: 0;
   border: 2.5px solid transparent;
   cursor: pointer;
   z-index: 20;
   box-sizing: border-box;
-  &:hover {
-    background: $black;
-  }
+  //&:hover {
+  //  background: $black;
+  //}
   transition: $sliding-menu-animation;
   &.slide {
     background: $danger-color;
-    transform: translateX(0); /* don't slide close button on small screens only */
+    transform: translateX(
+      0
+    ); /* don't slide close button on small screens only */
     @include media($medium) {
       transform: translateX(em(-600)); /* reset slide position */
     }
     @include media($large) {
       transform: translateX(em(-900)); /* reset slide position */
     }
+  }
+  opacity: 0;
+  animation: fade-in-menu 1s ease-out 1.5s 1 normal forwards;
+}
+
+@keyframes fade-in-menu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -108,10 +129,10 @@
     span {
       padding-top: 10px;
       display: block;
-      color: #FFD700;
-      @include font-size(42,no,1);
+      color: #ffd700;
+      @include font-size(42, no, 1);
       @include media($small) {
-        @include font-size(52,no,1);
+        @include font-size(52, no, 1);
       }
       font-family: $grid-title-font;
       text-transform: uppercase;
@@ -171,23 +192,23 @@
       padding-bottom: 5px;
       font-family: $menu-font;
       color: $cg-red;
-      @include font-size(24,no);
+      @include font-size(24, no);
       //font-weight: 200;
       @include media($small) {
         padding-top: 5px;
         padding-bottom: 0px;
         margin-left: 170px;
-        @include font-size(30,no);
+        @include font-size(30, no);
       }
     }
     .excerpt {
       margin-top: 0;
       margin-left: 110px;
       color: grey;
-      @include font-size(14,no);
+      @include font-size(14, no);
       @include media($small) {
         margin-left: 170px;
-        @include font-size(16,no);
+        @include font-size(16, no);
       }
     }
   }

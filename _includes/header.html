@@ -1,17 +1,25 @@
+<header id="masthead-floating">
+  <div class="inner-wrap">
+    <nav role="navigation" class="menu1 top-menu1">
+      <ul class="menu-item1">
+        <li><a href="{{ site.url }}{{ site.data.navigation[1].url }}" class="item"><span>{{ site.data.navigation[1].title }}</span></a></li>
+        <li><a href="{{ site.url }}/" class="site-title1"><span class="first-letter">a</span>miTh <span class="first-letter">r</span>aravi</a></li>
+        <li><a href="{{ site.url }}{{ site.data.navigation[2].url }}" class="item"><span>{{ site.data.navigation[2].title }}</span></a></li>
+      </ul>
+    </nav>
+  </div><!-- /.inner-wrap -->
+  <div class="div-20-high inner-wrap">
+  </div>
+  <div class="line-red inner-wrap">
+  </div>
+</header><!-- /.masthead -->
 <header id="masthead">
   <div class="inner-wrap">
-    <a href="{{ site.url }}/" class="site-title">amiTh raravi</a>
-    <nav role="navigation" class="menu top-menu">
-      <ul class="menu-item">
-        <li class="home"><a href="/">{{ site.title }}</a></li>
-        {%- for link in site.data.navigation %}
-          {%- if link.url contains 'http' -%}
-              {%- assign domain = '' -%}
-              {%- else -%}
-              {%- assign domain = site.url -%}
-          {%- endif %}
-        <li><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.title }}</a></li>
-        {%- endfor %}
+    <nav role="navigation" class="menu1 top-menu1">
+      <ul class="menu-item1">
+        <li><a href="{{ site.url }}{{ site.data.navigation[1].url }}" class="item"><span>{{ site.data.navigation[1].title }}</span></a></li>
+        <li><a href="{{ site.url }}/" class="site-title1"><span class="first-letter">a</span>miTh <span class="first-letter">r</span>aravi</a></li>
+        <li><a href="{{ site.url }}{{ site.data.navigation[2].url }}" class="item"><span>{{ site.data.navigation[2].title }}</span></a></li>
       </ul>
     </nav>
   </div><!-- /.inner-wrap -->

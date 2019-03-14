@@ -9,8 +9,8 @@ image:      images/morality.jpg
 teaser:     morality-400x250.jpg
 ---
 
-> Morality is not the doctrine of how we may make ourselves happy, but how we may make ourselves worthy of happiness.
-> ~ Immanuel Kant
+> "Morality is not the doctrine of how we may make ourselves happy, but how we may make ourselves worthy of happiness."
+> <br/><cite> ~ Immanuel Kant</cite>
 
 ![image]({{ site.url }}{{ site.images }}morality.jpg)
 

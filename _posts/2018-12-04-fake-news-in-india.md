@@ -28,8 +28,7 @@ Here is my understanding of the data from the BBC study.
 Rather than the authenticity of information, it’s the social influence of the sender that urges the user to forward information deemed to be important for consumption by their peers. And most messages are forwarded without being read, which tells us that people will only give a cursory glance before sending a message on its way to their friends and family. This removes any incentive for producing quality digital content, which can be verified to be true, because it’s so easy to create and share any kind of content.
 
 > "What is new though, is that with the definition of news becoming expansive and all-encompassing, we find that anything of importance to the citizen is now considered ‘news’. It then also stands to reason that they are happy receiving information from just about anyone – and not just a handful of news organisations with rigorous journalistic practices, trusted brand images, and legacies of accuracy. Even more importantly for our purposes, we find that people don’t differentiate – or more accurately find it too hard or too resource intensive - to differentiate between various sources of news (in the broad sense outlined above). Social media, with its low barriers to entry, provides innumerable sources of information - and the distinctions between them are flattened in the minds of the users."
->
-> ~ From the study
+> <br/><cite> ~ From the study</cite>
 
 {% include advertising-article.html %}
 
@@ -40,8 +39,7 @@ With the Internet being touted to be the greatest thing since the Industrial Rev
 As such, Indian users embraced these social media spaces as public spaces where they could voice their opinions and engage with like-minded individuals. This meant anyone from any part of India could be in touch with people all over the world. This newfound connectivity excited the Indian user. They were placed in a unique situation of not having experience in handling the informational deluge and yet having the tools to make use of it any way they saw fit.
 
 > "WhatsApp groups bring together like-minded people into tight-knit online communities. While this is supposed to be of a positive nature, more often than not this character of WhatsApp is used to mobilise groups to violent action. This is beside the fact that WhatsApp is a platform known for spreading low-quality information of doubtful veracity."
->
->~ From the study
+> <br/><cite> ~ From the study</cite>
 
 ## The Result
 
@@ -57,8 +55,7 @@ Easy access to the Internet and the resulting information overload has led to:
 So a key feature of online platforms is the sharing of content without active, engaged communication. Share because you feel it is important, not because it really is.
 
 > "Most people do not believe they are the ones spreading fake news. For them, the dominant association of fake news is scams and scares, done by nefarious actors for profit making, or at a deeper level fake news is news that is dissonant with their closely held beliefs and self-identity, done by those in a political outgroup. Either way, citizens don’t think they themselves have a role to play in this. This creates a challenge in tackling the spread of fake news: if you don’t believe you have a role to play in the sharing of fake news, then you certainly won’t respond to messages exhorting you to not share fake news."
->
-> ~ From the study
+> <br/><cite> ~ From the study</cite>
 
 {% include advertising-article.html %}
 
@@ -69,7 +66,6 @@ It's quite imperative that all of us understand how widespread the issue of fake
 I will leave you with the following conclusion from the BBC study.
 
 > "We have to conclude, though, that checking the flow of fake news, especially in their current predominant form of images and memes is likely to be extremely challenging. We suggest that all actors - platforms, media organisations, government, civil society - come together to tackle the problem, since it is not just a technological problem. But in this, ordinary citizens too, need to take more responsibility about sharing things without verification - and surely, platform-centric solutions to help them can be found without compromising too much on the essential characteristics of the platform. We also recommend that journalists investigate further whether or not there is an organised ecosystem of fake news production and dissemination."
->
-> ~ From the study
+> <br/><cite> ~ From the study</cite>
 
 Note: *All images used in this post are from [Unsplash](https://unsplash.com)!*

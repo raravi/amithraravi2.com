@@ -2,249 +2,537 @@
    Tiles
    ========================================================================== */
 
-   .articles-tiles-grid {
-       //border: 1px solid black;  /* For debugging */
-       display: flex;
-       flex-wrap: wrap;
-       flex-direction: row;
-       justify-content:space-around;
-       .hidden {
-         display: none;
-       }
-       .article-tile {
-         width: 100%;
-         box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-         &:hover {
-           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-           .post-title {
-             color: $cg-red;
-           }
-           .post-teaser {
-             &:after {
-                 background: rgba($base-color,0.05);
-             }
-           }
-         }
-         .entry-date, .post-title, .post-excerpt {
-           padding: 0 10px;
-         }
-         .post-teaser {
-           margin-top: 0px;
-           margin-bottom: 0px;
-           width: 100%;
-           position: relative;
-           display: block;
-           &:after {
-             content: '';
-             position: absolute;
-             width: 100%;
-             height: 100%;
-             top: 0;
-             left: 0;
-             background: rgba($base-color,0);
-             pointer-events: none;
-             @include transition(background 0.3s);
-           }
-         }
-         .entry-date {
-           margin-top: 10px;
-           @include font-size(12,no);
-           color: lighten($text-color,25);
-         }
-         .post-title {
-           margin-top: 4px;
-           @include font-size(18,no);
-           font-family: $grid-title-font;
-           color: $text-color;
-         }
-         .post-excerpt {
-           margin-top: 10px;
-           @include font-size(14);
-           color: $text-color;
-         }
-       }
-       .col {
-          display: flex;
-          flex: 23.05%;
-          max-width: 23.05%;
-          margin: 0px 10px 35px;
-          .ad {
-            height: 400px; // 481px to 600px
-            width: 400px;
-            .infeed {
-              height: 100%;
-              width: 100%;
-            }
-          }
-          @media screen and (max-width: 360px) {
-            .ad {
-              height: 250px;
-              width: 260px;
-            }
-          }
-          @media screen and (min-width: 361px) and (max-width: 420px) {
-            .ad {
-              height: 300px;
-              width: 300px;
-            }
-          }
-          @media screen and (min-width: 421px) and (max-width: 480px) {
-            .ad {
-              height: 350px;
-              width: 350px;
-            }
-          }
-          @media screen and (min-width: 601px) and (max-width: 650px) {
-            .ad {
-              height: 300px;
-              width: 250px;
-            }
-          }
-          @media screen and (min-width: 651px) and (max-width: 700px) {
-            .ad {
-              height: 300px;
-              width: 270px;
-            }
-          }
-          @media screen and (min-width: 701px) and (max-width: 750px) {
-            .ad {
-              height: 300px;
-              width: 300px;
-            }
-          }
-          @media screen and (min-width: 751px) and (max-width: 800px) {
-            .ad {
-              height: 300px;
-              width: 320px;
-            }
-          }
-          @media screen and (min-width: 801px) and (max-width: 900px) {
-            .ad {
-              height: 320px;
-              width: 350px;
-            }
-          }
-          @media screen and (min-width: 901px) and (max-width: 1000px) {
-            .ad {
-              height: 320px;
-              width: 260px;
-            }
-          }
-          @media screen and (min-width: 1001px) and (max-width: 1060px) {
-            .ad {
-              height: 320px;
-              width: 290px;
-            }
-          }
-          @media screen and (min-width: 1061px) and (max-width: 1120px) {
-            .ad {
-              height: 320px;
-              width: 310px;
-            }
-          }
-          @media screen and (min-width: 1121px) {
-            .ad {
-              height: 320px;
-              width: 255px;
-            }
-          }
-       }
-       @media screen and (max-width: 480px) {
-          .col {
-            flex: 100%;
-            max-width: 400px;
-          }
-       }
-       @media screen and (min-width: 481px) and (max-width: 900px) {
-          .col {
-            flex: 45.3%; // There is a side-effect to figure out here!! This should ideally be 50%. But right now, 50% will not display items in 2nd column properly on Firefox. (I know why :))
-            max-width: 45.3%;
-          }
-       }
-       @media screen and (min-width: 901px) and (max-width: 1120px) {
-          .col {
-            flex: 30.95%;
-            max-width: 30.95%;
-          }
-       }
-   }
+.no-js .articles-tiles-grid article,
+.no-cssanimations .articles-tiles-grid article {
+  opacity: 1;
+}
 
-   /* ==========================================================================
+.articles-tiles-grid {
+  //border: 1px solid black;  /* For debugging */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  .hidden {
+    display: none;
+  }
+  article.shown {
+    opacity: 1;
+  }
+  .article-tile {
+    opacity: 0;
+    //-webkit-transition: opacity 0.6s ease;
+    //-moz-transition: opacity 0.6s ease;
+    //-ms-transition: opacity 0.6s ease;
+    //-o-transition: opacity 0.6s ease;
+    //transition: opacity 0.6s ease;
+    width: 100%;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    &:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      .post-title {
+        color: $cg-red;
+      }
+      .post-teaser {
+        &:after {
+          background: rgba($base-color, 0.05);
+        }
+      }
+    }
+    .entry-date,
+    .post-title,
+    .post-excerpt {
+      padding: 0 10px;
+    }
+    .post-teaser {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      width: 100%;
+      max-height: 180px;
+      overflow-y: hidden;
+      position: relative;
+      display: block;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba($base-color, 0);
+        pointer-events: none;
+        @include transition(background 0.3s);
+      }
+    }
+    .entry-date {
+      margin-top: 10px;
+      @include font-size(12, no);
+      color: lighten($text-color, 25);
+    }
+    .post-title {
+      margin-top: 4px;
+      @include font-size(18, no);
+      font-family: $grid-title-font;
+      color: $text-color;
+    }
+    .post-excerpt {
+      margin-top: 10px;
+      @include font-size(14);
+      color: $text-color;
+    }
+  }
+  .col {
+    display: flex;
+    flex: 23.05%;
+    max-width: 23.05%;
+    margin: 0px 10px 35px;
+    .ad {
+      height: 400px; // 481px to 600px
+      width: 400px;
+      .infeed {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    @media screen and (max-width: 360px) {
+      .ad {
+        height: 250px;
+        width: 260px;
+      }
+    }
+    @media screen and (min-width: 361px) and (max-width: 420px) {
+      .ad {
+        height: 300px;
+        width: 300px;
+      }
+    }
+    @media screen and (min-width: 421px) and (max-width: 480px) {
+      .ad {
+        height: 350px;
+        width: 350px;
+      }
+    }
+    @media screen and (min-width: 601px) and (max-width: 650px) {
+      .ad {
+        height: 300px;
+        width: 250px;
+      }
+    }
+    @media screen and (min-width: 651px) and (max-width: 700px) {
+      .ad {
+        height: 300px;
+        width: 270px;
+      }
+    }
+    @media screen and (min-width: 701px) and (max-width: 750px) {
+      .ad {
+        height: 300px;
+        width: 300px;
+      }
+    }
+    @media screen and (min-width: 751px) and (max-width: 800px) {
+      .ad {
+        height: 300px;
+        width: 320px;
+      }
+    }
+    @media screen and (min-width: 801px) and (max-width: 900px) {
+      .ad {
+        height: 320px;
+        width: 350px;
+      }
+    }
+    @media screen and (min-width: 901px) and (max-width: 1000px) {
+      .ad {
+        height: 320px;
+        width: 260px;
+      }
+    }
+    @media screen and (min-width: 1001px) and (max-width: 1060px) {
+      .ad {
+        height: 320px;
+        width: 290px;
+      }
+    }
+    @media screen and (min-width: 1061px) and (max-width: 1120px) {
+      .ad {
+        height: 320px;
+        width: 310px;
+      }
+    }
+    @media screen and (min-width: 1121px) {
+      .ad {
+        height: 320px;
+        width: 255px;
+      }
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .col {
+      flex: 100%;
+      max-width: 400px;
+    }
+  }
+  @media screen and (min-width: 481px) and (max-width: 900px) {
+    .col {
+      flex: 45.3%; // There is a side-effect to figure out here!! This should ideally be 50%. But right now, 50% will not display items in 2nd column properly on Firefox. (I know why :))
+      max-width: 45.3%;
+    }
+  }
+  @media screen and (min-width: 901px) and (max-width: 1120px) {
+    .col {
+      flex: 30.95%;
+      max-width: 30.95%;
+    }
+  }
+}
+
+/* Effect 2: Move Up */
+.articles-tiles-grid.effect-2 article.animate {
+  -webkit-transform: translateY(200px);
+  transform: translateY(200px);
+  -webkit-animation: moveUp 0.65s ease forwards;
+  animation: moveUp 0.65s ease forwards;
+}
+
+@-webkit-keyframes moveUp {
+  0% {
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveUp {
+  0% {
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Effect 3: Scale up */
+.articles-tiles-grid.effect-3 article.animate {
+  -webkit-transform: scale(0.6);
+  transform: scale(0.6);
+  -webkit-animation: scaleUp 0.65s ease-in-out forwards;
+  animation: scaleUp 0.65s ease-in-out forwards;
+}
+
+@-webkit-keyframes scaleUp {
+  0% {
+  }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Effect 4: fall perspective */
+.articles-tiles-grid.effect-4 {
+  -webkit-perspective: 1300px;
+  perspective: 1300px;
+}
+
+.articles-tiles-grid.effect-4 article.animate {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translateZ(400px) translateY(300px) rotateX(-90deg);
+  transform: translateZ(400px) translateY(300px) rotateX(-90deg);
+  -webkit-animation: fallPerspective 0.8s ease-in-out forwards;
+  animation: fallPerspective 0.8s ease-in-out forwards;
+}
+
+@-webkit-keyframes fallPerspective {
+  0% {
+  }
+  100% {
+    -webkit-transform: translateZ(0px) translateY(0px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes fallPerspective {
+  0% {
+  }
+  100% {
+    -webkit-transform: translateZ(0px) translateY(0px) rotateX(0deg);
+    transform: translateZ(0px) translateY(0px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+/* Effect 6: flip (based on http://lab.hakim.se/scroll-effects/ by @hakimel) */
+.articles-tiles-grid.effect-6 {
+  -webkit-perspective: 1300px;
+  perspective: 1300px;
+}
+
+.articles-tiles-grid.effect-6 article.animate {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-origin: 0% 0%;
+  transform-origin: 0% 0%;
+  -webkit-transform: rotateX(-80deg);
+  transform: rotateX(-80deg);
+  -webkit-animation: flip 0.8s ease-in-out forwards;
+  animation: flip 0.8s ease-in-out forwards;
+}
+
+@-webkit-keyframes flip {
+  0% {
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes flip {
+  0% {
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+.portfolio-tiles-grid {
+  //border: 1px solid black;  /* For debugging */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  //min-width: 300px;
+  //max-width: 600px;
+  .hidden {
+    display: none;
+  }
+  .portfolio-tile {
+    position: relative;
+    width: 100%;
+    &:hover {
+      .portfolio-link {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+      .post-title {
+        color: $cg-red;
+      }
+      .post-teaser {
+        &:after {
+          background: rgba($base-color, 0.05);
+        }
+      }
+    }
+    .portfolio-link {
+      display: block;
+      opacity: 0;
+      box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .grid__deco {
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+
+    .grid__deco path {
+      fill: none;
+      stroke: lighten($red, 20%);
+      stroke-width: 6px;
+    }
+    .entry-date,
+    .post-title,
+    .post-excerpt {
+      padding: 0 10px;
+    }
+    .post-teaser {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      width: 100%;
+      max-height: 180px;
+      overflow-y: hidden;
+      position: relative;
+      display: block;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba($base-color, 0);
+        pointer-events: none;
+        @include transition(background 0.3s);
+      }
+    }
+    .entry-date {
+      margin-top: 10px;
+      @include font-size(12, no);
+      color: lighten($text-color, 25);
+    }
+    .post-title {
+      margin-top: 4px;
+      @include font-size(18, no);
+      font-family: $grid-title-font;
+      color: $text-color;
+    }
+    .post-excerpt {
+      margin-top: 10px;
+      @include font-size(14);
+      color: $text-color;
+    }
+  }
+  .col {
+    display: flex;
+    flex: 23.05%;
+    max-width: 23.05%;
+    margin: 0px 10px 35px;
+  }
+  @media screen and (max-width: 480px) {
+    .col {
+      flex: 100%;
+      max-width: 400px;
+    }
+  }
+  @media screen and (min-width: 481px) and (max-width: 900px) {
+    .col {
+      flex: 45.3%; // There is a side-effect to figure out here!! This should ideally be 50%. But right now, 50% will not display items in 2nd column properly on Firefox. (I know why :))
+      max-width: 45.3%;
+
+    }
+  }
+  @media screen and (min-width: 901px) and (max-width: 1120px) {
+  //@media screen and (min-width: 901px) {
+    .col {
+      flex: 30.95%;
+      max-width: 30.95%;
+    }
+  }
+}
+
+/* ==========================================================================
       Isotope
       ========================================================================== */
 
-   /* ---- button ---- */
+/* ---- button ---- */
 
-  .filters-button{
-    background: $white;
-    color:$cg-red;
-    border:none;
-    position:relative;
-    height:30px;
-    font-size:0.9em;
-    @include media($micro350) {
-      font-size: 1.1em;
-      height:40px;
-    }
-    padding:0 1em;
-    cursor:pointer;
-    transition:800ms ease all;
-    outline:none;
-    margin-right: 10px;
-    margin-bottom: 20px;
+.filters-button {
+  background: $white;
+  color: $cg-red;
+  border: none;
+  position: relative;
+  height: 30px;
+  font-size: 0.9em;
+  @include media($micro350) {
+    font-size: 1.1em;
+    height: 40px;
   }
-  .filters-button:before,.filters-button:after{
-    content:'';
-    position:absolute;
-    top:0;
-    right:0;
-    height:2px;
-    width: 100%;
-    background: $cg-red;
-    transition:200ms ease all;
-  }
-  .filters-button:after{
-    right:inherit;
-    top:inherit;
-    left:0;
-    bottom:0;
-  }
-  .filters-button:hover {
-    background: #ffeded;
-    transition:400ms ease all;
-  }
-  .filters-button:hover:before,.filters-button:hover:after{
-    height: 3px;
-    transition:400ms ease all;
-  }
+  padding: 0 1em;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+.filters-button:before,
+.filters-button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 100%;
+  background: $cg-red;
+  transition: 200ms ease all;
+}
+.filters-button:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+.filters-button:hover {
+  background: #ffeded;
+  transition: 400ms ease all;
+}
+.filters-button:hover:before,
+.filters-button:hover:after {
+  height: 3px;
+  transition: 400ms ease all;
+}
 
-  .filters-button:active,
-  .filters-button.is-checked {
-    background-color: $cg-red;
-    text-decoration: none;
-  }
+.filters-button:active,
+.filters-button.is-checked {
+  background-color: $cg-red;
+  text-decoration: none;
+}
 
-  .filters-button.is-checked {
-    color: white;
-    text-shadow: 0 -1px hsla(0, 0%, 0%, 0.4);
-  }
+.filters-button.is-checked {
+  color: white;
+  text-shadow: 0 -1px hsla(0, 0%, 0%, 0.4);
+}
 
-  .filters-button:active {
-    box-shadow: inset 0 1px 10px hsla(0, 0%, 0%, 0.8);
-  }
+.filters-button:active {
+  box-shadow: inset 0 1px 10px hsla(0, 0%, 0%, 0.8);
+}
 
-  .filters-button-group {
-    display: inline-block;
-    padding-top   : 20px;
-    padding-bottom: 0px;
+.filters-button-group {
+  //border: 1px solid blue;  /* For debugging */
+  //display: inline-block;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-top: 20px;
+  padding-bottom: 0px;
+  flex: 100%;
+  @include media($small) {
+    padding-top: 10px;
+    //padding-bottom: 20px;
+    flex: 50%;
+    justify-content: flex-end;
+  }
+}
+
+.filters-button-group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.article-header {
+  //border: 1px solid black;  /* For debugging */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  .page-title {
+    //border: 1px solid red;  /* For debugging */
+    padding-top: 10px;
+    flex: 100%;
     @include media($small) {
-      padding-top   : 10px;
-      padding-bottom: 20px;
+      padding-top: 4px;
+      flex: 50%;
+    }
+    h2 {
+      //border: 1px solid green;  /* For debugging */
     }
   }
-
-  .filters-button-group:after {
-    content: '';
-    display: block;
-    clear: both;
-  }
+}

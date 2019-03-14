@@ -6,121 +6,379 @@
    Masthead
    ========================================================================== */
 
-#masthead {
-	padding: $gutter $gutter 0px $gutter;
-	@include media($small) {
-		padding: $gutter;
-	}
-	z-index: 5;
-	@include transform(translate(0,0));
-	@include transition(500ms cubic-bezier(.645,.045,.355,1.000));
-	&.slide {
-		@include transform(translate(-1600px,0));
-	}
-	.inner-wrap {
-		@include outer-container;
-	}
-}
-.site-title {
-	@include row;
-	@include media($medium750) {
-		@include span-columns(4);
-	}
-	padding: (.25 * $masthead-height) 0; // fourth the height to center vertically
-	padding-left: 5px;
-	height: $masthead-height;
-	text-decoration: none;
-	color: $black;
-	font-family: $site-title-font;
-	font-weight: 600;
-	@include font-size(36,no);
-	line-height: .5 * $masthead-height; // half the height to center vertically
-	//text-transform: lowercase;
+#masthead-floating {
+  //border: 1px solid blue; /* For debugging */
+  padding: $gutter ($gutter * 0.5);
+  @include media($micro350) {
+    padding: $gutter ($gutter * 0.75);
+  }
+  @include media($small) {
+    padding: $gutter;
+  }
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: $white;
+  z-index: 6;
+  @include transform(translate(0, 0));
+  @include transition(500ms cubic-bezier(0.645, 0.045, 0.355, 1));
+  &.slide {
+    @include transform(translate(-1600px, 0));
+  }
+  .inner-wrap {
+    @include outer-container;
+    .menu1 {
+      .menu-item1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        @include media($small) {
+          justify-content: center;
+        }
+        li {
+          margin-bottom: 0px;
+          padding-bottom: 0px;
+          .site-title1 {
+            position: relative;
+            display: block;
+            padding: (0.25 * $masthead-height) (0.1 * $gutter)
+              (0.25 * $masthead-height); // fourth the height to center vertically
+            margin-left: 0px;
+            margin-right: 0px;
+            text-decoration: none;
+            color: $black;
+            font-family: $site-title-font;
+            font-weight: 600;
+            @include font-size(38);
+            @include media($small) {
+              @include font-size(42);
+              line-height: 0.5 * $masthead-height; // half the height to center vertically
+              margin-left: 10px;
+              margin-right: 10px;
+              margin-bottom: 0px;
+            }
+            @include media($medium) {
+              @include font-size(48);
+              line-height: 0.5 * $masthead-height; // half the height to center vertically
+              margin-left: 20px;
+              margin-right: 20px;
+              margin-bottom: 0px;
+            }
+            line-height: 0.5 * $masthead-height; // half the height to center vertically
+            margin-bottom: 0px;
+            &:hover {
+              text-shadow: 4px 8px 6px rgba(0, 0, 0, 0.19);
+              .first-letter {
+                color: darken($red, 10);
+              }
+            }
+            //opacity: 0;
+            animation: slide-down 0.5s ease-out 0.75s 1 normal both;
+            /* The animation property is a shorthand property for:
+              animation-name
+              animation-duration: time(s/ms)|initial|inherit;
+              animation-timing-function: linear|ease|ease-in|ease-out|ease-in-out|step-start|step-end|steps(int,start|end)|cubic-bezier(n,n,n,n)|initial|inherit;
+              animation-delay: time(s/ms)|initial|inherit;
+              animation-iteration-count: number(1)|infinite|initial|inherit;
+              animation-direction: normal|reverse|alternate|alternate-reverse|initial|inherit;
+              animation-fill-mode: none|forwards|backwards|both|initial|inherit;
+              animation-play-state */
+          }
+          .item {
+            // Text Props
+            font-weight: 500;
+            @include font-size(16, no);
+            font-family: $menu-font;
+            line-height: 0.5 * $masthead-height; // half the height to center vertically
+            color: $black;
+            text-transform: uppercase;
+            // line hover effect
+            position: relative;
+            display: none;
+            @include media($small) {
+              display: block;
+              padding-top: 0.27 * $masthead-height;
+            }
+            @include media($medium) {
+              @include font-size(18, no);
+              padding-top: 0.32 * $masthead-height;
+            }
+            margin: 0 (0.5 * $gutter);
+            padding: (0.25 * $masthead-height) 0 (0.25 * $masthead-height);
+            &:hover {
+              color: darken($red, 10);
+              text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.19);
+              span {
+                animation: glitch-anim-text 0.4s linear 1 alternate backwards;
+              }
+            }
+            &:focus {
+              outline: none;
+            }
+            span {
+              display: block;
+            }
+            //opacity: 0;
+            animation: slide-down 0.5s ease-out 1.25s 1 normal both;
+          }
+        }
+      }
+    }
+  }
 }
 
+@keyframes slide-down {
+  0% {
+    top: -100%;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+#masthead {
+  opacity: 0;
+  padding: $gutter ($gutter * 0.5);
+  @include media($micro350) {
+    padding: $gutter ($gutter * 0.75);
+  }
+  @include media($small) {
+    padding: $gutter;
+  }
+  background-color: $white;
+  z-index: 5;
+  @include transform(translate(0, 0));
+  @include transition(500ms cubic-bezier(0.645, 0.045, 0.355, 1));
+  &.slide {
+    @include transform(translate(-1600px, 0));
+  }
+  .inner-wrap {
+    @include outer-container;
+    .menu1 {
+      .menu-item1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        @include media($small) {
+          justify-content: center;
+        }
+        li {
+          margin-bottom: 0px;
+          padding-bottom: 0px;
+          .site-title1 {
+            position: relative;
+            display: block;
+            padding: (0.25 * $masthead-height) (0.1 * $gutter)
+              (0.25 * $masthead-height); // fourth the height to center vertically
+            margin-left: 0px;
+            margin-right: 0px;
+            text-decoration: none;
+            color: $black;
+            font-family: $site-title-font;
+            font-weight: 600;
+            @include font-size(38);
+            @include media($small) {
+              @include font-size(42);
+              line-height: 0.5 * $masthead-height; // half the height to center vertically
+              margin-left: 10px;
+              margin-right: 10px;
+              margin-bottom: 0px;
+            }
+            @include media($medium) {
+              @include font-size(48);
+              line-height: 0.5 * $masthead-height; // half the height to center vertically
+              margin-left: 20px;
+              margin-right: 20px;
+              margin-bottom: 0px;
+            }
+            line-height: 0.5 * $masthead-height; // half the height to center vertically
+            margin-bottom: 0px;
+            &:hover {
+              text-shadow: 4px 8px 6px rgba(0, 0, 0, 0.19);
+              .first-letter {
+                color: darken($red, 10);
+              }
+            }
+          }
+          .item {
+            // Text Props
+            font-weight: 500;
+            @include font-size(16, no);
+            font-family: $menu-font;
+            line-height: 0.5 * $masthead-height; // half the height to center vertically
+            color: $black;
+            text-transform: uppercase;
+            // line hover effect
+            position: relative;
+            display: none;
+            @include media($small) {
+              display: block;
+              padding-top: 0.27 * $masthead-height;
+            }
+            @include media($medium) {
+              @include font-size(18, no);
+              padding-top: 0.32 * $masthead-height;
+            }
+            margin: 0 (0.5 * $gutter);
+            padding: (0.25 * $masthead-height) 0 (0.25 * $masthead-height);
+            &:hover {
+              color: darken($red, 10);
+              text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.19);
+              span {
+                animation: glitch-anim-text 0.35s linear alternate 1 backwards;
+              }
+            }
+            &:focus {
+              outline: none;
+            }
+            span {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes glitch-anim-text {
+  0%,
+  100% {
+    transform: translate3d(2px, -2px, 0) scale3d(-1, -1, 1);
+    -webkit-clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
+    clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
+  }
+  20% {
+    -webkit-clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
+    clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
+  }
+  41% {
+    -webkit-clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
+    clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
+  }
+  52% {
+    -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
+    clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
+  }
+  61% {
+    -webkit-clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
+    clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
+  }
+  75% {
+    -webkit-clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
+    clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
+  }
+  80% {
+    -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
+    clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
+  }
+  96% {
+    -webkit-clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+    clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+  }
+}
+
+.site-title {
+  @include row;
+  @include media($medium750) {
+    @include span-columns(4);
+  }
+  padding: (0.25 * $masthead-height) 0; // fourth the height to center vertically
+  padding-left: 5px;
+  height: $masthead-height;
+  text-decoration: none;
+  color: $black;
+  font-family: $site-title-font;
+  font-weight: 600;
+  @include font-size(36, no);
+  line-height: 0.5 * $masthead-height; // half the height to center vertically
+  //text-transform: lowercase;
+}
 
 /*
    Menus
    ========================================================================== */
 
 .menu {
-	li {
-		float: left;
-		&:last-child a {
-			@include media($medium750) {
-				margin-right: 10px; // remove extra spacing from last menu link
-			}
-		}
-		a {
-			// line hover effect
-			position: relative;
-			display: block;
-			margin-right: $gutter;
-			padding: (.25 * $masthead-height) 0 (.25 * $masthead-height) ;
-			height: $masthead-height;
-			&:before,
-			&:after {
-				content: '';
-				display: block;
-				position: absolute;
-				top: 0;
-				left: 0;
-				height: 4px;
-				@include transition(width 0.3s);
-			}
-			&:before {
-				width: 100%;
-				background: transparent;
-			}
-			&:after {
-				width: 0;
-				background: $red;
-			}
-			&:active:after,
-			&:hover:after {
-				width: 100%;
-			}
-		}
-	}
+  li {
+    margin-bottom: 0px;
+    float: left;
+    &:last-child a {
+      @include media($medium750) {
+        margin-right: 10px; // remove extra spacing from last menu link
+      }
+    }
+    a {
+      // line hover effect
+      position: relative;
+      display: block;
+      margin-right: $gutter;
+      padding: (0.25 * $masthead-height) 0 (0.25 * $masthead-height);
+      height: $masthead-height;
+      &:before,
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 4px;
+        @include transition(width 0.3s);
+      }
+      &:before {
+        width: 100%;
+        background: transparent;
+      }
+      &:after {
+        width: 0;
+        background: $red;
+      }
+      &:active:after,
+      &:hover:after {
+        width: 100%;
+      }
+    }
+  }
 }
 
 /* Top menu navigation */
 
 .top-menu {
-	display: none;
-	position: relative;
-	@include media($medium750) {
-		@include span-columns(7);
-		ul {
-			position: absolute;
-			right: 0;
-		}
-	}
-	.home,
-	.sub-menu-item {
-		display: none;
-	}
-	li {
-		a {
-			font-weight: 500;
-			@include font-size(16,no);
-			font-family: $menu-font;
-			line-height: .5 * $masthead-height; // half the height to center vertically
-			color: $black;
-			text-transform: uppercase;
-		}
-	}
+  display: none;
+  position: relative;
+  @include media($medium750) {
+    @include span-columns(7);
+    ul {
+      position: absolute;
+      right: 0;
+    }
+  }
+  .home,
+  .sub-menu-item {
+    display: none;
+  }
+  li {
+    a {
+      font-weight: 500;
+      @include font-size(16, no);
+      font-family: $menu-font;
+      line-height: 0.5 * $masthead-height; // half the height to center vertically
+      color: $black;
+      text-transform: uppercase;
+    }
+  }
 }
 
 /* Bottom menu navigation */
 
 .bottom-menu {
-	@include clearfix;
-	//font-weight: 700;
-	font-family: $menu-font;
-	a {
-		color: lighten($black,60);
-	}
+  @include clearfix;
+  font-family: $menu-font;
+  a {
+    color: lighten($black, 60);
+  }
 }
 
 /*
@@ -128,15 +386,21 @@
    ========================================================================== */
 
 #page-wrapper {
-	padding: 0 $gutter; // add white space for smaller screens
-	@include size(100% 100%);
-	-webkit-overflow-scrolling: touch;
-	z-index: 2;
-	@include transform(translate(0,0));
-	@include transition(500ms cubic-bezier(.645,.045,.355,1.000));
-	&.slide {
-		@include transform(translate(-60rem,0));
-	}
+  padding: 0 ($gutter * 0.5); // add white space for smaller screens
+  @include media($micro350) {
+    padding: 0 ($gutter * 0.75);
+  }
+  @include media($small) {
+    padding: 0 $gutter;
+  }
+  @include size(100% 100%);
+  -webkit-overflow-scrolling: touch;
+  z-index: 2;
+  @include transform(translate(0, 0));
+  @include transition(500ms cubic-bezier(0.645, 0.045, 0.355, 1));
+  &.slide {
+    @include transform(translate(-60rem, 0));
+  }
 }
 
 /*
@@ -144,251 +408,253 @@
    ========================================================================== */
 
 #main {
-	.inner-wrap {
-		@include media($small) {
-			@include span-columns(11);
-		}
-		@include media($medium) {
-			@include span-columns(10);
-		}
-		@include media($medium1050) {
-			@include span-columns(9);
-		}
-	}
-	.page-title {
-		//border: 1px solid blue;  /* For debugging */
-		padding-bottom: 0px;
-		margin-bottom: 0px;
-		h1 {
-			padding-bottom: 0px;
-			margin-bottom: 0px;
-			font-family: $article-title-font;
-			@include font-size(24,yes,34);
-			@include media($small) {
-				@include font-size(30,yes,40);
-			}
-		}
-		h2 {
-			//border: 1px solid blue;  /* For debugging */
-			margin-top: 20px;
-			margin-bottom: 0px;
-			@include media($small) {
-				margin-top: 10px;
-				margin-bottom: 20px;
-			}
-		}
-		@include fill-parent;
-	}
-	.article-date {
-		//border: 1px solid green;  /* For debugging */
-		position: relative;
-		top: -10px;
-		p {
-			margin-top: 0px;
-			@include font-size(14,no);
-			font-family: $alt-font;
-			color: lighten($black,60);
-			margin-bottom: -10px;
-		}
-	}
-	.page-title-media {
-		h1 {
-			font-family: $article-title-font;
-			@include font-size(24,yes,34);
-			@include media($small) {
-				@include font-size(30,yes,40);
-			}
-			margin-bottom: 12px;
-		}
-		width: 100%;
-		@include media($medium) {
-			width: 80%;
-		}
-	}
-	@at-root {
-		.page-content {
-			@include fill-parent;
-			p {
-				@include font-size(18,yes,27);
-			}
-			h2 {
-				margin-top: 36px;
-				@include font-size(22,yes,22);
-				@include media($small) {
-					margin-top: 40px;
-					@include font-size(24,yes,32);
-				}
-			}
-			h3 {
-				margin-top: 28px;
-				@include font-size(20,yes,20);
-				@include media($small) {
-					margin-top: 32px;
-					@include font-size(22,yes,28);
-				}
-			}
-			h4 {
-				margin-top: 24px;
-				@include font-size(18,yes,18);
-				@include media($small) {
-					margin-top: 28px;
-					@include font-size(20,yes,24);
-				}
-			}
-			// larger font for intro paragraph
-			//> p {
-			//	&:first-child {
-			//		@include font-size(18,yes,27);
-			//		@include media($small) {
-			//			@include font-size(20,yes,30);
-			//		}
-			//	}
-			//}
-			// cleaner underlines for links
-			a { text-decoration: none; }
-			p a,
-			li a {
-				border-bottom: 1px dotted lighten($link-color, 50);
-				&:hover {
-					border-bottom-style: solid;
-				}
-			}
-			p > a.reversefootnote {
-				border-bottom-width: 0;
-			}
+  .inner-wrap {
+    @include media($small) {
+      @include span-columns(11);
+    }
+    @include media($medium) {
+      @include span-columns(10);
+    }
+    @include media($medium1050) {
+      @include span-columns(9);
+    }
+  }
+  .page-title {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    h1 {
+      padding-bottom: 0px;
+      margin-bottom: 0px;
+      font-family: $article-title-font;
+      @include font-size(24, yes, 34);
+      @include media($small) {
+        @include font-size(30, yes, 40);
+      }
+    }
+    h2 {
+      margin-top: 20px;
+      margin-bottom: 0px;
+      @include media($small) {
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+    }
+    @include fill-parent;
+  }
+  .article-date {
+    position: relative;
+    top: -10px;
+    p {
+      margin-top: 0px;
+      @include font-size(14, no);
+      font-family: $alt-font;
+      color: lighten($black, 60);
+      margin-bottom: -10px;
+    }
+  }
+  .page-title-media {
+    h1 {
+      font-family: $article-title-font;
+      @include font-size(24, yes, 34);
+      @include media($small) {
+        @include font-size(30, yes, 40);
+      }
+      margin-bottom: 12px;
+    }
+    width: 100%;
+    @include media($medium) {
+      width: 80%;
+    }
+  }
+  @at-root {
+    .page-content {
+      @include fill-parent;
+      p {
+        @include font-size(18, yes, 27);
+      }
+      h2 {
+        margin-top: 36px;
+        @include font-size(22, yes, 22);
+        @include media($small) {
+          margin-top: 40px;
+          @include font-size(24, yes, 32);
+        }
+      }
+      h3 {
+        margin-top: 28px;
+        @include font-size(20, yes, 20);
+        @include media($small) {
+          margin-top: 32px;
+          @include font-size(22, yes, 28);
+        }
+      }
+      h4 {
+        margin-top: 24px;
+        @include font-size(18, yes, 18);
+        @include media($small) {
+          margin-top: 28px;
+          @include font-size(20, yes, 24);
+        }
+      }
+      // larger font for intro paragraph
+      //> p {
+      //	&:first-child {
+      //		@include font-size(18,yes,27);
+      //		@include media($small) {
+      //			@include font-size(20,yes,30);
+      //		}
+      //	}
+      //}
+      // cleaner underlines for links
+      a {
+        text-decoration: none;
+      }
+      .owner-link {
+        position: relative;
+      }
+      p a,
+      li a {
+        border-bottom: 1px dotted lighten($link-color, 50);
+        &:hover {
+          border-bottom-style: solid;
+        }
+      }
+      p > a.reversefootnote {
+        border-bottom-width: 0;
+      }
       .toc li > a {
         border-bottom-width: 0;
       }
-			.page-footer,
-			.pagination {
-				@include fill-parent;
-			}
-			.page-meta {
-				p {
-					@include font-size(14,no);
-					font-family: $alt-font;
-					color: lighten($black,60);
-				}
-			}
-			.image-credit {
-				padding: 10px 15px;
-				font-family: $alt-font;
-				@include font-size(14,no);
-			}
-		}
-	}
-	@at-root {
-		.archive-wrap {
-			@include fill-parent;
-			.page-content {
-				@include reset-all;
-				@include fill-parent;
-			}
-		}
-	}
+      .page-footer,
+      .pagination {
+        @include fill-parent;
+      }
+      .page-meta {
+        p {
+          @include font-size(14, no);
+          font-family: $alt-font;
+          color: lighten($black, 60);
+        }
+      }
+      .image-credit {
+        padding: 10px 15px;
+        font-family: $alt-font;
+        @include font-size(14, no);
+      }
+    }
+  }
+  @at-root {
+    .archive-wrap {
+      @include fill-parent;
+      .page-content {
+        @include reset-all;
+        @include fill-parent;
+      }
+    }
+  }
   /* advertisements */
-	.ads {
-		position: relative;
-		text-align: center;
-		margin-top: $gutter;
-		margin-left: -$gutter;
-		margin-right: -$gutter;
-		padding: 10px 0 20px;
-		background: lighten($border-color,5);
-		@include media($medium) {
-			@include span-columns(3);
-			margin-left: 0;
-			margin-right: 0;
-		}
-		&:after {
-			content: 'Advertisement';
-			position: absolute;
-			bottom: 0;
-			width: 100%;
-			text-align: center;
-			display: block;
-			@include font-size(9,no);
-			font-family: $alt-font;
-		}
-		ins {
-			border-width: 0;
-		}
-	}
+  .ads {
+    position: relative;
+    text-align: center;
+    margin-top: $gutter;
+    margin-left: -$gutter;
+    margin-right: -$gutter;
+    padding: 10px 0 20px;
+    background: lighten($border-color, 5);
+    @include media($medium) {
+      @include span-columns(3);
+      margin-left: 0;
+      margin-right: 0;
+    }
+    &:after {
+      content: "Advertisement";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      display: block;
+      @include font-size(9, no);
+      font-family: $alt-font;
+    }
+    ins {
+      border-width: 0;
+    }
+  }
 }
 // page lead
 .page-lead {
-	background-position: center top;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	text-align: center;
-	color: $white;
-	@include media($large) {
-		background-size: cover;
-	}
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+  color: $white;
+  @include media($large) {
+    background-size: cover;
+  }
 }
 .page-lead-content {
-	padding: 1em;
-	@include media($medium) {
-		padding: 2em;
-	}
-	@include media($large) {
-		padding: 3em;
-	}
-	h1 {
-		@include font-size(48);
-		@include media($medium) {
-			@include font-size(60);
-		}
-		@include media($large) {
-			@include font-size(60);
-		}
-	}
-	h2 {
-		@include font-size(20);
-		@include media($medium) {
-			@include font-size(24);
-		}
-		@include media($large) {
-			@include font-size(32);
-		}
-	}
+  padding: 1em;
+  @include media($medium) {
+    padding: 2em;
+  }
+  @include media($large) {
+    padding: 3em;
+  }
+  h1 {
+    @include font-size(48);
+    @include media($medium) {
+      @include font-size(60);
+    }
+    @include media($large) {
+      @include font-size(60);
+    }
+  }
+  h2 {
+    @include font-size(20);
+    @include media($medium) {
+      @include font-size(24);
+    }
+    @include media($large) {
+      @include font-size(32);
+    }
+  }
 }
 // page header
 .page-feature {
-	@include fill-parent;
-	// expand image to cover full width of header
-	img {
-		padding-left: 25px;
-		padding-right: 25px;
-		width: 100%;
-		@include media($medium) {
-			width: 80%;
-		}
-	}
+  @include fill-parent;
+  // expand image to cover full width of header
+  img {
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 100%;
+    @include media($medium) {
+      width: 80%;
+    }
+  }
 }
 // make image flush with edges on small screens
 .page-image {
-	position: relative;
-	margin-left: -1 * $gutter;
-	margin-right: -1 * $gutter;
-	// feature image caption
-	.image-credit {
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		margin: 0 auto;
-		padding: 10px 15px;
-		background-color: rgba($black,.5);
-		color: $white;
-		font-family: $alt-font;
-		@include font-size(12,no);
-		text-align: right;
-		z-index: 10;
-		a {
-			color: $white;
-			text-decoration: none;
-		}
-	}
+  position: relative;
+  margin-left: -1 * $gutter;
+  margin-right: -1 * $gutter;
+  // feature image caption
+  .image-credit {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 10px 15px;
+    background-color: rgba($black, 0.5);
+    color: $white;
+    font-family: $alt-font;
+    @include font-size(12, no);
+    text-align: right;
+    z-index: 10;
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+  }
 }
 
 /*
@@ -396,31 +662,33 @@
    ========================================================================== */
 
 .page-footer {
-	position: relative;
+  position: relative;
 }
 
 /* Author block */
 
 .author-image {
-	position: absolute;
-	left: 0;
-	img {
-		width: 80px;
-		height: 80px;
-		border-radius: $border-radius;
-	}
+  position: absolute;
+  left: 0;
+  img {
+    width: 80px;
+    height: 80px;
+    border-radius: $border-radius;
+  }
 }
 .author-content {
-	word-wrap: break-word;
-	padding-left: 100px; //avatar width + 20px padding
-	min-height: 80px; //mirrors avatar height
-}
-.author-name {
-	@include font-size(20,no);
-}
-.author-bio {
-	margin-top: 0;
-	@include font-size(16);
+  word-wrap: break-word;
+  padding-left: 100px; //avatar width + 20px padding
+  min-height: 80px; //mirrors avatar height
+  .author-name {
+    @include font-size(20, no);
+    margin-top: 15px;
+    padding-top: 5px;
+  }
+  .author-bio {
+    margin-top: 7px;
+    @include font-size(16);
+  }
 }
 
 /*
@@ -428,18 +696,19 @@
    ========================================================================== */
 
 #site-footer {
-	@include outer-container;
-	margin-top: (3 * (0px + $doc-line-height));
-	margin-top: (3 * (0rem + ($doc-line-height / $doc-font-size)));
-	padding-bottom: $gutter;
-	font-family: $alt-font;
+  @include outer-container;
+  margin-top: (3 * (0px + $doc-line-height));
+  margin-top: (3 * (0rem + ($doc-line-height / $doc-font-size)));
+  padding-bottom: 0;
+  font-family: $alt-font;
   /* Copyright text */
-	.copyright {
-		@include font-size(12);
-		color: lighten($black,60);
-		a {
-			color: lighten($black,60);
-			text-decoration: none;
-		}
-	}
+  .copyright {
+    @include font-size(12);
+    color: lighten($black, 60);
+    a {
+      color: lighten($black, 60);
+      text-decoration: none;
+    }
+    margin-bottom: 0px;
+  }
 }

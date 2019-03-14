@@ -2,204 +2,260 @@
    Sidebar / Mainbar - Article
    ========================================================================== */
 
-   /* Main bar & Side bar */
-   .mainbar {
-       float: left;
-       width: 100%;
-       @include media($medium) {
-         width: 75%;
-       }
-       padding-top: 20px;
-       nav {
-         margin-top: 0px;
-         @include media($small) {
-           margin-top: 20px;
-         }
-       }
-       .div-high-1 {
-         &:nth-of-type(2) {
-           //border: 1px solid black;  /* For debugging */
-           height: 15px;
-           @include media($small) {
-             height: 10px;
-           }
-         }
-       }
-       .div-high-2 {
-         &:nth-of-type(3) {
-           //border: 1px solid black;  /* For debugging */
-           height: 15px;
-           @include media($small) {
-             height: 0px;
-           }
-         }
-       }
-   }
-   .sidebar {
-     float: left;
-     width: 100%;
-     @include media($medium) {
-       width: 25%;
-     }
-     padding: 10px;
-     .row {
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-       div {
-         .bio-pic {
-           border-radius: 50%;
-         }
-       }
-     }
-     .text {
-       text-align: center;
-       .sayhi {
-         @include font-size(20,no);
-         font-family: $hi-font;
-         color: $cg-red;
-       }
-       .sayhitext {
-         @include font-size(18,yes,24);
-         @include media($medium) {
-           @include font-size(16,yes,24);
-         }
-       }
-       a {
-         @include font-size(16,no);
-         text-decoration: none;
-       }
-     }
-     .blogger-resources {
-       a {
-         @include font-size(14,no);
-         font-family: $blogger-resources-font;
-         color: $text-color;
-         text-decoration: none;
-         &:hover {
-           color: $cg-red;
-         }
-       }
-     }
-   }
+/* Main bar & Side bar */
+.mainbar {
+  float: left;
+  width: 100%;
+  @include media($medium) {
+    width: 75%;
+  }
+  padding-top: 20px;
+  nav {
+    margin-top: 0px;
+    @include media($small) {
+      margin-top: 0px;
+    }
+  }
+  .div-high-1 {
+    &:nth-of-type(2) {
+      //border: 1px solid black;  /* For debugging */
+      height: 15px;
+      @include media($small) {
+        height: 10px;
+      }
+    }
+  }
+  .div-high-2 {
+    &:nth-of-type(3) {
+      //border: 1px solid black;  /* For debugging */
+      height: 5px;
+      @include media($small) {
+        height: 35px;
+      }
+    }
+  }
+}
+.sidebar {
+  float: left;
+  width: 100%;
+  @include media($medium) {
+    width: 25%;
+  }
+  padding: 10px;
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    div {
+      .bio-pic {
+        border-radius: 50%;
+      }
+    }
+  }
+  .text {
+    text-align: center;
+    .sayhi {
+      @include font-size(20, no);
+      font-family: $hi-font;
+      color: $cg-red;
+    }
+    .sayhitext {
+      @include font-size(18, yes, 24);
+      @include media($medium) {
+        @include font-size(16, yes, 24);
+      }
+    }
+    a {
+      @include font-size(16, no);
+      text-decoration: none;
+    }
+    /* Style all font awesome icons */
+    .fa {
+      padding: 18px;
+      @include font-size(20, no); //font-size: 30px;
+      width: 60px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 50%;
+      margin: 5px 2px;
+    }
 
-   .sidebarlatestposts {
-     display: flex;
-     flex-wrap: wrap;
-     flex-direction: row;
-     align-items: stretch;
-     div {
-       display: flex;
-       padding: 0 5px;
-       flex: 100%;
-       max-width: 100%;
-       @include media($small450) {
-         flex: 50%;
-         max-width: 50%;
-         padding: 0 10px;
-       }
-       @include media($medium750) {
+    /* LinkedIn */
+    .fa-linkedin {
+      background: $linkedin-color;
+      color: white;
+      border: 1px solid $linkedin-color;
+      &:hover {
+        background: white;
+        color: $linkedin-color;
+      }
+    }
+
+    /* Instagram */
+    .fa-instagram {
+      background: $instagram-color;
+      color: white;
+      border: 1px solid $instagram-color;
+      &:hover {
+        background: white;
+        color: $instagram-color;
+      }
+    }
+
+    /* Google Plus */
+    .fa-google-plus {
+      background: $google-plus-color;
+      color: white;
+      border: 1px solid $google-plus-color;
+      &:hover {
+        background: white;
+        color: $google-plus-color;
+      }
+    }
+
+    /* Facebook */
+    .fa-facebook {
+      background: $facebook-color;
+      color: white;
+      border: 1px solid $facebook-color;
+      &:hover {
+        background: white;
+        color: $facebook-color;
+      }
+    }
+  }
+  .blogger-resources {
+    a {
+      @include font-size(14, no);
+      font-family: $blogger-resources-font;
+      color: $text-color;
+      text-decoration: none;
+      &:hover {
+        color: $cg-red;
+      }
+    }
+  }
+}
+
+.sidebarlatestposts {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: stretch;
+  div {
+    display: flex;
+    padding: 0 5px;
+    flex: 100%;
+    max-width: 100%;
+    @include media($small450) {
+      flex: 50%;
+      max-width: 50%;
+      padding: 0 10px;
+    }
+    /*@include media($medium750) {
          flex: 25%;
          max-width: 25%;
          padding: 0 8px;
-       }
-       @include media($medium) {
-         flex: 100%;
-         max-width: 100%;
-         padding: 0 4px;
-       }
-     }
-   }
+       }*/
+    @include media($medium) {
+      flex: 100%;
+      max-width: 100%;
+      padding: 0 4px;
+    }
+  }
+}
 
-   /* Sidebar - Latest Posts */
-   .sidebartile {
-     display: flex;
-     margin: 0px 0px 30px;
-     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-     &:hover {
-       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-       .post-title {
-         color: $cg-red;
-       }
-       .post-teaser {
-         &:after {
-             background: rgba($base-color,0.05);
-         }
-       }
-     }
-     a {
-       text-decoration: none;
-     }
-     .post-title {
-       @include font-size(16,no);
-       color: $text-color;
-       font-family: $grid-title-font;
-       text-decoration: none;
-       padding: 0 10px;
-     }
-     .post-excerpt {
-       @include font-size(14);
-       color: $text-color;
-       text-decoration: none;
-       padding: 0 10px 10px;
-       margin-bottom: 10px;
-     }
-     .post-teaser {
-       margin-top: 0px;
-       position: relative;
-       display: block;
-       &:after {
-         content: '';
-         position: absolute;
-         width: 100%;
-         height: 100%;
-         top: 0;
-         left: 0;
-         background: rgba($base-color,0);
-         pointer-events: none;
-         @include transition(background 0.3s);
-       }
-     }
-   }
+/* Sidebar - Latest Posts */
+.sidebartile {
+  display: flex;
+  margin: 0px 0px 30px;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  &:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    .post-title {
+      color: $cg-red;
+    }
+    .post-teaser {
+      &:after {
+        background: rgba($base-color, 0.05);
+      }
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+  .post-title {
+    @include font-size(16, no);
+    color: $text-color;
+    font-family: $grid-title-font;
+    text-decoration: none;
+    padding: 0 10px;
+  }
+  .post-excerpt {
+    @include font-size(14);
+    color: $text-color;
+    text-decoration: none;
+    padding: 0 10px 10px;
+    margin-bottom: 10px;
+  }
+  .post-teaser {
+    margin-top: 0px;
+    max-height: 180px;
+    overflow-y: hidden;
+    position: relative;
+    display: block;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba($base-color, 0);
+      pointer-events: none;
+      @include transition(background 0.3s);
+    }
+  }
+}
 
-   /* Header & Footer Lines */
-   .div-35-high {
-     height: 35px;
-     width: 100%;
-   }
-   .div-30-high {
-     height: 30px;
-     width: 100%;
-   }
-   .div-25-high {
-     height: 25px;
-     width: 100%;
-   }
-   .div-20-high {
-     height: 20px;
-     width: 100%;
-   }
-   .div-10-high {
-     height: 10px;
-     width: 100%;
-   }
-   .div-5-high {
-     height: 5px;
-     width: 100%;
-   }
-   .line-red {
-     height: 7px;
-     width: 100%;
-     background-color: $red;
-   }
-   .line-red-media {
-     height: 7px;
-     width: 100%;
-     @include media($medium) {
-       width: 80%;
-     }
-     background-color: $red;
-   }
-   .site-title-padding {
-     width: 2000px;
-   }
+/* Header & Footer Lines */
+.div-35-high {
+  height: 35px;
+  width: 100%;
+}
+.div-30-high {
+  height: 30px;
+  width: 100%;
+}
+.div-25-high {
+  height: 25px;
+  width: 100%;
+}
+.div-20-high {
+  height: 20px;
+  width: 100%;
+}
+.div-10-high {
+  height: 10px;
+  width: 100%;
+}
+.div-5-high {
+  height: 5px;
+  width: 100%;
+}
+.line-red {
+  height: 7px;
+  width: 100%;
+  background-color: $red;
+}
+.line-red-media {
+  height: 7px;
+  width: 100%;
+  @include media($medium) {
+    width: 80%;
+  }
+  background-color: $red;
+}
+.site-title-padding {
+  width: 2000px;
+}

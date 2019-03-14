@@ -82,8 +82,7 @@ cellspacing="0" cellpadding="0">
 </body>
 </html>
 ```
-
-Note: *The above code is from [MA.CRO. Mind](https://marcocrosa.wordpress.com/2013/06/15/a-brief-history-of-html-layouts/).*
+<figcaption>Note: The above code is from <a href="https://marcocrosa.wordpress.com/2013/06/15/a-brief-history-of-html-layouts/">MA.CRO. Mind</a>.</figcaption>
 
 Websites designed using `<table>` element are fixed in nature. They can't be redesigned to handle new changes, everything will have to be rewritten completely. This is because the `<table>` element is meant to display only tabular data, and nothing more. So do not use it for website layout!
 
@@ -134,8 +133,7 @@ For designing an entire website, the basic idea to understand is that the `<floa
     clear: both;
 }
 ```
-
-Note: *A float column should be cleared, or it will mess up the layout of elements that follow after!*
+<figcaption>Note: A float column should be cleared, or it will mess up the layout of elements that follow after!</figcaption>
 
 Today, a website can be accessed from so many different devices - mobiles, tablets, laptops, PCs. So, how would you ensure that your website looks good on any device? The answer is **Responsive Web Design**. It has only one guiding principle: <u>A web page should look good on any device<u>!
 

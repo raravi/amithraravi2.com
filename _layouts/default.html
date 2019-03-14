@@ -2,163 +2,201 @@
 <html>
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96482099-1"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-96482099-1"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-      gtag('config', 'UA-96482099-1');
+      gtag("config", "UA-96482099-1");
     </script>
     <!-- End - Google Analytics -->
 
-    <meta charset="utf-8">
-    <title>{% if page.title %}{{ page.title }} • {% endif %}{{ site.title }}</title>
+    <meta charset="utf-8" />
+    <title>
+      {% if page.title %}{{ page.title }} • {% endif %}{{ site.title }}
+    </title>
     {%- if page.tags and page.tags != empty %}
-    <meta name="keywords" content="{{ page.tags | join: ', ' }}">
+    <meta name="keywords" content="{{ page.tags | join: ', ' }}" />
     {%- endif %}
-    <meta name="google-site-verification" content="wZay7xUx1IaKgYaoC5EA1V9z-kAZ1fYLD2WtuLVMjbU" />
-    <meta name="description" content={% if page.layout == "article" %}"{{ page.excerpt | strip_html | strip | truncate: 160 }}"{% else %}"{{ site.description }}"{% endif %} />
+    <meta
+      name="google-site-verification"
+      content="wZay7xUx1IaKgYaoC5EA1V9z-kAZ1fYLD2WtuLVMjbU"
+    />
+    <meta name="description" content={% if page.layout == "article" %}"{{
+    page.excerpt | strip_html | strip | truncate: 160 }}"{% else %}"{{
+    site.description }}"{% endif %} />
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:type" content={% if page.layout == "article" %}"article"{% else %}"website"{% endif %} />
-    <meta property="og:title" content={% if page.title %}"{{ page.title }}"{% else %}"{{ site.title }}"{% endif %} />
-    <meta property="og:description" content={% if page.layout == "article" %}"{{ page.excerpt | strip_html | strip | truncate: 160 }}"{% else %}"{{ site.description }}"{% endif %} />
+    <meta property="og:type" content={% if page.layout == "article"
+    %}"article"{% else %}"website"{% endif %} /> <meta property="og:title"
+    content={% if page.title %}"{{ page.title }}"{% else %}"{{ site.title }}"{%
+    endif %} /> <meta property="og:description" content={% if page.layout ==
+    "article" %}"{{ page.excerpt | strip_html | strip | truncate: 160 }}"{% else
+    %}"{{ site.description }}"{% endif %} />
     <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
     <meta property="og:site_name" content="{{ site.title }}" />
     {%- if page.layout == "article" %}
-    <meta property="article:publisher" content="{{site.owner.facebook.url}}/{{site.owner.facebook.username}}" />
-    <meta property="article:section" content="{{ page.categories[1] | capitalize }}" />
-    <meta property="article:published_time" content="{{ page.date | date: "%Y-%m-%dT%H:%M:%S+05:30" }}" />
-    {%- if page.modified %}
-    <meta property="article:modified_time" content="{{ page.modified | date: "%Y-%m-%dT%H:%M:%S+05:30" }}" />
-    {%- else %}
-    <meta property="article:modified_time" content="{{ page.date | date: "%Y-%m-%dT%H:%M:%S+05:30" }}" />
-    {%- endif -%}
-    {%- endif %}
-    <meta property="og:image" content={% if page.layout == "article" %}"{{ site.url }}{{ site.images }}{{ page.teaser }}"{% else %}"{{ site.url }}{{ site.logo }}"{% endif %} />
-    <meta property="og:image:secure_url" content={% if page.layout == "article" %}"{{ site.url }}{{ site.images }}{{ page.teaser }}"{% else %}"{{ site.url }}{{ site.logo }}"{% endif %} />
+    <meta
+      property="article:publisher"
+      content="{{site.owner.facebook.url}}/{{site.owner.facebook.username}}"
+    />
+    <meta
+      property="article:section"
+      content="{{ page.categories[1] | capitalize }}"
+    />
+    <meta property="article:published_time" content="{{ page.date | date:
+    "%Y-%m-%dT%H:%M:%S+05:30" }}" /> {%- if page.modified %} <meta
+    property="article:modified_time" content="{{ page.modified | date:
+    "%Y-%m-%dT%H:%M:%S+05:30" }}" /> {%- else %} <meta
+    property="article:modified_time" content="{{ page.date | date:
+    "%Y-%m-%dT%H:%M:%S+05:30" }}" /> {%- endif -%} {%- endif %} <meta
+    property="og:image" content={% if page.layout == "article" %}"{{ site.url
+    }}{{ site.images }}{{ page.teaser }}"{% else %}"{{ site.url }}{{ site.logo
+    }}"{% endif %} /> <meta property="og:image:secure_url" content={% if
+    page.layout == "article" %}"{{ site.url }}{{ site.images }}{{ page.teaser
+    }}"{% else %}"{{ site.url }}{{ site.logo }}"{% endif %} />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:description" content={% if page.layout == "article" %}"{{ page.excerpt | strip_html | strip | truncate: 160 }}"{% else %}"{{ site.description }}"{% endif %} />
-    <meta name="twitter:title" content={% if page.title %}"{{ page.title }}"{% else %}"{{ site.title }}"{% endif %} />
-    <meta name="twitter:site" content={% if page.author %}"@{{ site.data.authors[page.author].twitter }}"{% else %}"@{{ site.owner.twitter.username }}"{% endif %} />
-    <meta name="twitter:image" content={% if page.layout == "article" %}"{{ site.url }}{{ site.images }}{{ page.teaser }}"{% else %}"{{ site.url }}{{ site.logo }}"{% endif %} />
-    <meta name="twitter:creator" content={% if page.author %}"@{{ site.data.authors[page.author].twitter }}"{% else %}"@{{ site.owner.twitter.username }}"{% endif %} />
-    <link href="{{ site.url }}/feed.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} Atom Feed" />
-    <link href="{{ site.url }}/sitemap.xml" type="application/xml" rel="sitemap" title="Sitemap">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="cleartype" content="on">
-    <link rel="stylesheet" href="{{ site.url }}/css/main.css">
+    <meta name="twitter:description" content={% if page.layout == "article"
+    %}"{{ page.excerpt | strip_html | strip | truncate: 160 }}"{% else %}"{{
+    site.description }}"{% endif %} /> <meta name="twitter:title" content={% if
+    page.title %}"{{ page.title }}"{% else %}"{{ site.title }}"{% endif %} />
+    <meta name="twitter:site" content={% if page.author %}"@{{
+    site.data.authors[page.author].twitter }}"{% else %}"@{{
+    site.owner.twitter.username }}"{% endif %} /> <meta name="twitter:image"
+    content={% if page.layout == "article" %}"{{ site.url }}{{ site.images }}{{
+    page.teaser }}"{% else %}"{{ site.url }}{{ site.logo }}"{% endif %} /> <meta
+    name="twitter:creator" content={% if page.author %}"@{{
+    site.data.authors[page.author].twitter }}"{% else %}"@{{
+    site.owner.twitter.username }}"{% endif %} />
+    <link
+      href="{{ site.url }}/feed.xml"
+      type="application/atom+xml"
+      rel="alternate"
+      title="{{ site.title }} Atom Feed"
+    />
+    <link
+      href="{{ site.url }}/sitemap.xml"
+      type="application/xml"
+      rel="sitemap"
+      title="Sitemap"
+    />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="cleartype" content="on" />
+    <link rel="stylesheet" href="{{ site.url }}/css/main.css" />
     <!-- HTML5 Shiv and Media Query Support for IE -->
     <!--[if lt IE 9]>
       <script src="{{ site.url }}/js/vendor/html5shiv.min.js"></script>
       <script src="{{ site.url }}/js/vendor/respond.min.js"></script>
     <![endif]-->
     <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "Person",
-      "name": "{{ site.owner.name }}",
-      "url": "{{ site.url }}",
-      "sameAs": [
-        "{{site.owner.linkedin.url}}/{{site.owner.linkedin.username}}",
-        "{{site.owner.github.url}}/{{site.owner.github.username}}",
-        "{{site.owner.instagram.url}}/{{site.owner.instagram.username}}",
-        "{{site.owner.twitter.url}}/{{site.owner.twitter.username}}",
-        "{{site.owner.googleplus.url}}/{{site.owner.googleplus.username}}",
-        "{{site.owner.facebook.url}}/{{site.owner.facebook.username}}",
-        "{{site.owner.goodreads.url}}/{{site.owner.goodreads.username}}",
-        "{{site.owner.runkeeper.url}}/{{site.owner.runkeeper.username}}"
-      ]
-    }
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "{{ site.owner.name }}",
+        "url": "{{ site.url }}",
+        "sameAs": [
+          "{{site.owner.linkedin.url}}/{{site.owner.linkedin.username}}",
+          "{{site.owner.github.url}}/{{site.owner.github.username}}",
+          "{{site.owner.instagram.url}}/{{site.owner.instagram.username}}",
+          "{{site.owner.twitter.url}}/{{site.owner.twitter.username}}",
+          "{{site.owner.googleplus.url}}/{{site.owner.googleplus.username}}",
+          "{{site.owner.facebook.url}}/{{site.owner.facebook.username}}",
+          "{{site.owner.goodreads.url}}/{{site.owner.goodreads.username}}",
+          "{{site.owner.runkeeper.url}}/{{site.owner.runkeeper.username}}"
+        ]
+      }
     </script>
 
     {%- if page.title == "Articles" %}
     <script type="application/ld+json">
-    {
-      "@context":"http://schema.org",
-      "@type":"ItemList",
-      "itemListElement":[
-    	{%- assign counter = 1 -%}
-    	{%- for post in site.posts -%}
-    		{% if post.layout == "article" %}
-        {
-          "@type":"ListItem",
-          "position":{{ counter }},
-          "url":"{{ site.url }}{{ post.url }}"
-        }{% if site.posts.last != post %},{% endif %}
-    		{%- assign counter = counter | plus:1 -%}
-    		{%- endif -%}
-    	{%- endfor %}
-      ]
-    }
+      {
+        "@context":"http://schema.org",
+        "@type":"ItemList",
+        "itemListElement":[
+      	{%- assign counter = 1 -%}
+      	{%- for post in site.posts -%}
+      		{% if post.layout == "article" %}
+          {
+            "@type":"ListItem",
+            "position":{{ counter }},
+            "url":"{{ site.url }}{{ post.url }}"
+          }{% if site.posts.last != post %},{% endif %}
+      		{%- assign counter = counter | plus:1 -%}
+      		{%- endif -%}
+      	{%- endfor %}
+        ]
+      }
     </script>
-    {%- endif %}
-
-    {%- if page.layout == "article" %}
+    {%- endif %} {%- if page.layout == "article" %}
     <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "{{ site.owner.name }}",
-          "item": "{{ site.url }}"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Articles",
-          "item": "{{ site.url }}/articles/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "{{ page.title }}",
-          "item": "{{ site.url }}{{ page.url }}"
-        }
-      ]
-    }
+      {
+        "@context": "http://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "{{ site.owner.name }}",
+            "item": "{{ site.url }}"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Articles",
+            "item": "{{ site.url }}/articles/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "{{ page.title }}",
+            "item": "{{ site.url }}{{ page.url }}"
+          }
+        ]
+      }
     </script>
     <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "BlogPosting",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "{{ site.url }}{{ page.url }}"
-      },
-      "headline": "{{ page.excerpt | strip_html | strip | truncate: 160 }}",
-      "image": "{{ site.url }}{{ site.images }}{{ page.teaser }}",
-      "datePublished": "{{ page.date | date: "%Y-%m-%dT%H:%M:%S+05:30" }}",
-      {%- if page.modified %}
-      "dateModified": "{{ page.modified | date: "%Y-%m-%dT%H:%M:%S+05:30" }}",
-      {%- else %}
-      "dateModified": "{{ page.date | date: "%Y-%m-%dT%H:%M:%S+05:30" }}",
-      {%- endif %}
-    	{%- if page.author -%}
-    	  {%- assign author = site.data.authors[page.author] -%}
-      {%- else -%}
-        {%- assign author = site.owner -%}
-      {% endif %}
-      "author": {
-        "@type": "Person",
-        "name": "{{ author.name }}"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "{{ site.title }}",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "{{site.url}}{{site.images}}amith-bio-300x300.png"
-        }
-      },
-    	"description": "{{ page.excerpt | strip_html | strip | truncate: 160 }}"
-    }
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "{{ site.url }}{{ page.url }}"
+        },
+        "headline": "{{ page.excerpt | strip_html | strip | truncate: 160 }}",
+        "image": "{{ site.url }}{{ site.images }}{{ page.teaser }}",
+        "datePublished": "{{ page.date | date: "%Y-%m-%dT%H:%M:%S+05:30" }}",
+        {%- if page.modified %}
+        "dateModified": "{{ page.modified | date: "%Y-%m-%dT%H:%M:%S+05:30" }}",
+        {%- else %}
+        "dateModified": "{{ page.date | date: "%Y-%m-%dT%H:%M:%S+05:30" }}",
+        {%- endif %}
+      	{%- if page.author -%}
+      	  {%- assign author = site.data.authors[page.author] -%}
+        {%- else -%}
+          {%- assign author = site.owner -%}
+        {% endif %}
+        "author": {
+          "@type": "Person",
+          "name": "{{ author.name }}"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "{{ site.title }}",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "{{site.url}}{{site.images}}amith-bio-300x300.png"
+          }
+        },
+      	"description": "{{ page.excerpt | strip_html | strip | truncate: 160 }}"
+      }
     </script>
     {%- endif %}
   </head>
@@ -167,12 +205,20 @@
     {% include header.html %}
     {% include navigation-sliding.html -%}
     <div id="page-wrapper">
-      {{ content }}
+      <div id="barba-wrapper" class="wrapper">
+        <div class="barba-container">{{ content }}</div>
+      </div>
       {%- include footer.html -%}
     </div>
-    <script src="{{ site.url }}/js/vendor/jquery-1.9.1.min.js"></script>
+    <script src="{{ site.url }}/js/vendor/modernizr.custom.js"></script>
+    <script src="{{ site.url }}/js/vendor/jquery-3.3.1.min.js"></script>
     <script src="{{ site.url }}/js/vendor/isotope.pkgd.min.js"></script>
     <script src="{{ site.url }}/js/vendor/imagesloaded.pkgd.min.js"></script>
+    <script src="{{ site.url }}/js/vendor/classie.js"></script>
+    <script src="{{ site.url }}/js/vendor/AnimOnScroll.js"></script>
+    <script src="{{ site.url }}/js/vendor/barba.min.js"></script>
+    <script src="{{ site.url }}/js/vendor/anime.min.js"></script>
+    <script src="{{ site.url }}/js/vendor/mo.min.js"></script>
     <script src="{{ site.url }}/js/main.js"></script>
   </body>
 </html>

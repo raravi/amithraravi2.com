@@ -19,7 +19,7 @@ So you have updated to the new **iOS 12**, and want to see what it has to offer?
 
 iOS 12 has been released at a time when our lives are being overshadowed by our online avatars. Our FB updates, Instagram posts, Tweets and LinkedIn posts are taking up so much of our time daily. We go on dates to have some uninterrupted ‘Us’ time with our significant other, only to realise that we have posted more updates online then we talked to each other all evening…
 
->Ooh, let me quickly post this dinner date on Instagram. Damn, the Greek salad was not as good as last time. On top of it, our waiter is rude. That’s it, let me write a scathing review on Yelp. My Uber is not here yet.
+>Ooh, let me quickly post this dinner date on Instagram. Damn, the Greek salad was not as good as last time. On top of it, our waiter is rude. That’s it, let me write a scathing review on Yelp. I'm out of here. Where's my Uber??
 
 See what I mean.
 

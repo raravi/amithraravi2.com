@@ -1,14 +1,14 @@
 ---
 layout:     media
-title:      "Editing Services"
+title:      "Content Editing"
 date:       2017-07-01 21:00:00 +0530
 modified:   
 categories: portfolio
 image:
-  feature:  editor-1600x800.jpg
+  feature:  editor-900x450.jpg
 teaser:   editor-400x250.jpg
 ---
-Role:     Freelance Editor
+Role:     Content Editor
 
 Duration: June 2017 till date.
 

@@ -357,11 +357,6 @@
       stroke: lighten($red, 20%);
       stroke-width: 6px;
     }
-    .entry-date,
-    .post-title,
-    .post-excerpt {
-      padding: 0 10px;
-    }
     .post-teaser {
       margin-top: 0px;
       margin-bottom: 0px;
@@ -382,20 +377,11 @@
         @include transition(background 0.3s);
       }
     }
-    .entry-date {
-      margin-top: 10px;
-      @include font-size(12, no);
-      color: lighten($text-color, 25);
-    }
     .post-title {
-      margin-top: 4px;
-      @include font-size(18, no);
+      margin-top: 20px;
+      padding: 0 10px;
+      @include font-size(18);
       font-family: $grid-title-font;
-      color: $text-color;
-    }
-    .post-excerpt {
-      margin-top: 10px;
-      @include font-size(14);
       color: $text-color;
     }
   }

@@ -5,7 +5,7 @@ date:       2017-06-01 21:00:00 +0530
 modified:   
 categories: portfolio
 image:
-  feature:  website-design-1600x800.jpg
+  feature:  website-design-700x350.jpg
 teaser:   website-design-400x250.jpg
 ---
 Role:     Freelance Web Designer

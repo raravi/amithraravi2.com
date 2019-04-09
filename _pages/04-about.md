@@ -17,7 +17,7 @@ My freelancing career took off in the beginning of 2017, with focus on **Web Des
 
 ## Personal Life
 
-![image]({{ site.url }}{{ site.images }}gandalf.png)
+![image]({{ site.url }}{{ site.images }}gandalf.jpg)
 <figcaption>Note: This <a href="https://www.deviantart.com/s1ghtly/art/Gandalf-419175721">awesome piece of work</a> was found on Deviant Art.</figcaption>
 
 I love going on trips to places where the mobile network cannot reach, and documenting it on Instagram/Medium. Spend most of my spare time with family. And reading novels. And watching movies. Have I mentioned *The White Wizard* yet..?!

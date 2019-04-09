@@ -5,8 +5,8 @@ author:     amith_raravi
 date:       2017-03-10 20:20:00 +0530
 modified:   2017-03-18 20:21:00 +0530
 categories: [articles, tech]
-image:      images/web-hosting.png
-teaser:     web-hosting-400x250.png
+image:      images/web-hosting.jpg
+teaser:     web-hosting-400x250.jpg
 ---
 
 Bought your own [fancy domain]({{ site.url }}{% post_url 2017-03-09-your-own-website-part-1 %}), did you?! Well that's good :)
@@ -27,7 +27,7 @@ Have you decided yet? Awesome, let's move on!
 
 **Where to buy it:** The popular places to buy web hosting packages also offer to sell web domains:  [GoDaddy](https://www.godaddy.com), [BigRock](https://www.bigrock.in), [ZNet](https://www.znetlive.com), [NameCheap](https://www.namecheap.com/) & [HostGator](https://www.hostgator.in). Once you buy your web hosting package, it will usually take about half an hour for it to be visible to the world.
 
-![image]({{ site.url }}{{ site.images }}web-hosting.png)
+![image]({{ site.url }}{{ site.images }}web-hosting.jpg)
 
 If you bought your web hosting from the same place you got your domain, then connecting is quite easy. Usually the website you bought them from will connect it for you.
 

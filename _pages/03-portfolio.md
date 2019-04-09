@@ -22,13 +22,8 @@ permalink: /portfolio/
 					<img src="{{ site.url }}{{ site.images }}{{ site.teaser }}" alt="teaser">
 					{%- endif %}
 				</p>
-				{%- if post.date %}
-					<p class="entry-date date published">
-						<time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %d, %Y" }}</time>
-					</p>
-				{%- endif %}
-			<h2 class="post-title">{{ post.title }}</h2>
-			<p class="post-excerpt">{{ post.excerpt | strip_html | strip | truncate: 160 }}</p></a>
+				<h2 class="post-title">{{ post.title }}</h2>
+			</a>
 		</article><!-- /.tile -->
 		{%- endif -%}
 	{%- endfor %}

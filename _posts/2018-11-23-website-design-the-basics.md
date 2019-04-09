@@ -38,7 +38,7 @@ Just start with a minimal set of pages that you think are necessary, and add mor
 
 ## Layout of your website
 
-![image]({{ site.url }}{{ site.images }}design-2.png)
+![image]({{ site.url }}{{ site.images }}design-2.jpg)
 
 To achieve a consistent look and feel across your website, all the pages need to conform to one design. This is usually achieved through the same header / footer sections and consistent colour and design choices. Choose a background colour / pattern / image that is relevant to your website. This is what we call the basic template of a website.
 

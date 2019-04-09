@@ -5,7 +5,7 @@ author:     amith_raravi
 date:       2017-04-17 14:51:00 +0530
 modified:   2017-04-17 16:34:00 +0530
 categories: [articles, tech]
-image:      images/jekyll-templates.png
+image:      images/jekyll-templates.jpg
 teaser:     jekyll-logo-400x250.png
 ---
 
@@ -25,7 +25,7 @@ If like me, you are working on windows, go [here](https://labs.sverrirs.com/jeky
 
 ## Installing Grunt
 
-![image]({{ site.url }}{{ site.images }}grunt-logo.png)
+![image]({{ site.url }}{{ site.images }}grunt-logo.jpg)
 
 [Grunt](https://gruntjs.com/), put simply, is for automating stuff. Stuff that you don't want to be doing every time you build. It's a Javascript Task Runner which requires [node.js](https://nodejs.org/en/) to run and works really well with Jekyll for automating tasks like image compression, compiling/uglifying the main.js file and so on. Uglify compresses all the javascripts used into a main.js file to be used by the website.
 
@@ -35,7 +35,7 @@ Note: Make sure you are able to run commands on these packages. If not, you may 
 
 ## Get a Jekyll template
 
-[![image]({{ site.url }}{{ site.images }}jekyll-templates.png)](https://jekyllthemes.io/theme/31560300/beautiful-jekyll)
+[![image]({{ site.url }}{{ site.images }}jekyll-templates.jpg)](https://jekyllthemes.io/theme/31560300/beautiful-jekyll)
 
 Getting a simple Jekyll template will make it easier for you to understand how Jekyll works and focus on the content of your website faster. I recommend going with a template initially, instead of building things from scratch, for the sheer pleasure of everything working out of the box!
 

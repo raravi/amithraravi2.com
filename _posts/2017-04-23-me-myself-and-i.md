@@ -13,7 +13,7 @@ There are times when what you are becomes more than just a passing thought...
 
 It turns into a deeper quest to find yourself, and what that means to you as a living breathing human being. It's no longer enough to just live day after day. You are not satisfied with just making money anymore. You need to know why you really need that money, and what you want out of life.
 
-![image]({{ site.url }}{{ site.images }}tattoo.jpg)
+![image]({{ site.imagekiturl }}{{ site.images }}tattoo.jpg)
 
 Tattoos are an expression of the soul. And also an extension of it. My tattoos are my interpretation of what I see myself as right now. I'm a traveller who has started on a journey, a journey so personal that I don't have the words to express what I mean.
 

@@ -11,7 +11,7 @@ teaser:     moving-in-400x250.jpg
 
 It has finally happened, I've moved to a place which I can call my own. Such a sweet feeling!
 
-![image]({{ site.url }}{{ site.images }}moving-in.jpg)
+![image]({{ site.imagekiturl }}{{ site.images }}moving-in.jpg)
 
 It's difficult to think of moving away from a locality where you have lived for ever. You know every street for miles around. That's what holds you back - the familiarity. The people, the shops, the apparent safety. All you have to do is take that first step, get that foot out the front door. What I mean is, make up your mind to take the first step. Decide that you are ready. After that it's all smooth sailing. Well, not really :)
 

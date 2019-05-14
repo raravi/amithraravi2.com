@@ -2,8 +2,9 @@
   <h5>{{ site.title }} <span>{{ site.data.messages.locales[site.locale].toc }}</span></h5>
   <ul class="menu-item">
     {% for link in site.data.navigation %}<li>
-      <a href="{{ site.url }}{{ link.url }}" id="js-menu-link">
-        {% if link.image %}<img src="{{ site.url }}{{ site.images }}{{ link.image }}" alt="teaser" class="teaser">{% endif %}
+      <a href="{{ site.url }}{{ link.url }}" class="js-menu-link">
+        {% if link.image %}<img src="{{ site.imagekiturl }}{{ site.images }}400x250.gif" data-src="{{ site.imagekiturl }}/tr:w-100,h-63{{ site.images }}{{ link.image }}"
+        data-srcset="{{ site.imagekiturl }}/tr:w-100,h-63{{ site.images }}{{ link.image }} 1x, {{ site.imagekiturl }}/tr:w-200,h-125{{ site.images }}{{ link.image }} 2x" alt="teaser" class="teaser">{% endif %}
         <div class="title">{{ link.title }}</div>
         {% if link.excerpt %}<p class="excerpt">{{ link.excerpt }}</p>{% endif %}
       </a>

@@ -17,9 +17,9 @@ permalink: /portfolio/
 			<a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}" class="portfolio-link">
 				<p class="post-teaser">
 					{%- if post.teaser %}
-					<img src="{{ site.url }}{{ site.images }}{{ post.teaser }}" alt="teaser">
+					<img src="{{ site.imagekiturl }}{{ site.images }}400x250.gif" data-src="{{ site.imagekiturl }}{{ site.images }}{{ post.teaser }}" alt="teaser">
 					{%- else %}
-					<img src="{{ site.url }}{{ site.images }}{{ site.teaser }}" alt="teaser">
+					<img src="{{ site.imagekiturl }}{{ site.images }}400x250.gif" data-src="{{ site.imagekiturl }}{{ site.images }}{{ site.teaser }}" alt="teaser">
 					{%- endif %}
 				</p>
 				<h2 class="post-title">{{ post.title }}</h2>

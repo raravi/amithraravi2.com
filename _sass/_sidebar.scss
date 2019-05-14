@@ -57,7 +57,7 @@
     .sayhi {
       @include font-size(20, no);
       font-family: $hi-font;
-      color: $cg-red;
+      color: $boston-red;
     }
     .sayhitext {
       @include font-size(18, yes, 24);
@@ -68,12 +68,13 @@
     a {
       @include font-size(16, no);
       text-decoration: none;
+      color: $boston-red;
     }
     /* Style all font awesome icons */
     .fa {
-      padding: 18px;
+      padding: 10px;
       @include font-size(20, no); //font-size: 30px;
-      width: 60px;
+      width: 45px;
       text-align: center;
       text-decoration: none;
       border-radius: 50%;
@@ -102,14 +103,14 @@
       }
     }
 
-    /* Google Plus */
-    .fa-google-plus {
-      background: $google-plus-color;
+    /* Github */
+    .fa-github {
+      background: $github-color;
       color: white;
-      border: 1px solid $google-plus-color;
+      border: 1px solid $github-color;
       &:hover {
         background: white;
-        color: $google-plus-color;
+        color: $github-color;
       }
     }
 

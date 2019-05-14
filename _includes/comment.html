@@ -6,7 +6,7 @@
 		{%- elsif include.email %}
 		  <img src="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=60" srcset="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=120 2x" alt="{{ include.name | escape }}">
 		{%- else %}
-		  <img src="{{ site.url }}{{ site.images }}avatar-60.png" srcset="{{ site.url }}{{ site.images }}avatar-120.png 2x" alt="{{ include.name | escape }}">
+		  <img src="{{ site.imagekiturl }}{{ site.images }}avatar-60.png" srcset="{{ site.imagekiturl }}{{ site.images }}avatar-120.png 2x" alt="{{ include.name | escape }}">
 		{%- endif %}
 	  </div>
 	  <div>
@@ -33,7 +33,7 @@
   </div>
   {%- unless include.replying_to != 0 or page.comments_locked == true %}
     <div class="comment__reply">
-      <a rel="nofollow" href="#comment-{{ include.index }}" onclick="return addComment.moveForm('comment-{{ include.index }}', '{{ include.index }}', 'respond', '{{ page.slug }}')"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve"><path class="replying-to-icon" d="M11.6,12.8l-1-1l2.7-2.7H5.5C0.2,9.1,0,3.9,0,3.7l0-0.5l1.4,0v0.5c0,0.2,0,4.1,4.1,4.1h7.8L10.6,5l1-1L16,8.4L11.6,12.8z"/></svg> Reply to {{ include.name }}</a>
+      <a rel="nofollow" href="#comment-{{ include.index }}" data-comment="comment-{{ include.index }}" data-index="{{ include.index }}" data-respond="respond" data-slug="{{ page.slug }}"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve"><path class="replying-to-icon" d="M11.6,12.8l-1-1l2.7-2.7H5.5C0.2,9.1,0,3.9,0,3.7l0-0.5l1.4,0v0.5c0,0.2,0,4.1,4.1,4.1h7.8L10.6,5l1-1L16,8.4L11.6,12.8z"/></svg> Reply to {{ include.name }}</a>
     </div>
   {%- endunless %}
 </article>

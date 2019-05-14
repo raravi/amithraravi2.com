@@ -57,9 +57,9 @@ ins {
 /* Links */
 
 a {
-	color: lighten($cg-red, 5);
+	color: lighten($boston-red, 5);
 	&:hover {
-		color: $cg-red; //color: darken($link-color, 20);
+		color: $boston-red; //color: darken($link-color, 20);
 	}
 	&:focus {
 		@extend %tab-focus;

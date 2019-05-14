@@ -421,7 +421,7 @@
 
 .filters-button {
   background: $white;
-  color: $cg-red;
+  color: $boston-red;
   border: none;
   position: relative;
   height: 30px;
@@ -445,7 +445,7 @@
   right: 0;
   height: 2px;
   width: 100%;
-  background: $cg-red;
+  background: $boston-red;
   transition: 200ms ease all;
 }
 .filters-button:after {
@@ -466,7 +466,7 @@
 
 .filters-button:active,
 .filters-button.is-checked {
-  background-color: $cg-red;
+  background-color: $boston-red;
   text-decoration: none;
 }
 

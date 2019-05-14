@@ -231,7 +231,7 @@ By now you should be able to spot the issue with using `<flex>` to design an ent
 }
 ```
 
-![image]({{ site.url }}{{ site.images }}layout-grid-1.png)
+![image]({{ site.imagekiturl }}{{ site.images }}layout-grid-1.png)
 
 Going by the example above, you can design a layout of your website using the CSS grid as follows.
 
@@ -266,7 +266,7 @@ Going by the example above, you can design a layout of your website using the CS
 }
 ```
 
-![image]({{ site.url }}{{ site.images }}layout-grid-2.png)
+![image]({{ site.imagekiturl }}{{ site.images }}layout-grid-2.png)
 
 The `grid-template-areas` is a great way to structure your layout. It's represented visually in code and is easily understandable. Comparing this with the earlier ways (the rigid structure of the tables, the cumbersome floats and the multi-level hierarchy of the flexbox), we can see how easy the CSS Grid has made designing a layout!
 

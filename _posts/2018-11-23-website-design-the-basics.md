@@ -15,7 +15,7 @@ Figure out the pages you want on your site and what you need each of them to be.
 
 At its most basic level, wireframing can be just a simple sketch done with pen and paper. For advanced wireframing, you have [tools available](https://medium.com/@soulless/the-best-mockup-wireframing-design-tools-apps-for-ui-ux-designers-in-2018-4eb16957e25d)) that help to maintain the same feel across pages and reuse commonly used blocks. Wireframing tools are usually expensive and not really needed for building a personal website. But if you’re looking at a medium sized website for e-commerce purposes then they’re a worthy investment.
 
-![image]({{ site.url }}{{ site.images }}design-1.jpg)
+![image]({{ site.imagekiturl }}{{ site.images }}design-1.jpg)
 
 Okay then, let us deep-dive into the design process and see the steps involved.
 
@@ -38,13 +38,13 @@ Just start with a minimal set of pages that you think are necessary, and add mor
 
 ## Layout of your website
 
-![image]({{ site.url }}{{ site.images }}design-2.jpg)
+![image]({{ site.imagekiturl }}{{ site.images }}design-2.jpg)
 
 To achieve a consistent look and feel across your website, all the pages need to conform to one design. This is usually achieved through the same header / footer sections and consistent colour and design choices. Choose a background colour / pattern / image that is relevant to your website. This is what we call the basic template of a website.
 
 Once the layout of the different pages have been decided upon, the next thing you should think of is navigation. The navigation between the different pages should feel seamless to the user. For example, the Header / Footer sections should contain links to the main pages of your website. Along with the navigation section in the Header, page-specific navigation links offer users easier backlinks to come back to the main sections of the website. In each blog post, a link to the same category of posts is relevant and expected. You can also add links to the next/previous posts at the end of the current post being read. This leads to the evolution of a tree structure of your website, which would be something similar to the one below.
 
-![image]({{ site.url }}{{ site.images }}design-3.png)
+![image]({{ site.imagekiturl }}{{ site.images }}design-3.png)
 
 I believe, the number one thing to learn for designing websites is layout design. Or at least a basic understanding of the HTML/CSS elements like the Flexbox and Grid. If you don't know what they are, then now is a good time for a refresher course on these. To play around with the different layouts and make sure they work as expected, its essential to know how to use these elements to fit your requirements.
 

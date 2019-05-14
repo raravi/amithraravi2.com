@@ -235,7 +235,7 @@
                .sayhi {
                    @include font-size(20,no);
                    font-family: $hi-font;
-                   color: $cg-red;
+                   color: $boston-red;
                }
                .sayhitext {
                  @include font-size(18,yes,28);
@@ -249,6 +249,61 @@
                a {
                  @include font-size(16,no);
                  text-decoration: none;
+                 color: $boston-red;
+               }
+               /* Style all font awesome icons */
+               .fa {
+                 padding: 10px;
+                 @include font-size(20, no); //font-size: 30px;
+                 width: 45px;
+                 text-align: center;
+                 text-decoration: none;
+                 border-radius: 50%;
+                 margin: 5px 2px;
+               }
+
+               /* LinkedIn */
+               .fa-linkedin {
+                 background: $linkedin-color;
+                 color: white;
+                 border: 1px solid $linkedin-color;
+                 &:hover {
+                   background: white;
+                   color: $linkedin-color;
+                 }
+               }
+
+               /* Instagram */
+               .fa-instagram {
+                 background: $instagram-color;
+                 color: white;
+                 border: 1px solid $instagram-color;
+                 &:hover {
+                   background: white;
+                   color: $instagram-color;
+                 }
+               }
+
+               /* Github */
+               .fa-github {
+                 background: $github-color;
+                 color: white;
+                 border: 1px solid $github-color;
+                 &:hover {
+                   background: white;
+                   color: $github-color;
+                 }
+               }
+
+               /* Facebook */
+               .fa-facebook {
+                 background: $facebook-color;
+                 color: white;
+                 border: 1px solid $facebook-color;
+                 &:hover {
+                   background: white;
+                   color: $facebook-color;
+                 }
                }
                h5 {
                  margin-bottom: 20px;

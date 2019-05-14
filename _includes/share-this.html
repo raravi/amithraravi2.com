@@ -3,12 +3,12 @@
 {%- endif -%}
 <div class="sharethis">
   <div class="col first">
-  <a class="btn-social twitter" href="https://twitter.com/intent/tweet?text={{ page.title | escape | replace:' ','%20' }}&amp;url={{ page.url | replace:'index.html','' | prepend: site.url }}&amp;via={{ author.twitter }}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;Twitter</a>
+  <a class="btn-social twitter" href="https://twitter.com/intent/tweet?text={{ page.title | escape | replace:' ','%20' }}&amp;url={{ page.url | replace:'index.html','' | prepend: site.url }}&amp;via={{ author.twitter }}" target="_blank" rel="noreferrer"><i class="fa fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;Twitter</a>
 	</div>
   <div class="col middle">
-  <a class="btn-social facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | replace:'index.html','' | prepend: site.url }}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i>&nbsp;&nbsp;Facebook</a>
+  <a class="btn-social facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | replace:'index.html','' | prepend: site.url }}" target="_blank" rel="noreferrer"><i class="fa fa-facebook" aria-hidden="true"></i>&nbsp;&nbsp;Facebook</a>
   </div>
   <div class="col last">
-  <a class="btn-social google-plus"  href="https://plus.google.com/share?url={{ page.url | replace:'index.html','' | prepend: site.url }}" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i>&nbsp;&nbsp;Google+</a>
+  <a class="btn-social google-plus"  href="https://plus.google.com/share?url={{ page.url | replace:'index.html','' | prepend: site.url }}" target="_blank" rel="noreferrer"><i class="fa fa-google-plus" aria-hidden="true"></i>&nbsp;&nbsp;Google+</a>
   </div>
 </div><!-- /.share-this inline-btn-->

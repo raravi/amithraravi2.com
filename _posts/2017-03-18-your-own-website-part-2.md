@@ -15,7 +15,7 @@ In this blog post, I'll take you through the process of setting up Web Hosting f
 
 ## Buy a Web Hosting package
 
-![image]({{ site.url }}{{ site.images }}linux-vs-windows-hosting.jpg)
+![image]({{ site.imagekiturl }}{{ site.images }}linux-vs-windows-hosting.jpg)
 
 **Decide on a Web Hosting Service:** The one thing you have to decide on is whether you want a `Windows` or `Linux` based web hosting for your website. Linux has more of the features web designers expect, so unless you have websites which need specific Windows applications, Linux is the preferred choice. Windows applications which do require a Windows server: ASP.NET, MSSQL, MS Access, Visual Basic development and Remote Desktop (dedicated servers only).
 
@@ -27,7 +27,7 @@ Have you decided yet? Awesome, let's move on!
 
 **Where to buy it:** The popular places to buy web hosting packages also offer to sell web domains:  [GoDaddy](https://www.godaddy.com), [BigRock](https://www.bigrock.in), [ZNet](https://www.znetlive.com), [NameCheap](https://www.namecheap.com/) & [HostGator](https://www.hostgator.in). Once you buy your web hosting package, it will usually take about half an hour for it to be visible to the world.
 
-![image]({{ site.url }}{{ site.images }}web-hosting.jpg)
+![image]({{ site.imagekiturl }}{{ site.images }}web-hosting.jpg)
 
 If you bought your web hosting from the same place you got your domain, then connecting is quite easy. Usually the website you bought them from will connect it for you.
 
@@ -37,6 +37,6 @@ Let's not worry if the domain is still not directing to your site. We shall go a
 
 Once you know where the `cpanel` is, you can find a File Manager on it. You can use this to edit the `index.html` (this file should be available by default) that is at the root of your website. Just type something as simple as: `Hello World to my own website!!!` and save it. Now if you go to your `www.mydomain.com` from any browser, you can see what you have typed in your `index.html`!
 
-![image]({{ site.url }}{{ site.images }}hello-world.png)
+![image]({{ site.imagekiturl }}{{ site.images }}hello-world.png)
 
 Voila, your site just went live to the world!!

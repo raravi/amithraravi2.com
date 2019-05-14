@@ -15,7 +15,7 @@ The advent of **Fake News** in modern times is seen as a problem primarily to do
 
 While I have always wondered why so many of my acquaintances on Facebook/Twitter/WhatsApp keep sending information that I've found of a dubious nature, I've never really found the energy to dig deeper till now. About a week or so ago, I came across this [BBC study](http://downloads.bbc.co.uk/mediacentre/duty-identity-credibility.pdf) done on Fake News in various countries, India being one of them. This was of immense interest to me, as I see the significant real-world consequences of fake news in the current political climate.
 
-![image]({{ site.url }}{{ site.images }}fake-news-01.jpg)
+![image]({{ site.imagekiturl }}{{ site.images }}fake-news-01.jpg)
 
 It took me about 3-4 days for me to go through the entire study. The study is quite detailed and employs a qualitative analysis of the representative dataset to try to understand the prevailing situation in India. I urge everyone to go through the study for the sake of understanding why fake news can be so dangerous. If you are still not convinced, please see [this article](https://www.bbc.com/news/world-46146877) to get the basics of the study results and also to find some context as to why the study was deemed necessary.
 
@@ -41,7 +41,7 @@ As such, Indian users embraced these social media spaces as public spaces where 
 
 ## The Result
 
-![image]({{ site.url }}{{ site.images }}fake-news-02.jpg)
+![image]({{ site.imagekiturl }}{{ site.images }}fake-news-02.jpg)
 
 Easy access to the Internet and the resulting information overload has led to:
 

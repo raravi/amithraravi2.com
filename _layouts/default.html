@@ -1,22 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-96482099-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "UA-96482099-1");
-    </script>
-    <!-- End - Google Analytics -->
-
     <meta charset="utf-8" />
     <title>
       {% if page.title %}{{ page.title }} • {% endif %}{{ site.title }}
@@ -28,6 +12,7 @@
       name="google-site-verification"
       content="wZay7xUx1IaKgYaoC5EA1V9z-kAZ1fYLD2WtuLVMjbU"
     />
+    <meta name="theme-color" content="#2196f3"/>
     <meta name="description" content={% if page.layout == "article" %}"{{
     page.excerpt | strip_html | strip | truncate: 160 }}"{% else %}"{{
     site.description }}"{% endif %} />
@@ -56,10 +41,10 @@
     "%Y-%m-%dT%H:%M:%S+05:30" }}" /> {%- else %} <meta
     property="article:modified_time" content="{{ page.date | date:
     "%Y-%m-%dT%H:%M:%S+05:30" }}" /> {%- endif -%} {%- endif %} <meta
-    property="og:image" content={% if page.layout == "article" %}"{{ site.url
+    property="og:image" content={% if page.layout == "article" %}"{{ site.imagekiturl
     }}{{ site.images }}{{ page.teaser }}"{% else %}"{{ site.url }}{{ site.logo
     }}"{% endif %} /> <meta property="og:image:secure_url" content={% if
-    page.layout == "article" %}"{{ site.url }}{{ site.images }}{{ page.teaser
+    page.layout == "article" %}"{{ site.imagekiturl }}{{ site.images }}{{ page.teaser
     }}"{% else %}"{{ site.url }}{{ site.logo }}"{% endif %} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:description" content={% if page.layout == "article"
@@ -69,7 +54,7 @@
     <meta name="twitter:site" content={% if page.author %}"@{{
     site.data.authors[page.author].twitter }}"{% else %}"@{{
     site.owner.twitter.username }}"{% endif %} /> <meta name="twitter:image"
-    content={% if page.layout == "article" %}"{{ site.url }}{{ site.images }}{{
+    content={% if page.layout == "article" %}"{{ site.imagekiturl }}{{ site.images }}{{
     page.teaser }}"{% else %}"{{ site.url }}{{ site.logo }}"{% endif %} /> <meta
     name="twitter:creator" content={% if page.author %}"@{{
     site.data.authors[page.author].twitter }}"{% else %}"@{{
@@ -91,6 +76,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="cleartype" content="on" />
     <link rel="stylesheet" href="{{ site.url }}/css/main.css" />
+    <link rel="manifest" href="{{ site.url }}/manifest.json">
     <!-- HTML5 Shiv and Media Query Support for IE -->
     <!--[if lt IE 9]>
       <script src="{{ site.url }}/js/vendor/html5shiv.min.js"></script>
@@ -171,7 +157,7 @@
           "@id": "{{ site.url }}{{ page.url }}"
         },
         "headline": "{{ page.excerpt | strip_html | strip | truncate: 160 }}",
-        "image": "{{ site.url }}{{ site.images }}{{ page.teaser }}",
+        "image": "{{ site.imagekiturl }}{{ site.images }}{{ page.teaser }}",
         "datePublished": "{{ page.date | date: "%Y-%m-%dT%H:%M:%S+05:30" }}",
         {%- if page.modified %}
         "dateModified": "{{ page.modified | date: "%Y-%m-%dT%H:%M:%S+05:30" }}",
@@ -192,7 +178,7 @@
           "name": "{{ site.title }}",
           "logo": {
             "@type": "ImageObject",
-            "url": "{{site.url}}{{site.images}}amith-bio-300x300.jpg"
+            "url": "{{ site.imagekiturl }}{{ site.images }}amith-bio-300x300.jpg"
           }
         },
       	"description": "{{ page.excerpt | strip_html | strip | truncate: 160 }}"
@@ -210,15 +196,24 @@
       </div>
       {%- include footer.html -%}
     </div>
-    <script src="{{ site.url }}/js/vendor/modernizr.custom.js"></script>
-    <script src="{{ site.url }}/js/vendor/jquery-3.3.1.min.js"></script>
-    <script src="{{ site.url }}/js/vendor/isotope.pkgd.min.js"></script>
-    <script src="{{ site.url }}/js/vendor/imagesloaded.pkgd.min.js"></script>
-    <script src="{{ site.url }}/js/vendor/classie.js"></script>
-    <script src="{{ site.url }}/js/vendor/AnimOnScroll.js"></script>
-    <script src="{{ site.url }}/js/vendor/barba.min.js"></script>
-    <script src="{{ site.url }}/js/vendor/anime.min.js"></script>
-    <script src="{{ site.url }}/js/vendor/mo.min.js"></script>
-    <script src="{{ site.url }}/js/main.js"></script>
+    <script async src="{{ site.url }}/dist/main.js"></script>
+    <script type="text/javascript">
+      function downloadJSAtOnload() {
+        var element = document.createElement("script");
+        element.async = true;
+        element.setAttribute('src','https://www.googletagmanager.com/gtag/js?id=UA-96482099-1');
+        document.body.appendChild(element);
+
+        element = document.createElement("script");
+        element.innerHTML = 'window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "UA-96482099-1");';
+        document.body.appendChild(element);
+      }
+      if (window.addEventListener)
+        window.addEventListener("load", downloadJSAtOnload, false);
+      else if (window.attachEvent)
+        window.attachEvent("onload", downloadJSAtOnload);
+      else
+        window.onload = downloadJSAtOnload;
+    </script>
   </body>
 </html>

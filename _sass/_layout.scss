@@ -377,7 +377,7 @@
   @include clearfix;
   font-family: $menu-font;
   a {
-    color: lighten($black, 60);
+    color: lighten($black, 35);
   }
 }
 
@@ -448,7 +448,7 @@
       margin-top: 0px;
       @include font-size(14, no);
       font-family: $alt-font;
-      color: lighten($black, 60);
+      color: lighten($black, 45);
       margin-bottom: -10px;
     }
   }
@@ -533,7 +533,7 @@
         p {
           @include font-size(14, no);
           font-family: $alt-font;
-          color: lighten($black, 60);
+          color: lighten($black, 45);
         }
       }
       .image-credit {
@@ -704,9 +704,9 @@
   /* Copyright text */
   .copyright {
     @include font-size(12);
-    color: lighten($black, 60);
+    color: lighten($black, 45);
     a {
-      color: lighten($black, 60);
+      color: lighten($black, 15);
       text-decoration: none;
     }
     margin-bottom: 0px;

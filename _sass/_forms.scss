@@ -20,6 +20,12 @@ label,
 select {
   display: block;
   @include font-size($form-font-size, no);
+  a {
+    color: $boston-red;
+    &:hover {
+  		color: darken($boston-red, 5); //color: darken($link-color, 20);
+  	}
+  }
 }
 
 label {

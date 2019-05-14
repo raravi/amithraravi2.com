@@ -21,7 +21,7 @@ Oh my god! The crowded roads and the never-ending stream of people. It took fore
 
 I wonder what Jim Corbett would think of the present day Nainital?! The crowd-filled streets and the honk-filled ambiance. Not much, I guess. He may not even recognise it as the same place where he had lived his life peacefully.
 
-![image]({{ site.url }}{{ site.images }}boats.jpg)
+![image]({{ site.imagekiturl }}{{ site.images }}boats.jpg)
 
 About 22 kms from Nainital is Bhimtal. Smaller than Nainital, and absolutely no crowd. Bhimtal can be considered the smaller cousin of Nainital. We enjoyed a quiet evening in Bhimtal the next day, and it was serenity personified. The Tal (meaning lake) in Bhimtal is like any other Tal. And like any other Tal, it has boats. Colourful ones!!
 
@@ -31,7 +31,7 @@ After staying for 2 days, we started from Bhimtal and reached Kausani at 9 in th
 
 I get up in the morning and see this... Who knew I would get to see this!
 
-![image]({{ site.url }}{{ site.images }}himalayas.jpg)
+![image]({{ site.imagekiturl }}{{ site.images }}himalayas.jpg)
 <figcaption>This photo doesn't do justice to the view we have from the room. It's only by being here can the view be really appreciated.</figcaption>
 
 Kausani is breathtakingly beautiful and serene. The resort we stayed at is on the northern slope of a big hill and hence offers a bird's eye-view of the surrounding valley. As you follow the hills and look farther and farther away, you will finally see the horizon where snowcapped mountains kiss the skies.

@@ -1,3 +1,7 @@
+import imagesLoaded from './imagesloaded.pkgd.min.js';
+import './modernizr-custom-3.6.0.js';
+import anime from './anime.min.js';
+import classie from './classie.js';
 /**
  * animOnScroll.js v1.0.0
  * http://www.codrops.com
@@ -105,6 +109,70 @@
               }
               //classie.add( el, 'shown' );
             }
+          });
+
+          /**
+           * Animation from (https://tympanus.net/Development/GridLoadingAnimations/)
+           * Uses anime.js
+           */
+          var animeOpts = {
+            targets: showItems,
+            duration: function(t, i) {
+              return 1000 + i * 50;
+            },
+            easing: "easeOutExpo",
+            delay: function(t, i) {
+              return 250 + i * 20;
+            },
+            opacity: {
+              value: [0, 1],
+              duration: function(t, i) {
+                return 250 + i * 50;
+              },
+              easing: "linear"
+            },
+            translateY: [400, 0]
+          };
+
+          animeOpts.targets = [].slice.call(showItems).sort(function(a, b) {
+            var aBounds = a.getBoundingClientRect(),
+              bBounds = b.getBoundingClientRect();
+
+            return aBounds.left - bBounds.left || aBounds.top - bBounds.top;
+          });
+
+          anime.remove(animeOpts.targets);
+          anime(animeOpts);
+
+          var imgDefer = document.getElementsByTagName('img');
+          for (var i=0; i<imgDefer.length; i++) {
+            if(imgDefer[i].getAttribute('data-src')) {
+              imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+              imgDefer[i].removeAttribute('data-src');
+            }
+          }
+
+          // animate on scroll the items inside the viewport
+          window.addEventListener(
+            "scroll",
+            function() {
+              self._onScrollFn();
+            },
+            false
+          );
+          window.addEventListener(
+            "resize",
+            function() {
+              self._resizeHandler();
+            },
+            false
+          );
+        } else {
+          // the items already shown...
+          var showItems = [];
+          self.items.forEach(function(el, i) {
+            self._checkTotalRendered();
+            showItems.push(el);
           });
 
           /**

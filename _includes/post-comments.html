@@ -53,22 +53,22 @@
           <input type="hidden" id="comment-post-slug" name="slug" value="{{ page.slug }}">
           <label for="comment-form-location">Leave blank if you are a human</label>
           <input type="text" id="comment-form-location" name="fields[hidden]" autocomplete="off">
-          <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
+          <!-- <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
           <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}">
-        </fieldset>
+        </fieldset> -->
         <!-- Start comment form alert messaging -->
         <p class="hidden js-notice">
           <span class="js-notice-text"></span>
         </p>
         <!-- End comment form alert messaging -->
         <fieldset>
-          <div class="g-recaptcha" data-sitekey="{{ site.reCaptcha.siteKey }}"></div>
+          <!-- <div class="g-recaptcha" data-sitekey="{{ site.reCaptcha.siteKey }}"></div> -->
           <button type="submit" id="comment-form-submit" class="btn">Submit Comment</button>
         </fieldset>
       </form>
     </div>
 	  <!-- End new comment form -->
-    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <!-- <script src="https://www.google.com/recaptcha/api.js"></script> -->
     {%- else %}
       <p><em>Comments are closed. If you have a question concerning the content of this page, please feel free to <a href="mailto:{{ site.owner.email }}">contact me</a>.</em></p>
     {%- endunless %}

@@ -1,3 +1,28 @@
+import $ from './vendor/jquery-3.3.1.min.js';
+import jQuery from './vendor/jquery-3.3.1.min.js';
+import Barba from './vendor/barba.min.js';
+import './vendor/AnimOnScroll.js';
+import imagesLoaded from './vendor/imagesloaded.pkgd.min.js';
+import './vendor/modernizr-custom-3.6.0.js';
+import anime from './vendor/anime.min.js';
+import './vendor/mo.min.js';
+
+/**
+ * Service Worker
+ * Attempt Registration of the Service Worker on Page Load.
+ */
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+
 /**
  * Barba.js Initialization
  * Added function to prevent reloading on clicking same URL.
@@ -102,13 +127,146 @@ $(document).ready(function() {
 });
 
 /**
+ * Barba.js - Update Meta Tags in Head
+ * Head Tags aren't updated on PJAX navigation, this needs to be done manually.
+ */
+Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container, newPageRawHTML) {
+  // html head parser borrowed from jquery pjax
+  console.log(document.title + ": newPageReady: Updating Meta tags");
+  var $newPageHead = $( '<head />' ).html(
+  $.parseHTML(
+  newPageRawHTML.match(/<head[^>]*>([\s\S.]*)<\/head>/i)[0]
+            , document
+            , true
+          )
+      );
+  var headTags = [
+  "meta[name='keywords']"
+        , "meta[name='description']"
+        , "meta[property^='og']"
+        , "meta[property^='article']"
+        , "meta[name^='twitter']"
+        //, "meta[itemprop]"
+        //, "link[itemprop]"
+        //, "link[rel='prev']"
+        //, "link[rel='next']"
+        , "link[rel='canonical']"
+        , "script[type='application/ld+json']"
+      ].join(',');
+  $( 'head' ).find( headTags ).remove(); // Remove current head tags
+  $newPageHead.find( headTags ).appendTo( 'head' ); // Append new tags to the head
+});
+
+/**
+ * Load scripts upon Page Load (on Load) / PJAX Load (on newPageReady)
+ * Upon each PJAX page load, Webpack bundles need to be loaded for
+ * the functionailty to be triggered.
+ */
+/*$(window).on("load", function() {
+  console.log(document.title + ": onLoad");
+  var title = document.title;
+  var element;
+  if (title == 'Portfolio • Amith Raravi') {
+   element = document.createElement("script");
+   element.src = '/js/portfolio.js';
+   document.body.appendChild(element);
+   console.log("onLoad: appendChild");
+  }
+});
+Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container) {
+  console.log(document.title + ": newPageReady");
+  var title = document.title;
+  var element;
+  if (oldStatus.url && title == 'Portfolio • Amith Raravi') {
+   element = document.createElement("script");
+   element.src = '/js/portfolio.js';
+   document.body.appendChild(element);
+   console.log("newPageReady: appendChild");
+  }
+});*/
+/*$(window).on("load", function() {
+  console.log(document.title + ": onLoad");
+  var title = document.title;
+  var element;
+  if (title == 'About Me • Amith Raravi') {
+    element = document.createElement("script");
+    element.src = '/dist/about.js';
+    eval(element);
+    document.body.appendChild(element);
+    console.log("onLoad: appendChild");
+  }
+});
+Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container) {
+  console.log(document.title + ": newPageReady");
+  var title = document.title;
+  var element;
+  if (oldStatus.url && title == 'About Me • Amith Raravi') {
+    element = document.createElement("script");
+    element.src = '/dist/about.js';
+    eval(element);
+    document.body.appendChild(element);
+    console.log("newPageReady: appendChild");
+  }
+});*/
+/*Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container) {
+    var title = document.title;
+    var element;
+    console.log('In PageReady');
+    if (title == 'About Me • Amith Raravi') {
+      console.log('In About');
+      element = document.createElement("script");
+      element.src = '/dist/about.js';
+      if ($('script[src="/dist/about.js"]').length == 0) {
+        console.log('In About - If');
+        document.body.appendChild(element);
+      }
+      else {
+        console.log('In About - Else');
+      }
+    } else if (title == 'Articles • Amith Raravi') {
+      console.log('In Articles');
+      element = document.createElement("script");
+      element.src = '/dist/articles~portfolio.js';
+      if ($('script[src="/dist/articles~portfolio.js"]').length == 0) {
+        document.body.appendChild(element);
+      }
+      element = document.createElement("script");
+      element.src = '/dist/articles.js';
+      if ($('script[src="/dist/articles.js"]').length == 0) {
+        document.body.appendChild(element);
+      }
+    } else if (title == 'Portfolio • Amith Raravi') {
+      console.log('In Portfolio');
+      element = document.createElement("script");
+      element.src = '/dist/articles~portfolio.js';
+      if ($('script[src="/dist/articles~portfolio.js"]').length == 0) {
+        document.body.appendChild(element);
+      }
+      element = document.createElement("script");
+      element.src = '/dist/portfolio.js';
+      if ($('script[src="/dist/portfolio.js"]').length == 0) {
+        document.body.appendChild(element);
+      }
+    } else if ($('meta[property="article:published_time"]').length > 0) {
+      console.log('In Posts');
+      element = document.createElement("script");
+      element.src = '/dist/post.js';
+      if ($('script[src="/dist/post.js"]').length == 0) {
+        document.body.appendChild(element);
+      }
+    } else {
+      console.log('In Main / 404 / Terms / Portfolio Pieces');
+    }
+});*/
+
+/**
  * Init: FitVids, Lightbox, Table of Content, etc.
  */
 $(document).ready(function() {
   /**
    * FitVids: Target your .container, .wrapper, .post, etc.
    */
-  $("#main").fitVids();
+  //$("#main").fitVids();
 
   /**
    * Add Lightbox class to all image links
@@ -120,7 +278,8 @@ $(document).ready(function() {
    * Change text to localize.
    */
   $("#markdown-toc").prepend(
-    "<li><h6>{{ site.data.messages.locales[site.locale].overview }}</h6></li>"
+    //"<li><h6>{{ site.data.messages.locales[site.locale].overview }}</h6></li>"
+    "<li><h6>Table of Contents</h6></li>"
   );
 });
 
@@ -129,7 +288,7 @@ $(document).ready(function() {
  */
 $(window).on("load", function() {
   // Menu button click
-  $("#js-menu-trigger,#js-menu-screen,#js-menu-link").on(
+  $("#js-menu-trigger,#js-menu-screen,.js-menu-link").on(
     "click",
     function(e) {
       $("#js-body").toggleClass("no-scroll");
@@ -223,8 +382,32 @@ $(window).on("scroll", function() {
 });
 
 /**
+ * Defer Loading Images
+ * For All pages except Articles/Portfolio.
+ */
+Barba.Dispatcher.on("transitionCompleted", function(
+  currentStatus,
+  oldStatus,
+  container
+) {
+  if (document.getElementById("tiles-grid") == null && document.getElementsByClassName("portfolio-tile").length == 0) {
+    var imgDefer = document.getElementsByTagName('img');
+    for (var i=0; i<imgDefer.length; i++) {
+      if(imgDefer[i].getAttribute('data-src')) {
+        imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+        imgDefer[i].removeAttribute('data-src');
+      }
+      if(imgDefer[i].getAttribute('data-srcset')) {
+        imgDefer[i].setAttribute('srcset',imgDefer[i].getAttribute('data-srcset'));
+        imgDefer[i].removeAttribute('data-srcset');
+      }
+    }
+  }
+});
+
+/**
  * IIFE Function for handling Comment Form submission on Posts.
- * Ajax calls sends it to the server, where add-comment.php script will process it!
+ * Ajax call sends it to the server, where add-comment.php script will process it!
  */
 (function($) {
   function showAlert(message) {
@@ -289,6 +472,7 @@ var addComment = {
       commentForm = respond.getElementsByTagName("form")[0];
 
     if (!comm || !respond || !cancel || !parent || !commentForm) {
+      console.log("Moveform: Error 1 - return");
       return;
     }
 
@@ -315,6 +499,7 @@ var addComment = {
         respond = t.I(t.respondId);
 
       if (!temp || !respond) {
+        console.log("Cancel: Error 2 - return");
         return;
       }
 
@@ -323,6 +508,7 @@ var addComment = {
       temp.parentNode.removeChild(temp);
       this.style.display = "none";
       this.onclick = null;
+      console.log("Cancel: Success - return");
       return false;
     };
 
@@ -334,6 +520,7 @@ var addComment = {
     /*
      * Return false so that the page is not redirected to HREF.
      */
+    console.log("Moveform: Success - return");
     return false;
   },
 
@@ -341,6 +528,23 @@ var addComment = {
     return document.getElementById(id);
   }
 };
+
+Barba.Dispatcher.on("transitionCompleted", function(
+  currentStatus,
+  oldStatus,
+  container
+) {
+  var comments = document.getElementsByClassName('comment__reply');
+  Array.prototype.forEach.call(comments, function(comment){
+    $(comment).on("click", function() {
+      var aTag = comment.getElementsByTagName("A")[0];
+      addComment.moveForm(aTag.dataset.comment,
+                                              aTag.dataset.index,
+                                              aTag.dataset.respond,
+                                              aTag.dataset.slug);
+    });
+  });
+});
 
 /**
  * Articles Page - Grid Selectors
@@ -368,7 +572,7 @@ Barba.Dispatcher.on("transitionCompleted", function(
       .children(".article-tile")
       .show();
 
-    $animOnScroll1 = new AnimOnScroll(document.getElementById("tiles-grid"), {
+    var $animOnScroll1 = new AnimOnScroll(document.getElementById("tiles-grid"), {
       minDuration: 0.4,
       maxDuration: 0.7,
       viewportFactor: 0.1
@@ -390,7 +594,7 @@ Barba.Dispatcher.on("transitionCompleted", function(
       .children(".article-tile")
       .filter(".tech")
       .show();
-    $animOnScroll1 = new AnimOnScroll(document.getElementById("tiles-grid"), {
+    var $animOnScroll1 = new AnimOnScroll(document.getElementById("tiles-grid"), {
       minDuration: 0.4,
       maxDuration: 0.7,
       viewportFactor: 0.1
@@ -413,7 +617,7 @@ Barba.Dispatcher.on("transitionCompleted", function(
       .filter(".personal")
       .show();
 
-    $animOnScroll1 = new AnimOnScroll(document.getElementById("tiles-grid"), {
+    var $animOnScroll1 = new AnimOnScroll(document.getElementById("tiles-grid"), {
       minDuration: 0.4,
       maxDuration: 0.7,
       viewportFactor: 0.1
@@ -454,61 +658,73 @@ Barba.Dispatcher.on("transitionCompleted", function(
 ) {
   var portfolioLinks = document.getElementsByClassName("portfolio-link");
   if (document.getElementsByClassName("portfolio-tile").length > 0) {
-    [].slice.call(portfolioLinks).forEach(function(item) {
-      // Create SVG.
-      var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg"),
-        path = document.createElementNS("http://www.w3.org/2000/svg", "path"),
-        itemW = item.offsetWidth,
-        itemH = item.offsetHeight;
+    imagesLoaded(portfolioLinks, function() {
+      if (Modernizr.cssanimations) {
+        [].slice.call(portfolioLinks).forEach(function(item) {
+          // Create SVG.
+          var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg"),
+            path = document.createElementNS("http://www.w3.org/2000/svg", "path"),
+            itemW = item.offsetWidth,
+            itemH = item.offsetHeight;
 
-      svg.setAttribute("width", itemW + "px");
-      svg.setAttribute("height", itemH + "px");
-      svg.setAttribute("viewBox", "0 0 " + itemW + " " + itemH);
-      svg.setAttribute("class", "grid__deco");
-      path.setAttribute(
-        "d",
-        "M0,0 l" + itemW + ",0 0," + itemH + " -" + itemW + ",0 0,-" + itemH
-      );
-      path.setAttribute("stroke-dashoffset", anime.setDashoffset(path));
-      svg.appendChild(path);
-      item.parentNode.appendChild(svg);
+          svg.setAttribute("width", itemW + "px");
+          svg.setAttribute("height", itemH + "px");
+          svg.setAttribute("viewBox", "0 0 " + itemW + " " + itemH);
+          svg.setAttribute("class", "grid__deco");
+          path.setAttribute(
+            "d",
+            "M0,0 l" + itemW + ",0 0," + itemH + " -" + itemW + ",0 0,-" + itemH
+          );
+          path.setAttribute("stroke-dashoffset", anime.setDashoffset(path));
+          svg.appendChild(path);
+          item.parentNode.appendChild(svg);
+        });
+
+        var animeLineDrawingOpts = {
+          duration: 800,
+          delay: function(t, i) {
+            return i * 150 + 300;
+          },
+          easing: "easeInOutSine",
+          strokeDashoffset: [anime.setDashoffset, 0],
+          opacity: [
+            { value: [0, 1] },
+            { value: [1, 0], duration: 200, easing: "linear", delay: 500 }
+          ]
+        };
+        animeLineDrawingOpts.targets = document.querySelectorAll(
+          ".grid__deco > path"
+        );
+
+        anime.remove(animeLineDrawingOpts.targets);
+        anime(animeLineDrawingOpts);
+
+        var animeOpts = {
+          duration: 800,
+          easing: [0.2, 1, 0.3, 1],
+          delay: function(t, i) {
+            return i * 150 + 1500;
+          },
+          opacity: {
+            value: [0, 1],
+            easing: "linear"
+          },
+          scale: [0.25, 1]
+        };
+        animeOpts.targets = document.querySelectorAll(".portfolio-link");
+
+        anime.remove(animeOpts.targets);
+        anime(animeOpts);
+
+        var imgDefer = document.getElementsByTagName('img');
+        for (var i=0; i<imgDefer.length; i++) {
+          if(imgDefer[i].getAttribute('data-src')) {
+            imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+            imgDefer[i].removeAttribute('data-src');
+          }
+        }
+      }
     });
-
-    var animeLineDrawingOpts = {
-      duration: 800,
-      delay: function(t, i) {
-        return i * 150 + 300;
-      },
-      easing: "easeInOutSine",
-      strokeDashoffset: [anime.setDashoffset, 0],
-      opacity: [
-        { value: [0, 1] },
-        { value: [1, 0], duration: 200, easing: "linear", delay: 500 }
-      ]
-    };
-    animeLineDrawingOpts.targets = document.querySelectorAll(
-      ".grid__deco > path"
-    );
-
-    anime.remove(animeLineDrawingOpts.targets);
-    anime(animeLineDrawingOpts);
-
-    var animeOpts = {
-      duration: 800,
-      easing: [0.2, 1, 0.3, 1],
-      delay: function(t, i) {
-        return i * 150 + 1500;
-      },
-      opacity: {
-        value: [0, 1],
-        easing: "linear"
-      },
-      scale: [0.25, 1]
-    };
-    animeOpts.targets = document.querySelectorAll(".portfolio-link");
-
-    anime.remove(animeOpts.targets);
-    anime(animeOpts);
   }
 });
 
@@ -522,6 +738,7 @@ Barba.Dispatcher.on("transitionCompleted", function(
   oldStatus,
   container
 ) {
+  console.log(document.title + ": transitionCompleted: mo.js animation");
   if (document.querySelector(".owner-link") != null) {
     var molinkEl = document.querySelector(".owner-link"),
       moTimeline = new mojs.Timeline(),
@@ -629,17 +846,6 @@ Barba.Dispatcher.on("transitionCompleted", function(
     molinkEl.addEventListener("mouseenter", function() {
       moTimeline.replay();
     });
+    console.log(document.title + ": mo.js event added");
   }
-});
-
-/**
- * Google Ads Init code. Throws an error when used with PJAX.
- * Do not put any function below this, it will not be executed!!
- */
-Barba.Dispatcher.on("transitionCompleted", function(
-  currentStatus,
-  oldStatus,
-  container
-) {
-  (adsbygoogle = window.adsbygoogle || []).push({});
 });

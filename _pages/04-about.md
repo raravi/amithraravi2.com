@@ -11,13 +11,13 @@ I've accumulated more than 10 years of Information Technology experience, workin
 
 ## Freelancing
 
-![image]({{ site.url }}{{ site.images }}frameworks.png)
+![image]({{ site.imagekiturl }}{{ site.images }}frameworks.png)
 
 My freelancing career took off in the beginning of 2017, with focus on **Web Design** and **Content Creation**. I'm actively involved in learning new technologies like Node.js, AngularJS, Static Site Generators (Jekyll, Gatsby), ReactJS, React Native. And I do love a good story, which compels me to read. A lot. I go through at least 100 books in a year. Hence, my passion for the <u>written word</u>!
 
 ## Personal Life
 
-![image]({{ site.url }}{{ site.images }}gandalf.jpg)
+![image]({{ site.imagekiturl }}{{ site.images }}gandalf.jpg)
 <figcaption>Note: This <a href="https://www.deviantart.com/s1ghtly/art/Gandalf-419175721">awesome piece of work</a> was found on Deviant Art.</figcaption>
 
 I love going on trips to places where the mobile network cannot reach, and documenting it on Instagram/Medium. Spend most of my spare time with family. And reading novels. And watching movies. Have I mentioned *The White Wizard* yet..?!

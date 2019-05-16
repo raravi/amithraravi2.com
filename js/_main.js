@@ -324,7 +324,7 @@ $(window).on("load", function() {
     menuButtonTop = 13;
   }
 
-  if (scroll >= 25) {
+  if (scroll >= 10) {
     header.style.paddingTop = "10px";
     header.style.paddingBottom = "10px";
     header.style.backgroundColor = "#F9D64C";
@@ -362,7 +362,7 @@ $(window).on("scroll", function() {
     menuButtonTop = 13;
   }
 
-  if (scroll >= 25) {
+  if (scroll >= 10) {
     header.style.paddingTop = "10px";
     header.style.paddingBottom = "10px";
     header.style.backgroundColor = "#F9D64C";

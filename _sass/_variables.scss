@@ -6,18 +6,18 @@
    Typography variables
    ========================================================================== */
 
-$site-title-font              : "Unica One", cursive;
+$site-title-font              : "Unica One",sans-serif;//, cursive;
 $base-font                   	: "Niramit",sans-serif;
 $heading-font                	: "Allerta",sans-serif;
 $caption-font                	: $base-font;
 $code-font                   	: monospace;
 $alt-font                    	: $heading-font;
-$hi-font                      : "Courgette",cursive;
+$hi-font                      : "Courgette",sans-serif;//,cursive;
 $blogger-resources-font       : "Cabin",sans-serif;
-$grid-title-font              : "Nova Square", cursive;
-$article-title-font           : "Nova Square", cursive;
+$grid-title-font              : "Nova Square",sans-serif;//, cursive;
+$article-title-font           : "Nova Square",sans-serif;//, cursive;
 $quoted-text-font             : "Raleway",sans-serif;
-$menu-font                    : "Righteous", cursive;
+$menu-font                    : "Righteous",sans-serif;//, cursive;
 
 $doc-font-size               	: 16;
 $doc-line-height             	: 24;

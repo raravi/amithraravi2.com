@@ -3,9 +3,9 @@
 {%- endif -%}
 <div class="author-image">
 	<img src="{{ site.imagekiturl }}{{ site.images }}{{ author.avatar }}" alt="{{ author.name }}">
-</div><!-- ./author-image -->
+</div>
 <div class="author-content">
 	<h3 class="author-name" >{{ site.data.messages.locales[site.locale].written_by }} {% if author.web %}<a href="{{ author.web }}">{{ author.name }}</a>{% else %}<span>{{ author.name }}</span>{% endif %}</h3>
 	<p class="author-bio">{{ author.bio }}</p>
   {% if page.share != false %}{% include share-this.html %}{% endif %}
-</div><!-- ./author-content -->
+</div>

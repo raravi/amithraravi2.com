@@ -207,7 +207,6 @@
    }
 
    .main-about-me {
-     //border: 1px solid #000;  /* For debugging */
      padding: 20px;
      box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
@@ -254,15 +253,13 @@
                /* Style all font awesome icons */
                .fa {
                  padding: 10px;
-                 @include font-size(20, no); //font-size: 30px;
+                 @include font-size(20, no);
                  width: 45px;
                  text-align: center;
                  text-decoration: none;
                  border-radius: 50%;
                  margin: 5px 2px;
                }
-
-               /* LinkedIn */
                .fa-linkedin {
                  background: $linkedin-color;
                  color: white;
@@ -272,8 +269,6 @@
                    color: $linkedin-color;
                  }
                }
-
-               /* Instagram */
                .fa-instagram {
                  background: $instagram-color;
                  color: white;
@@ -283,8 +278,6 @@
                    color: $instagram-color;
                  }
                }
-
-               /* Github */
                .fa-github {
                  background: $github-color;
                  color: white;
@@ -294,8 +287,6 @@
                    color: $github-color;
                  }
                }
-
-               /* Facebook */
                .fa-facebook {
                  background: $facebook-color;
                  color: white;

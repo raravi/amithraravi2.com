@@ -3,14 +3,14 @@ layout: archive
 title: Articles
 permalink: /articles/
 ---
-<div class="article-header" >
+<div class="article-header">
 	<div class="page-title">
 		<h2>{{ page.title }}</h2>
 	</div>
 	<div class="filters-button-group">
-			<button class="filters-button is-checked button-all" data-filter="*">All</button>
-			<button class="filters-button button-tech" data-filter=".tech">Tech</button>
-		  <button class="filters-button button-personal" data-filter=".personal">Personal</button>
+		<button class="filters-button is-checked button-all" data-filter="*">All</button>
+		<button class="filters-button button-tech" data-filter=".tech">Tech</button>
+	  <button class="filters-button button-personal" data-filter=".personal">Personal</button>
 	</div>
 </div>
 
@@ -33,7 +33,7 @@ permalink: /articles/
 					{%- endif %}
 				<h2 class="post-title">{{ post.title }}</h2>
 				<p class="post-excerpt">{{ post.excerpt | strip_html | strip | truncate: 160 }}</p></a>
-			</article><!-- /.tile -->
+			</article>
 		{%- endif -%}
 	{%- endfor %}
-</div><!-- /.tiles -->
+</div>

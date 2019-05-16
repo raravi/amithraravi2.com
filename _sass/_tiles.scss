@@ -313,13 +313,10 @@
 }
 
 .portfolio-tiles-grid {
-  //border: 1px solid black;  /* For debugging */
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
-  //min-width: 300px;
-  //max-width: 600px;
   .hidden {
     display: none;
   }
@@ -480,8 +477,6 @@
 }
 
 .filters-button-group {
-  //border: 1px solid blue;  /* For debugging */
-  //display: inline-block;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -490,7 +485,6 @@
   flex: 100%;
   @include media($small) {
     padding-top: 10px;
-    //padding-bottom: 20px;
     flex: 50%;
     justify-content: flex-end;
   }
@@ -503,22 +497,17 @@
 }
 
 .article-header {
-  //border: 1px solid black;  /* For debugging */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   padding-bottom: 20px;
   padding-left: 10px;
   .page-title {
-    //border: 1px solid red;  /* For debugging */
     padding-top: 10px;
     flex: 100%;
     @include media($small) {
       padding-top: 4px;
       flex: 50%;
-    }
-    h2 {
-      //border: 1px solid green;  /* For debugging */
     }
   }
 }

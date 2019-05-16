@@ -24,7 +24,7 @@ permalink: /portfolio/
 				</p>
 				<h2 class="post-title">{{ post.title }}</h2>
 			</a>
-		</article><!-- /.tile -->
+		</article>
 		{%- endif -%}
 	{%- endfor %}
-</div><!-- /.tiles -->
+</div>

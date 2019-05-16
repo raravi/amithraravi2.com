@@ -13,7 +13,7 @@
         	<h2 class="post-title">{{ post.title }}</h2>
       		<p class="post-excerpt">{{ post.excerpt | strip_html | strip | truncate: 160 }}</p>
       	</a>
-      </article><!-- /.tile -->
+      </article>
       {%- assign count = count | plus:1 %}
     </div>
   {%- endif -%}

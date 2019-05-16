@@ -1,32 +1,10 @@
 var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
   '/',
-//  '/css/main.css',
-//  '/dist/main.js',
-//  '/fonts/1cXxaUPXBpj2rGoU7C9WiHGFq8Kk1Q.woff2',
-//  '/fonts/DPEuYwWHyAYGVTSmalsRcd3emkUrFQ.woff2',
-//  '/fonts/TwMO-IAHRlkbx940YnYXSCiN9uc.woff2',
-//  '/fonts/RrQUbo9-9DV7b06QHgSWsahHT4ICGcWB.woff2',
-//  '/fonts/I_uuMpWdvgLdNxVLXbNakwKso5c.woff2',
-//  '/fonts/wEO_EBrAnc9BLjLQAUk1VvoK_kgXiQ.woff2',
-//  '/fonts/u-4x0qWljRw-Pd8w__1ImSRu.woff2',
-//  '/fonts/fontawesome-webfont.woff?v=4.5.0',
-//  '/images/400x250.gif',
-//  '/images/amith-bio-300x300.jpg',
-//  '/images/once-upon-a-time.jpg',
-//  '/images/joao-silas.jpg',
-//  '/images/office.jpg',
-//  '/images/about-me.jpg',
   '/articles/',
   '/portfolio/',
   '/about/',
   '/terms/',
-//  '/404/',
-//  '/images/dotnet-700x350.jpg',
-//  '/images/website-design-700x350.jpg',
-//  '/images/web-designer-700x350.jpg',
-//  '/images/writer-700x350.jpg',
-//  '/images/editor-700x350.jpg',
 ];
 
 self.addEventListener('install', function(event) {

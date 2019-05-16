@@ -18,7 +18,6 @@
   }
   .div-high-1 {
     &:nth-of-type(2) {
-      //border: 1px solid black;  /* For debugging */
       height: 15px;
       @include media($small) {
         height: 10px;
@@ -27,7 +26,6 @@
   }
   .div-high-2 {
     &:nth-of-type(3) {
-      //border: 1px solid black;  /* For debugging */
       height: 5px;
       @include media($small) {
         height: 35px;
@@ -80,8 +78,6 @@
       border-radius: 50%;
       margin: 5px 2px;
     }
-
-    /* LinkedIn */
     .fa-linkedin {
       background: $linkedin-color;
       color: white;
@@ -91,8 +87,6 @@
         color: $linkedin-color;
       }
     }
-
-    /* Instagram */
     .fa-instagram {
       background: $instagram-color;
       color: white;
@@ -102,8 +96,6 @@
         color: $instagram-color;
       }
     }
-
-    /* Github */
     .fa-github {
       background: $github-color;
       color: white;
@@ -113,8 +105,6 @@
         color: $github-color;
       }
     }
-
-    /* Facebook */
     .fa-facebook {
       background: $facebook-color;
       color: white;
@@ -153,11 +143,6 @@
       max-width: 50%;
       padding: 0 10px;
     }
-    /*@include media($medium750) {
-         flex: 25%;
-         max-width: 25%;
-         padding: 0 8px;
-       }*/
     @include media($medium) {
       flex: 100%;
       max-width: 100%;

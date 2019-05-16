@@ -1,5 +1,4 @@
 import $ from './vendor/jquery-3.3.1.min.js';
-import jQuery from './vendor/jquery-3.3.1.min.js';
 import Barba from './vendor/barba.min.js';
 import './vendor/AnimOnScroll.js';
 import imagesLoaded from './vendor/imagesloaded.pkgd.min.js';
@@ -146,10 +145,6 @@ Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container
         , "meta[property^='og']"
         , "meta[property^='article']"
         , "meta[name^='twitter']"
-        //, "meta[itemprop]"
-        //, "link[itemprop]"
-        //, "link[rel='prev']"
-        //, "link[rel='next']"
         , "link[rel='canonical']"
         , "script[type='application/ld+json']"
       ].join(',');
@@ -183,80 +178,6 @@ Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container
    document.body.appendChild(element);
    console.log("newPageReady: appendChild");
   }
-});*/
-/*$(window).on("load", function() {
-  console.log(document.title + ": onLoad");
-  var title = document.title;
-  var element;
-  if (title == 'About Me • Amith Raravi') {
-    element = document.createElement("script");
-    element.src = '/dist/about.js';
-    eval(element);
-    document.body.appendChild(element);
-    console.log("onLoad: appendChild");
-  }
-});
-Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container) {
-  console.log(document.title + ": newPageReady");
-  var title = document.title;
-  var element;
-  if (oldStatus.url && title == 'About Me • Amith Raravi') {
-    element = document.createElement("script");
-    element.src = '/dist/about.js';
-    eval(element);
-    document.body.appendChild(element);
-    console.log("newPageReady: appendChild");
-  }
-});*/
-/*Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container) {
-    var title = document.title;
-    var element;
-    console.log('In PageReady');
-    if (title == 'About Me • Amith Raravi') {
-      console.log('In About');
-      element = document.createElement("script");
-      element.src = '/dist/about.js';
-      if ($('script[src="/dist/about.js"]').length == 0) {
-        console.log('In About - If');
-        document.body.appendChild(element);
-      }
-      else {
-        console.log('In About - Else');
-      }
-    } else if (title == 'Articles • Amith Raravi') {
-      console.log('In Articles');
-      element = document.createElement("script");
-      element.src = '/dist/articles~portfolio.js';
-      if ($('script[src="/dist/articles~portfolio.js"]').length == 0) {
-        document.body.appendChild(element);
-      }
-      element = document.createElement("script");
-      element.src = '/dist/articles.js';
-      if ($('script[src="/dist/articles.js"]').length == 0) {
-        document.body.appendChild(element);
-      }
-    } else if (title == 'Portfolio • Amith Raravi') {
-      console.log('In Portfolio');
-      element = document.createElement("script");
-      element.src = '/dist/articles~portfolio.js';
-      if ($('script[src="/dist/articles~portfolio.js"]').length == 0) {
-        document.body.appendChild(element);
-      }
-      element = document.createElement("script");
-      element.src = '/dist/portfolio.js';
-      if ($('script[src="/dist/portfolio.js"]').length == 0) {
-        document.body.appendChild(element);
-      }
-    } else if ($('meta[property="article:published_time"]').length > 0) {
-      console.log('In Posts');
-      element = document.createElement("script");
-      element.src = '/dist/post.js';
-      if ($('script[src="/dist/post.js"]').length == 0) {
-        document.body.appendChild(element);
-      }
-    } else {
-      console.log('In Main / 404 / Terms / Portfolio Pieces');
-    }
 });*/
 
 /**
@@ -406,50 +327,55 @@ Barba.Dispatcher.on("transitionCompleted", function(
 });
 
 /**
- * IIFE Function for handling Comment Form submission on Posts.
+ * Function for handling Comment Form submission on Posts.
  * Ajax call sends it to the server, where add-comment.php script will process it!
  */
-(function($) {
-  function showAlert(message) {
-    $("#comment-form .js-notice").removeClass("hidden");
-    $("#comment-form .js-notice-text").html(message);
-  }
+ Barba.Dispatcher.on("transitionCompleted", function(
+   currentStatus,
+   oldStatus,
+   container
+ ) {
+    function showAlert(message) {
+      $("#comment-form .js-notice").removeClass("hidden");
+      $("#comment-form .js-notice-text").html(message);
+    }
 
-  $("#comment-form").submit(function() {
-    var form = this;
+    $("#comment-form").submit(function() {
+      event.preventDefault();
+      var form = this;
 
-    $(form).addClass("disabled");
-    $("#comment-form-submit").html("Loading...");
+      $(form).addClass("disabled");
+      $("#comment-form-submit").html("Loading...");
 
-    $.ajax({
-      type: $(this).attr("method"),
-      url: $(this).attr("action"),
-      data: $(this).serialize(),
-      contentType: "application/x-www-form-urlencoded"
-    })
-      .done(function(data) {
-        $("#comment-form-submit").html("Submitted");
-        $("#comment-form .js-notice")
-          .removeClass("notice--danger")
-          .addClass("notice--success");
-        showAlert(
-          "<strong>Thank you!</strong> Your comment will show up here once it has been approved by the moderator."
-        );
+      $.ajax({
+        type: $(this).attr("method"),
+        url: $(this).attr("action"),
+        data: $(this).serialize(),
+        contentType: "application/x-www-form-urlencoded"
       })
-      .fail(function(err) {
-        $("#comment-form-submit").html("Submit Comment");
-        $("#comment-form .js-notice")
-          .removeClass("notice--success")
-          .addClass("notice--danger");
-        showAlert(
-          "<strong>Sorry, there was an error with your submission.</strong> Please make sure all required fields have been completed and try again."
-        );
-        $(form).removeClass("disabled");
-      });
+        .done(function(data) {
+          $("#comment-form-submit").html("Submitted");
+          $("#comment-form .js-notice")
+            .removeClass("notice--danger")
+            .addClass("notice--success");
+          showAlert(
+            "<strong>Thank you!</strong> Your comment will show up here once it has been approved by the moderator."
+          );
+        })
+        .fail(function(err) {
+          $("#comment-form-submit").html("Submit Comment");
+          $("#comment-form .js-notice")
+            .removeClass("notice--success")
+            .addClass("notice--danger");
+          showAlert(
+            "<strong>Sorry, there was an error with your submission.</strong> Please make sure all required fields have been completed and try again."
+          );
+          $(form).removeClass("disabled");
+        });
 
-    return false;
-  });
-})(jQuery);
+      return false;
+    });
+});
 
 /**
  * 'Comment Reply' to each comment.

@@ -1,6 +1,8 @@
 var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
   '/',
+  '/css/main.css',
+  '/dist/main.js',
   '/articles/',
   '/portfolio/',
   '/about/',

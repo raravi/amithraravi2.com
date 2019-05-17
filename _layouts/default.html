@@ -12,7 +12,6 @@
       name="google-site-verification"
       content="wZay7xUx1IaKgYaoC5EA1V9z-kAZ1fYLD2WtuLVMjbU"
     />
-    <meta name="theme-color" content="#2196f3"/>
     <meta name="description" content={% if page.layout == "article" %}"{{
     page.excerpt | strip_html | strip | truncate: 160 }}"{% else %}"{{
     site.description }}"{% endif %} />
@@ -76,7 +75,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="cleartype" content="on" />
     <link rel="stylesheet" href="{{ site.url }}/css/main.css" />
-    <link rel="manifest" href="{{ site.url }}/manifest.json">
+    <link rel="manifest" href="{{ site.url }}/manifest.json" />
+    <!-- For theme color on Chrome, Firefox & Opera -->
+    <meta name="theme-color" content="#F9D64C"/>
+    <!-- For Chrome & Opera, size should be multiples of 48px -->
+    <link rel="icon" sizes="96x96" href="{{ site.url }}/images/icons/icon-96x96.png">
+    <link rel="icon" sizes="144x144" href="{{ site.url }}/images/icons/icon-144x144.png">
+    <link rel="icon" sizes="192x192" href="{{ site.url }}/images/icons/icon-192x192.png">
+    <!-- For Safari, sized for iPhone, iPad, retina display -->
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ site.url }}/images/icons/icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ site.url }}/images/icons/icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="{{ site.url }}/images/icons/icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.url }}/images/icons/icon-180x180.png">
+    <!-- For IE / Windows devices -->
+    <meta name="msapplication-square70x70logo" content="{{ site.url }}/images/icons/icon-70x70.png">
+    <meta name="msapplication-square150x150logo" content="{{ site.url }}/images/icons/icon-150x150.png">
+    <meta name="msapplication-square310x310logo" content="{{ site.url }}/images/icons/icon-310x310.png">
     <!-- HTML5 Shiv and Media Query Support for IE -->
     <!--[if lt IE 9]>
       <script src="{{ site.url }}/js/vendor/html5shiv.min.js"></script>

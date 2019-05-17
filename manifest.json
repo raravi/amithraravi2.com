@@ -1,8 +1,8 @@
 {
   "name": "amithraravi.com",
   "short_name": "rArAvi",
-  "theme_color": "#2196f3",
-  "background_color": "#2196f3",
+  "theme_color": "#F9D64C",
+  "background_color": "#F9D64C",
   "display": "standalone",
   "Scope": "/",
   "start_url": "/",

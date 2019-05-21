@@ -68,56 +68,49 @@
       text-decoration: none;
       color: $boston-red;
     }
-    /* Style all font awesome icons */
-    .fa {
-      padding: 10px;
-      @include font-size(20, no); //font-size: 30px;
-      width: 45px;
-      text-align: center;
-      text-decoration: none;
-      border-radius: 50%;
-      margin: 5px 2px;
+    .social-icon {
+      margin: 0px 6px;
     }
-    .fa-linkedin {
-      background: $linkedin-color;
-      color: white;
-      border: 1px solid $linkedin-color;
+    .icon {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      stroke-width: 0;
+      stroke: currentColor;
+      fill: currentColor;
+    }
+    .icon-linkedin {
+      font-size: 32px;
+      color: $black;
       &:hover {
-        background: white;
         color: $linkedin-color;
       }
     }
-    .fa-instagram {
-      background: $instagram-color;
-      color: white;
-      border: 1px solid $instagram-color;
+    .icon-instagram {
+      font-size: 32px;
+      color: $black;
       &:hover {
-        background: white;
         color: $instagram-color;
       }
     }
-    .fa-github {
-      background: $github-color;
-      color: white;
-      border: 1px solid $github-color;
+    .icon-github {
+      font-size: 32px;
+      color: $black;
       &:hover {
-        background: white;
         color: $github-color;
       }
     }
-    .fa-facebook {
-      background: $facebook-color;
-      color: white;
-      border: 1px solid $facebook-color;
+    .icon-facebook {
+      font-size: 32px;
+      color: $black;
       &:hover {
-        background: white;
         color: $facebook-color;
       }
     }
   }
   .blogger-resources {
     a {
-      @include font-size(14, no);
+      @include font-size(15, yes, 30);
       font-family: $blogger-resources-font;
       color: $text-color;
       text-decoration: none;
@@ -213,10 +206,6 @@
   height: 30px;
   width: 100%;
 }
-.div-25-high {
-  height: 25px;
-  width: 100%;
-}
 .div-20-high {
   height: 20px;
   width: 100%;
@@ -241,7 +230,4 @@
     width: 80%;
   }
   background-color: $red;
-}
-.site-title-padding {
-  width: 2000px;
 }

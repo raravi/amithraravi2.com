@@ -27,103 +27,6 @@
   }
   .inner-wrap {
     @include outer-container;
-    .menu1 {
-      .menu-item1 {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        @include media($small) {
-          justify-content: center;
-        }
-        li {
-          margin-bottom: 0px;
-          padding-bottom: 0px;
-          .site-title1 {
-            position: relative;
-            display: block;
-            padding: (0.25 * $masthead-height) (0.1 * $gutter)
-              (0.25 * $masthead-height); // fourth the height to center vertically
-            margin-left: 0px;
-            margin-right: 0px;
-            text-decoration: none;
-            color: $black;
-            font-family: $site-title-font;
-            font-weight: 600;
-            @include font-size(38);
-            @include media($small) {
-              @include font-size(42);
-              line-height: 0.5 * $masthead-height; // half the height to center vertically
-              margin-left: 10px;
-              margin-right: 10px;
-              margin-bottom: 0px;
-            }
-            @include media($medium) {
-              @include font-size(48);
-              line-height: 0.5 * $masthead-height; // half the height to center vertically
-              margin-left: 20px;
-              margin-right: 20px;
-              margin-bottom: 0px;
-            }
-            line-height: 0.5 * $masthead-height; // half the height to center vertically
-            margin-bottom: 0px;
-            &:hover {
-              text-shadow: 4px 8px 6px rgba(0, 0, 0, 0.19);
-              .first-letter {
-                color: darken($red, 10);
-              }
-            }
-            //opacity: 0;
-            animation: slide-down 0.5s ease-out 0.75s 1 normal both;
-            /* The animation property is a shorthand property for:
-              animation-name
-              animation-duration: time(s/ms)|initial|inherit;
-              animation-timing-function: linear|ease|ease-in|ease-out|ease-in-out|step-start|step-end|steps(int,start|end)|cubic-bezier(n,n,n,n)|initial|inherit;
-              animation-delay: time(s/ms)|initial|inherit;
-              animation-iteration-count: number(1)|infinite|initial|inherit;
-              animation-direction: normal|reverse|alternate|alternate-reverse|initial|inherit;
-              animation-fill-mode: none|forwards|backwards|both|initial|inherit;
-              animation-play-state */
-          }
-          .item {
-            // Text Props
-            font-weight: 500;
-            @include font-size(16, no);
-            font-family: $menu-font;
-            line-height: 0.5 * $masthead-height; // half the height to center vertically
-            color: $black;
-            text-transform: uppercase;
-            // line hover effect
-            position: relative;
-            display: none;
-            @include media($small) {
-              display: block;
-              padding-top: 0.27 * $masthead-height;
-            }
-            @include media($medium) {
-              @include font-size(18, no);
-              padding-top: 0.32 * $masthead-height;
-            }
-            margin: 0 (0.5 * $gutter);
-            padding: (0.25 * $masthead-height) 0 (0.25 * $masthead-height);
-            &:hover {
-              color: darken($red, 10);
-              text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.19);
-              span {
-                animation: glitch-anim-text 0.4s linear 1 alternate backwards;
-              }
-            }
-            &:focus {
-              outline: none;
-            }
-            span {
-              display: block;
-            }
-            //opacity: 0;
-            animation: slide-down 0.5s ease-out 1.25s 1 normal both;
-          }
-        }
-      }
-    }
   }
 }
 
@@ -183,28 +86,113 @@
   }
 }
 
-.site-title {
-  @include row;
-  @include media($medium750) {
-    @include span-columns(4);
-  }
-  padding: (0.25 * $masthead-height) 0; // fourth the height to center vertically
-  padding-left: 5px;
-  height: $masthead-height;
-  text-decoration: none;
-  color: $black;
-  font-family: $site-title-font;
-  font-weight: 600;
-  @include font-size(36, no);
-  line-height: 0.5 * $masthead-height; // half the height to center vertically
-  //text-transform: lowercase;
-}
-
 /*
    Menus
    ========================================================================== */
 
-.menu {
+/* Top menu navigation */
+.top-menu {
+  .menu-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    @include media($small) {
+      justify-content: center;
+    }
+    li {
+      margin-bottom: 0px;
+      padding-bottom: 0px;
+      .site-title {
+        position: relative;
+        display: block;
+        padding: (0.25 * $masthead-height) (0.1 * $gutter)
+         (0.25 * $masthead-height); // fourth the height to center vertically
+        margin-left: 0px;
+        margin-right: 0px;
+        text-decoration: none;
+        color: $black;
+        font-family: $site-title-font;
+        font-weight: 600;
+        @include font-size(38);
+        @include media($small) {
+          @include font-size(42);
+          line-height: 0.5 * $masthead-height; // half the height to center vertically
+          margin-left: 10px;
+          margin-right: 10px;
+          margin-bottom: 0px;
+        }
+        @include media($medium) {
+          @include font-size(48);
+          line-height: 0.5 * $masthead-height; // half the height to center vertically
+          margin-left: 20px;
+          margin-right: 20px;
+          margin-bottom: 0px;
+        }
+        line-height: 0.5 * $masthead-height; // half the height to center vertically
+        margin-bottom: 0px;
+        &:hover {
+          text-shadow: 4px 8px 6px rgba(0, 0, 0, 0.19);
+          .first-letter {
+            color: darken($red, 10);
+          }
+        }
+        //opacity: 0;
+        animation: slide-down 0.5s ease-out 0.75s 1 normal both;
+        /* The animation property is a shorthand property for:
+         animation-name
+         animation-duration: time(s/ms)|initial|inherit;
+         animation-timing-function: linear|ease|ease-in|ease-out|ease-in-out|step-start|step-end|steps(int,start|end)|cubic-bezier(n,n,n,n)|initial|inherit;
+         animation-delay: time(s/ms)|initial|inherit;
+         animation-iteration-count: number(1)|infinite|initial|inherit;
+         animation-direction: normal|reverse|alternate|alternate-reverse|initial|inherit;
+         animation-fill-mode: none|forwards|backwards|both|initial|inherit;
+         animation-play-state */
+      }
+      .item {
+        // Text Props
+        font-weight: 500;
+        @include font-size(16, no);
+        font-family: $menu-font;
+        line-height: 0.5 * $masthead-height; // half the height to center vertically
+        color: $black;
+        text-transform: uppercase;
+        // line hover effect
+        position: relative;
+        display: none;
+        @include media($small) {
+          display: block;
+          padding-top: 0.27 * $masthead-height;
+        }
+        @include media($medium) {
+          @include font-size(18, no);
+          padding-top: 0.32 * $masthead-height;
+        }
+        margin: 0 (0.5 * $gutter);
+        padding: (0.25 * $masthead-height) 0 (0.25 * $masthead-height);
+        &:hover {
+          color: darken($red, 10);
+          text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.19);
+          span {
+            animation: glitch-anim-text 0.4s linear 1 alternate backwards;
+          }
+        }
+        &:focus {
+          outline: none;
+        }
+        span {
+          display: block;
+        }
+        //opacity: 0;
+        animation: slide-down 0.5s ease-out 1.25s 1 normal both;
+      }
+    }
+  }
+}
+
+/* Bottom menu navigation */
+.bottom-menu {
+  @include clearfix;
+  font-family: $menu-font;
   li {
     margin-bottom: 0px;
     float: left;
@@ -220,6 +208,7 @@
       margin-right: $gutter;
       padding: (0.25 * $masthead-height) 0 (0.25 * $masthead-height);
       height: $masthead-height;
+      color: lighten($black, 35);
       &:before,
       &:after {
         content: "";
@@ -243,44 +232,6 @@
         width: 100%;
       }
     }
-  }
-}
-
-/* Top menu navigation */
-
-.top-menu {
-  display: none;
-  position: relative;
-  @include media($medium750) {
-    @include span-columns(7);
-    ul {
-      position: absolute;
-      right: 0;
-    }
-  }
-  .home,
-  .sub-menu-item {
-    display: none;
-  }
-  li {
-    a {
-      font-weight: 500;
-      @include font-size(16, no);
-      font-family: $menu-font;
-      line-height: 0.5 * $masthead-height; // half the height to center vertically
-      color: $black;
-      text-transform: uppercase;
-    }
-  }
-}
-
-/* Bottom menu navigation */
-
-.bottom-menu {
-  @include clearfix;
-  font-family: $menu-font;
-  a {
-    color: lighten($black, 35);
   }
 }
 
@@ -456,7 +407,7 @@
     }
   }
   /* advertisements */
-  .ads {
+  /*.ads {
     position: relative;
     text-align: center;
     margin-top: $gutter;
@@ -482,10 +433,10 @@
     ins {
       border-width: 0;
     }
-  }
+  }*/
 }
 // page lead
-.page-lead {
+/*.page-lead {
   background-position: center top;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -521,7 +472,7 @@
       @include font-size(32);
     }
   }
-}
+}*/
 // page header
 .page-feature {
   @include fill-parent;

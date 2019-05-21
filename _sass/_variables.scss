@@ -13,7 +13,7 @@ $caption-font                	: $base-font;
 $code-font                   	: monospace;
 $alt-font                    	: $heading-font;
 $hi-font                      : "Courgette",sans-serif;//,cursive;
-$blogger-resources-font       : "Cabin",sans-serif;
+$blogger-resources-font       : $base-font;
 $grid-title-font              : "Nova Square",sans-serif;//, cursive;
 $article-title-font           : "Nova Square",sans-serif;//, cursive;
 $quoted-text-font             : "Raleway",sans-serif;
@@ -32,11 +32,11 @@ $white                        : #fff;
 $black                        : #000;
 
 $red                          : #f00;
-$awesome                      : #ff2052;
-$amaranth                     : #e52b50;
+//$awesome                      : #ff2052;
+//$amaranth                     : #e52b50;
 $boston-red                   : #cc0000;
 $cg-red                       : #e03c31;
-$beige                        : #f5f5dc;
+//$beige                        : #f5f5dc;
 
 $yellow                       : #F9D64C;
 

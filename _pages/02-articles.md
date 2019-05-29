@@ -21,9 +21,9 @@ permalink: /articles/
 				<a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
 					<p class="post-teaser">
 						{%- if post.teaser %}
-						<img src="{{ site.imagekiturl }}{{ site.images }}400x250.gif" data-src="{{ site.imagekiturl }}{{ site.images }}{{ post.teaser }}" alt="teaser">
+						<img src="{{ site.imagekiturl }}{{ site.images }}{{ site.teaser }}" data-src="{{ site.imagekiturl }}{{ site.images }}{{ post.teaser }}" alt="teaser">
 						{%- else %}
-						<img src="{{ site.imagekiturl }}{{ site.images }}400x250.gif" data-src="{{ site.imagekiturl }}{{ site.images }}{{ site.teaser }}" alt="teaser">
+						<img src="{{ site.imagekiturl }}{{ site.images }}{{ site.teaser }}" alt="teaser">
 						{%- endif %}
 					</p>
 					{%- if post.date %}

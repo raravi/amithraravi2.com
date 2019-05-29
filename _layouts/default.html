@@ -12,10 +12,11 @@
       name="google-site-verification"
       content="wZay7xUx1IaKgYaoC5EA1V9z-kAZ1fYLD2WtuLVMjbU"
     />
-    <link rel="preconnect" href="https://ik.imagekit.io" crossorigin>
-    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
-    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
-    <link rel="preconnect" href="https://stats.g.doubleclick.net" crossorigin>
+    <link rel="preconnect" href="https://ik.imagekit.io">
+    {% if page.layout == "article" %}<link rel="preconnect" href="https://www.gravatar.com">{% endif %}
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="preconnect" href="https://stats.g.doubleclick.net">
     <meta name="description" content={% if page.layout == "article" %}"{{
     page.excerpt | strip_html | strip | truncate: 160 }}"{% else %}"{{
     site.description }}"{% endif %} />

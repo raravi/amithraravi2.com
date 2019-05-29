@@ -4,7 +4,7 @@ import './vendor/AnimOnScroll.js';
 import imagesLoaded from './vendor/imagesloaded.pkgd.min.js';
 import './vendor/modernizr-custom-3.6.0.js';
 import anime from './vendor/anime.min.js';
-import './vendor/mo.min.js';
+//import './vendor/mo.min.js';
 
 /**
  * Service Worker
@@ -147,6 +147,7 @@ Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container
         , "meta[name^='twitter']"
         , "link[rel='canonical']"
         , "script[type='application/ld+json']"
+        , "link[href='https://www.gravatar.com']"
       ].join(',');
   $( 'head' ).find( headTags ).remove(); // Remove current head tags
   $newPageHead.find( headTags ).appendTo( 'head' ); // Append new tags to the head
@@ -659,7 +660,7 @@ Barba.Dispatcher.on("transitionCompleted", function(
  * Uses mo.js animation
  * Based on Icon Animations from https://tympanus.net/codrops/2016/02/23/icon-animations-powered-by-mo-js/
  */
-Barba.Dispatcher.on("transitionCompleted", function(
+/*Barba.Dispatcher.on("transitionCompleted", function(
   currentStatus,
   oldStatus,
   container
@@ -774,4 +775,4 @@ Barba.Dispatcher.on("transitionCompleted", function(
     });
     console.log(document.title + ": mo.js event added");
   }
-});
+});*/

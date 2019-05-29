@@ -7,7 +7,7 @@
     {% if count <= 4 and post.title != page.title %}
       <li><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
         <div>
-          <img src="{{ site.imagekiturl }}{{ site.images }}{{ post.teaser }}" alt="">
+          <img src="{{ site.imagekiturl }}{{ site.images }}{{ site.teaser }}" data-src="{{ site.imagekiturl }}{{ site.images }}{{ post.teaser }}" alt="">
           <h6>{{ post.title }}</h6>
         </div>
       </a></li>

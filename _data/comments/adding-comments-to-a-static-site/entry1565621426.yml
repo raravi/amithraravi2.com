@@ -1,0 +1,9 @@
+_id: 1565621426
+replying_to: '6'
+message: "Hi!\r\n\r\nThe commenting part is where you usually get stuck, especially with a static site :)\r\n\r\nYou can use Javascript to call a PHP script on the server, which will in turn process your file!\r\n\r\nHere's a sample PHP script that I've created on GitHub: https://gist.github.com/raravi/1e08d69c8ea882ee14d5beed1728262a\r\n\r\nPs. Be careful!! This is a sample only, as it will overwrite the comments into the same comment.txt file every time the script is called!\r\n\r\nThank you for visiting!  \r\nAmith"
+name: Amith Raravi
+email: f53870600465fb505ecf3d559cefccc5
+emailorig: amith.raravi@gmail.com
+url: https://www.amithraravi.com
+date: 1565621426
+slug: adding-comments-to-a-static-site

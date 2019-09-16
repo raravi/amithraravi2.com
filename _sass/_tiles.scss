@@ -21,6 +21,7 @@
   }
   .article-tile {
     opacity: 0;
+    border-radius: 10px 10px 50px/40px 10px;
     //-webkit-transition: opacity 0.6s ease;
     //-moz-transition: opacity 0.6s ease;
     //-ms-transition: opacity 0.6s ease;
@@ -53,6 +54,7 @@
       overflow-y: hidden;
       position: relative;
       display: block;
+      border-radius: 10px 10px 0px 0px;
       &:after {
         content: "";
         position: absolute;
@@ -341,6 +343,7 @@
       display: block;
       opacity: 0;
       box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      border-radius: 10px;
     }
     .grid__deco {
       position: absolute;
@@ -362,6 +365,7 @@
       overflow-y: hidden;
       position: relative;
       display: block;
+      border-radius: 10px 10px 0px 0px;
       &:after {
         content: "";
         position: absolute;

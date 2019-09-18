@@ -119,4 +119,7 @@ exclude:
   - staticman.yml
   - webpack.config.js
   - js
-  - vendor
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

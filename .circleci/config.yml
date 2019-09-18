@@ -79,6 +79,10 @@ jobs:
           name: Deploy Over SSH
           command: |
             ssh amithraravi.com@ssh.stackcp.com "pwd"
+      - run:
+          name: Deploy Over SSH
+          command: |
+            rsync -a --progress --delete dist/ amithraravi.com@ssh.stackcp.com:/home/sites/1a/8/89ee07bb2f/tmp/
 
 workflows:
   version: 2

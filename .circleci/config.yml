@@ -100,7 +100,7 @@ workflows:
           filters:
             branches:
               only: master
-      - build2
+      - build2:
           requires:
             - deploy1
       - deploy2:

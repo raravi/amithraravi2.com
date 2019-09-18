@@ -41,8 +41,8 @@ jobs:
       enabled: true
     steps:
       - run:
-          name: Bundle Install
-          command: ls
+          name: Check Local Dir
+          command: pwd
       - run:
           name: Deploy Over SSH
           command: |

@@ -35,6 +35,15 @@ jobs:
       - run:
           name: Check dir
           command: ls
+      - run:
+          name: Switch to _site
+          command: cd _site
+      - run:
+          name: Check dir
+          command: ls
+      - run:
+          name: Switch to _site
+          command: cd ..
       - persist_to_workspace:
           root: ./
           paths:

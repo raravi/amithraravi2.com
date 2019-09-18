@@ -118,3 +118,4 @@ exclude:
   - tmp
   - staticman.yml
   - webpack.config.js
+  - js

@@ -82,7 +82,7 @@ jobs:
       - run:
           name: Deploy Over SSH
           command: |
-            rsync -a --progress --delete dist/ amithraravi.com@ssh.stackcp.com:/home/sites/1a/8/89ee07bb2f/tmp/ --exclude=/a.txt --exclude=/b/
+            rsync -a --progress --delete dist/ amithraravi.com@ssh.stackcp.com:/home/sites/1a/8/89ee07bb2f/tmp/ --exclude=/a.txt --exclude=/b/ --exclude=/.dd/ --exclude=/.ggg --exclude=/entry*.yml
 
 workflows:
   version: 2

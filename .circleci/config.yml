@@ -2,7 +2,7 @@ defaults: &defaults
   working_directory: ~/repo
 version: 2
 jobs:
-  build:
+  build1:
     <<: *defaults
     docker:
       - image: circleci/ruby:2.5
@@ -36,7 +36,46 @@ jobs:
           root: ./
           paths:
             - _site
-  deploy:
+  deploy1:
+    machine:
+      enabled: true
+    steps:
+      - attach_workspace:
+          at: ./
+      - run:
+          name: Check Local Dir
+          command: ls
+      - run:
+          name: Deploy Over SSH
+          command: |
+            ssh amithraravi.com@ssh.stackcp.com "ls"
+  build2:
+    <<: *defaults
+    docker:
+      - image: circleci/node:4.8.2
+    steps:
+      - checkout
+      - run:
+          name: Update npm
+          command: 'sudo npm install -g npm@latest'
+      - restore_cache: # special step to restore the dependency cache
+          # Read about caching dependencies: https://circleci.com/docs/2.0/caching/
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Install npm dependencies
+          command: npm install
+      - save_cache: # special step to save the dependency cache
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: Run webpack
+          command: npm run webpack
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - _site
+  deploy2:
     machine:
       enabled: true
     steps:
@@ -54,10 +93,19 @@ workflows:
   version: 2
   build-and-deploy:
     jobs:
-      - build
-      - deploy:
+      - build1
+      - deploy1:
           requires:
-            - build
+            - build1
+          filters:
+            branches:
+              only: master
+      - build2
+          requires:
+            - deploy1
+      - deploy2:
+          requires:
+            - build2
           filters:
             branches:
               only: master

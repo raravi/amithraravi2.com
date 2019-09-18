@@ -32,6 +32,9 @@ jobs:
               --check-favicon  \
               --check-html \
               --disable-external
+      - run:
+          name: Check dir
+          command: ls
       - persist_to_workspace:
           root: ./
           paths:
@@ -71,6 +74,9 @@ jobs:
       - run:
           name: Run webpack
           command: npm run webpack
+      - run:
+          name: Check dir
+          command: ls
       - persist_to_workspace:
           root: ./
           paths:

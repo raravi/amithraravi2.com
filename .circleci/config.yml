@@ -69,22 +69,11 @@ jobs:
       - attach_workspace:
           at: ./
       - run:
-          name: Check Local Dir
-          command: ls
-      - run:
-          name: Deploy Over SSH
-          command: |
-            ssh amithraravi.com@ssh.stackcp.com "ls"
-      - run:
-          name: Deploy Over SSH
-          command: |
-            ssh amithraravi.com@ssh.stackcp.com "pwd"
-      - run:
-          name: Deploy Over SSH
+          name: Deploy _site Over SSH
           command: |
             rsync -a --progress --delete _site/ amithraravi.com@ssh.stackcp.com:/home/sites/1a/8/89ee07bb2f/public_html/ --exclude=/.git/ --exclude=/cgi-bin/ --exclude=/.gitignore --exclude=/entry*.yml --exclude=/google*.html --exclude=/stackms.php
       - run:
-          name: Deploy Over SSH
+          name: Deploy dist Over SSH
           command: |
             rsync -a --progress --delete dist/ amithraravi.com@ssh.stackcp.com:/home/sites/1a/8/89ee07bb2f/public_html/dist/
 

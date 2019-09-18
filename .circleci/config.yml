@@ -82,7 +82,11 @@ jobs:
       - run:
           name: Deploy Over SSH
           command: |
-            rsync -a --progress --delete dist/ amithraravi.com@ssh.stackcp.com:/home/sites/1a/8/89ee07bb2f/tmp/ --exclude=/a.txt --exclude=/b/ --exclude=/.dd/ --exclude=/.ggg --exclude=/entry*.yml
+            rsync --dry-run -a --progress --delete _site/ amithraravi.com@ssh.stackcp.com:/home/sites/1a/8/89ee07bb2f/public_html/ --exclude=/.git/ --exclude=/cgi-bin/ --exclude=/.gitignore --exclude=/entry*.yml --exclude=/google*.html --exclude=/stackms.php
+      - run:
+          name: Deploy Over SSH
+          command: |
+            rsync --dry-run -a --progress --delete dist/ amithraravi.com@ssh.stackcp.com:/home/sites/1a/8/89ee07bb2f/public_html/dist/
 
 workflows:
   version: 2

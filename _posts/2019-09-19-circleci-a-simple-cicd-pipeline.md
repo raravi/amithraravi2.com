@@ -111,7 +111,7 @@ Now that you have seen jobs in action, it’s time to understand the next level:
 
 If your website code resides on GitHub, you can connect it to CircleCI and start watching your GitHub repo for commits.
 
-1. The only thing required is to add the below file to your repo.
+The only thing required is to add the below file to your repo.
 
 ```
 .circleci/config.yml
@@ -121,7 +121,7 @@ The `config.yml` file contains the configuration required by `CircleCI` for the 
 
 Next up, is to build your website inside the docker image. My website is built on `Jekyll` in a `Ruby` environment. So, I will launch a ruby docker image and build my website in it.
 
-2. The `build` job is given below
+The `build` job is given below
 
 ```yml
 jobs:
@@ -158,12 +158,12 @@ The next step is to run a sanity check on the website, to check if it’s runnin
             - _site
 ```
 
-3. The `deploy` job will first get the data saved from the previous job. Then, it uses the [rsync](https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories-on-a-vps) Linux command to sync the `_site` folder contents to the web server.
+The `deploy` job will first get the data saved from the previous job. Then, it uses the [rsync](https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories-on-a-vps) Linux command to sync the `_site` folder contents to the web server.
 
 `rsync` command does the following:
-a. --delete flag: delete the contents in the Destination folder that doesn’t match the contents of Source folder (`_site`)
-b. --exclude flag: excludes the file/folder on the Destination side from deletion.
-c. The file/folders to be copied, or only copied if they’ve been modified in any way. And only the modified part is copied, not the enter file!
+* --delete flag: delete the contents in the Destination folder that doesn’t match the contents of Source folder (`_site`).
+* --exclude flag: excludes the file/folder on the Destination side from deletion.
+* The file/folders to be copied, or only copied if they’ve been modified in any way. And only the modified part is copied, not the entire file!
 
 ```yml
   deploy:

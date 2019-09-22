@@ -124,4 +124,3 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - scripts
-  - dist/main.css

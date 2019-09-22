@@ -61,6 +61,9 @@ jobs:
       - run:
           name: Run purgecss
           command: npm run purgecss
+      - run:
+          name: Show DIR
+          command: cd dist && ls
       - persist_to_workspace:
           root: ./
           paths:

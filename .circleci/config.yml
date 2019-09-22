@@ -80,11 +80,11 @@ jobs:
       - run:
           name: Deploy dist/main.js Over SSH
           command: |
-            rsync -a --progress --delete dist/main.js amithraravi.com@ssh.stackcp.com:/home/sites/1a/8/89ee07bb2f/public_html/dist/main.js
+            rsync -a --progress --delete dist/main.js amithraravi.com@ssh.stackcp.com:/home/sites/1a/8/89ee07bb2f/public_html/dist/
       - run:
           name: Deploy dist/main.css Over SSH
           command: |
-            rsync -a --progress --delete dist/main.css amithraravi.com@ssh.stackcp.com:/home/sites/1a/8/89ee07bb2f/public_html/css/main.css
+            rsync -a --progress --delete dist/main.css amithraravi.com@ssh.stackcp.com:/home/sites/1a/8/89ee07bb2f/public_html/css/
 
 workflows:
   version: 2

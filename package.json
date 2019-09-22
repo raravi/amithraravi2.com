@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpackdev": "webpack --mode development",
     "webpack": "webpack --mode production",
-    "purgecss": "purgecss --css _site/css/main.css --content _site/index.html _site/**/index.html _site/**/**/index.html _site/**/**/**/index.html _site/dist/main.js --out dist/"
+    "purgecss": "purgecss --css _site/css/main.css --content _site/index.html _site/**/index.html _site/**/**/index.html _site/**/**/**/index.html dist/main.js --out dist/"
   },
   "author": "Amith Raravi <amith.raravi@gmail.com>",
   "homepage": "http://amithraravi.com/",

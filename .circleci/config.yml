@@ -77,11 +77,11 @@ jobs:
          name: Remove _site/css folder
          command: rm -r _site/css
       - run:
-          name: Deploy _site Over SSH
+          name: Deploy _site/ folder over SSH
           command: |
             rsync -a --progress --delete _site/ amithraravi.com@ssh.stackcp.com:/home/sites/1a/8/89ee07bb2f/public_html/ --exclude=/.git/ --exclude=/cgi-bin/ --exclude=/.gitignore --exclude=/entry*.yml --exclude=/google*.html --exclude=/stackms.php
       - run:
-          name: Deploy dist/main.js Over SSH
+          name: Deploy dist/ folder over SSH
           command: |
             rsync -a --progress --delete dist/ amithraravi.com@ssh.stackcp.com:/home/sites/1a/8/89ee07bb2f/public_html/dist/
 

@@ -41,6 +41,8 @@ jobs:
     docker:
       - image: circleci/node:10.11.0
     steps:
+      - attach_workspace:
+          at: ./
       - checkout
       - run:
           name: Update npm

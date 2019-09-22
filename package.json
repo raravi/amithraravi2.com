@@ -14,7 +14,7 @@
     "purgecss": "purgecss --css _site/css/main.css --content _site/index.html _site/**/index.html _site/**/**/index.html _site/**/**/**/index.html dist/main.js --out dist/"
   },
   "author": "Amith Raravi <amith.raravi@gmail.com>",
-  "homepage": "http://amithraravi.com/",
+  "homepage": "https://www.amithraravi.com/",
   "license": "The MIT License (MIT)",
   "devDependencies": {
     "@babel/core": "^7.4.3",

@@ -58,6 +58,9 @@ jobs:
       - run:
           name: Run webpack
           command: npm run webpack
+      - run:
+          name: Run purgecss
+          command: npm run purgecss
       - persist_to_workspace:
           root: ./
           paths:
@@ -73,9 +76,13 @@ jobs:
           command: |
             rsync -a --progress --delete _site/ amithraravi.com@ssh.stackcp.com:/home/sites/1a/8/89ee07bb2f/public_html/ --exclude=/.git/ --exclude=/cgi-bin/ --exclude=/.gitignore --exclude=/entry*.yml --exclude=/google*.html --exclude=/stackms.php
       - run:
-          name: Deploy dist Over SSH
+          name: Deploy dist/main.js Over SSH
           command: |
-            rsync -a --progress --delete dist/ amithraravi.com@ssh.stackcp.com:/home/sites/1a/8/89ee07bb2f/public_html/dist/
+            rsync -a --progress --delete dist/main.js amithraravi.com@ssh.stackcp.com:/home/sites/1a/8/89ee07bb2f/public_html/dist/main.js
+      - run:
+          name: Deploy dist/main.css Over SSH
+          command: |
+            rsync -a --progress --delete dist/main.css amithraravi.com@ssh.stackcp.com:/home/sites/1a/8/89ee07bb2f/public_html/css/main.css
 
 workflows:
   version: 2

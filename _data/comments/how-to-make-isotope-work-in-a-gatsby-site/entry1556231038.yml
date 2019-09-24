@@ -1,21 +1,23 @@
 _id: 1556231038
 replying_to: '0'
-message: "Ohhhh my goodness, thank you! I've spent hours trying to figure this out and it turns out I was missing the iso.arrange() on each click. The only real change on my end is that I've been using a single filter function and just passing in the desired class with each button:\n\r
-\n\r
-\n\r    onFilterChange = (newFilter) => {
-\n\r      if (this.iso === undefined)
-\n\r          this.iso = new Isotope('#portfolio-container', {
-\n\r              itemSelector: '.portfolio-item',
-\n\r              layoutMode: 'fitRows'
-\n\r          });
-\n\r      if(newFilter === '*') {
-\n\r          this.iso.arrange({ filter: `*` });
-\n\r      } else {
-\n\r          this.iso.arrange({ filter: `.${newFilter}` });
-\n\r      }
-\n\r    }
-\n\r
-\n\rThanks again!"
+message: "Ohhhh my goodness, thank you! I've spent hours trying to figure this out and it turns out I was missing the `iso.arrange()` on each click. The only real change on my end is that I've been using a single filter function and just passing in the desired class with each button:\r\n
+\r\n
+\r\n```javascript
+\r\n    onFilterChange = (newFilter) => {
+\r\n      if (this.iso === undefined)
+\r\n          this.iso = new Isotope('#portfolio-container', {
+\r\n              itemSelector: '.portfolio-item',
+\r\n              layoutMode: 'fitRows'
+\r\n          });
+\r\n      if(newFilter === '*') {
+\r\n          this.iso.arrange({ filter: `*` });
+\r\n      } else {
+\r\n          this.iso.arrange({ filter: `.${newFilter}` });
+\r\n      }
+\r\n    }
+\r\n```
+\r\n
+Thanks again!"
 name: Luke
 email: 28ff1ca5e24265cf5b9accfe2dd31943
 emailorig: luke@serverlessguru.com

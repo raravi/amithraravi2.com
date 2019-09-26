@@ -4,11 +4,11 @@
   "private": true,
   "description": "A self starter site",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "bundle exec jekyll build",
-    "serve": "bundle exec jekyll serve",
-    "buildfull": "bundle exec jekyll build && npm run webpack && npm run purgecss && bundle exec jekyll build",
-    "servefull": "bundle exec jekyll build && npm run webpack && npm run purgecss && bundle exec jekyll serve",
+    "test": "bundle exec htmlproofer ./_site --allow-hash-href --check-favicon  --check-html --disable-external",
+    "build": "npm run test && bundle exec jekyll build",
+    "serve": "npm run test && bundle exec jekyll serve",
+    "buildfull": "npm run test && bundle exec jekyll build && npm run webpack && npm run purgecss && bundle exec jekyll build",
+    "servefull": "npm run test && bundle exec jekyll build && npm run webpack && npm run purgecss && bundle exec jekyll serve",
     "webpackdev": "webpack --mode development",
     "webpack": "webpack --mode production",
     "purgecss": "purgecss --css _site/css/main.css --content _site/index.html _site/**/index.html _site/**/**/index.html _site/**/**/**/index.html dist/main.js --out dist/"

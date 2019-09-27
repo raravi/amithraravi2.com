@@ -1,24 +1,30 @@
-import $ from './vendor/jquery-3.3.1.min.js';
-import Barba from './vendor/barba.min.js';
-import './vendor/AnimOnScroll.js';
-import imagesLoaded from './vendor/imagesloaded.pkgd.min.js';
-import './vendor/modernizr-custom-3.6.0.js';
-import anime from './vendor/anime.min.js';
+import $ from "./vendor/jquery-3.3.1.min.js";
+import Barba from "./vendor/barba.min.js";
+import "./vendor/AnimOnScroll.js";
+import imagesLoaded from "./vendor/imagesloaded.pkgd.min.js";
+import "./vendor/modernizr-custom-3.6.0.js";
+import anime from "./vendor/anime.min.js";
 //import './vendor/mo.min.js';
 
 /**
  * Service Worker
  * Attempt Registration of the Service Worker on Page Load.
  */
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/sw.js').then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function() {
+    navigator.serviceWorker.register("/sw.js").then(
+      function(registration) {
+        // Registration was successful
+        console.log(
+          "ServiceWorker registration successful with scope: ",
+          registration.scope
+        );
+      },
+      function(err) {
+        // registration failed :(
+        console.log("ServiceWorker registration failed: ", err);
+      }
+    );
   });
 }
 
@@ -54,7 +60,7 @@ $(document).ready(function() {
  * Start Barba
  */
 $(document).ready(function() {
-  var HideShowTransition = Barba.BaseTransition.extend({
+  /*var HideShowTransition = Barba.BaseTransition.extend({
     start: function() {
       this.newContainerLoading.then(this.finish.bind(this));
     },
@@ -63,7 +69,7 @@ $(document).ready(function() {
       document.body.scrollTop = 0;
       this.done();
     }
-  });
+  });*/
   var FadeTransition = Barba.BaseTransition.extend({
     start: function() {
       /**
@@ -129,28 +135,35 @@ $(document).ready(function() {
  * Barba.js - Update Meta Tags in Head
  * Head Tags aren't updated on PJAX navigation, this needs to be done manually.
  */
-Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container, newPageRawHTML) {
+Barba.Dispatcher.on("newPageReady", function(
+  currentStatus,
+  oldStatus,
+  container,
+  newPageRawHTML
+) {
   // html head parser borrowed from jquery pjax
   console.log(document.title + ": newPageReady: Updating Meta tags");
-  var $newPageHead = $( '<head />' ).html(
-  $.parseHTML(
-  newPageRawHTML.match(/<head[^>]*>([\s\S.]*)<\/head>/i)[0]
-            , document
-            , true
-          )
-      );
+  var $newPageHead = $("<head />").html(
+    $.parseHTML(
+      newPageRawHTML.match(/<head[^>]*>([\s\S.]*)<\/head>/i)[0],
+      document,
+      true
+    )
+  );
   var headTags = [
-  "meta[name='keywords']"
-        , "meta[name='description']"
-        , "meta[property^='og']"
-        , "meta[property^='article']"
-        , "meta[name^='twitter']"
-        , "link[rel='canonical']"
-        , "script[type='application/ld+json']"
-        , "link[href='https://www.gravatar.com']"
-      ].join(',');
-  $( 'head' ).find( headTags ).remove(); // Remove current head tags
-  $newPageHead.find( headTags ).appendTo( 'head' ); // Append new tags to the head
+    "meta[name='keywords']",
+    "meta[name='description']",
+    "meta[property^='og']",
+    "meta[property^='article']",
+    "meta[name^='twitter']",
+    "link[rel='canonical']",
+    "script[type='application/ld+json']",
+    "link[href='https://www.gravatar.com']"
+  ].join(",");
+  $("head")
+    .find(headTags)
+    .remove(); // Remove current head tags
+  $newPageHead.find(headTags).appendTo("head"); // Append new tags to the head
 });
 
 /**
@@ -210,16 +223,13 @@ $(document).ready(function() {
  */
 $(window).on("load", function() {
   // Menu button click
-  $("#js-menu-trigger,#js-menu-screen,.js-menu-link").on(
-    "click",
-    function(e) {
-      $("#js-body").toggleClass("no-scroll");
-      $("#js-menu, #js-menu-screen").toggleClass("is-visible");
-      $("#js-menu-trigger").toggleClass("slide close");
-      $("#masthead-floating, #page-wrapper").toggleClass("slide");
-      e.preventDefault();
-    }
-  );
+  $("#js-menu-trigger,#js-menu-screen,.js-menu-link").on("click", function(e) {
+    $("#js-body").toggleClass("no-scroll");
+    $("#js-menu, #js-menu-screen").toggleClass("is-visible");
+    $("#js-menu-trigger").toggleClass("slide close");
+    $("#masthead-floating, #page-wrapper").toggleClass("slide");
+    e.preventDefault();
+  });
 });
 
 /**
@@ -308,20 +318,26 @@ $(window).on("scroll", function() {
  * For All pages except Articles/Portfolio.
  */
 Barba.Dispatcher.on("transitionCompleted", function(
-  currentStatus,
-  oldStatus,
-  container
+  //currentStatus,
+  //oldStatus,
+  //container
 ) {
-  if (document.getElementById("tiles-grid") == null && document.getElementsByClassName("portfolio-tile").length == 0) {
-    var imgDefer = document.getElementsByTagName('img');
-    for (var i=0; i<imgDefer.length; i++) {
-      if(imgDefer[i].getAttribute('data-src')) {
-        imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
-        imgDefer[i].removeAttribute('data-src');
+  if (
+    document.getElementById("tiles-grid") == null &&
+    document.getElementsByClassName("portfolio-tile").length == 0
+  ) {
+    var imgDefer = document.getElementsByTagName("img");
+    for (var i = 0; i < imgDefer.length; i++) {
+      if (imgDefer[i].getAttribute("data-src")) {
+        imgDefer[i].setAttribute("src", imgDefer[i].getAttribute("data-src"));
+        imgDefer[i].removeAttribute("data-src");
       }
-      if(imgDefer[i].getAttribute('data-srcset')) {
-        imgDefer[i].setAttribute('srcset',imgDefer[i].getAttribute('data-srcset'));
-        imgDefer[i].removeAttribute('data-srcset');
+      if (imgDefer[i].getAttribute("data-srcset")) {
+        imgDefer[i].setAttribute(
+          "srcset",
+          imgDefer[i].getAttribute("data-srcset")
+        );
+        imgDefer[i].removeAttribute("data-srcset");
       }
     }
   }
@@ -331,51 +347,51 @@ Barba.Dispatcher.on("transitionCompleted", function(
  * Function for handling Comment Form submission on Posts.
  * Ajax call sends it to the server, where add-comment.php script will process it!
  */
- Barba.Dispatcher.on("transitionCompleted", function(
-   currentStatus,
-   oldStatus,
-   container
- ) {
-    function showAlert(message) {
-      $("#comment-form .js-notice").removeClass("hidden");
-      $("#comment-form .js-notice-text").html(message);
-    }
+Barba.Dispatcher.on("transitionCompleted", function(
+  //currentStatus,
+  //oldStatus,
+  //container
+) {
+  function showAlert(message) {
+    $("#comment-form .js-notice").removeClass("hidden");
+    $("#comment-form .js-notice-text").html(message);
+  }
 
-    $("#comment-form").submit(function() {
-      event.preventDefault();
-      var form = this;
+  $("#comment-form").submit(function() {
+    event.preventDefault();
+    var form = this;
 
-      $(form).addClass("disabled");
-      $("#comment-form-submit").html("Loading...");
+    $(form).addClass("disabled");
+    $("#comment-form-submit").html("Loading...");
 
-      $.ajax({
-        type: $(this).attr("method"),
-        url: $(this).attr("action"),
-        data: $(this).serialize(),
-        contentType: "application/x-www-form-urlencoded"
+    $.ajax({
+      type: $(this).attr("method"),
+      url: $(this).attr("action"),
+      data: $(this).serialize(),
+      contentType: "application/x-www-form-urlencoded"
+    })
+      .done(function(/*data*/) {
+        $("#comment-form-submit").html("Submitted");
+        $("#comment-form .js-notice")
+          .removeClass("notice--danger")
+          .addClass("notice--success");
+        showAlert(
+          "<strong>Thank you!</strong> Your comment will show up here once it has been approved by the moderator."
+        );
       })
-        .done(function(data) {
-          $("#comment-form-submit").html("Submitted");
-          $("#comment-form .js-notice")
-            .removeClass("notice--danger")
-            .addClass("notice--success");
-          showAlert(
-            "<strong>Thank you!</strong> Your comment will show up here once it has been approved by the moderator."
-          );
-        })
-        .fail(function(err) {
-          $("#comment-form-submit").html("Submit Comment");
-          $("#comment-form .js-notice")
-            .removeClass("notice--success")
-            .addClass("notice--danger");
-          showAlert(
-            "<strong>Sorry, there was an error with your submission.</strong> Please make sure all required fields have been completed and try again."
-          );
-          $(form).removeClass("disabled");
-        });
+      .fail(function(/*err*/) {
+        $("#comment-form-submit").html("Submit Comment");
+        $("#comment-form .js-notice")
+          .removeClass("notice--success")
+          .addClass("notice--danger");
+        showAlert(
+          "<strong>Sorry, there was an error with your submission.</strong> Please make sure all required fields have been completed and try again."
+        );
+        $(form).removeClass("disabled");
+      });
 
-      return false;
-    });
+    return false;
+  });
 });
 
 /**
@@ -387,9 +403,9 @@ Barba.Dispatcher.on("transitionCompleted", function(
 var addComment = {
   moveForm: function(commId, parentId, respondId, postId) {
     var div,
-      element,
-      style,
-      cssHidden,
+      //element,
+      //style,
+      //cssHidden,
       t = this,
       comm = t.I(commId),
       respond = t.I(respondId),
@@ -457,18 +473,20 @@ var addComment = {
 };
 
 Barba.Dispatcher.on("transitionCompleted", function(
-  currentStatus,
-  oldStatus,
-  container
+  //currentStatus,
+  //oldStatus,
+  //container
 ) {
-  var comments = document.getElementsByClassName('comment__reply');
-  Array.prototype.forEach.call(comments, function(comment){
+  var comments = document.getElementsByClassName("comment__reply");
+  Array.prototype.forEach.call(comments, function(comment) {
     $(comment).on("click", function() {
       var aTag = comment.getElementsByTagName("A")[0];
-      addComment.moveForm(aTag.dataset.comment,
-                                              aTag.dataset.index,
-                                              aTag.dataset.respond,
-                                              aTag.dataset.slug);
+      addComment.moveForm(
+        aTag.dataset.comment,
+        aTag.dataset.index,
+        aTag.dataset.respond,
+        aTag.dataset.slug
+      );
     });
   });
 });
@@ -480,9 +498,9 @@ Barba.Dispatcher.on("transitionCompleted", function(
  * Re-Init AnimeOnScroll.js to prevent errors in animation.
  */
 Barba.Dispatcher.on("transitionCompleted", function(
-  currentStatus,
-  oldStatus,
-  container
+  //currentStatus,
+  //oldStatus,
+  //container
 ) {
   $(".button-all").on("click", function() {
     $(".button-all").addClass("is-checked");
@@ -499,11 +517,14 @@ Barba.Dispatcher.on("transitionCompleted", function(
       .children(".article-tile")
       .show();
 
-    var $animOnScroll1 = new AnimOnScroll(document.getElementById("tiles-grid"), {
-      minDuration: 0.4,
-      maxDuration: 0.7,
-      viewportFactor: 0.1
-    });
+    new window.AnimOnScroll(
+      document.getElementById("tiles-grid"),
+      {
+        minDuration: 0.4,
+        maxDuration: 0.7,
+        viewportFactor: 0.1
+      }
+    );
   });
 
   $(".button-tech").on("click", function() {
@@ -521,11 +542,14 @@ Barba.Dispatcher.on("transitionCompleted", function(
       .children(".article-tile")
       .filter(".tech")
       .show();
-    var $animOnScroll1 = new AnimOnScroll(document.getElementById("tiles-grid"), {
-      minDuration: 0.4,
-      maxDuration: 0.7,
-      viewportFactor: 0.1
-    });
+    new window.AnimOnScroll(
+      document.getElementById("tiles-grid"),
+      {
+        minDuration: 0.4,
+        maxDuration: 0.7,
+        viewportFactor: 0.1
+      }
+    );
   });
 
   $(".button-personal").on("click", function() {
@@ -544,11 +568,14 @@ Barba.Dispatcher.on("transitionCompleted", function(
       .filter(".personal")
       .show();
 
-    var $animOnScroll1 = new AnimOnScroll(document.getElementById("tiles-grid"), {
-      minDuration: 0.4,
-      maxDuration: 0.7,
-      viewportFactor: 0.1
-    });
+    new window.AnimOnScroll(
+      document.getElementById("tiles-grid"),
+      {
+        minDuration: 0.4,
+        maxDuration: 0.7,
+        viewportFactor: 0.1
+      }
+    );
   });
 });
 
@@ -557,12 +584,12 @@ Barba.Dispatcher.on("transitionCompleted", function(
  * Uses AnimeOnScroll.js
  */
 Barba.Dispatcher.on("transitionCompleted", function(
-  currentStatus,
-  oldStatus,
-  container
+  //currentStatus,
+  //oldStatus,
+  //container
 ) {
   if (document.getElementById("tiles-grid") != null) {
-    var $animOnScroll1 = new AnimOnScroll(
+    new window.AnimOnScroll(
       document.getElementById("tiles-grid"),
       {
         minDuration: 0.4,
@@ -579,18 +606,24 @@ Barba.Dispatcher.on("transitionCompleted", function(
  * Based on 'Shu' animation from https://tympanus.net/Development/GridLoadingAnimations/
  */
 Barba.Dispatcher.on("transitionCompleted", function(
-  currentStatus,
-  oldStatus,
-  container
+  //currentStatus,
+  //oldStatus,
+  //container
 ) {
   var portfolioLinks = document.getElementsByClassName("portfolio-link");
   if (document.getElementsByClassName("portfolio-tile").length > 0) {
     imagesLoaded(portfolioLinks, function() {
-      if (Modernizr.cssanimations) {
+      if (window.Modernizr.cssanimations) {
         [].slice.call(portfolioLinks).forEach(function(item) {
           // Create SVG.
-          var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg"),
-            path = document.createElementNS("http://www.w3.org/2000/svg", "path"),
+          var svg = document.createElementNS(
+              "http://www.w3.org/2000/svg",
+              "svg"
+            ),
+            path = document.createElementNS(
+              "http://www.w3.org/2000/svg",
+              "path"
+            ),
             itemW = item.offsetWidth,
             itemH = item.offsetHeight;
 
@@ -643,11 +676,14 @@ Barba.Dispatcher.on("transitionCompleted", function(
         anime.remove(animeOpts.targets);
         anime(animeOpts);
 
-        var imgDefer = document.getElementsByTagName('img');
-        for (var i=0; i<imgDefer.length; i++) {
-          if(imgDefer[i].getAttribute('data-src')) {
-            imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
-            imgDefer[i].removeAttribute('data-src');
+        var imgDefer = document.getElementsByTagName("img");
+        for (var i = 0; i < imgDefer.length; i++) {
+          if (imgDefer[i].getAttribute("data-src")) {
+            imgDefer[i].setAttribute(
+              "src",
+              imgDefer[i].getAttribute("data-src")
+            );
+            imgDefer[i].removeAttribute("data-src");
           }
         }
       }

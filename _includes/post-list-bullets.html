@@ -1,15 +1,19 @@
 <div class="bullets">
-	{% for post in site.posts %}
-	<div class="bullet three-col-bullet">
-		<a href="{{ site.url }}{{ post.url }}">
-			<div class="bullet-icon">
-				<img src="{{ site.imagekiturl }}{{ site.images }}{{ post.teaser }}" class="bullet-image" alt="">
-			</div>
-			<div class="bullet-content">
-				<h2>{{ post.title }}</h2>
-				<p>{{ post.excerpt | strip_html | strip }}</p>
-			</div>
-		</a>
-	</div>
-	{% endfor %}
+  {% for post in site.posts %}
+  <div class="bullet three-col-bullet">
+    <a href="{{ site.url }}{{ post.url }}">
+      <div class="bullet-icon">
+        <img
+          src="{{ site.imagekiturl }}{{ site.images }}{{ post.teaser }}"
+          class="bullet-image"
+          alt=""
+        />
+      </div>
+      <div class="bullet-content">
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.excerpt | strip_html | strip }}</p>
+      </div>
+    </a>
+  </div>
+  {% endfor %}
 </div>

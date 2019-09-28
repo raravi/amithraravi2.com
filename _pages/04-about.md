@@ -18,12 +18,13 @@ My freelancing career took off in the beginning of 2017, with focus on **Web Des
 ## Personal Life
 
 ![image]({{ site.imagekiturl }}{{ site.images }}gandalf.jpg)
+
 <figcaption>Note: This <a href="https://www.deviantart.com/s1ghtly/art/Gandalf-419175721">awesome piece of work</a> was found on Deviant Art.</figcaption>
 
-I love going on trips to places where the mobile network cannot reach, and documenting it on Instagram/Medium. Spend most of my spare time with family. And reading novels. And watching movies. Have I mentioned *The White Wizard* yet..?!
+I love going on trips to places where the mobile network cannot reach, and documenting it on Instagram/Medium. Spend most of my spare time with family. And reading novels. And watching movies. Have I mentioned _The White Wizard_ yet..?!
 
 ## Contact Me
 
-If you are looking for some magic to transform your website/project, you've come to the right place! What you need is a web designer / content creator, so go ahead and email me your requirements at <a href="mailto:{{site.owner.email}}" class="owner-link">amith.raravi@gmail.com</a>. I usually respond within a day! Unless I'm out of office.. Hang on, that was earlier.  
+If you are looking for some magic to transform your website/project, you've come to the right place! What you need is a web designer / content creator, so go ahead and email me your requirements at <a href="mailto:{{site.owner.email}}" class="owner-link">amith.raravi@gmail.com</a>. I usually respond within a day! Unless I'm out of office.. Hang on, that was earlier.
 
 I'm always excited to connect with new people! Find me on [GitHub]({{site.owner.github.url}}/{{site.owner.github.username}}), [Google+]({{site.owner.googleplus.url}}/{{site.owner.googleplus.username}}), [LinkedIn]({{site.owner.linkedin.url}}/{{site.owner.linkedin.username}}), [Instagram]({{site.owner.instagram.url}}/{{site.owner.instagram.username}}), [Facebook]({{site.owner.facebook.url}}/{{site.owner.facebook.username}}), [Twitter]({{site.owner.twitter.url}}/{{site.owner.twitter.username}}), [XDA]({{site.owner.xda.url}}/{{site.owner.xda.username}}), [Good Reads]({{site.owner.goodreads.url}}/{{site.owner.goodreads.username}}) and [Runkeeper]({{site.owner.runkeeper.url}}/{{site.owner.runkeeper.username}}).

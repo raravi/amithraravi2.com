@@ -7,67 +7,72 @@
    ========================================================================== */
 
 body {
-	font-family: $base-font;
-	color: $text-color;
-	@include font-size(16);
-	overflow-x: hidden;
+  font-family: $base-font;
+  color: $text-color;
+  @include font-size(16);
+  overflow-x: hidden;
 }
 
 p {
-	@include font-size(18,yes,28);
+  @include font-size(18, yes, 28);
 }
 
 li {
-	@include font-size(16,12,24);
+  @include font-size(16, 12, 24);
 }
 
 /* Headings */
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: $heading-font;
-	text-rendering: optimizeLegibility; // Fix the character spacing for headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font;
+  text-rendering: optimizeLegibility; // Fix the character spacing for headings
 }
 h1 {
-	@include font-size(36);
+  @include font-size(36);
 }
 h2 {
-	@include font-size(32);
+  @include font-size(32);
 }
 h3 {
-	@include font-size(28);
+  @include font-size(28);
 }
 h4 {
-	@include font-size(24);
+  @include font-size(24);
 }
 h5 {
-	@include font-size(20);
+  @include font-size(20);
 }
 h6 {
-	@include font-size(18);
+  @include font-size(18);
 }
 
 /* Underlined text */
 
 u,
 ins {
-	text-decoration: none;
-	border-bottom: 3px solid $red;
+  text-decoration: none;
+  border-bottom: 3px solid $red;
 }
 
 /* Links */
 
 a {
-	color: lighten($boston-red, 5);
-	&:hover {
-		color: $boston-red; //color: darken($link-color, 20);
-	}
-	&:focus {
-		@extend %tab-focus;
-	}
-	&:hover,
-	&:active {
-		outline: 0;
-	}
+  color: lighten($boston-red, 5);
+  &:hover {
+    color: $boston-red; //color: darken($link-color, 20);
+  }
+  &:focus {
+    @extend %tab-focus;
+  }
+  &:hover,
+  &:active {
+    outline: 0;
+  }
 }
 
 /* Quoted text */
@@ -78,9 +83,9 @@ blockquote {
   border-left: 6px solid $info-color;
   p {
     font-family: $quoted-text-font;
-		font-style: italic;
+    font-style: italic;
     @include font-size(16);
-		line-height: 1.55;
+    line-height: 1.55;
   }
   cite {
     font-family: $base-font;
@@ -91,22 +96,26 @@ blockquote {
 }
 
 // Code
-tt, code, kbd, samp, pre {
-	font-family: $code-font;
+tt,
+code,
+kbd,
+samp,
+pre {
+  font-family: $code-font;
 }
 pre {
-	overflow-x: auto; // add scrollbars to wide code blocks
+  overflow-x: auto; // add scrollbars to wide code blocks
 }
 p code,
 li code {
-	@include font-size(16,no);
-	color: $text-color;
-	white-space: nowrap;
-	margin: 0 2px;
-	padding: 0 5px;
-	border: 1px solid $border-color;
-	background-color: lighten($primary-color, 95);
-	border-radius: $border-radius;
+  @include font-size(16, no);
+  color: $text-color;
+  white-space: nowrap;
+  margin: 0 2px;
+  padding: 0 5px;
+  border: 1px solid $border-color;
+  background-color: lighten($primary-color, 95);
+  border-radius: $border-radius;
 }
 
 /*
@@ -136,7 +145,7 @@ figure {
       /* Image hover animation */
       @include transition(box-shadow 0.3s);
       &:hover {
-        box-shadow: 0 0 10px rgba($black, .20);
+        box-shadow: 0 0 10px rgba($black, 0.2);
       }
     }
   }
@@ -178,7 +187,7 @@ figcaption {
     padding-right: 0;
   }
   font-family: $alt-font;
-  @include font-size(14,yes);
+  @include font-size(14, yes);
   color: $caption-color;
   clear: both;
   a {
@@ -193,7 +202,8 @@ figcaption {
 
 .half,
 .third {
-  & figcaption { /* Remove caption indents */
+  & figcaption {
+    /* Remove caption indents */
     padding-left: 0;
     padding-right: 0;
   }
@@ -209,37 +219,40 @@ svg:not(:root) {
    ========================================================================== */
 
 table {
-	border-collapse: collapse;
-	margin: ((0px + $doc-line-height) / 2) 0;
-	margin: ((0rem + ($doc-line-height / $doc-font-size)) / 2) 0;
-	width: 100%;
+  border-collapse: collapse;
+  margin: ((0px + $doc-line-height) / 2) 0;
+  margin: ((0rem + ($doc-line-height / $doc-font-size)) / 2) 0;
+  width: 100%;
 }
 tbody {
-	tr:hover > td, tr:hover > th {
-		background-color: $table-hover-color;
-	}
+  tr:hover > td,
+  tr:hover > th {
+    background-color: $table-hover-color;
+  }
 }
 thead {
-	tr:first-child td {
-		border-bottom: 2px solid $table-border-color;
-	}
+  tr:first-child td {
+    border-bottom: 2px solid $table-border-color;
+  }
 }
 th {
-	padding: (0px + $doc-line-height) / 2;
-	padding: (0rem + ($doc-line-height / $doc-font-size)) / 2;
-	font-family: $alt-font;
-	font-weight: bold;
-	text-align: left;
-	background-color: $table-header-color;
-	border-bottom: 1px solid darken($border-color, 15%);
+  padding: (0px + $doc-line-height) / 2;
+  padding: (0rem + ($doc-line-height / $doc-font-size)) / 2;
+  font-family: $alt-font;
+  font-weight: bold;
+  text-align: left;
+  background-color: $table-header-color;
+  border-bottom: 1px solid darken($border-color, 15%);
 }
 td {
-	border-bottom: 1px solid $border-color;
-	padding: (0px + $doc-line-height) / 2;
-	padding: (0rem + ($doc-line-height / $doc-font-size)) / 2;
+  border-bottom: 1px solid $border-color;
+  padding: (0px + $doc-line-height) / 2;
+  padding: (0rem + ($doc-line-height / $doc-font-size)) / 2;
 }
-tr, td, th {
-	vertical-align: middle;
+tr,
+td,
+th {
+  vertical-align: middle;
 }
 
 /*
@@ -247,23 +260,23 @@ tr, td, th {
    ========================================================================== */
 
 hr {
-	display: block;
-	position: relative;
-	margin: 0px + (1.5 * $doc-line-height) 0;
-	margin: 0rem + ((1.5 * $doc-line-height) / $doc-font-size) 0;
-	padding: 0;
-	height: 1px;
-	border: 0;
-	&:before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 50%;
-		margin-left: -(0.75 * $column);
-		width: 1.5 * $column;
-		height: 3px;
-		background: $red;
-	}
+  display: block;
+  position: relative;
+  margin: 0px + (1.5 * $doc-line-height) 0;
+  margin: 0rem + ((1.5 * $doc-line-height) / $doc-font-size) 0;
+  padding: 0;
+  height: 1px;
+  border: 0;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -(0.75 * $column);
+    width: 1.5 * $column;
+    height: 3px;
+    background: $red;
+  }
 }
 
 /*
@@ -271,94 +284,96 @@ hr {
    ========================================================================== */
 
 fieldset {
-	background: lighten($border-color, 10);
-	border: 1px solid $border-color;
-	margin-bottom: 0px + $doc-line-height;
-	margin-bottom: 0rem + ($doc-line-height / $doc-font-size);
-	padding: $gutter;
-	border-radius: $border-radius;
+  background: lighten($border-color, 10);
+  border: 1px solid $border-color;
+  margin-bottom: 0px + $doc-line-height;
+  margin-bottom: 0rem + ($doc-line-height / $doc-font-size);
+  padding: $gutter;
+  border-radius: $border-radius;
 }
 
 input,
 label,
 select {
-	display: block;
-	@include font-size($form-font-size,no);
+  display: block;
+  @include font-size($form-font-size, no);
 }
 
 label {
-	font-weight: bold;
-	font-family: $alt-font;
-	margin-bottom: (0px + $doc-line-height) / 4;
-	margin-bottom: (0rem + ($doc-line-height / $doc-font-size)) / 4;
-	&.required:after {
-		content: "*";
-	}
-	abbr {
-		display: none;
-	}
+  font-weight: bold;
+  font-family: $alt-font;
+  margin-bottom: (0px + $doc-line-height) / 4;
+  margin-bottom: (0rem + ($doc-line-height / $doc-font-size)) / 4;
+  &.required:after {
+    content: "*";
+  }
+  abbr {
+    display: none;
+  }
 }
 
 textarea,
 #{$all-text-inputs},
 select,
-select[multiple=multiple] {
-	@include box-sizing(border-box);
-	@include transition(border-color);
-	background-color: white;
-	border-radius: $form-border-radius;
-	border: 1px solid $form-border-color;
-	box-shadow: $form-box-shadow;
-	font-family: $form-font-family;
-	font-size: $form-font-size;
-	margin-bottom: (0px + $doc-line-height) / 2;
-	margin-bottom: (0rem + ($doc-line-height / $doc-font-size)) / 2;
-	padding: ((0px + $doc-line-height) / 3) ((0px + $doc-line-height) / 3);
-	padding: ((0rem + ($doc-line-height / $doc-font-size)) / 3) ((0rem + ($doc-line-height / $doc-font-size)) / 3);
-	width: 100%;
-	&:hover {
-		border-color: $form-border-color-hover;
-	}
-	&:focus {
-		border-color: $form-border-color-focus;
-		box-shadow: $form-box-shadow-focus;
-		outline: none;
-	}
+select[multiple="multiple"] {
+  @include box-sizing(border-box);
+  @include transition(border-color);
+  background-color: white;
+  border-radius: $form-border-radius;
+  border: 1px solid $form-border-color;
+  box-shadow: $form-box-shadow;
+  font-family: $form-font-family;
+  font-size: $form-font-size;
+  margin-bottom: (0px + $doc-line-height) / 2;
+  margin-bottom: (0rem + ($doc-line-height / $doc-font-size)) / 2;
+  padding: ((0px + $doc-line-height) / 3) ((0px + $doc-line-height) / 3);
+  padding: ((0rem + ($doc-line-height / $doc-font-size)) / 3)
+    ((0rem + ($doc-line-height / $doc-font-size)) / 3);
+  width: 100%;
+  &:hover {
+    border-color: $form-border-color-hover;
+  }
+  &:focus {
+    border-color: $form-border-color-focus;
+    box-shadow: $form-box-shadow-focus;
+    outline: none;
+  }
 }
 
 textarea {
-	resize: vertical;
+  resize: vertical;
 }
 
 input[type="search"] {
-	@include appearance(none);
+  @include appearance(none);
 }
 
-input[type="checkbox"], input[type="radio"] {
-	display: inline;
-	margin-right: (0px + $doc-line-height) / 4;
-	margin-right: (0rem + ($doc-line-height / $doc-font-size)) / 4;
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+  margin-right: (0px + $doc-line-height) / 4;
+  margin-right: (0rem + ($doc-line-height / $doc-font-size)) / 4;
 }
 
 input[type="file"] {
-	width: 100%;
+  width: 100%;
 }
 
 select {
-	width: auto;
-	max-width: 100%;
-	margin-bottom: 0px + $doc-line-height;
-	margin-bottom: 0rem + ($doc-line-height / $doc-font-size);
+  width: auto;
+  max-width: 100%;
+  margin-bottom: 0px + $doc-line-height;
+  margin-bottom: 0rem + ($doc-line-height / $doc-font-size);
 }
 
 form button,
 input[type="submit"] {
-	@extend .btn;
-	@include appearance(none);
-	cursor: pointer;
-	user-select: none;
-	vertical-align: middle;
-	white-space: nowrap;
+  @extend .btn;
+  @include appearance(none);
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
 }
 
 /*
@@ -395,6 +410,28 @@ nav {
    Global animation transition
    ========================================================================== */
 
-b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a, tr, td, .highlight {
-	@include transition (color 0.2s ease-out, opacity 0.2s ease-out, background 0.2s ease-out, border-color 0.2s ease-out);
+b,
+i,
+strong,
+em,
+blockquote,
+p,
+q,
+span,
+figure,
+img,
+h1,
+h2,
+header,
+input,
+a,
+tr,
+td,
+.highlight {
+  @include transition(
+    color 0.2s ease-out,
+    opacity 0.2s ease-out,
+    background 0.2s ease-out,
+    border-color 0.2s ease-out
+  );
 }

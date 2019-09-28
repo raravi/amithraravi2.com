@@ -39,7 +39,8 @@
 
 .inline-btn {
   @include clearfix;
-  a, btn {
+  a,
+  btn {
     display: inline-block;
     margin-right: $gutter / 2;
     &:last-child {
@@ -100,7 +101,7 @@
       overflow-y: hidden;
     }
     h6 {
-      @include font-size(14,no);
+      @include font-size(14, no);
       color: $text-color;
       font-weight: 400;
       font-family: $grid-title-font;
@@ -109,23 +110,23 @@
     }
   }
   @media screen and (max-width: 749px) {
-     li {
-       @include span-columns(6);
-       @include omega(2n);
-     }
+    li {
+      @include span-columns(6);
+      @include omega(2n);
+    }
   }
   @media screen and (max-width: 449px) {
-     li {
-       @include span-columns(12);
-       @include omega(n);
-     }
+    li {
+      @include span-columns(12);
+      @include omega(n);
+    }
   }
   a {
     &:hover {
       // Image hover animation
       img {
-        @include animation(pop .3s 0 linear);
-        box-shadow: 0 0 10px rgba($black, .20);
+        @include animation(pop 0.3s 0 linear);
+        box-shadow: 0 0 10px rgba($black, 0.2);
       }
       h6 {
         color: $cg-red;

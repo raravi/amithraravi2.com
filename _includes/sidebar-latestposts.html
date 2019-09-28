@@ -1,28 +1,38 @@
 <div class="text">
-  <h5>Posts - {% if page.categories[1] == "tech" %}Personal{% else %}Tech{% endif %}</h5>
+  <h5>
+    Posts - {% if page.categories[1] == "tech" %}Personal{% else %}Tech{% endif
+    %}
+  </h5>
 </div>
 <div class="sidebarlatestposts">
-{% assign count = 1 %}
-{%- for post in site.posts -%}
-  {%- if count <= 4 and post.layout == "article" and post.categories[1] != page.categories[1] -%}
-    <div>
-      <article class="sidebartile">
-        <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
-      		<p class="post-teaser">
-            {% if post.teaser %}
-            <img src="{{ site.imagekiturl }}{{ site.images }}{{ site.teaser }}" data-src="{{ site.imagekiturl }}{{ site.images }}{{ post.teaser }}" alt="teaser">
-            {% else %}
-            <img src="{{ site.imagekiturl }}{{ site.images }}{{ site.teaser }}" alt="teaser">
-            {% endif %}
-          </p>
-        	<h2 class="post-title">{{ post.title }}</h2>
-      		<p class="post-excerpt">{{ post.excerpt | strip_html | strip | truncate: 160 }}</p>
-      	</a>
-      </article>
-      {%- assign count = count | plus:1 %}
-    </div>
-  {%- endif -%}
-{%- endfor %}
+  {% assign count = 1 %} {%- for post in site.posts -%} {%- if count <= 4 and
+  post.layout == "article" and post.categories[1] != page.categories[1] -%}
+  <div>
+    <article class="sidebartile">
+      <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
+        <p class="post-teaser">
+          {% if post.teaser %}
+          <img
+            src="{{ site.imagekiturl }}{{ site.images }}{{ site.teaser }}"
+            data-src="{{ site.imagekiturl }}{{ site.images }}{{ post.teaser }}"
+            alt="teaser"
+          />
+          {% else %}
+          <img
+            src="{{ site.imagekiturl }}{{ site.images }}{{ site.teaser }}"
+            alt="teaser"
+          />
+          {% endif %}
+        </p>
+        <h2 class="post-title">{{ post.title }}</h2>
+        <p class="post-excerpt">
+          {{ post.excerpt | strip_html | strip | truncate: 160 }}
+        </p>
+      </a>
+    </article>
+    {%- assign count = count | plus:1 %}
+  </div>
+  {%- endif -%} {%- endfor %}
 </div>
 <div class="div-10-high"></div>
 <div class="line-red"></div>

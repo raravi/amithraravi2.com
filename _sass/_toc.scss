@@ -23,9 +23,9 @@
     }
   }
   li {
-    @include font-size(14,no,16);
+    @include font-size(14, no, 16);
     @include media($small) {
-      @include font-size(16,no,18);
+      @include font-size(16, no, 18);
     }
     border-bottom: 1px solid $border-color;
     > a {

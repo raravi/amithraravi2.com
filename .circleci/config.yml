@@ -46,7 +46,7 @@ jobs:
           at: ./
       - run:
           name: Update npm
-          command: 'sudo npm install -g npm@latest'
+          command: "sudo npm install -g npm@latest"
       - restore_cache: # special step to restore the dependency cache
           # Read about caching dependencies: https://circleci.com/docs/2.0/caching/
           key: dependency-cache-{{ checksum "package.json" }}
@@ -74,8 +74,8 @@ jobs:
       - attach_workspace:
           at: ./
       - run:
-         name: Remove _site/css folder
-         command: rm -r _site/css
+          name: Remove _site/css folder
+          command: rm -r _site/css
       - run:
           name: Deploy _site/ folder over SSH
           command: |

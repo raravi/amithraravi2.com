@@ -18,12 +18,12 @@ First and foremost, I will never share your email address or any other personal 
 
 Like many other websites, this site uses log files to help learn about when, from where, and how often traffic flows to this site. The information in these log files include:
 
-* Internet Protocol addresses (IP)
-* Types of browser
-* Internet Service Provider (ISP)
-* Date and time stamp
-* Referring and exit pages
-* Number of clicks
+- Internet Protocol addresses (IP)
+- Types of browser
+- Internet Service Provider (ISP)
+- Date and time stamp
+- Referring and exit pages
+- Number of clicks
 
 All of this information is not linked to anything that is personally identifiable.
 
@@ -55,10 +55,10 @@ Currently I'm an affiliate for Amazon and Google Adsense.
 
 What this means for you:
 
-* I do not and will not recommend a product just because I'm an affiliate.
-* I became an affiliate to earn some revenue towards the costs of running and maintaining this website. Where I have direct control over which ads are served on this website I offer only products that are directly related to the topic of this website and products that a reader/subscriber would have a genuine interest in or need of.
-* I do not recommend products just for the sake of making money.
-* I recommend products because I think they are valuable to my readers.
-* I do not let the compensation I receive influence the content, topics, posts, or opinions expressed on this website.
-* I respect and value my readers too much to write anything other than my own genuine and objective opinions and advice.
-* Just like this website, my Disclosure Policy is a work in progress. As the revenue streams evolve, so will this page.
+- I do not and will not recommend a product just because I'm an affiliate.
+- I became an affiliate to earn some revenue towards the costs of running and maintaining this website. Where I have direct control over which ads are served on this website I offer only products that are directly related to the topic of this website and products that a reader/subscriber would have a genuine interest in or need of.
+- I do not recommend products just for the sake of making money.
+- I recommend products because I think they are valuable to my readers.
+- I do not let the compensation I receive influence the content, topics, posts, or opinions expressed on this website.
+- I respect and value my readers too much to write anything other than my own genuine and objective opinions and advice.
+- Just like this website, my Disclosure Policy is a work in progress. As the revenue streams evolve, so will this page.

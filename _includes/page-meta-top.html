@@ -1,7 +1,9 @@
 {% if page.date %}
 <div class="page-meta">
-	<p>
-		<time datetime="{{ page.date | date: '%Y-%m-%dT%H:%M:%S+05:30' }}">{{ page.date | date: "%B %d, %Y" }}</time>
-	</p>
+  <p>
+    <time datetime="{{ page.date | date: '%Y-%m-%dT%H:%M:%S+05:30' }}"
+      >{{ page.date | date: "%B %d, %Y" }}</time
+    >
+  </p>
 </div>
 {% endif %}

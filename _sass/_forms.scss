@@ -23,13 +23,14 @@ select {
   a {
     color: $boston-red;
     &:hover {
-  		color: darken($boston-red, 5); //color: darken($link-color, 20);
-  	}
+      color: darken($boston-red, 5); //color: darken($link-color, 20);
+    }
   }
 }
 
 label {
-  font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+  font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto",
+    "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
   margin-bottom: (0px + $doc-line-height) / 4;
 
   &.required:after {
@@ -44,7 +45,7 @@ label {
 input,
 textarea,
 select,
-select[multiple=multiple] {
+select[multiple="multiple"] {
   box-sizing: border-box;
   transition: border-color;
   background-color: $white;
@@ -76,7 +77,8 @@ input[type="search"] {
   appearance: none;
 }
 
-input[type="checkbox"], input[type="radio"] {
+input[type="checkbox"],
+input[type="radio"] {
   display: inline;
   margin-right: (0px + $doc-line-height) / 4;
 }
@@ -101,8 +103,9 @@ input[type="submit"] {
 }
 
 form {
-
-  ul, ol, li {
+  ul,
+  ol,
+  li {
     padding-left: 0;
     list-style-type: none;
   }

@@ -2,8 +2,8 @@
    About Grid
    ========================================================================== */
 
-   /* Create two equal columns that floats next to each other */
-   /*.twocolumn {
+/* Create two equal columns that floats next to each other */
+/*.twocolumn {
        float: left;
        width: 100%;
        @include media($small) {
@@ -12,9 +12,9 @@
        padding: 10px;
    }*/
 
-   /* Clear floats after the columns */
-   .gridrow:after {
-       content: "";
-       display: block;
-       clear: both;
-   }
+/* Clear floats after the columns */
+.gridrow:after {
+  content: "";
+  display: block;
+  clear: both;
+}

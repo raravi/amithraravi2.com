@@ -3,6 +3,7 @@ layout: archive
 title: Articles
 permalink: /articles/
 ---
+
 <div class="article-header">
 	<div class="page-title">
 		<h2>{{ page.title }}</h2>

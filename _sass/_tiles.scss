@@ -403,11 +403,10 @@
     .col {
       flex: 45.3%; // There is a side-effect to figure out here!! This should ideally be 50%. But right now, 50% will not display items in 2nd column properly on Firefox. (I know why :))
       max-width: 45.3%;
-
     }
   }
   @media screen and (min-width: 901px) and (max-width: 1120px) {
-  //@media screen and (min-width: 901px) {
+    //@media screen and (min-width: 901px) {
     .col {
       flex: 30.95%;
       max-width: 30.95%;

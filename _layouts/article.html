@@ -1,41 +1,42 @@
 ---
 layout: default
 ---
+
 <div id="main" role="main">
-	<article class="wrap">
-		<div class="gridrow">
-				<div class="mainbar">
-						<div class="inner-wrap">
-								<div class="line-red"></div>
-								<div class="page-title">
-									<h1>{{ page.title }}</h1>
-								</div>
-								<div class="article-date">
-									{% include page-meta-top.html %}
-								</div>
-								<div class="div-20-high"></div>
-								<div class="line-red"></div>
-								<div class="div-20-high"></div>
-								<div id="content" class="page-content">
-									{{ content }}
-									<div class="div-20-high"></div>
-									<div class="div-20-high"></div>
-									<div class="line-red"></div>
-									<div class="div-20-high"></div>
-									<footer class="page-footer">
-										{% if page.categories %}{% include page-author.html %}{% endif %}
-									</footer>
-									<div class="line-red"></div>
-									<div class="div-20-high"></div>
-									{% include latest-posts-grid.html %}
-									<div class="div-30-high"></div>
-									<aside>
-										{% include post-comments.html -%}
-									</aside>
-								</div>
-						</div>
-				</div>
-				{% include sidebar.html -%}
-		</div>
-	</article>
+  <article class="wrap">
+    <div class="gridrow">
+      <div class="mainbar">
+        <div class="inner-wrap">
+          <div class="line-red"></div>
+          <div class="page-title">
+            <h1>{{ page.title }}</h1>
+          </div>
+          <div class="article-date">
+            {% include page-meta-top.html %}
+          </div>
+          <div class="div-20-high"></div>
+          <div class="line-red"></div>
+          <div class="div-20-high"></div>
+          <div id="content" class="page-content">
+            {{ content }}
+            <div class="div-20-high"></div>
+            <div class="div-20-high"></div>
+            <div class="line-red"></div>
+            <div class="div-20-high"></div>
+            <footer class="page-footer">
+              {% if page.categories %}{% include page-author.html %}{% endif %}
+            </footer>
+            <div class="line-red"></div>
+            <div class="div-20-high"></div>
+            {% include latest-posts-grid.html %}
+            <div class="div-30-high"></div>
+            <aside>
+              {% include post-comments.html -%}
+            </aside>
+          </div>
+        </div>
+      </div>
+      {% include sidebar.html -%}
+    </div>
+  </article>
 </div>

@@ -2,214 +2,214 @@
    About Flex Grid
    ========================================================================== */
 
-   .mainbox {
-       //border: 1px solid #000;  /* For debugging */
+.mainbox {
+  //border: 1px solid #000;  /* For debugging */
 
-       margin-top: 15px;
-       display: flex;
-       flex-direction: column;
-       .row {
-         box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-         margin-bottom: 40px;
-         display: flex;
-         align-items: stretch;
-         flex-wrap: wrap;
-         a {
-           text-decoration: none;
-         }
-         .col {
-             display: flex;
-             justify-content: center;
-             align-items: center;
-             flex: 100%;
-             max-width: 100%;
-             @include media($medium750) {
-               flex: 50%;
-               max-width: 50%;
-             }
-             .grid-title {
-                  padding: 1em;
-                 	@include media($medium) {
-                 		padding: 2em;
-                 	}
-                 	@include media($large) {
-                 		padding: 3em;
-                 	}
-                 	h1 {
-                    text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.6);
-                    color: darken($white,2);
-                 		@include font-size(48);
-                 		@include media($medium) {
-                 			@include font-size(60);
-                 		}
-                 		@include media($large) {
-                 			@include font-size(60);
-                 		}
-                 	}
-             }
-             .grid-content {
-                   padding-left: 15px;
-                   padding-right: 30px;
-                   padding-top: 30px;
-                   padding-bottom: 30px;
-                 	 li {
-                 		  color: lighten($text-color,17);
-                 		   @include font-size(18);
-                 		   @include media($medium) {
-                 			     @include font-size(20);
-                 	     }
-                 	     @include media($large) {
-                          @include font-size(20);
-                 	     }
-                 	 }
-             }
-         }
-         .image {
-             text-align: center;
-           	 color: $white;
-           	 text-shadow: 1px 1px $text-color;
-           	 background-size: 100% 100%;
-             min-height: 250px;
-         }
-       }
-       .forward {
-         flex-direction: row;
-       }
-       .reverse {
-         flex-direction: row-reverse;
-       }
-   }
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  .row {
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 40px;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    a {
+      text-decoration: none;
+    }
+    .col {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 100%;
+      max-width: 100%;
+      @include media($medium750) {
+        flex: 50%;
+        max-width: 50%;
+      }
+      .grid-title {
+        padding: 1em;
+        @include media($medium) {
+          padding: 2em;
+        }
+        @include media($large) {
+          padding: 3em;
+        }
+        h1 {
+          text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.6);
+          color: darken($white, 2);
+          @include font-size(48);
+          @include media($medium) {
+            @include font-size(60);
+          }
+          @include media($large) {
+            @include font-size(60);
+          }
+        }
+      }
+      .grid-content {
+        padding-left: 15px;
+        padding-right: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        li {
+          color: lighten($text-color, 17);
+          @include font-size(18);
+          @include media($medium) {
+            @include font-size(20);
+          }
+          @include media($large) {
+            @include font-size(20);
+          }
+        }
+      }
+    }
+    .image {
+      text-align: center;
+      color: $white;
+      text-shadow: 1px 1px $text-color;
+      background-size: 100% 100%;
+      min-height: 250px;
+    }
+  }
+  .forward {
+    flex-direction: row;
+  }
+  .reverse {
+    flex-direction: row-reverse;
+  }
+}
 
-   .main-about-me {
-     padding: 20px;
-     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.main-about-me {
+  padding: 20px;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-       display: flex;
-       flex-wrap: wrap;
-       flex-direction: row;
-       align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
 
-       .col {
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-           flex: 100%;
-           max-width: 100%;
-           @include media($small) {
-             flex: 33%;
-             max-width: 33%;
-           }
-           .bio-pic {
-               border-radius: 50%;
-               padding-right: 20px;
-           }
-           .text {
-               text-align: center;
-               .sayhi {
-                   @include font-size(20,no);
-                   font-family: $hi-font;
-                   color: $boston-red;
-               }
-               .sayhitext {
-                 @include font-size(18,yes,28);
-                 @include media($small) {
-                   @include font-size(16,yes,26);
-                 }
-                 @include media($medium) {
-                   @include font-size(18,yes,28);
-                 }
-               }
-               a {
-                 @include font-size(16,no);
-                 text-decoration: none;
-                 color: $boston-red;
-               }
-               .social-icon {
-                 margin: 0px 6px;
-               }
-               .icon {
-                 display: inline-block;
-                 width: 1em;
-                 height: 1em;
-                 stroke-width: 0;
-                 stroke: currentColor;
-                 fill: currentColor;
-               }
-               .icon-linkedin {
-                 font-size: 32px;
-                 color: $black;
-                 &:hover {
-                   color: $linkedin-color;
-                 }
-               }
-               .icon-instagram {
-                 font-size: 32px;
-                 color: $black;
-                 &:hover {
-                   color: $instagram-color;
-                 }
-               }
-               .icon-github {
-                 font-size: 32px;
-                 color: $black;
-                 &:hover {
-                   color: $github-color;
-                 }
-               }
-               .icon-facebook {
-                 font-size: 32px;
-                 color: $black;
-                 &:hover {
-                   color: $facebook-color;
-                 }
-               }
-               h5 {
-                 margin-bottom: 20px;
-               }
-           }
-       }
-   }
+  .col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 100%;
+    max-width: 100%;
+    @include media($small) {
+      flex: 33%;
+      max-width: 33%;
+    }
+    .bio-pic {
+      border-radius: 50%;
+      padding-right: 20px;
+    }
+    .text {
+      text-align: center;
+      .sayhi {
+        @include font-size(20, no);
+        font-family: $hi-font;
+        color: $boston-red;
+      }
+      .sayhitext {
+        @include font-size(18, yes, 28);
+        @include media($small) {
+          @include font-size(16, yes, 26);
+        }
+        @include media($medium) {
+          @include font-size(18, yes, 28);
+        }
+      }
+      a {
+        @include font-size(16, no);
+        text-decoration: none;
+        color: $boston-red;
+      }
+      .social-icon {
+        margin: 0px 6px;
+      }
+      .icon {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        stroke-width: 0;
+        stroke: currentColor;
+        fill: currentColor;
+      }
+      .icon-linkedin {
+        font-size: 32px;
+        color: $black;
+        &:hover {
+          color: $linkedin-color;
+        }
+      }
+      .icon-instagram {
+        font-size: 32px;
+        color: $black;
+        &:hover {
+          color: $instagram-color;
+        }
+      }
+      .icon-github {
+        font-size: 32px;
+        color: $black;
+        &:hover {
+          color: $github-color;
+        }
+      }
+      .icon-facebook {
+        font-size: 32px;
+        color: $black;
+        &:hover {
+          color: $facebook-color;
+        }
+      }
+      h5 {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
 
 /* ==========================================================================
    Share This buttons
    ========================================================================== */
 
-   .sharethis {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      max-width: 485px;
-      .col {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        flex: 100%;
-        max-width: 100%;
-        @include media($small) {
-          flex: 33%;
-          max-width: 33%;
-      	}
-        a {
-          text-align: center;
-          align-content: center;
-        }
-      }
-      .first {
-        padding-right: 0;
-        @include media($small) {
-          padding-right: 5px;
-      	}
-      }
-      .middle {
-        padding: 0 0;
-        @include media($small) {
-          padding: 0 5px;
-      	}
-      }
-      .last {
-        padding-left: 0;
-        @include media($small) {
-          padding-left: 5px;
-      	}
-      }
-   }
+.sharethis {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 485px;
+  .col {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex: 100%;
+    max-width: 100%;
+    @include media($small) {
+      flex: 33%;
+      max-width: 33%;
+    }
+    a {
+      text-align: center;
+      align-content: center;
+    }
+  }
+  .first {
+    padding-right: 0;
+    @include media($small) {
+      padding-right: 5px;
+    }
+  }
+  .middle {
+    padding: 0 0;
+    @include media($small) {
+      padding: 0 5px;
+    }
+  }
+  .last {
+    padding-left: 0;
+    @include media($small) {
+      padding-left: 5px;
+    }
+  }
+}

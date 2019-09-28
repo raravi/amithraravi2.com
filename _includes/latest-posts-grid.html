@@ -1,18 +1,21 @@
 <div class="archive-wrap">
   <h4>You Might Also Like</h4>
   <ul class="th-grid">
-  {%- capture category_name %}{{ page.categories[1]] }}{% endcapture %}
-  {%- assign count = 1 -%}
-  {%- for post in site.categories.[category_name] -%}
-    {% if count <= 4 and post.title != page.title %}
-      <li><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
+    {%- capture category_name %}{{ page.categories[1]] }}{% endcapture %} {%-
+    assign count = 1 -%} {%- for post in site.categories.[category_name] -%} {%
+    if count <= 4 and post.title != page.title %}
+    <li>
+      <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
         <div>
-          <img src="{{ site.imagekiturl }}{{ site.images }}{{ site.teaser }}" data-src="{{ site.imagekiturl }}{{ site.images }}{{ post.teaser }}" alt="teaser">
+          <img
+            src="{{ site.imagekiturl }}{{ site.images }}{{ site.teaser }}"
+            data-src="{{ site.imagekiturl }}{{ site.images }}{{ post.teaser }}"
+            alt="teaser"
+          />
           <h6>{{ post.title }}</h6>
         </div>
-      </a></li>
-      {%- assign count = count | plus:1 -%}
-    {%- endif -%}
-  {%- endfor %}
+      </a>
+    </li>
+    {%- assign count = count | plus:1 -%} {%- endif -%} {%- endfor %}
   </ul>
 </div>

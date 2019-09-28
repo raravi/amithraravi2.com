@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo 'Error: no test specified' && exit 1",
     "htmlproofer": "bundle exec htmlproofer ./_site --allow-hash-href --check-favicon  --check-html --disable-external",
+    "prettier": "./node_modules/.bin/prettier --debug-check '_data/*.yml' '_includes/*.html' '_layouts/*.html' '_pages/*.md' '_sass/*.scss' '.circleci/config.yml' 'js/_main.js' '_config.yml' '.babelrc' '.eslintrc.json' '.jshintrc' 'cypress.json' 'Gruntfile.js' 'manifest.json' 'package.json' 'staticman.yml' 'sw.js' 'webpack.config.js'",
     "eslint": "./node_modules/.bin/eslint js/_main.js",
     "build": "bundle exec jekyll build",
     "serve": "bundle exec jekyll serve",
@@ -35,6 +36,7 @@
     "grunt-file-append": "0.0.7",
     "grunt-newer": "^1.3.0",
     "grunt-svgmin": "^5.0.0",
+    "prettier": "^1.18.2",
     "purgecss": "^1.4.0",
     "webpack": "^4.30.0",
     "webpack-cli": "^3.3.0"

@@ -124,10 +124,9 @@
 		//(pinterest, $pinterest-color),
 		//(rss, $rss-color),
 		//(tumblr, $tumblr-color),
-		(twitter, $twitter-color)//,
+		(twitter, $twitter-color);//,
 		//(vimeo, $vimeo-color),
 		//(youtube, $youtube-color)
-    ;
 	@extend .btn-inverse;
 	color: $text-color !important;
 	&:visited,

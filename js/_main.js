@@ -317,11 +317,10 @@ $(window).on("scroll", function() {
  * Defer Loading Images
  * For All pages except Articles/Portfolio.
  */
-Barba.Dispatcher.on("transitionCompleted", function(
-  //currentStatus,
-  //oldStatus,
-  //container
-) {
+Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
+//oldStatus,
+//container
+{
   if (
     document.getElementById("tiles-grid") == null &&
     document.getElementsByClassName("portfolio-tile").length == 0
@@ -347,11 +346,10 @@ Barba.Dispatcher.on("transitionCompleted", function(
  * Function for handling Comment Form submission on Posts.
  * Ajax call sends it to the server, where add-comment.php script will process it!
  */
-Barba.Dispatcher.on("transitionCompleted", function(
-  //currentStatus,
-  //oldStatus,
-  //container
-) {
+Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
+//oldStatus,
+//container
+{
   function showAlert(message) {
     $("#comment-form .js-notice").removeClass("hidden");
     $("#comment-form .js-notice-text").html(message);
@@ -472,11 +470,10 @@ var addComment = {
   }
 };
 
-Barba.Dispatcher.on("transitionCompleted", function(
-  //currentStatus,
-  //oldStatus,
-  //container
-) {
+Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
+//oldStatus,
+//container
+{
   var comments = document.getElementsByClassName("comment__reply");
   Array.prototype.forEach.call(comments, function(comment) {
     $(comment).on("click", function() {
@@ -497,11 +494,10 @@ Barba.Dispatcher.on("transitionCompleted", function(
  * Remove classes/style added by previous animation
  * Re-Init AnimeOnScroll.js to prevent errors in animation.
  */
-Barba.Dispatcher.on("transitionCompleted", function(
-  //currentStatus,
-  //oldStatus,
-  //container
-) {
+Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
+//oldStatus,
+//container
+{
   $(".button-all").on("click", function() {
     $(".button-all").addClass("is-checked");
     $(".button-tech").removeClass("is-checked");
@@ -517,14 +513,11 @@ Barba.Dispatcher.on("transitionCompleted", function(
       .children(".article-tile")
       .show();
 
-    new window.AnimOnScroll(
-      document.getElementById("tiles-grid"),
-      {
-        minDuration: 0.4,
-        maxDuration: 0.7,
-        viewportFactor: 0.1
-      }
-    );
+    new window.AnimOnScroll(document.getElementById("tiles-grid"), {
+      minDuration: 0.4,
+      maxDuration: 0.7,
+      viewportFactor: 0.1
+    });
   });
 
   $(".button-tech").on("click", function() {
@@ -542,14 +535,11 @@ Barba.Dispatcher.on("transitionCompleted", function(
       .children(".article-tile")
       .filter(".tech")
       .show();
-    new window.AnimOnScroll(
-      document.getElementById("tiles-grid"),
-      {
-        minDuration: 0.4,
-        maxDuration: 0.7,
-        viewportFactor: 0.1
-      }
-    );
+    new window.AnimOnScroll(document.getElementById("tiles-grid"), {
+      minDuration: 0.4,
+      maxDuration: 0.7,
+      viewportFactor: 0.1
+    });
   });
 
   $(".button-personal").on("click", function() {
@@ -568,14 +558,11 @@ Barba.Dispatcher.on("transitionCompleted", function(
       .filter(".personal")
       .show();
 
-    new window.AnimOnScroll(
-      document.getElementById("tiles-grid"),
-      {
-        minDuration: 0.4,
-        maxDuration: 0.7,
-        viewportFactor: 0.1
-      }
-    );
+    new window.AnimOnScroll(document.getElementById("tiles-grid"), {
+      minDuration: 0.4,
+      maxDuration: 0.7,
+      viewportFactor: 0.1
+    });
   });
 });
 
@@ -583,20 +570,16 @@ Barba.Dispatcher.on("transitionCompleted", function(
  * Articles Page - Loading Animation
  * Uses AnimeOnScroll.js
  */
-Barba.Dispatcher.on("transitionCompleted", function(
-  //currentStatus,
-  //oldStatus,
-  //container
-) {
+Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
+//oldStatus,
+//container
+{
   if (document.getElementById("tiles-grid") != null) {
-    new window.AnimOnScroll(
-      document.getElementById("tiles-grid"),
-      {
-        minDuration: 0.4,
-        maxDuration: 0.7,
-        viewportFactor: 0.1
-      }
-    );
+    new window.AnimOnScroll(document.getElementById("tiles-grid"), {
+      minDuration: 0.4,
+      maxDuration: 0.7,
+      viewportFactor: 0.1
+    });
   }
 });
 
@@ -605,11 +588,10 @@ Barba.Dispatcher.on("transitionCompleted", function(
  * Uses anime.js
  * Based on 'Shu' animation from https://tympanus.net/Development/GridLoadingAnimations/
  */
-Barba.Dispatcher.on("transitionCompleted", function(
-  //currentStatus,
-  //oldStatus,
-  //container
-) {
+Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
+//oldStatus,
+//container
+{
   var portfolioLinks = document.getElementsByClassName("portfolio-link");
   if (document.getElementsByClassName("portfolio-tile").length > 0) {
     imagesLoaded(portfolioLinks, function() {

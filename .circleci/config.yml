@@ -58,6 +58,9 @@ jobs:
           paths:
             - ./node_modules
       - run:
+          name: Run ESLint
+          command: ./node_modules/.bin/eslint --version
+      - run:
           name: Run webpack
           command: npm run webpack
       - run:

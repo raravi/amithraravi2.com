@@ -362,37 +362,43 @@ Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
     $(form).addClass("disabled");
     $("#comment-form-submit").html("Loading...");
 
+    /* eslint-disable */
     grecaptcha.ready(function() {
-      grecaptcha.execute('6Le7grwUAAAAAITi3vzGaO8Vi9GvjiRaJss9OtXP', {action: 'add-comment'}).then(function(token) {
-        $("#comment-token").attr("value",token);
-        $.ajax({
-          type: $(this).attr("method"),
-          url: $(this).attr("action"),
-          data: $(this).serialize(),
-          contentType: "application/x-www-form-urlencoded"
+      grecaptcha
+        .execute("6Le7grwUAAAAAITi3vzGaO8Vi9GvjiRaJss9OtXP", {
+          action: "add-comment"
         })
-          .done(function(data) {
-            console.log(data);
-            $("#comment-form-submit").html("Submitted");
-            $("#comment-form .js-notice")
-              .removeClass("notice--danger")
-              .addClass("notice--success");
-            showAlert(
-              "<strong>Thank you!</strong> Your comment will show up here once it has been approved by the moderator."
-            );
+        .then(function(token) {
+          $("#comment-token").attr("value", token);
+          $.ajax({
+            type: $(this).attr("method"),
+            url: $(this).attr("action"),
+            data: $(this).serialize(),
+            contentType: "application/x-www-form-urlencoded"
           })
-          .fail(function(/*err*/) {
-            $("#comment-form-submit").html("Submit Comment");
-            $("#comment-form .js-notice")
-              .removeClass("notice--success")
-              .addClass("notice--danger");
-            showAlert(
-              "<strong>Sorry, there was an error with your submission.</strong> Please make sure all required fields have been completed and try again."
-            );
-            $(form).removeClass("disabled");
-          });
-      });
+            .done(function(data) {
+              console.log(data);
+              $("#comment-form-submit").html("Submitted");
+              $("#comment-form .js-notice")
+                .removeClass("notice--danger")
+                .addClass("notice--success");
+              showAlert(
+                "<strong>Thank you!</strong> Your comment will show up here once it has been approved by the moderator."
+              );
+            })
+            .fail(function(/*err*/) {
+              $("#comment-form-submit").html("Submit Comment");
+              $("#comment-form .js-notice")
+                .removeClass("notice--success")
+                .addClass("notice--danger");
+              showAlert(
+                "<strong>Sorry, there was an error with your submission.</strong> Please make sure all required fields have been completed and try again."
+              );
+              $(form).removeClass("disabled");
+            });
+        });
     });
+    /* eslint-enable */
 
     return false;
   });

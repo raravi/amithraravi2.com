@@ -364,13 +364,11 @@ Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
 
     /* eslint-disable */
     grecaptcha.ready(function() {
-      console.log("In grecaptcha ready fn");
       grecaptcha
         .execute("6Le7grwUAAAAAITi3vzGaO8Vi9GvjiRaJss9OtXP", {
           action: "addcomment"
         })
         .then(function(token) {
-          console.log(token);
           $("#comment-token").attr("value", token);
           $.ajax({
             type: $(this).attr("method"),
@@ -379,7 +377,6 @@ Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
             contentType: "application/x-www-form-urlencoded"
           })
             .done(function(/*data*/) {
-              //console.log(data);
               $("#comment-form-submit").html("Submitted");
               $("#comment-form .js-notice")
                 .removeClass("notice--danger")

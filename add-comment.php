@@ -53,6 +53,8 @@
         $txt = "slug: $slug\n";
         fwrite($myfile, $txt);
 
+        $txt = "token: $token\n";
+        fwrite($myfile, $txt);
         if($responseKeys["success"]) {
           //echo json_encode(array('success' => 'true'));
           $txt = "reCaptchaSuccess: true\n";

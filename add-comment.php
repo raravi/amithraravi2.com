@@ -53,21 +53,21 @@
         $txt = "slug: $slug\n";
         fwrite($myfile, $txt);
 
-        $responseKeysSuccess = $responseKeys["success"];
+        /*$responseKeysSuccess = $responseKeys["success"];
         $txt = "reCaptchaSuccess: $responseKeysSuccess\n";
         fwrite($myfile, $txt);
         $responseKeysScore = $responseKeys["score"];
         $txt = "reCaptchaScore: $responseKeysScore\n";
         fwrite($myfile, $txt);
         $responseKeysAction = $responseKeys["action"];
-        $txt = "reCaptchaScore: $responseKeysAction\n";
+        $txt = "reCaptchaAction: $responseKeysAction\n";
         fwrite($myfile, $txt);
         $responseKeysTS = $responseKeys["challenge_ts"];
-        $txt = "reCaptchaScore: $responseKeysTS\n";
+        $txt = "reCaptchaTimestamp: $responseKeysTS\n";
         fwrite($myfile, $txt);
         $responseKeysHost = $responseKeys["hostname"];
-        $txt = "reCaptchaScore: $responseKeysHost\n";
-        fwrite($myfile, $txt);
+        $txt = "reCaptchaHost: $responseKeysHost\n";
+        fwrite($myfile, $txt);*/
 
         fclose($myfile);
 

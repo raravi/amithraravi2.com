@@ -10,6 +10,26 @@
         $replyingto = trim($_POST['replyingto']);
         $slug       = $_POST['slug'];
 
+        $token       = $_POST['token'];
+        $secretKey = "6Le7grwUAAAAAPpp3bSKRUfr6-iXTjhnF9_I1TbN";
+
+        // post request to server
+        $recaptchaurl = 'https://www.google.com/recaptcha/api/siteverify';
+        $data = array('secret' => $secretKey, 'response' => $token);
+
+        $options = array(
+          'http' => array(
+            'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+            'method'  => 'POST',
+            'content' => http_build_query($data)
+          )
+        );
+        $context  = stream_context_create($options);
+        $response = file_get_contents($recaptchaurl, false, $context);
+        $responseKeys = json_decode($response,true);
+        //header('Content-type: application/json');
+        // end post request
+
         $date = new DateTime();
         $datetostring = $date->getTimestamp();
         $myfilename = "entry$datetostring.yml";
@@ -32,6 +52,17 @@
         fwrite($myfile, $txt);
         $txt = "slug: $slug\n";
         fwrite($myfile, $txt);
+
+        if($responseKeys["success"]) {
+          //echo json_encode(array('success' => 'true'));
+          $txt = "reCaptchaSuccess: true\n";
+          fwrite($myfile, $txt);
+        } else {
+          //echo json_encode(array('success' => 'false'));
+          $txt = "reCaptchaSuccess: false\n";
+          fwrite($myfile, $txt);
+        }
+
         fclose($myfile);
 
         exit("OK");

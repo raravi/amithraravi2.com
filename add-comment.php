@@ -1,10 +1,12 @@
 <?php
+    $errorlog = 'error.log';
+    file_put_contents($errorlog, print_r("\n===================\n", true), FILE_APPEND);
+    file_put_contents($errorlog, print_r("Beginning of Script\n", true), FILE_APPEND);
+
     header("Content-type: text/plain; charset=utf-8", true, 200); //Response body is text
     if(isset($_POST['replyingto'])) {
 
-        $errorlog = 'error.log';
-        file_put_contents($errorlog, print_r("\n===================\n", true), FILE_APPEND);
-        file_put_contents($errorlog, print_r("Beginning of Script\n", true), FILE_APPEND);
+        file_put_contents($errorlog, print_r("replyingto is set\n", true), FILE_APPEND);
 
         $post       = $_POST;
         $message    = trim($_POST['message']);
@@ -78,6 +80,10 @@
 
         exit("OK");
     }
-    else
+    else {
+        file_put_contents($errorlog, print_r("replyingto is not set\n", true), FILE_APPEND);
+        file_put_contents($errorlog, print_r("End of Script\n", true), FILE_APPEND);
+        file_put_contents($errorlog, print_r("===================\n", true), FILE_APPEND);
         exit("INVALID REQUEST.");
+    }
 ?>

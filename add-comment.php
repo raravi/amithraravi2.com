@@ -14,7 +14,7 @@
         $secretKey = "6Le7grwUAAAAAPpp3bSKRUfr6-iXTjhnF9_I1TbN";
 
         // post request to server
-        $recaptchaurl = 'https://www.google.com/recaptcha/api/siteverify';
+        /*$recaptchaurl = 'https://www.google.com/recaptcha/api/siteverify';
         $data = array('secret' => $secretKey, 'response' => $token);
 
         $options = array(
@@ -25,7 +25,9 @@
           )
         );
         $context  = stream_context_create($options);
-        $response = file_get_contents($recaptchaurl, false, $context);
+        $response = file_get_contents($recaptchaurl, false, $context);*/
+        $recaptchaurl =  'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) . '&response=' . urlencode($token);
+        $response = file_get_contents($recaptchaurl);
         $responseKeys = json_decode($response,true);
         //header('Content-type: application/json');
         // end post request
@@ -53,7 +55,7 @@
         $txt = "slug: $slug\n";
         fwrite($myfile, $txt);
 
-        /*$responseKeysSuccess = $responseKeys["success"];
+        $responseKeysSuccess = $responseKeys["success"];
         $txt = "reCaptchaSuccess: $responseKeysSuccess\n";
         fwrite($myfile, $txt);
         $responseKeysScore = $responseKeys["score"];
@@ -67,7 +69,7 @@
         fwrite($myfile, $txt);
         $responseKeysHost = $responseKeys["hostname"];
         $txt = "reCaptchaHost: $responseKeysHost\n";
-        fwrite($myfile, $txt);*/
+        fwrite($myfile, $txt);
 
         fclose($myfile);
 

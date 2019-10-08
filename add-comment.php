@@ -53,17 +53,21 @@
         $txt = "slug: $slug\n";
         fwrite($myfile, $txt);
 
-        $txt = "token: $token\n";
+        $responseKeysSuccess = $responseKeys["success"];
+        $txt = "reCaptchaSuccess: $responseKeysSuccess\n";
         fwrite($myfile, $txt);
-        if($responseKeys["success"]) {
-          //echo json_encode(array('success' => 'true'));
-          $txt = "reCaptchaSuccess: true\n";
-          fwrite($myfile, $txt);
-        } else {
-          //echo json_encode(array('success' => 'false'));
-          $txt = "reCaptchaSuccess: false\n";
-          fwrite($myfile, $txt);
-        }
+        $responseKeysScore = $responseKeys["score"];
+        $txt = "reCaptchaScore: $responseKeysScore\n";
+        fwrite($myfile, $txt);
+        $responseKeysAction = $responseKeys["action"];
+        $txt = "reCaptchaScore: $responseKeysAction\n";
+        fwrite($myfile, $txt);
+        $responseKeysTS = $responseKeys["challenge_ts"];
+        $txt = "reCaptchaScore: $responseKeysTS\n";
+        fwrite($myfile, $txt);
+        $responseKeysHost = $responseKeys["hostname"];
+        $txt = "reCaptchaScore: $responseKeysHost\n";
+        fwrite($myfile, $txt);
 
         fclose($myfile);
 

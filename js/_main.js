@@ -370,6 +370,7 @@ Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
           action: "addcomment"
         })
         .then(function(token) {
+          console.log(token);
           $("#comment-token").attr("value", token);
           $.ajax({
             type: $(this).attr("method"),

@@ -371,9 +371,9 @@ Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
         .then(function(token) {
           $("#comment-token").attr("value", token);
           $.ajax({
-            type: $(this).attr("method"),
-            url: $(this).attr("action"),
-            data: $(this).serialize(),
+            type: $(form).attr("method"),
+            url: $(form).attr("action"),
+            data: $(form).serialize(),
             contentType: "application/x-www-form-urlencoded"
           })
             .done(function(/*data*/) {

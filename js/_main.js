@@ -364,12 +364,13 @@ Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
 
     /* eslint-disable */
     grecaptcha.ready(function() {
+      console.log("In grecaptcha ready fn");
       grecaptcha
         .execute("6Le7grwUAAAAAITi3vzGaO8Vi9GvjiRaJss9OtXP", {
           action: "addcomment"
         })
         .then(function(token) {
-          $("#comment-token").attr("value", token);
+          //$("#comment-token").attr("value", token);
           $.ajax({
             type: $(this).attr("method"),
             url: $(this).attr("action"),

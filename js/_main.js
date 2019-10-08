@@ -362,10 +362,6 @@ Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
     $(form).addClass("disabled");
     $("#comment-form-submit").html("Loading...");
 
-    console.log($("#comment-form").attr("method"));
-    console.log($("#comment-form").attr("action"));
-    console.log($("#comment-form").serialize());
-
     /* eslint-disable */
     grecaptcha.ready(function() {
       grecaptcha
@@ -374,9 +370,6 @@ Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
         })
         .then(function(token) {
           $("#comment-token").attr("value", token);
-          console.log($("#comment-form").attr("method"));
-          console.log($("#comment-form").attr("action"));
-          console.log($("#comment-form").serialize());
           $.ajax({
             type: $("#comment-form").attr("method"),
             url: $("#comment-form").attr("action"),

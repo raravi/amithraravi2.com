@@ -370,15 +370,15 @@ Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
           action: "addcomment"
         })
         .then(function(token) {
-          //$("#comment-token").attr("value", token);
+          $("#comment-token").attr("value", token);
           $.ajax({
             type: $(this).attr("method"),
             url: $(this).attr("action"),
             data: $(this).serialize(),
             contentType: "application/x-www-form-urlencoded"
           })
-            .done(function(data) {
-              console.log(data);
+            .done(function(/*data*/) {
+              //console.log(data);
               $("#comment-form-submit").html("Submitted");
               $("#comment-form .js-notice")
                 .removeClass("notice--danger")

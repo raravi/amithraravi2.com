@@ -2,7 +2,8 @@
     header("Content-type: text/plain; charset=utf-8", true, 200); //Response body is text
     if(isset($_POST['replyingto'])) {
 
-        file_put_contents('/var/tmp/error.log', print_r("Beginning of Script", true), FILE_APPEND);
+        $errorlog = 'error.log';
+        file_put_contents($errorlog, print_r("Beginning of Script", true), FILE_APPEND);
 
         $post       = $_POST;
         $message    = trim($_POST['message']);
@@ -16,7 +17,7 @@
         $token       = $_POST['token'];
         $secretKey = "6Le7grwUAAAAAPpp3bSKRUfr6-iXTjhnF9_I1TbN";
 
-        file_put_contents('/var/tmp/error.log', print_r("Init done", true), FILE_APPEND);
+        file_put_contents($errorlog, print_r("Init done", true), FILE_APPEND);
 
         // post request to server
         $recaptchaurl =  'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) . '&response=' . urlencode($token);
@@ -24,7 +25,7 @@
         $responseKeys = json_decode($response,true);
         // end post request
 
-        file_put_contents('/var/tmp/error.log', print_r("reCaptcha verification done", true), FILE_APPEND);
+        file_put_contents($errorlog, print_r("reCaptcha verification done", true), FILE_APPEND);
 
         $date = new DateTime();
         $datetostring = $date->getTimestamp();
@@ -49,7 +50,7 @@
         $txt = "slug: $slug\n";
         fwrite($myfile, $txt);
 
-        file_put_contents('/var/tmp/error.log', print_r("Regular variables written", true), FILE_APPEND);
+        file_put_contents($errorlog, print_r("Regular variables written", true), FILE_APPEND);
 
         $responseKeysSuccess = $responseKeys["success"];
         $txt = "reCaptchaSuccess: $responseKeysSuccess\n";
@@ -67,11 +68,11 @@
         $txt = "reCaptchaHost: $responseKeysHost\n";
         fwrite($myfile, $txt);
 
-        file_put_contents('/var/tmp/error.log', print_r("Response variables written", true), FILE_APPEND);
+        file_put_contents($errorlog, print_r("Response variables written", true), FILE_APPEND);
 
         fclose($myfile);
 
-        file_put_contents('/var/tmp/error.log', print_r("End of Script", true), FILE_APPEND);
+        file_put_contents($errorlog, print_r("End of Script", true), FILE_APPEND);
 
         exit("OK");
     }

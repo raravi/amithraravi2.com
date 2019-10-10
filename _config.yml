@@ -125,3 +125,4 @@ exclude:
   - vendor/ruby/
   - scripts
   - cypress
+  - config.php

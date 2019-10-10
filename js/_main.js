@@ -365,7 +365,7 @@ Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
     /* eslint-disable */
     grecaptcha.ready(function() {
       grecaptcha
-        .execute("6Le7grwUAAAAAITi3vzGaO8Vi9GvjiRaJss9OtXP", {
+        .execute("6Ld267wUAAAAAI_fRatpssUObDichF88iycOGqX9", {
           action: "addcomment"
         })
         .then(function(token) {

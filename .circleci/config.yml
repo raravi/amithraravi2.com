@@ -79,7 +79,7 @@ jobs:
       - run:
           name: Deploy _site/ folder over SSH
           command: |
-            rsync -a --progress --delete _site/ amithraravi.com@ssh.stackcp.com:/home/sites/1a/8/89ee07bb2f/public_html/ --exclude=/.git/ --exclude=/cgi-bin/ --exclude=/.gitignore --exclude=/entry*.yml --exclude=/google*.html --exclude=/stackms.php
+            rsync -a --progress --delete _site/ amithraravi.com@ssh.stackcp.com:/home/sites/1a/8/89ee07bb2f/public_html/ --exclude=/.git/ --exclude=/cgi-bin/ --exclude=/.well-known/ --exclude=/.gitignore --exclude=/entry*.yml --exclude=/google*.html --exclude=/stackms.php
       - run:
           name: Deploy dist/ folder over SSH
           command: |

@@ -88,7 +88,6 @@ social:
     - https://runkeeper.com/user/raravi
 
 include:
-  - .htaccess
   - _pages
 
 exclude:
@@ -126,3 +125,6 @@ exclude:
   - scripts
   - cypress
   - config.php
+  - Dockerfile
+  - .htaccess
+  - .docker

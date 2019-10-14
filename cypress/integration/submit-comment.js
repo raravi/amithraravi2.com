@@ -19,19 +19,7 @@ describe("Comment Submission", function() {
 
     cy.get("#comment-form-email").type("first.last@email.com");
 
-    cy.server(); // enable response stubbing
-
-    cy.route({
-      method: "POST",           // Route all POST requests
-      url: "/add-comment.php",  // that have a URL that matches '/articles/*', and
-      status: 200,              // send status (of response) of 200
-      response: "OK",           // and force the response to be: "OK"
-      delay: 2000,              // response returns after 2 seconds
-    });
-
     cy.get("#comment-form-submit").click();
-
-    cy.server({ enable: false }); // disable response stubbing
 
     cy.get(".js-notice").should("have.class", "notice--success");
   });

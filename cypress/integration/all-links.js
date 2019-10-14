@@ -14,7 +14,7 @@ describe("My First Test", function() {
     cy.contains("Web Design / Digital Marketing").click();
     cy.url().should("include", "/portfolio/web-design/");
 
-    cy.contains("amiTh raravi").click();
+    cy.contains("raravi").click();
     cy.url().should("include", "/");
 
     cy.get("footer").contains("About Me").click();
@@ -24,6 +24,6 @@ describe("My First Test", function() {
     cy.url().should("include", "/terms/");
 
     cy.visit("/term/", { failOnStatusCode: false });
-    cy.contains("not found");
+    cy.contains("404 or SOS ?!");
   });
 });

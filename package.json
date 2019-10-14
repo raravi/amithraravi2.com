@@ -17,7 +17,7 @@
     "purgecss": "purgecss --css _site/css/main.css --content _site/index.html _site/**/index.html _site/**/**/index.html _site/**/**/**/index.html dist/main.js --out dist/",
     "build:full": "npm run prettier:check && npm run eslint && bundle exec jekyll build && npm run webpack && npm run purgecss && npm run htmlproofer && bundle exec jekyll build",
     "serve:full": "npm run prettier:check && npm run eslint && bundle exec jekyll build && npm run webpack && npm run purgecss && npm run htmlproofer && bundle exec jekyll serve",
-    "docker:build": "docker build -t amithraravi-docker .",
+    "docker:build": "docker build --file .docker/Dockerfile -t amithraravi-docker .",
     "docker:run": "docker run --rm -d -p 4000:80 --name amithraravi -v \"$PWD/_site\":/var/www/html amithraravi-docker",
     "docker:stop": "docker stop amithraravi",
     "docker:rmi": "docker rmi amithraravi-docker",

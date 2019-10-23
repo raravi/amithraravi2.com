@@ -57,6 +57,8 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - ./node_modules
+            - ~/.npm
+            - ~/.cache
       - run:
           name: Run webpack
           command: npm run webpack

@@ -1,0 +1,16 @@
+_id: 1573917181
+replying_to: '0'
+message: "Thanks for sharing the solution.\r\n\r\n
+actually it works fine in dev environment but when you run build command it throws an error:
+error 'window' is not available during server side rendering.\r\n\r\nany idea how to work around that?\r\n\r\nthanks."
+name: Haithem
+email: d0b8c6797c81aa1d3a76508b079c857c
+emailorig: lezoku@gmail.com
+url:
+date: 1573917181
+slug: how-to-make-isotope-work-in-a-gatsby-site
+reCaptchaSuccess: 1
+reCaptchaScore: 0.9
+reCaptchaAction: addcomment
+reCaptchaTimestamp: 2019-11-16T14:36:23Z
+reCaptchaHost: www.amithraravi.com

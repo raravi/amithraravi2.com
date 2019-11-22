@@ -1,6 +1,6 @@
 _id: 1574441365
 replying_to: '2'
-message: "Hi Haithem,\r\n\r\nI don't see 'window' variable being used in my code above. Maybe it's from somewhere else in your code?!\r\n\r\nHope this helps, a little bit of Googling through this link: https://www.gatsbyjs.org/docs/debugging-html-builds/#how-to-check-if-code-classlanguage-textwindowcode-is-defined\r\n\r\nRegards,  \r\nAmith Raravi"
+message: "Hi Haithem,\r\n\r\nI don't see 'window' variable being used in my code above. Maybe it's from somewhere else in your code?!\r\n\r\nHope this helps, a little bit of Googling threw this link: https://www.gatsbyjs.org/docs/debugging-html-builds/#how-to-check-if-code-classlanguage-textwindowcode-is-defined\r\n\r\nRegards,  \r\nAmith Raravi"
 name: Amith Raravi
 email: f53870600465fb505ecf3d559cefccc5
 emailorig: amith.raravi@gmail.com

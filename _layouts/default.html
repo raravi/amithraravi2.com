@@ -19,6 +19,7 @@
     <link rel="preconnect" href="https://www.googletagmanager.com" />
     <link rel="preconnect" href="https://www.google-analytics.com" />
     <link rel="preconnect" href="https://stats.g.doubleclick.net" />
+    <link rel="preconnect" href="https://www.google.com/recaptcha/api.js" />
     <meta name="description" content={% if page.layout == "article" %}"{{
     page.excerpt | strip_html | strip | truncate: 160 }}"{% else %}"{{
     site.description }}"{% endif %} />
@@ -244,7 +245,6 @@
       }
     </script>
     {%- endif %}
-    <script src="https://www.google.com/recaptcha/api.js?render=6Ld267wUAAAAAI_fRatpssUObDichF88iycOGqX9"></script>
   </head>
   <body id="js-body">
     <svg
@@ -309,6 +309,14 @@
         element = document.createElement("script");
         element.innerHTML =
           'window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "UA-96482099-1");';
+        document.body.appendChild(element);
+
+        element = document.createElement("script");
+        element.async = true;
+        element.setAttribute(
+          "src",
+          "https://www.google.com/recaptcha/api.js?render=6Ld267wUAAAAAI_fRatpssUObDichF88iycOGqX9"
+        );
         document.body.appendChild(element);
       }
       if (window.addEventListener)

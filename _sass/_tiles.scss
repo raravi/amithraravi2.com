@@ -171,22 +171,22 @@
       }
     }*/
   }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 1120px) {
     .col {
-      flex: 100%;
-      max-width: 400px;
+      flex: 30.95%;
+      max-width: 30.95%;
     }
   }
-  @media screen and (min-width: 481px) and (max-width: 900px) {
+  @media screen and (max-width: 900px) {
     .col {
       flex: 45.3%; // There is a side-effect to figure out here!! This should ideally be 50%. But right now, 50% will not display items in 2nd column properly on Firefox. (I know why :))
       max-width: 45.3%;
     }
   }
-  @media screen and (min-width: 901px) and (max-width: 1120px) {
+  @media screen and (max-width: 480px) {
     .col {
-      flex: 30.95%;
-      max-width: 30.95%;
+      flex: 100%;
+      max-width: 400px;
     }
   }
 }
@@ -393,23 +393,22 @@
     max-width: 23.05%;
     margin: 0px 10px 35px;
   }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 1120px) {
     .col {
-      flex: 100%;
-      max-width: 400px;
+      flex: 30.95%;
+      max-width: 30.95%;
     }
   }
-  @media screen and (min-width: 481px) and (max-width: 900px) {
+  @media screen and (max-width: 900px) {
     .col {
       flex: 45.3%; // There is a side-effect to figure out here!! This should ideally be 50%. But right now, 50% will not display items in 2nd column properly on Firefox. (I know why :))
       max-width: 45.3%;
     }
   }
-  @media screen and (min-width: 901px) and (max-width: 1120px) {
-    //@media screen and (min-width: 901px) {
+  @media screen and (max-width: 480px) {
     .col {
-      flex: 30.95%;
-      max-width: 30.95%;
+      flex: 100%;
+      max-width: 400px;
     }
   }
 }

@@ -107,7 +107,6 @@ import classie from './classie.js';
               if (el.style.display == "" || el.style.display == "flex") {
                 showItems.push(el);
               }
-              //classie.add( el, 'shown' );
             }
           });
 
@@ -122,7 +121,7 @@ import classie from './classie.js';
             },
             easing: "easeOutExpo",
             delay: function(t, i) {
-              return 250 + i * 20;
+              return 50 + i * 20;
             },
             opacity: {
               value: [0, 1],
@@ -131,7 +130,7 @@ import classie from './classie.js';
               },
               easing: "linear"
             },
-            translateY: [400, 0]
+            translateY: [250, 0]
           };
 
           animeOpts.targets = [].slice.call(showItems).sort(function(a, b) {
@@ -143,14 +142,6 @@ import classie from './classie.js';
 
           anime.remove(animeOpts.targets);
           anime(animeOpts);
-
-          var imgDefer = document.getElementsByTagName('img');
-          for (var i=0; i<imgDefer.length; i++) {
-            if(imgDefer[i].getAttribute('data-src')) {
-              imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
-              imgDefer[i].removeAttribute('data-src');
-            }
-          }
 
           // animate on scroll the items inside the viewport
           window.addEventListener(
@@ -168,61 +159,19 @@ import classie from './classie.js';
             false
           );
         } else {
-          // the items already shown...
+          // show all items
+          // disable animations
           var showItems = [];
           self.items.forEach(function(el, i) {
-            self._checkTotalRendered();
-            showItems.push(el);
+            classie.add(el, 'shown');
           });
-
-          /**
-           * Animation from (https://tympanus.net/Development/GridLoadingAnimations/)
-           * Uses anime.js
-           */
-          var animeOpts = {
-            targets: showItems,
-            duration: function(t, i) {
-              return 1000 + i * 50;
-            },
-            easing: "easeOutExpo",
-            delay: function(t, i) {
-              return 250 + i * 20;
-            },
-            opacity: {
-              value: [0, 1],
-              duration: function(t, i) {
-                return 250 + i * 50;
-              },
-              easing: "linear"
-            },
-            translateY: [400, 0]
-          };
-
-          animeOpts.targets = [].slice.call(showItems).sort(function(a, b) {
-            var aBounds = a.getBoundingClientRect(),
-              bBounds = b.getBoundingClientRect();
-
-            return aBounds.left - bBounds.left || aBounds.top - bBounds.top;
-          });
-
-          anime.remove(animeOpts.targets);
-          anime(animeOpts);
-
-          // animate on scroll the items inside the viewport
-          window.addEventListener(
-            "scroll",
-            function() {
-              self._onScrollFn();
-            },
-            false
-          );
-          window.addEventListener(
-            "resize",
-            function() {
-              self._resizeHandler();
-            },
-            false
-          );
+        }
+        var imgDefer = document.getElementsByTagName('img');
+        for (var i=0; i<imgDefer.length; i++) {
+          if(imgDefer[i].getAttribute('data-src')) {
+            imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+            imgDefer[i].removeAttribute('data-src');
+          }
         }
       });
     },

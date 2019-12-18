@@ -2,7 +2,7 @@
 layout: article
 title: "Bash: Automating Comments Submission for a Static Site"
 author: amith_raravi
-excerpt: "Automate the comments submission on my static site by using BASH scripts to automate backend processing."
+excerpt: "Automate publishing of new comments submitted to your static site."
 date: 2019-09-22 16:06:00 +0530
 modified:
 categories: [articles, tech]

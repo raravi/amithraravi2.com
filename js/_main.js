@@ -636,7 +636,7 @@ Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
         var animeLineDrawingOpts = {
           duration: 800,
           delay: function(t, i) {
-            return i * 150 + 300;
+            return i * 150 + 50;
           },
           easing: "easeInOutSine",
           strokeDashoffset: [anime.setDashoffset, 0],
@@ -654,9 +654,9 @@ Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
 
         var animeOpts = {
           duration: 800,
-          easing: [0.2, 1, 0.3, 1],
+          easing: [0.3, 1, 0.7, 1],
           delay: function(t, i) {
-            return i * 150 + 1500;
+            return i * 150 + 1200;
           },
           opacity: {
             value: [0, 1],
@@ -668,16 +668,16 @@ Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
 
         anime.remove(animeOpts.targets);
         anime(animeOpts);
-
-        var imgDefer = document.getElementsByTagName("img");
-        for (var i = 0; i < imgDefer.length; i++) {
-          if (imgDefer[i].getAttribute("data-src")) {
-            imgDefer[i].setAttribute(
-              "src",
-              imgDefer[i].getAttribute("data-src")
-            );
-            imgDefer[i].removeAttribute("data-src");
-          }
+      } else {
+        [].slice.call(portfolioLinks).forEach(function(item) {
+          item.style.opacity = 1;
+        });
+      }
+      var imgDefer = document.getElementsByTagName("img");
+      for (var i = 0; i < imgDefer.length; i++) {
+        if (imgDefer[i].getAttribute("data-src")) {
+          imgDefer[i].setAttribute("src", imgDefer[i].getAttribute("data-src"));
+          imgDefer[i].removeAttribute("data-src");
         }
       }
     });

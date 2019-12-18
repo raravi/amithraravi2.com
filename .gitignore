@@ -8,6 +8,7 @@ node_modules
 _asset_bundler_cache
 .sass-cache
 .jekyll-metadata
+.jekyll-cache
 cypress/integration/examples
 config.php
 .htaccess

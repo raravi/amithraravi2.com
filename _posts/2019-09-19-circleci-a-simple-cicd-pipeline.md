@@ -2,7 +2,7 @@
 layout: article
 title: "CircleCI: A Simple CI/CD Pipeline for Your Static Site"
 author: amith_raravi
-excerpt: "Using CircleCI to build a CI/CD pipeline for deploying to my static site."
+excerpt: "Use CircleCI to build a CI/CD pipeline for deploying to a static site."
 date: 2019-09-19 16:06:00 +0530
 modified:
 categories: [articles, tech]

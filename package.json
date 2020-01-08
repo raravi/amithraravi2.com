@@ -35,7 +35,7 @@
     "babel-loader": "^8.0.6",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "clean-webpack-plugin": "^2.0.2",
-    "cypress": "^3.8.0",
+    "cypress": "^3.8.1",
     "eslint": "^6.7.2",
     "grunt": "^1.0.4",
     "grunt-contrib-imagemin": "^3.1.0",

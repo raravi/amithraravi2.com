@@ -44,7 +44,7 @@ constructor() {
 import styles from "./grid.module.scss";
 ...
 ...
-      <div className={styles.filtersButtonGroup}>
+      <div className={styles.filtersButtonGroup}></div>
 ...
 ...
 ```
@@ -258,6 +258,8 @@ Well, I thought so too. And my first implementation had the initialization code 
 Finally, I came up with the idea of initializing before use in each of the 3 `handleClick` functions. You can see that the initialising code is called only when the Isotope is `undefined`, meaning it only runs once.
 
 Now, you can insert the **GridFilter** React component into any of your pages. All you need to do is supply the class names for your grid and grid-item in the initialization code of the component!
+
+Edit (26 Jan 2020): `gatsby build` fails with the error: `window is not defined`. You can read the blog post [Gatsby and the 'window' variable]({{ site.url }}{% post_url 2020-01-24-gatsby-and-the-window-variable %}) to understand this issue and how to fix it!
 
 Note: _Cover Photo by [Sharon McCutcheon](https://unsplash.com/@sharonmccutcheon) on [Unsplash](https://unsplash.com/)!_
 

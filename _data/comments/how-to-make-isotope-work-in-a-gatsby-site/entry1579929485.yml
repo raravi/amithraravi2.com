@@ -1,0 +1,31 @@
+_id: 1579929485
+replying_to: '2'
+message: "I had the exact same problem. The issue is that `Isotope` expects `window` to be defined, which fails during server-side rendering.\r\n\r\nThe fix is rather simple in this case. I followed what's suggested on Gatsby doc [here](https://www.gatsbyjs.org/docs/debugging-html-builds/#fixing-third-party-modules).\r\n
+\r\n
+\r\n```javascript
+\r\nexports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+\r\n  if (stage === 'build-html') {
+\r\n    actions.setWebpackConfig({
+\r\n      module: {
+\r\n        rules: [
+\r\n          {
+\r\n            test: /isotope-layout/,
+\r\n            use: loaders.null(),
+\r\n          },
+\r\n        ],
+\r\n      },
+\r\n    });
+\r\n  }
+\r\n};
+\r\n```"
+name: B
+email: 214a3822679140b3d5837138ac0c4aac
+emailorig: bumhan.yu@gmail.com
+url:
+date: 1579929485
+slug: how-to-make-isotope-work-in-a-gatsby-site
+reCaptchaSuccess: 1
+reCaptchaScore: 0.9
+reCaptchaAction: addcomment
+reCaptchaTimestamp: 2020-01-25T05:13:00Z
+reCaptchaHost: www.amithraravi.com

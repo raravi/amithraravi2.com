@@ -79,7 +79,7 @@ jobs:
       - run:
           name: Deploy _site/ folder over SSH
           command: |
-            rsync -a --progress --delete _site/ dh_hc94wb@templer.dreamhost.com:/home/dh_hc94wb/amithraravi.com/ --exclude=/.git/ --exclude=/cgi-bin/ --exclude=/.well-known/ --exclude=/.gitignore --exclude=/entry*.yml --exclude=/google*.html --exclude=/stackms.php
+            rsync -a --progress --delete _site/ dh_hc94wb@templer.dreamhost.com:/home/dh_hc94wb/amithraravi.com/ --exclude=/.git/ --exclude=/cgi-bin/ --exclude=/.well-known/ --exclude=/.htaccess --exclude=/.gitignore --exclude=/entry*.yml --exclude=/google*.html --exclude=/stackms.php
       - run:
           name: Deploy dist/ folder over SSH
           command: |

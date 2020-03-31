@@ -2,23 +2,21 @@
 
 ![raravi](https://img.shields.io/github/license/raravi/amithraravi2.com)&nbsp;&nbsp;![raravi](https://img.shields.io/github/package-json/v/raravi/amithraravi2.com)&nbsp;&nbsp;![raravi](https://img.shields.io/circleci/build/github/raravi/amithraravi2.com)&nbsp;&nbsp;![raravi](https://img.shields.io/depfu/raravi/amithraravi2.com)&nbsp;&nbsp;![raravi](https://img.shields.io/github/last-commit/raravi/amithraravi2.com)&nbsp;&nbsp;![raravi](https://img.shields.io/website?url=https%3A%2F%2Fwww.amithraravi.com)
 
-My Personal Website
+**My Personal Website**: This repo holds the source-code of my website www.amithraravi.com, in order to track the changes.
 
-This will hold the code of my website www.amithraravi.com, so that i don't accidentally delete it. I may need help from other contributors later on - once my website grows - hence creating a repo to track the changes.
-
-This is a work in progress. Just a little something I’m using to jump start a career refresh :)
-
-I like to think of it as a starter for building my freelancing work…
-
+Warning: This is a work in progress...
 ---
 
 ## Notable Features
 
-* Jekyll 3.x and GitHub Pages compatible.
-* Stylesheet built using Sass.
+* [Jekyll](https://github.com/jekyll/jekyll) 4.x and GitHub Pages compatible.
+* Stylesheet built using [Sass](https://sass-lang.com/).
 * Data files for easier customization of the site navigation/footer and for supporting multiple authors.
 * Comments using PHP script, table of contents, social sharing links, and Google AdSense ads.
-* Cloudflare as CDN for all, Imagekit for images.
-* Webpack for bundling Javascript into a single file. Previously used Grunt for tasks image optimisation / asset minification / javascript bundling.
-* Babel for ES6 support.
-* Keeping in mind the WCAG 2.1 guidelines to be accessible by all, the website maintains the right color contrast, size of buttons, ARIA labels, and many more features under the hood.
+* [Docker](https://www.docker.com/) container for local development.
+* [CircleCi](https://circleci.com/) integration for Continuous Integration / Continuous Delivery (CI/CD): On very commit, CircleCi workflow will run build and deploy to the web server (right now, [Dreamhost](https://www.dreamhost.com/)).
+* [Cypress](https://www.cypress.io/) for End-to-End testing.
+* [Cloudflare](https://www.cloudflare.com/) as CDN for all, [Imagekit](https://imagekit.io/) for images.
+* [Webpack](https://github.com/webpack/webpack) for bundling Javascript into a single file. Previously used [Grunt](https://github.com/gruntjs/grunt) for image optimisation / asset minification / javascript bundling.
+* [Babel](https://github.com/babel/babel) for ES6 support.
+* Keeping in mind the [WCAG](https://www.w3.org/WAI/tips/) 2.1 guidelines to be accessible by all, the website maintains the right color contrast, size of buttons, ARIA labels, and many more features under the hood.

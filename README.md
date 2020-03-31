@@ -1,5 +1,7 @@
 # Amith Raravi's Blog - Version 2.0
 
+![raravi](https://circleci.com/gh/raravi/amithraravi2.com.svg?style=svg)
+
 My Personal Website
 
 This will hold the code of my website www.amithraravi.com, so that i don't accidentally delete it. I may need help from other contributors later on - once my website grows - hence creating a repo to track the changes.

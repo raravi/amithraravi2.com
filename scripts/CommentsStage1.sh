@@ -1,7 +1,7 @@
 #!/bin/bash
 
-server="amithraravi.com@ssh.stackcp.com"
-src="/home/sites/1a/8/89ee07bb2f/public_html/entry*.yml"
+server="dh_hc94wb@templer.dreamhost.com"
+src="/home/dh_hc94wb/amithraravi.com/entry*.yml"
 destination="/Users/raravi/Programming/gitprojects/go/newcomments/"
 
 rsync_command=$(rsync -a --progress "$server:$src" "$destination" 2>/dev/null)

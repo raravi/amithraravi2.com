@@ -32,14 +32,14 @@
   "homepage": "https://www.amithraravi.com/",
   "license": "The MIT License (MIT)",
   "devDependencies": {
-    "@babel/core": "^7.7.5",
-    "@babel/preset-env": "^7.7.6",
-    "babel-loader": "^8.0.6",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "babel-loader": "^8.1.0",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "clean-webpack-plugin": "^2.0.2",
-    "cypress": "^3.8.1",
-    "eslint": "^6.7.2",
-    "grunt": "^1.0.4",
+    "cypress": "^4.3.0",
+    "eslint": "^6.8.0",
+    "grunt": "^1.1.0",
     "grunt-contrib-imagemin": "^3.1.0",
     "grunt-contrib-jshint": "^2.1.0",
     "grunt-contrib-uglify": "^4.0.1",
@@ -49,8 +49,8 @@
     "grunt-svgmin": "^5.0.0",
     "prettier": "^1.19.1",
     "purgecss": "^1.4.2",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10"
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
   },
   "dependencies": {}
 }

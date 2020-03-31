@@ -1,6 +1,6 @@
 # Amith Raravi's Blog - Version 2.0
 
-![raravi](https://circleci.com/gh/raravi/amithraravi2.com.svg?style=svg)
+![raravi](https://img.shields.io/circleci/build/github/raravi/amithraravi2.com)
 
 My Personal Website
 

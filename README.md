@@ -14,7 +14,7 @@ Warning: This is a work in progress...
 * Data files for easier customization of the site navigation/footer and for supporting multiple authors.
 * Comments using PHP script, table of contents, social sharing links, and Google AdSense ads.
 * [Docker](https://www.docker.com/) container for local development.
-* [CircleCi](https://circleci.com/) integration for Continuous Integration / Continuous Delivery (CI/CD): On very commit, CircleCi workflow will run build and deploy to the web server (right now, [Dreamhost](https://www.dreamhost.com/)).
+* [CircleCi](https://circleci.com/) integration for Continuous Integration / Continuous Delivery (CI/CD): On every commit, CircleCi workflow will run build and deploy to the web server (right now, [Dreamhost](https://www.dreamhost.com/)).
 * [Cypress](https://www.cypress.io/) for End-to-End testing.
 * [Cloudflare](https://www.cloudflare.com/) as CDN for all, [Imagekit](https://imagekit.io/) for images.
 * [Webpack](https://github.com/webpack/webpack) for bundling Javascript into a single file. Previously used [Grunt](https://github.com/gruntjs/grunt) for image optimisation / asset minification / javascript bundling.

@@ -1,6 +1,6 @@
 # Amith Raravi's Blog - Version 2.0
 
-![raravi](https://img.shields.io/circleci/build/github/raravi/amithraravi2.com)
+![raravi](https://img.shields.io/github/license/raravi/amithraravi2.com) ![raravi](https://img.shields.io/github/package-json/v/raravi/amithraravi2.com) ![raravi](https://img.shields.io/circleci/build/github/raravi/amithraravi2.com) ![raravi](https://img.shields.io/depfu/raravi/amithraravi2.com)
 
 My Personal Website
 

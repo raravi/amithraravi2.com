@@ -6,8 +6,6 @@
 
 Warning: This is a work in progress...
 
----
-
 ## Notable Features
 
 * [Jekyll](https://github.com/jekyll/jekyll) 4.x and GitHub Pages compatible.

@@ -11,16 +11,16 @@ import anime from "./vendor/anime.min.js";
  * Attempt Registration of the Service Worker on Page Load.
  */
 if ("serviceWorker" in navigator) {
-  window.addEventListener("load", function() {
+  window.addEventListener("load", function () {
     navigator.serviceWorker.register("/sw.js").then(
-      function(registration) {
+      function (registration) {
         // Registration was successful
         console.log(
           "ServiceWorker registration successful with scope: ",
           registration.scope
         );
       },
-      function(err) {
+      function (err) {
         // registration failed :(
         console.log("ServiceWorker registration failed: ", err);
       }
@@ -32,12 +32,12 @@ if ("serviceWorker" in navigator) {
  * Barba.js Initialization
  * Added function to prevent reloading on clicking same URL.
  */
-$(document).ready(function() {
+$(document).ready(function () {
   /**
    * Function to prevent reloading on clicking same URL.
    */
   var links = document.querySelectorAll("a[href]");
-  var cbk = function(e) {
+  var cbk = function (e) {
     if (e.currentTarget.href === window.location.href) {
       e.preventDefault();
       e.stopPropagation();
@@ -59,7 +59,7 @@ $(document).ready(function() {
  * Barba.js Page Transitions
  * Start Barba
  */
-$(document).ready(function() {
+$(document).ready(function () {
   /*var HideShowTransition = Barba.BaseTransition.extend({
     start: function() {
       this.newContainerLoading.then(this.finish.bind(this));
@@ -71,7 +71,7 @@ $(document).ready(function() {
     }
   });*/
   var FadeTransition = Barba.BaseTransition.extend({
-    start: function() {
+    start: function () {
       /**
        * This function is automatically called as soon the Transition starts
        * this.newContainerLoading is a Promise for the loading of the new container
@@ -84,17 +84,15 @@ $(document).ready(function() {
       );
     },
 
-    fadeOut: function() {
+    fadeOut: function () {
       /**
        * this.oldContainer is the HTMLElement of the old Container
        */
 
-      return $(this.oldContainer)
-        .animate({ opacity: 0 })
-        .promise();
+      return $(this.oldContainer).animate({ opacity: 0 }).promise();
     },
 
-    fadeIn: function() {
+    fadeIn: function () {
       /**
        * this.newContainer is the HTMLElement of the new Container
        * At this stage newContainer is on the DOM (inside our #barba-container and with visibility: hidden)
@@ -108,12 +106,12 @@ $(document).ready(function() {
 
       $el.css({
         visibility: "visible",
-        opacity: 0
+        opacity: 0,
       });
 
       window.scrollTo(0, 0);
 
-      $el.animate({ opacity: 1 }, 400, function() {
+      $el.animate({ opacity: 1 }, 400, function () {
         /**
          * Do not forget to call .done() as soon your transition is finished!
          * .done() will automatically remove from the DOM the old Container
@@ -121,12 +119,12 @@ $(document).ready(function() {
 
         _this.done();
       });
-    }
+    },
   });
 
   Barba.Pjax.start();
 
-  Barba.Pjax.getTransition = function() {
+  Barba.Pjax.getTransition = function () {
     return FadeTransition;
   };
 });
@@ -135,7 +133,7 @@ $(document).ready(function() {
  * Barba.js - Update Meta Tags in Head
  * Head Tags aren't updated on PJAX navigation, this needs to be done manually.
  */
-Barba.Dispatcher.on("newPageReady", function(
+Barba.Dispatcher.on("newPageReady", function (
   currentStatus,
   oldStatus,
   container,
@@ -158,11 +156,9 @@ Barba.Dispatcher.on("newPageReady", function(
     "meta[name^='twitter']",
     "link[rel='canonical']",
     "script[type='application/ld+json']",
-    "link[href='https://www.gravatar.com']"
+    "link[href='https://www.gravatar.com']",
   ].join(",");
-  $("head")
-    .find(headTags)
-    .remove(); // Remove current head tags
+  $("head").find(headTags).remove(); // Remove current head tags
   $newPageHead.find(headTags).appendTo("head"); // Append new tags to the head
 });
 
@@ -197,7 +193,7 @@ Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container
 /**
  * Init: FitVids, Lightbox, Table of Content, etc.
  */
-$(document).ready(function() {
+$(document).ready(function () {
   /**
    * FitVids: Target your .container, .wrapper, .post, etc.
    */
@@ -221,9 +217,9 @@ $(document).ready(function() {
 /**
  * Off Canvas Sliding for Menu
  */
-$(window).on("load", function() {
+$(window).on("load", function () {
   // Menu button click
-  $("#js-menu-trigger,#js-menu-screen,.js-menu-link").on("click", function(e) {
+  $("#js-menu-trigger,#js-menu-screen,.js-menu-link").on("click", function (e) {
     $("#js-body").toggleClass("no-scroll");
     $("#js-menu, #js-menu-screen").toggleClass("is-visible");
     $("#js-menu-trigger").toggleClass("slide close");
@@ -236,7 +232,7 @@ $(window).on("load", function() {
  * Sticky Heading Transformation
  * onScroll function is used
  */
-$(window).on("load", function() {
+$(window).on("load", function () {
   var scroll = $(window).scrollTop();
 
   var header = document.querySelector("#masthead-floating");
@@ -274,7 +270,7 @@ $(window).on("load", function() {
     menuButton.style.top = "";
   }
 });
-$(window).on("scroll", function() {
+$(window).on("scroll", function () {
   var scroll = $(window).scrollTop();
 
   var header = document.querySelector("#masthead-floating");
@@ -317,7 +313,7 @@ $(window).on("scroll", function() {
  * Defer Loading Images
  * For All pages except Articles/Portfolio.
  */
-Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
+Barba.Dispatcher.on("transitionCompleted", function () //currentStatus,
 //oldStatus,
 //container
 {
@@ -346,7 +342,7 @@ Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
  * Function for handling Comment Form submission on Posts.
  * Ajax call sends it to the server, where add-comment.php script will process it!
  */
-Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
+Barba.Dispatcher.on("transitionCompleted", function () //currentStatus,
 //oldStatus,
 //container
 {
@@ -355,7 +351,7 @@ Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
     $("#comment-form .js-notice-text").html(message);
   }
 
-  $("#comment-form").submit(function() {
+  $("#comment-form").submit(function () {
     event.preventDefault();
     var form = this;
 
@@ -363,20 +359,20 @@ Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
     $("#comment-form-submit").html("Loading...");
 
     /* eslint-disable */
-    grecaptcha.ready(function() {
+    grecaptcha.ready(function () {
       grecaptcha
         .execute("6Ld267wUAAAAAI_fRatpssUObDichF88iycOGqX9", {
-          action: "addcomment"
+          action: "addcomment",
         })
-        .then(function(token) {
+        .then(function (token) {
           $("#comment-token").attr("value", token);
           $.ajax({
             type: $("#comment-form").attr("method"),
             url: $("#comment-form").attr("action"),
             data: $("#comment-form").serialize(),
-            contentType: "application/x-www-form-urlencoded"
+            contentType: "application/x-www-form-urlencoded",
           })
-            .done(function(/*data*/) {
+            .done(function (/*data*/) {
               $("#comment-form-submit").html("Submitted");
               $("#comment-form .js-notice")
                 .removeClass("notice--danger")
@@ -385,7 +381,7 @@ Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
                 "<strong>Thank you!</strong> Your comment will show up here once it has been approved by the moderator."
               );
             })
-            .fail(function(/*err*/) {
+            .fail(function (/*err*/) {
               $("#comment-form-submit").html("Submit Comment");
               $("#comment-form .js-notice")
                 .removeClass("notice--success")
@@ -410,7 +406,7 @@ Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
  * Released under the GNU General Public License - https://wordpress.org/about/gpl/
  */
 var addComment = {
-  moveForm: function(commId, parentId, respondId, postId) {
+  moveForm: function (commId, parentId, respondId, postId) {
     var div,
       //element,
       //style,
@@ -445,7 +441,7 @@ var addComment = {
     parent.value = parentId;
     cancel.style.display = "";
 
-    cancel.onclick = function() {
+    cancel.onclick = function () {
       var t = addComment,
         temp = t.I("sm-temp-form-div"),
         respond = t.I(t.respondId);
@@ -476,18 +472,18 @@ var addComment = {
     return false;
   },
 
-  I: function(id) {
+  I: function (id) {
     return document.getElementById(id);
-  }
+  },
 };
 
-Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
+Barba.Dispatcher.on("transitionCompleted", function () //currentStatus,
 //oldStatus,
 //container
 {
   var comments = document.getElementsByClassName("comment__reply");
-  Array.prototype.forEach.call(comments, function(comment) {
-    $(comment).on("click", function() {
+  Array.prototype.forEach.call(comments, function (comment) {
+    $(comment).on("click", function () {
       var aTag = comment.getElementsByTagName("A")[0];
       addComment.moveForm(
         aTag.dataset.comment,
@@ -505,11 +501,11 @@ Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
  * Remove classes/style added by previous animation
  * Re-Init AnimeOnScroll.js to prevent errors in animation.
  */
-Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
+Barba.Dispatcher.on("transitionCompleted", function () //currentStatus,
 //oldStatus,
 //container
 {
-  $(".button-all").on("click", function() {
+  $(".button-all").on("click", function () {
     $(".button-all").addClass("is-checked");
     $(".button-tech").removeClass("is-checked");
     $(".button-personal").removeClass("is-checked");
@@ -517,21 +513,17 @@ Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
     $(".article-tile").removeClass("shown animate");
     $(".articles-tiles-grid, .article-tile").removeAttr("style");
 
-    $(".articles-tiles-grid")
-      .children(".article-tile")
-      .hide();
-    $(".articles-tiles-grid")
-      .children(".article-tile")
-      .show();
+    $(".articles-tiles-grid").children(".article-tile").hide();
+    $(".articles-tiles-grid").children(".article-tile").show();
 
     new window.AnimOnScroll(document.getElementById("tiles-grid"), {
       minDuration: 0.4,
       maxDuration: 0.7,
-      viewportFactor: 0.1
+      viewportFactor: 0.1,
     });
   });
 
-  $(".button-tech").on("click", function() {
+  $(".button-tech").on("click", function () {
     $(".button-all").removeClass("is-checked");
     $(".button-tech").addClass("is-checked");
     $(".button-personal").removeClass("is-checked");
@@ -539,21 +531,16 @@ Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
     $(".article-tile").removeClass("shown animate");
     $(".articles-tiles-grid, .article-tile").removeAttr("style");
 
-    $(".articles-tiles-grid")
-      .children(".article-tile")
-      .hide();
-    $(".articles-tiles-grid")
-      .children(".article-tile")
-      .filter(".tech")
-      .show();
+    $(".articles-tiles-grid").children(".article-tile").hide();
+    $(".articles-tiles-grid").children(".article-tile").filter(".tech").show();
     new window.AnimOnScroll(document.getElementById("tiles-grid"), {
       minDuration: 0.4,
       maxDuration: 0.7,
-      viewportFactor: 0.1
+      viewportFactor: 0.1,
     });
   });
 
-  $(".button-personal").on("click", function() {
+  $(".button-personal").on("click", function () {
     $(".button-all").removeClass("is-checked");
     $(".button-tech").removeClass("is-checked");
     $(".button-personal").addClass("is-checked");
@@ -561,9 +548,7 @@ Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
     $(".article-tile").removeClass("shown animate");
     $(".articles-tiles-grid, .article-tile").removeAttr("style");
 
-    $(".articles-tiles-grid")
-      .children(".article-tile")
-      .hide();
+    $(".articles-tiles-grid").children(".article-tile").hide();
     $(".articles-tiles-grid")
       .children(".article-tile")
       .filter(".personal")
@@ -572,7 +557,7 @@ Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
     new window.AnimOnScroll(document.getElementById("tiles-grid"), {
       minDuration: 0.4,
       maxDuration: 0.7,
-      viewportFactor: 0.1
+      viewportFactor: 0.1,
     });
   });
 });
@@ -581,7 +566,7 @@ Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
  * Articles Page - Loading Animation
  * Uses AnimeOnScroll.js
  */
-Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
+Barba.Dispatcher.on("transitionCompleted", function () //currentStatus,
 //oldStatus,
 //container
 {
@@ -589,7 +574,7 @@ Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
     new window.AnimOnScroll(document.getElementById("tiles-grid"), {
       minDuration: 0.4,
       maxDuration: 0.7,
-      viewportFactor: 0.1
+      viewportFactor: 0.1,
     });
   }
 });
@@ -599,15 +584,15 @@ Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
  * Uses anime.js
  * Based on 'Shu' animation from https://tympanus.net/Development/GridLoadingAnimations/
  */
-Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
+Barba.Dispatcher.on("transitionCompleted", function () //currentStatus,
 //oldStatus,
 //container
 {
   var portfolioLinks = document.getElementsByClassName("portfolio-link");
   if (document.getElementsByClassName("portfolio-tile").length > 0) {
-    imagesLoaded(portfolioLinks, function() {
+    imagesLoaded(portfolioLinks, function () {
       if (window.Modernizr.cssanimations) {
-        [].slice.call(portfolioLinks).forEach(function(item) {
+        [].slice.call(portfolioLinks).forEach(function (item) {
           // Create SVG.
           var svg = document.createElementNS(
               "http://www.w3.org/2000/svg",
@@ -635,15 +620,15 @@ Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
 
         var animeLineDrawingOpts = {
           duration: 800,
-          delay: function(t, i) {
+          delay: function (t, i) {
             return i * 150 + 50;
           },
           easing: "easeInOutSine",
           strokeDashoffset: [anime.setDashoffset, 0],
           opacity: [
             { value: [0, 1] },
-            { value: [1, 0], duration: 200, easing: "linear", delay: 500 }
-          ]
+            { value: [1, 0], duration: 200, easing: "linear", delay: 500 },
+          ],
         };
         animeLineDrawingOpts.targets = document.querySelectorAll(
           ".grid__deco > path"
@@ -655,21 +640,21 @@ Barba.Dispatcher.on("transitionCompleted", function() //currentStatus,
         var animeOpts = {
           duration: 800,
           easing: [0.3, 1, 0.7, 1],
-          delay: function(t, i) {
+          delay: function (t, i) {
             return i * 150 + 1200;
           },
           opacity: {
             value: [0, 1],
-            easing: "linear"
+            easing: "linear",
           },
-          scale: [0.25, 1]
+          scale: [0.25, 1],
         };
         animeOpts.targets = document.querySelectorAll(".portfolio-link");
 
         anime.remove(animeOpts.targets);
         anime(animeOpts);
       } else {
-        [].slice.call(portfolioLinks).forEach(function(item) {
+        [].slice.call(portfolioLinks).forEach(function (item) {
           item.style.opacity = 1;
         });
       }

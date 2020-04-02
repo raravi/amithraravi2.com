@@ -1,21 +1,21 @@
 "use strict";
-module.exports = function(grunt) {
+module.exports = function (grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON("package.json"),
     jshint: {
       options: {
-        jshintrc: ".jshintrc"
+        jshintrc: ".jshintrc",
       },
-      all: ["Gruntfile.js", "js/*.js", "!js/main.js"]
+      all: ["Gruntfile.js", "js/*.js", "!js/main.js"],
     },
     watch: {
       js: {
         files: ["<%= jshint.all %>"],
         tasks: ["jshint", "uglify", "surround"],
         options: {
-          livereload: true
-        }
-      }
+          livereload: true,
+        },
+      },
     },
     uglify: {
       dist: {
@@ -25,28 +25,28 @@ module.exports = function(grunt) {
             '<%= grunt.template.today("yyyy-mm-dd") %> */',
           compress: {},
           beautify: false,
-          mangle: false
+          mangle: false,
         },
         files: {
-          "js/main.js": ["js/plugins/*.js", "js/_*.js"]
-        }
-      }
+          "js/main.js": ["js/plugins/*.js", "js/_*.js"],
+        },
+      },
     },
     imagemin: {
       dist: {
         options: {
           optimizationLevel: 7,
-          progressive: true
+          progressive: true,
         },
         files: [
           {
             expand: true,
             cwd: "images/",
             src: "{,*/}*.{png,jpg,jpeg}",
-            dest: "images/"
-          }
-        ]
-      }
+            dest: "images/",
+          },
+        ],
+      },
     },
     svgmin: {
       dist: {
@@ -55,21 +55,21 @@ module.exports = function(grunt) {
             expand: true,
             cwd: "images/",
             src: "{,*/}*.svg",
-            dest: "images/"
-          }
-        ]
-      }
+            dest: "images/",
+          },
+        ],
+      },
     },
     file_append: {
       default_options: {
         files: [
           {
             prepend: "---\n---\n",
-            input: "js/main.js"
-          }
-        ]
-      }
-    }
+            input: "js/main.js",
+          },
+        ],
+      },
+    },
   });
 
   // Load tasks

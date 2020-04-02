@@ -13,6 +13,8 @@ A simple **Tic Tac Toe** game written in vanilla JavaScript! This is written to 
 Play: [tic tac toe](https://raravi.github.io/tictactoe/)<br />
 Source: [github](https://github.com/raravi/tictactoe)
 
+![license](https://img.shields.io/github/license/raravi/tictactoe)&nbsp;&nbsp;![last-commit](https://img.shields.io/github/last-commit/raravi/tictactoe)
+
 ## CSS Custom Variables
 
 Before using custom variables, the color properties (of various backgrounds, of different fonts) were spread all over the CSS file. CSS custom properties allows for a central location to be established. This helps keep the CSS dry (Don't Repeat Yourself)!

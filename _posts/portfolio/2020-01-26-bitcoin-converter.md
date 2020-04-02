@@ -12,6 +12,8 @@ A simple web-based bitcoin converter!
 
 Source: [github](https://github.com/raravi/bitcoin-converter)
 
+![license](https://img.shields.io/github/license/raravi/bitcoin-converter)&nbsp;&nbsp;![last-commit](https://img.shields.io/github/last-commit/raravi/bitcoin-converter)
+
 This project demonstrates the use of [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest), [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) and [async/await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function). It fetches data from 2 different APIs: [blockchain.info](https://www.blockchain.com/api) & [fixer.io](https://fixer.io/)!
 
 You can play around with this demo by replacing the script in `index.html` to point to any of the options below. Each is functionally equivalent, what changes is how the javascript code is written.

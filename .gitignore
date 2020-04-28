@@ -10,5 +10,7 @@ _asset_bundler_cache
 .jekyll-metadata
 .jekyll-cache
 cypress/integration/examples
+cypress/videos
+cypress/screenshots
 config.php
 .htaccess

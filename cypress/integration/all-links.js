@@ -1,4 +1,4 @@
-describe("My First Test", function() {
+describe("Visit All Pages", function() {
   it("Visits the main pages on local site - AmithRaravi.com", function() {
     cy.visit("/");
 

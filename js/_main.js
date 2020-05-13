@@ -366,13 +366,14 @@ Barba.Dispatcher.on("transitionCompleted", function () //currentStatus,
         })
         .then(function (token) {
           $("#comment-token").attr("value", token);
-          $.ajax({
+          // Testing
+          /*$.ajax({
             type: $("#comment-form").attr("method"),
             url: $("#comment-form").attr("action"),
             data: $("#comment-form").serialize(),
             contentType: "application/x-www-form-urlencoded",
           })
-            .done(function (/*data*/) {
+            .done(function (data) {
               $("#comment-form-submit").html("Submitted");
               $("#comment-form .js-notice")
                 .removeClass("notice--danger")
@@ -381,7 +382,39 @@ Barba.Dispatcher.on("transitionCompleted", function () //currentStatus,
                 "<strong>Thank you!</strong> Your comment will show up here once it has been approved by the moderator."
               );
             })
-            .fail(function (/*err*/) {
+            .fail(function (err) {
+              $("#comment-form-submit").html("Submit Comment");
+              $("#comment-form .js-notice")
+                .removeClass("notice--success")
+                .addClass("notice--danger");
+              showAlert(
+                "<strong>Sorry, there was an error with your submission.</strong> Please make sure all required fields have been completed and try again."
+              );
+              $(form).removeClass("disabled");
+            });*/
+          // Testing
+          const method = $("#comment-form").attr("method"),
+            url = $("#comment-form").attr("action"),
+            data = $("#comment-form").serialize(),
+            contentType = "application/x-www-form-urlencoded";
+
+          fetch(url, {
+            method: method,
+            body: data,
+            headers: {
+              "Content-Type": contentType,
+            },
+          })
+            .then(() => {
+              $("#comment-form-submit").html("Submitted");
+              $("#comment-form .js-notice")
+                .removeClass("notice--danger")
+                .addClass("notice--success");
+              showAlert(
+                "<strong>Thank you!</strong> Your comment will show up here once it has been approved by the moderator."
+              );
+            })
+            .catch(() => {
               $("#comment-form-submit").html("Submit Comment");
               $("#comment-form .js-notice")
                 .removeClass("notice--success")

@@ -1,0 +1,158 @@
+_id: 1584934452
+replying_to: '0'
+message: "Thanks for sharing this solution.\r\n\r\n
+Actually, my everything is working fine but when i click on the filter buttons then i get an error \"Cannot set property 'filter' of undefined\"\r\n
+but i don't know what i have don't wrong. Please check my code below:\r\n
+\r\n
+\r\n```jsx
+\r\nimport React from \"react\";
+\r\nimport styles from \"styled-components\";
+\r\nimport Isotope from \"isotope-layout/js/isotope\";
+\r\nimport classNames from 'classnames';
+\r\n
+\r\n
+\r\nclass Ptfilter extends React.Component {
+\r\n    componentDidMount() {
+\r\n
+\r\n        var iso = new Isotope('.grid', {
+\r\n            itemSelector: '.grid-item',
+\r\n            layoutMode: 'fitRows',
+\r\n        });
+\r\n
+\r\n        this.iso = new Isotope(`.${styles.articlesTiles}`, {
+\r\n            itemSelector: `.${styles.col}`,
+\r\n            layoutMode: \"fitRows\"
+\r\n        });
+\r\n        iso.arrange({
+\r\n            filter: \"*\" // All grid items
+\r\n        });
+\r\n
+\r\n        iso.arrange({
+\r\n            filter: \".tech\" // Tech grid items only
+\r\n        });
+\r\n
+\r\n        iso.arrange({
+\r\n            filter: \".personal\" // Personal grid items only
+\r\n        });
+\r\n    }
+\r\n    constructor() {
+\r\n        super();
+\r\n        this.handleClickAll = this.handleClickAll.bind(this);
+\r\n        this.handleClickTech = this.handleClickTech.bind(this);
+\r\n        this.handleClickPersonal = this.handleClickPersonal.bind(this);
+\r\n        this.state = {
+\r\n            isClickedAll: true,
+\r\n            isClickedTech: false,
+\r\n            isClickedPersonal: false
+\r\n        };
+\r\n    }
+\r\n
+\r\n    handleClickAll(e) {
+\r\n        this.setState({
+\r\n            isClickedAll: true,
+\r\n            isClickedTech: false,
+\r\n            isClickedPersonal: false
+\r\n        });
+\r\n        if (this.iso === undefined)
+\r\n            this.iso = new Isotope(`.${styles.articlesTiles}`, {
+\r\n                itemSelector: `.${styles.col}`,
+\r\n                layoutMode: \"fitRows\"
+\r\n            });
+\r\n        this.iso.arrange({ filter: \"*\" });
+\r\n    }
+\r\n
+\r\n    handleClickTech(e) {
+\r\n        this.setState({
+\r\n            isClickedAll: false,
+\r\n            isClickedTech: true,
+\r\n            isClickedPersonal: false
+\r\n        });
+\r\n        if (this.iso === undefined)
+\r\n            this.iso = new Isotope(`.${styles.articlesTiles}`, {
+\r\n                itemSelector: `.${styles.col}`,
+\r\n                layoutMode: \"fitRows\"
+\r\n            });
+\r\n        this.iso.arrange({ filter: `.${styles.tech}` });
+\r\n    }
+\r\n
+\r\n    handleClickPersonal(e) {
+\r\n        this.setState({
+\r\n            isClickedAll: false,
+\r\n            isClickedTech: false,
+\r\n            isClickedPersonal: true
+\r\n        });
+\r\n        if (this.iso === undefined)
+\r\n            this.iso = new Isotope(`.${styles.articlesTiles}`, {
+\r\n                itemSelector: `.${styles.col}`,
+\r\n                layoutMode: \"fitRows\"
+\r\n            });
+\r\n        this.iso.arrange({ filter: `.${styles.personal}` });
+\r\n    }
+\r\n
+\r\n
+\r\n    render() {
+\r\n        return (
+\r\n            <>
+\r\n                <div className=\"filter-button-group button-group js-radio-button-group\">
+\r\n                    <div className={styles.filtersButtonGroup}>
+\r\n                        <button
+\r\n                            data-filter=\"*\"
+\r\n                            onClick={this.handleClickAll}
+\r\n                            className={
+\r\n                                this.state.isClickedAll
+\r\n                                    ? classNames(styles.filtersButton, styles.isChecked)
+\r\n                                    : styles.filtersButton
+\r\n                            }
+\r\n                        >
+\r\n                            All
+\r\n                </button>
+\r\n                        <button
+\r\n                            data-filter=\".tech\"
+\r\n                            onClick={this.handleClickTech}
+\r\n                            className={
+\r\n                                this.state.isClickedTech
+\r\n                                    ? classNames(styles.filtersButton, styles.isChecked)
+\r\n                                    : styles.filtersButton
+\r\n                            }
+\r\n                        >
+\r\n                            Tech
+\r\n                </button>
+\r\n                        <button
+\r\n                            data-filter=\".personal\"
+\r\n                            onClick={this.handleClickPersonal}
+\r\n                            className={
+\r\n                                this.state.isClickedPersonal
+\r\n                                    ? classNames(styles.filtersButton, styles.isChecked)
+\r\n                                    : styles.filtersButton
+\r\n                            }
+\r\n                        >
+\r\n                            Personal
+\r\n                </button>
+\r\n
+\r\n                    </div>
+\r\n                </div>
+\r\n                <div class=\"grid\">
+\r\n                    <div class=\"grid-item tech\">Tech 1</div>
+\r\n                    <div class=\"grid-item tech\">Tech 2</div>
+\r\n                    <div class=\"grid-item personal\">Personal 3</div>
+\r\n                    <div class=\"grid-item personal\">Personal 4</div>
+\r\n                </div>
+\r\n            </>
+\r\n        );
+\r\n    }
+\r\n}
+\r\n
+\r\n
+\r\nexport default Ptfilter
+\r\n```"
+name: Tanbir
+email: eb740d69cba6ea5643c24670e89f3429
+emailorig: tanbitsylhet20@gmail.com
+url:
+date: 1584934452
+slug: how-to-make-isotope-work-in-a-gatsby-site
+reCaptchaSuccess: 1
+reCaptchaScore: 0.9
+reCaptchaAction: addcomment
+reCaptchaTimestamp: 2020-03-23T03:26:41Z
+reCaptchaHost: www.amithraravi.com

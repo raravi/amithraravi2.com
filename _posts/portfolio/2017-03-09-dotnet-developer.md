@@ -4,8 +4,7 @@ title:      "DotNet Developer"
 date:       2017-04-16 21:00:00 +0530
 modified:   
 categories: portfolio
-image:
-  feature:  dotnet-900x450.jpg
+image:  dotnet-900x450.jpg
 teaser:   dotnet-400x250.jpg
 ---
 Company:  Cognizant Technology Solutions

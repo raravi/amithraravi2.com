@@ -4,8 +4,7 @@ title:      "Content Creation"
 date:       2017-08-01 21:00:00 +0530
 modified:   
 categories: portfolio
-image:
-  feature:  writer-900x450.jpg
+image:  writer-900x450.jpg
 teaser:   writer-400x250.jpg
 ---
 Role:     Content Creator

@@ -4,8 +4,7 @@ title:      "Twitter bot"
 date:       2020-02-06 21:00:00 +0530
 modified:   
 categories: portfolio
-image:
-  feature:  twitter-bot.jpg
+image:  twitter-bot.jpg
 teaser:   twitter-bot-400x250.jpg
 ---
 A Twitter bot for my account!

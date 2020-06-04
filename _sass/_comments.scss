@@ -15,9 +15,10 @@
   padding-left: 4.5em;
   font-size: 0.8em;
   .comment__box {
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
+    // display: -webkit-box;
+    // display: -moz-box;
+    // display: box;
+    display: block;
   }
   .comment__timestamp {
     font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto",

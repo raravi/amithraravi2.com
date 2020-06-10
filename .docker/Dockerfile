@@ -1,6 +1,6 @@
 FROM php:5.6-apache
 
-MAINTAINER Amith Raravi <amith.raravi@gmail.com>
+LABEL maintainer="Amith Raravi <amith.raravi@gmail.com>"
 
 COPY _site/ /var/www/html/
 COPY config.php /var/www/

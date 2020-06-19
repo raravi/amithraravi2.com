@@ -12,8 +12,8 @@
         $replyingto = trim($_POST['replyingto']);
         $slug       = $_POST['slug'];
 
-        $token       = $_POST['token'];
-        $secretKey = $config['secretKey'];
+        $token      = $_POST['token'];
+        $secretKey  = $config['secretKey'];
 
         // post request to server
         $recaptchaurl =  'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) . '&response=' . urlencode($token);

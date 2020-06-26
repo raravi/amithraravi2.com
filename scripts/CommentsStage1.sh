@@ -4,7 +4,7 @@ server="dh_hc94wb@templer.dreamhost.com"
 src="/home/dh_hc94wb/amithraravi.com/entry*.yml"
 destination="/Users/raravi/Programming/gitprojects/go/newcomments/"
 
-rsync_command=$(rsync -a --progress "$server:$src" "$destination" 2>/dev/null)
+rsync_command=$(rsync -a -e "ssh -i ~/.ssh/id3_rsa -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progress "$server:$src" "$destination" 2>/dev/null)
 
 if [ $? -eq 0 ]; then
     # Success do some more work!
@@ -12,7 +12,7 @@ if [ $? -eq 0 ]; then
     if [ -n "${rsync_command}" ]; then
         # Stuff to run, because rsync has changes
         echo "$rsync_command"
-        ssh "$server" "rm $src"
+        ssh -i ~/.ssh/id3_rsa "$server" "rm $src"
     else
         # No changes were made by rsync
         echo "No comments were copied! Check if you have copied the comments already.."

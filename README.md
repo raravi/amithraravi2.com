@@ -19,3 +19,5 @@ Warning: This is a work in progress...
 * [Webpack](https://github.com/webpack/webpack) for bundling Javascript into a single file. Previously used [Grunt](https://github.com/gruntjs/grunt) for image optimisation / asset minification / javascript bundling.
 * [Babel](https://github.com/babel/babel) for ES6 support.
 * Keeping in mind the [WCAG](https://www.w3.org/WAI/tips/) 2.1 guidelines to be accessible by all, the website maintains the right color contrast, size of buttons, ARIA labels, and many more features under the hood.
+
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Y8Y21VCIL)

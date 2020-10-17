@@ -16,7 +16,7 @@
     "serve": "bundle exec jekyll serve",
     "webpack:dev": "webpack --mode development",
     "webpack": "webpack --mode production",
-    "purgecss": "purgecss --css _site/css/main.css --content _site/index.html,_site/**/index.html,_site/**/**/index.html,_site/**/**/**/index.html,dist/main.js --output dist/",
+    "purgecss": "purgecss --css _site/css/main.css --content _site/index.html _site/**/index.html _site/**/**/index.html _site/**/**/**/index.html dist/main.js --output dist/",
     "build:dev:full": "npm run prettier:check && npm run eslint && npm run build:dev && npm run webpack && npm run purgecss && npm run build:dev && npm run htmlproofer",
     "build:pork:full": "npm run prettier:check && npm run eslint && npm run build:pork && npm run webpack && npm run purgecss && npm run build:pork && npm run htmlproofer",
     "build:prod:full": "npm run prettier:check && npm run eslint && npm run build:prod && npm run webpack && npm run purgecss && npm run build:prod && npm run htmlproofer",

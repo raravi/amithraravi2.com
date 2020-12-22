@@ -133,34 +133,32 @@ $(document).ready(function () {
  * Barba.js - Update Meta Tags in Head
  * Head Tags aren't updated on PJAX navigation, this needs to be done manually.
  */
-Barba.Dispatcher.on("newPageReady", function (
-  currentStatus,
-  oldStatus,
-  container,
-  newPageRawHTML
-) {
-  // html head parser borrowed from jquery pjax
-  console.log(document.title + ": newPageReady: Updating Meta tags");
-  var $newPageHead = $("<head />").html(
-    $.parseHTML(
-      newPageRawHTML.match(/<head[^>]*>([\s\S.]*)<\/head>/i)[0],
-      document,
-      true
-    )
-  );
-  var headTags = [
-    "meta[name='keywords']",
-    "meta[name='description']",
-    "meta[property^='og']",
-    "meta[property^='article']",
-    "meta[name^='twitter']",
-    "link[rel='canonical']",
-    "script[type='application/ld+json']",
-    "link[href='https://www.gravatar.com']",
-  ].join(",");
-  $("head").find(headTags).remove(); // Remove current head tags
-  $newPageHead.find(headTags).appendTo("head"); // Append new tags to the head
-});
+Barba.Dispatcher.on(
+  "newPageReady",
+  function (currentStatus, oldStatus, container, newPageRawHTML) {
+    // html head parser borrowed from jquery pjax
+    console.log(document.title + ": newPageReady: Updating Meta tags");
+    var $newPageHead = $("<head />").html(
+      $.parseHTML(
+        newPageRawHTML.match(/<head[^>]*>([\s\S.]*)<\/head>/i)[0],
+        document,
+        true
+      )
+    );
+    var headTags = [
+      "meta[name='keywords']",
+      "meta[name='description']",
+      "meta[property^='og']",
+      "meta[property^='article']",
+      "meta[name^='twitter']",
+      "link[rel='canonical']",
+      "script[type='application/ld+json']",
+      "link[href='https://www.gravatar.com']",
+    ].join(",");
+    $("head").find(headTags).remove(); // Remove current head tags
+    $newPageHead.find(headTags).appendTo("head"); // Append new tags to the head
+  }
+);
 
 /**
  * Load scripts upon Page Load (on Load) / PJAX Load (on newPageReady)

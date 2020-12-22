@@ -14,3 +14,5 @@ cypress/videos
 cypress/screenshots
 config.php
 .htaccess
+vendor
+.bundle

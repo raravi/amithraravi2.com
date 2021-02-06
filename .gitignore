@@ -13,6 +13,5 @@ cypress/integration/examples
 cypress/videos
 cypress/screenshots
 config.php
-.htaccess
 vendor
 .bundle

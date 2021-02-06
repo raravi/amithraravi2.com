@@ -1,0 +1,21 @@
+RewriteEngine On
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L]
+Header set Cache-Control "max-age=2592000, public"
+Header always set Content-Security-Policy "upgrade-insecure-requests;"
+Header set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+Header set X-Frame-Options "SAMEORIGIN"
+Header set X-Content-Type-Options "nosniff"
+Header set X-XSS-Protection "1; mode=block"
+ErrorDocument 404 /404/
+<FilesMatch "\.html$">
+    Header add Link "</dist/main.css>; rel=preload; as=style"
+    Header add Link "</dist/main.js>; rel=preload; as=script"
+    Header add Link "</fonts/1cXxaUPXBpj2rGoU7C9WiHGFq8Kk1Q.woff2>; rel=preload; as=font"
+    Header add Link "</fonts/DPEuYwWHyAYGVTSmalsRcd3emkUrFQ.woff2>; rel=preload; as=font"
+    Header add Link "</fonts/TwMO-IAHRlkbx940YnYXSCiN9uc.woff2>; rel=preload; as=font"
+    Header add Link "</fonts/RrQUbo9-9DV7b06QHgSWsahHT4ICGcWB.woff2>; rel=preload; as=font"
+    Header add Link "</fonts/I_uuMpWdvgLdNxVLXbNakwKso5c.woff2>; rel=preload; as=font"
+    Header add Link "</fonts/1Ptug8zYS_SKggPNyC0IT4ttDfA.woff2>; rel=preload; as=font"
+    Header add Link "</fonts/wEO_EBrAnc9BLjLQAUk1VvoK_kgXiQ.woff2>; rel=preload; as=font"
+</FilesMatch>

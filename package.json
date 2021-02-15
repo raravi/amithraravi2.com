@@ -53,6 +53,5 @@
     "purgecss": "^4.0.0",
     "webpack": "^5.21.2",
     "webpack-cli": "^4.5.0"
-  },
-  "dependencies": {}
+  }
 }

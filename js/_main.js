@@ -634,9 +634,8 @@ Barba.Dispatcher.on("transitionCompleted", function () //currentStatus,
             { value: [1, 0], duration: 200, easing: "linear", delay: 500 },
           ],
         };
-        animeLineDrawingOpts.targets = document.querySelectorAll(
-          ".grid__deco > path"
-        );
+        animeLineDrawingOpts.targets =
+          document.querySelectorAll(".grid__deco > path");
 
         anime.remove(animeLineDrawingOpts.targets);
         anime(animeLineDrawingOpts);

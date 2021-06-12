@@ -1,6 +1,25 @@
 <article
   id="comment{{ include.index | prepend: '-' }}"
-  class="js-comment comment{% if include.name == site.author.name %} admin{% endif %}{% unless include.replying_to == 0 %} child{% endunless %}"
+  class="
+    js-comment
+    comment{%
+    if
+    include.name
+    ==
+    site.author.name
+    %}
+    admin{%
+    endif
+    %}{%
+    unless
+    include.replying_to
+    ==
+    0
+    %}
+    child{%
+    endunless
+    %}
+  "
 >
   <div class="comment__box">
     <div class="comment__avatar">

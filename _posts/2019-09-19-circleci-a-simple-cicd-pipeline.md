@@ -40,7 +40,7 @@ If **Continuous Deployment** is part of the CI/CD pipeline, then the code is dep
 
 I agree that the complete set of advantages offered by a dedicated CI/CD pipeline is a bit of overkill for us mere mortals. But then, all of us deserve a bit more of automation in our lives, don’t we?! With this spirit, I came up with the 3 steps that I would like to automate :)
 
-A bit of googling (is this still a thing?!) revealed that a CI/CD pipeline using containers is the fastest way to automate the above requirement. Out of the various options available (the popular ones being [Jenkins](https://jenkins.io), [Travis CI](https://travis-ci.org), [CircleCI](https://www.circleci.com/‎), [Buddy](https://buddy.works), etc..), I zeroed in on **CircleCI**. **CircleCI** is currently offering free accounts for GitHub repo owners, as are a few others listed above.
+A bit of googling (is this still a thing?!) revealed that a CI/CD pipeline using containers is the fastest way to automate the above requirement. Out of the various options available (the popular ones being [Jenkins](https://jenkins.io), [Travis CI](https://travis-ci.org), [CircleCI](https://www.circleci.com/), [Buddy](https://buddy.works), etc..), I zeroed in on **CircleCI**. **CircleCI** is currently offering free accounts for GitHub repo owners, as are a few others listed above.
 
 ## Enter CircleCI
 

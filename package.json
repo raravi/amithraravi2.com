@@ -51,7 +51,7 @@
     "husky": "^7.0.4",
     "prettier": "^2.4.1",
     "purgecss": "^4.0.3",
-    "webpack": "^5.61.0",
+    "webpack": "^5.76.1",
     "webpack-cli": "^4.9.1"
   }
 }
